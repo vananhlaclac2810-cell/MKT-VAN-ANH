@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Hành trình Euro tự ngủ — Cẩm nang luyện ngủ thuận tự nhiên cho con 0-12 tháng | Dr.Maya</title>
+<meta name="description" content="Ebook miễn phí của Dược sĩ Thiều Vân Anh — cẩm nang luyện ngủ tổng hợp 5S, 4S, PUPD, EASY, vỗ chuyển giấc, dành cho mẹ Việt." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* =================== BRAND TOKENS =================== */
+:root {
+  --maya-50:  #F0F8F3;
+  --maya-100: #E8F3EC;
+  --maya-200: #C9E2D3;
+  --maya-500: #2E7D5B;
+  --maya-600: #246349;
+  --maya-700: #1A4A37;
+  --maya-900: #0F2A1F;
+  --honey-100:#FCEFD7;
+  --honey-300:#F4C97F;
+  --honey-400:#F0B963;
+  --honey-500:#E8A33D;
+  --honey-600:#C7821D;
+  --cream:    #FBF7F0;
+  --ink:      #1A2E22;
+  --ink-soft: #5A6B5F;
+  --ink-line: #E4DFD3;
+}
+
+/* =================== PAGE LAYOUT =================== */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #d8d2c4;
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 700;
+}
+
+/* Each page = A4 (210x297mm) */
+.page {
+  width: 210mm;
+  height: 297mm;
+  background: var(--cream);
+  margin: 24px auto;
+  padding: 18mm 16mm;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.page:last-child { page-break-after: avoid; }
+
+@media print {
+  html, body { background: white; }
+  .page {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
+
+/* =================== COMMON HEADER / FOOTER =================== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9pt;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--ink-line);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
+.page-header .brand {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--maya-600);
+  letter-spacing: 0.5px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 10mm;
+  left: 16mm;
+  right: 16mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8.5pt;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--ink-line);
+  padding-top: 6px;
+}
+
+.page-footer .logo-mini {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--maya-600);
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* =================== TYPOGRAPHY =================== */
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  color: var(--maya-700);
+  margin: 0;
+  line-height: 1.25;
+}
+
+p { font-size: 10.5pt; line-height: 1.6; margin: 0 0 8px 0; color: var(--ink); }
+strong { color: var(--maya-700); font-weight: 600; }
+
+ul, ol { padding-left: 18px; margin: 6px 0; }
+li { font-size: 10.5pt; line-height: 1.55; margin-bottom: 4px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  margin: 6px 0;
+}
+th, td {
+  border: 1px solid var(--ink-line);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--maya-100);
+  color: var(--maya-700);
+  font-weight: 600;
+  font-family: 'Lora', serif;
+}
+tr:nth-child(even) td { background: rgba(232,243,236,0.4); }
+
+/* =================== SPECIAL COMPONENTS =================== */
+.case-euro {
+  background: linear-gradient(135deg, #FFF8EC 0%, #FCEFD7 100%);
+  border-left: 4px solid var(--honey-500);
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+.case-euro .label {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--honey-600);
+  font-size: 10pt;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.case-euro p { font-size: 10pt; }
+
+.ong-ba-bao {
+  background: var(--maya-50);
+  border: 1px dashed var(--maya-500);
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+  position: relative;
+}
+.ong-ba-bao .label {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--maya-600);
+  font-size: 10pt;
+  margin-bottom: 4px;
+}
+
+.callout {
+  background: var(--maya-50);
+  border-left: 4px solid var(--maya-500);
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 4px;
+  font-size: 10pt;
+  color: var(--maya-700);
+  font-style: italic;
+}
+
+.warning {
+  background: #FFF4E0;
+  border: 1px solid var(--honey-500);
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 6px;
+  font-size: 10pt;
+}
+.warning::before {
+  content: "⚠️ ";
+  font-size: 12pt;
+}
+
+.checklist li {
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 6px;
+}
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--maya-500);
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 18pt;
+  color: var(--maya-700);
+  margin-bottom: 4px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+.section-subtitle {
+  font-size: 11pt;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.phase-card {
+  border: 1px solid var(--ink-line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: white;
+}
+.phase-card h4 {
+  font-size: 12pt;
+  color: var(--maya-700);
+  margin-bottom: 4px;
+}
+.phase-card .meta {
+  font-size: 9pt;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+/* =================== PAGE 1 — COVER =================== */
+.cover {
+  background: linear-gradient(135deg, var(--maya-700) 0%, var(--maya-500) 60%, var(--maya-600) 100%);
+  color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: var(--honey-400);
+  opacity: 0.15;
+  border-radius: 50%;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  bottom: -150px; left: -100px;
+  width: 500px; height: 500px;
+  background: var(--honey-300);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+.cover-content { position: relative; z-index: 2; padding: 40mm 20mm; }
+
+.cover .badge {
+  display: inline-block;
+  background: var(--honey-500);
+  color: var(--maya-900);
+  font-size: 10pt;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.cover h1 {
+  font-size: 42pt;
+  color: white;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.cover .subtitle {
+  font-size: 14pt;
+  color: var(--honey-300);
+  font-style: italic;
+  margin-bottom: 50px;
+  font-family: 'Lora', serif;
+}
+.cover .author {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.cover .author-label {
+  font-size: 9pt;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--honey-300);
+  margin-bottom: 8px;
+}
+.cover .author-name {
+  font-size: 22pt;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: white;
+}
+.cover .author-meta {
+  font-size: 11pt;
+  color: rgba(255,255,255,0.85);
+  margin-top: 6px;
+}
+.cover .quote {
+  position: absolute;
+  bottom: 30mm;
+  left: 0; right: 0;
+  text-align: center;
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  font-family: 'Lora', serif;
+  font-size: 12pt;
+  padding: 0 20mm;
+}
+
+/* =================== UTILITY =================== */
+.text-maya { color: var(--maya-700); }
+.text-honey { color: var(--honey-600); }
+.bg-maya-50 { background: var(--maya-50); }
+.text-center { text-align: center; }
+.mt-2 { margin-top: 8px; } .mt-3 { margin-top: 12px; } .mt-4 { margin-top: 16px; }
+.mb-2 { margin-bottom: 8px; } .mb-3 { margin-bottom: 12px; } .mb-4 { margin-bottom: 16px; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Flowchart visual */
+.flowchart {
+  background: white;
+  border: 2px dashed var(--maya-200);
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'Be Vietnam Pro', monospace;
+  font-size: 9pt;
+  line-height: 1.6;
+  white-space: pre;
+  color: var(--maya-700);
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted var(--ink-line);
+}
+.faq-q {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: var(--maya-700);
+  font-size: 10.5pt;
+  margin-bottom: 4px;
+}
+.faq-a { font-size: 10pt; color: var(--ink); }
+
+/* =================== SVG ILLUSTRATIONS =================== */
+.illust { display: block; margin: 8px auto; }
+.illust-inline { display: inline-block; vertical-align: middle; }
+
+.leaf-bg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.06;
+  z-index: 0;
+}
+.leaf-bg.tl { top: -30px; left: -30px; }
+.leaf-bg.br { bottom: -30px; right: -30px; transform: rotate(180deg); }
+.leaf-bg.tr { top: -20px; right: -20px; transform: rotate(90deg); }
+
+.illust-cover-baby {
+  position: absolute;
+  z-index: 2;
+}
+
+.illust-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.icon-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--maya-100);
+  color: var(--maya-600);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.phase-card .icon-bubble {
+  background: var(--honey-100);
+  color: var(--honey-600);
+}
+
+.cta-card {
+  background: white;
+  border: 1px solid var(--ink-line);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--maya-500);
+}
+.cta-card h4 {
+  font-size: 11pt;
+  color: var(--maya-700);
+  margin-bottom: 4px;
+}
+.cta-card p { font-size: 9.5pt; margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1 — COVER                                                -->
+<!-- ============================================================ -->
+<section class="page cover">
+  <!-- Decorative stars -->
+  <svg style="position:absolute; top:40px; right:60px; z-index:2;" width="80" height="80" viewBox="0 0 80 80">
+    <g fill="#F4C97F" opacity="0.85">
+      <path d="M40 5 L43 15 L53 18 L43 21 L40 31 L37 21 L27 18 L37 15 Z"/>
+      <circle cx="65" cy="35" r="2"/>
+      <circle cx="15" cy="40" r="1.5"/>
+      <circle cx="60" cy="60" r="1.5"/>
+      <circle cx="20" cy="65" r="2"/>
+    </g>
+  </svg>
+
+  <!-- Sleeping baby on moon illustration -->
+  <svg style="position:absolute; top:50%; left:50%; transform:translate(-50%, -56%); z-index:1; opacity:0.18;" width="320" height="320" viewBox="0 0 320 320">
+    <!-- Crescent moon -->
+    <path d="M 160 60 A 100 100 0 1 0 220 240 A 80 80 0 1 1 160 60 Z" fill="#F0B963"/>
+    <!-- Z's -->
+    <text x="220" y="100" fill="#FCEFD7" font-family="Lora, serif" font-size="36" font-weight="700">Z</text>
+    <text x="245" y="80" fill="#FCEFD7" font-family="Lora, serif" font-size="26" font-weight="700">z</text>
+    <text x="265" y="65" fill="#FCEFD7" font-family="Lora, serif" font-size="18" font-weight="700">z</text>
+  </svg>
+
+  <!-- Leaves decoration -->
+  <svg style="position:absolute; bottom:40px; left:40px; z-index:2; opacity:0.6;" width="100" height="120" viewBox="0 0 100 120">
+    <g fill="#C9E2D3">
+      <path d="M50 10 Q30 30 35 60 Q40 80 50 90 Q60 80 65 60 Q70 30 50 10 Z"/>
+      <path d="M50 30 L50 90" stroke="#C9E2D3" stroke-width="1" fill="none"/>
+    </g>
+  </svg>
+  <svg style="position:absolute; bottom:60px; right:50px; z-index:2; opacity:0.5; transform:rotate(35deg);" width="80" height="100" viewBox="0 0 100 120">
+    <g fill="#F4C97F">
+      <path d="M50 10 Q30 30 35 60 Q40 80 50 90 Q60 80 65 60 Q70 30 50 10 Z"/>
+    </g>
+  </svg>
+
+  <div class="cover-content">
+    <div class="badge">Ebook miễn phí</div>
+    <h1>CẨM NANG<br>LUYỆN NGỦ</h1>
+    <div class="subtitle"><em>Hành trình Euro tự ngủ</em><br><span style="font-size:11pt; color:rgba(255,255,255,0.85); font-style:normal;">Cho con 0–12 tháng</span></div>
+    <div class="author">
+      <div class="author-label">Tác giả</div>
+      <div class="author-name">Dược sĩ Thiều Vân Anh</div>
+      <div class="author-meta">Mẹ Euro · 5 em bé trong nhà đã đi qua hành trình này</div>
+    </div>
+  </div>
+  <div class="quote">"Con ngủ ngon — mẹ mới lành lặn để yêu thương."</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 2 — LỜI NGỎ                                              -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Lời ngỏ</span>
+  </div>
+  <div class="content">
+    <!-- Illustration: Moon + Z's small -->
+    <svg class="illust" width="120" height="60" viewBox="0 0 120 60" style="margin: 0 auto 4px;">
+      <path d="M 30 30 A 18 18 0 1 0 38 50 A 14 14 0 1 1 30 30 Z" fill="#F0B963"/>
+      <text x="55" y="40" fill="#246349" font-family="Lora, serif" font-size="20" font-weight="700">Z</text>
+      <text x="72" y="28" fill="#246349" font-family="Lora, serif" font-size="14" font-weight="700">z</text>
+      <text x="85" y="20" fill="#246349" font-family="Lora, serif" font-size="10" font-weight="700">z</text>
+      <circle cx="100" cy="38" r="1.5" fill="#E8A33D"/>
+      <circle cx="108" cy="30" r="1" fill="#E8A33D"/>
+    </svg>
+
+    <h2 class="section-title">Đêm thứ 47 không ngủ liền 3 tiếng…</h2>
+    <p class="section-subtitle">Đó là 10 năm trước — với bé đầu lòng của tôi.</p>
+
+    <p><strong>10 năm trước</strong>, tôi ngồi trên giường, nước mắt rơi xuống tay bé đầu lòng lúc 3 giờ sáng. Đó là đêm thứ <strong>47</strong> tôi không được ngủ một mạch quá 3 tiếng. Bé khóc dạ đề, thức 7–8 lần mỗi đêm, mỗi lần phải bế ru gần 1 tiếng mới ngủ lại.</p>
+
+    <p>Tôi là dược sĩ. Tôi đã đọc hàng chục cuốn sách. Vậy mà tôi vẫn cảm thấy mình <em>bất lực</em> với một sinh linh nhỏ xíu — vì cả nhà ai cũng bảo "trẻ con khóc đêm là chuyện thường".</p>
+
+    <div class="callout">Đó là đêm tôi quyết định: <strong>thế hệ con sau của tôi sẽ KHÔNG đi qua những đêm này nữa.</strong></div>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">10 năm — và 5 em bé sau</h3>
+    <p>Sau bé đầu, tôi đọc — đọc rất nhiều. <strong>Harvey Karp (5S)</strong>, <strong>Tracy Hogg (EASY, 4S, PUPD)</strong>, các nghiên cứu về hormone melatonin và chu kỳ REM trẻ sơ sinh. Tôi áp dụng <strong>có hệ thống</strong> với từng em bé trong nhà — mỗi bé tôi học thêm một điều.</p>
+    <p>Đến Euro, tôi đã rút kinh nghiệm trọn vẹn. Tôi áp dụng đúng <strong>từ tuần đầu sau sinh</strong>.</p>
+
+    <div class="case-euro">
+      <div class="label">🌿 Kết quả với Euro</div>
+      <ul style="margin:4px 0;">
+        <li><strong>Từ tuần đầu:</strong> Euro không khóc đêm — chỉ dậy ti mẹ khi đói, ti xong ngủ tiếp ngay.</li>
+        <li><strong>6 tuần:</strong> con ngủ xuyên đêm, chỉ dậy ti mẹ khi đói.</li>
+        <li><strong>3 tháng:</strong> con ngủ xuyên đêm, chỉ dậy ti mẹ khi đói.</li>
+      </ul>
+    </div>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">Lời hứa của ebook này</h3>
+    <p>15 trang này gói gọn <strong>10 năm và 5 em bé</strong> tôi đã học — để bạn không phải đi qua đêm thứ 47 như tôi ngày xưa. Bạn có thể bắt đầu áp dụng <strong>ngay đêm nay</strong>.</p>
+    <p>Tôi viết bằng tư cách <strong>một dược sĩ</strong> (để bạn yên tâm về khoa học) và <strong>một người mẹ Việt</strong> (để bạn không thấy lạc lõng giữa lời "ông bà bảo").</p>
+
+    <p class="mt-3" style="font-style:italic; color:var(--maya-600); text-align:right;">— Thiều Vân Anh</p>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>2</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 3 — MỤC LỤC                                              -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Mục lục</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Mục lục & Cách dùng ebook</h2>
+    <p class="section-subtitle">Đọc 1 lượt — in templates — áp dụng theo tháng tuổi của con.</p>
+
+    <table>
+      <thead><tr><th style="width:50px;">Phần</th><th>Nội dung</th><th style="width:60px;">Trang</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Hiểu giấc ngủ của con (góc nhìn Dược sĩ)</td><td>4</td></tr>
+        <tr><td>2</td><td>Lịch sinh hoạt EASY</td><td>5</td></tr>
+        <tr><td>3</td><td>3 phương pháp dỗ ngủ cốt lõi (5S · 4S · PUPD)</td><td>6</td></tr>
+        <tr><td>4</td><td>Quy trình đặt cũi tự ngủ</td><td>7</td></tr>
+        <tr><td>5</td><td>Vỗ hỗ trợ chuyển giấc</td><td>8</td></tr>
+        <tr><td>6</td><td>4 giai đoạn luyện ngủ theo tháng tuổi</td><td>9</td></tr>
+        <tr><td>7</td><td>Đối thoại "Ông bà bảo" (văn hoá Việt)</td><td>10</td></tr>
+        <tr><td>📋</td><td>Templates: Nhật ký · Checklist · Lịch EASY</td><td>11–13</td></tr>
+        <tr><td>❓</td><td>FAQ — 10 câu hỏi mẹ thường hỏi</td><td>14</td></tr>
+        <tr><td>💛</td><td>Lời kết & Bước tiếp theo</td><td>15</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">4 bước dùng ebook hiệu quả nhất</h3>
+    <ol>
+      <li><strong>Đọc 1 lượt</strong> từ đầu đến cuối — đừng bỏ Phần 1 (khoa học là nền).</li>
+      <li><strong>In 3 trang Templates (11–13)</strong> ra giấy, dán lên tủ lạnh hoặc cạnh cũi.</li>
+      <li><strong>Áp dụng từng giai đoạn</strong> theo tháng tuổi của con — đừng nhảy bước.</li>
+      <li><strong>Đọc lại mỗi tháng</strong> — bạn sẽ thấy những điều bỏ sót lần đầu.</li>
+    </ol>
+
+    <div class="callout">💡 Nếu đang vội: đi thẳng đến <strong>Phần 6 (trang 9)</strong> — tìm độ tuổi của con, làm đúng việc tháng đó cần làm.</div>
+
+    <div class="warning">
+      <strong>Ebook này chia sẻ kinh nghiệm cá nhân + tổng hợp khoa học, không thay thế tư vấn bác sĩ Nhi.</strong> Nếu con có dấu hiệu bất thường (sốt, bỏ bú, lờ đờ, khóc thét bất thường), đưa con đến cơ sở y tế ngay. <strong>Tuyệt đối không</strong> áp dụng phương pháp luyện tự ngủ cho bé <strong>dưới 4 tháng</strong>. Giai đoạn 0–3m chỉ tập trung dỗ ngủ thuận tự nhiên (5S) và xây nếp ngày.
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>3</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 4 — PHẦN 1: HIỂU GIẤC NGỦ                                -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 1 · Khoa học giấc ngủ</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 1 — Hiểu giấc ngủ của con</h2>
+    <p class="section-subtitle">Góc nhìn Dược sĩ: vì sao các phương pháp hoạt động.</p>
+
+    <!-- Sleep cycle illustration (compact) -->
+    <svg class="illust" width="340" height="60" viewBox="0 0 400 75" style="margin: 2px auto 4px;">
+      <line x1="20" y1="45" x2="380" y2="45" stroke="#E4DFD3" stroke-width="1" stroke-dasharray="3,3"/>
+      <path d="M 20 45 Q 50 18 80 45 Q 110 72 140 45 Q 170 18 200 45 Q 230 72 260 45 Q 290 18 320 45 Q 350 72 380 45"
+            fill="none" stroke="#2E7D5B" stroke-width="2.5"/>
+      <circle cx="50" cy="22" r="3.5" fill="#F0B963"/>
+      <circle cx="170" cy="22" r="3.5" fill="#F0B963"/>
+      <circle cx="290" cy="22" r="3.5" fill="#F0B963"/>
+      <circle cx="110" cy="68" r="3.5" fill="#246349"/>
+      <circle cx="230" cy="68" r="3.5" fill="#246349"/>
+      <circle cx="350" cy="68" r="3.5" fill="#246349"/>
+      <line x1="80" y1="40" x2="80" y2="52" stroke="#D45A5A" stroke-width="2"/>
+      <line x1="200" y1="40" x2="200" y2="52" stroke="#D45A5A" stroke-width="2"/>
+      <line x1="320" y1="40" x2="320" y2="52" stroke="#D45A5A" stroke-width="2"/>
+      <text x="50" y="14" text-anchor="middle" fill="#C7821D" font-size="9" font-weight="600">REM</text>
+      <text x="110" y="62" text-anchor="middle" fill="#246349" font-size="9" font-weight="600">NREM</text>
+      <text x="80" y="62" text-anchor="middle" fill="#D45A5A" font-size="7">↑Bé thức nhẹ</text>
+      <text x="20" y="55" fill="#5A6B5F" font-size="8">0p</text>
+      <text x="105" y="55" fill="#5A6B5F" font-size="8">40p</text>
+      <text x="225" y="55" fill="#5A6B5F" font-size="8">80p</text>
+      <text x="345" y="55" fill="#5A6B5F" font-size="8">120p</text>
+    </svg>
+
+    <h3 class="text-maya" style="font-size:12pt; margin-top:4px;">Vì sao con tỉnh sau đúng 40 phút?</h3>
+    <p style="font-size:10pt; margin-bottom:4px;">Đây không phải con "kén ngủ" — là <strong>sinh học</strong>. Một chu kỳ giấc ngủ trẻ sơ sinh kéo dài <strong>40–50 phút</strong> (người lớn 90 phút): <strong>REM</strong> (giấc động, dễ tỉnh, chiếm 50%) và <strong>NREM</strong> (giấc sâu). Giữa 2 chu kỳ, bé thức nhẹ vài giây để "kiểm tra môi trường". Nếu khác lúc ngủ → <strong>bé khóc</strong>.</p>
+
+    <div class="callout" style="margin:4px 0;">Đây là lý do "bé chỉ ngủ 30–45 phút rồi dậy" — không phải lỗi của bạn.</div>
+
+    <h3 class="text-maya" style="font-size:12pt; margin-top:6px;">Hai hormone quyết định giấc ngủ</h3>
+    <table style="margin:4px 0;">
+      <thead><tr><th>Hormone</th><th>Vai trò</th><th>Khi nào tăng</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Melatonin</strong></td><td>Khiến bé buồn ngủ</td><td>Khi bóng tối — tiết từ 19h</td></tr>
+        <tr><td><strong>Cortisol</strong></td><td>Khiến bé tỉnh táo</td><td>Khi overtired (quá mệt) hoặc stress</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:10pt; margin-bottom:4px;"><strong>2 quy tắc vàng:</strong> ① Phòng ngủ <strong>tối</strong> = melatonin tiết nhiều = dễ vào giấc. ② Đặt bé ngủ <strong>sớm</strong> = tránh cortisol tăng vọt = ngủ sâu hơn.</p>
+    <div class="callout" style="margin:4px 0;">💡 <strong>Phản trực giác:</strong> Bé càng mệt thì càng <strong>khó ngủ</strong>, không phải càng dễ ngủ.</div>
+
+    <div class="callout" style="margin:6px 0;">📌 <strong>Cửa sổ thức (Wake Window)</strong> là khoảng thời gian bé có thể thức trước giấc ngủ kế tiếp — thay đổi theo tháng tuổi. <strong>Xem bảng chi tiết ở Trang 5 (Phần EASY).</strong></div>
+
+    <div class="ong-ba-bao" style="margin:8px 0 0;">
+      <div class="label">🌾 Ông bà bảo: "Con khóc là đói"</div>
+      <p style="margin:0; font-size:10pt;">80% trường hợp con khóc <strong>sau khi vừa bú không lâu</strong> là <strong>overtired</strong> chứ không phải đói. Trước khi cho bú lần nữa, hãy thử <strong>vỗ về và đưa đi ngủ</strong>.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>4</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 5 — PHẦN 2: EASY                                         -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 2 · Lịch sinh hoạt EASY</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 2 — Lịch sinh hoạt EASY</h2>
+    <p class="section-subtitle">Học theo EASY — nhưng không rập khuôn. Để mẹ canh được nhịp thức-ngủ ngày của con.</p>
+
+    <!-- EASY circular wheel illustration -->
+    <svg class="illust" width="200" height="120" viewBox="0 0 240 130">
+      <!-- Center circle -->
+      <circle cx="120" cy="65" r="22" fill="#FBF7F0" stroke="#2E7D5B" stroke-width="2"/>
+      <text x="120" y="70" text-anchor="middle" fill="#246349" font-family="Lora, serif" font-size="14" font-weight="700">EASY</text>
+      <!-- E (left) -->
+      <circle cx="50" cy="65" r="18" fill="#2E7D5B"/>
+      <text x="50" y="70" text-anchor="middle" fill="white" font-family="Lora, serif" font-size="16" font-weight="700">E</text>
+      <text x="50" y="100" text-anchor="middle" fill="#5A6B5F" font-size="8">Ăn</text>
+      <!-- A (top) -->
+      <circle cx="120" cy="20" r="18" fill="#F0B963"/>
+      <text x="120" y="26" text-anchor="middle" fill="#1A2E22" font-family="Lora, serif" font-size="16" font-weight="700">A</text>
+      <text x="120" y="55" text-anchor="middle" fill="#5A6B5F" font-size="8">Chơi</text>
+      <!-- S (right) -->
+      <circle cx="190" cy="65" r="18" fill="#246349"/>
+      <text x="190" y="70" text-anchor="middle" fill="white" font-family="Lora, serif" font-size="16" font-weight="700">S</text>
+      <text x="190" y="100" text-anchor="middle" fill="#5A6B5F" font-size="8">Ngủ</text>
+      <!-- Y (bottom) -->
+      <circle cx="120" cy="110" r="18" fill="#E8A33D"/>
+      <text x="120" y="116" text-anchor="middle" fill="white" font-family="Lora, serif" font-size="16" font-weight="700">Y</text>
+      <!-- Arrows -->
+      <path d="M 70 60 Q 90 40 100 30" stroke="#5A6B5F" stroke-width="1" fill="none" marker-end="url(#arr)"/>
+      <path d="M 140 30 Q 160 40 170 60" stroke="#5A6B5F" stroke-width="1" fill="none" marker-end="url(#arr)"/>
+      <path d="M 170 80 Q 160 100 140 105" stroke="#5A6B5F" stroke-width="1" fill="none" marker-end="url(#arr)"/>
+      <path d="M 100 105 Q 80 100 70 80" stroke="#5A6B5F" stroke-width="1" fill="none" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 z" fill="#5A6B5F"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <p style="font-size:10pt;">EASY là chu trình 4 bước Tracy Hogg đề xuất, lặp lại suốt ngày: <strong>E — Eat (Ăn)</strong> · <strong>A — Activity (Chơi)</strong> · <strong>S — Sleep (Ngủ)</strong> · <strong>Y — Your time (Mẹ)</strong>.</p>
+
+    <div class="callout">💡 <strong>Triết lý của tôi:</strong> Học theo EASY, nhưng <strong>KHÔNG rập khuôn</strong>. Mỗi bé là cá thể riêng. Tôi dùng EASY để <strong>canh thời gian thức (wake window) và bố trí các giấc ngủ ngày hợp lý</strong> — không bắt con đúng phút đúng giờ.</div>
+
+    <h3 class="text-maya mt-2" style="font-size:13pt;">Vì sao tách Eat khỏi Sleep (không bú-ngủ liền) là cốt lõi?</h3>
+    <p style="font-size:10pt;">Nếu bé luôn ngủ trên ti, bé sẽ <strong>liên kết "bú = ngủ"</strong>. Khi tỉnh giữa giấc, bé KHÔNG biết tự ngủ lại nếu thiếu ti. Đây là <strong>gốc rễ của 70% vấn đề ngủ đêm</strong>. Đó là điều quan trọng nhất tôi học được từ EASY.</p>
+
+    <h3 class="text-maya mt-2" style="font-size:13pt;">⏱ Bảng EASY theo tháng tuổi <span style="font-size:9pt; color:var(--ink-soft); font-weight:400;">(tham khảo "Nuôi con không phải là cuộc chiến")</span></h3>
+    <table>
+      <thead><tr><th>Tháng tuổi</th><th>Lịch EASY</th><th>Thời gian thức</th><th>Số nap</th><th>Giấc đêm liền</th></tr></thead>
+      <tbody>
+        <tr><td><strong>0–6 tuần</strong></td><td>EASY 3</td><td>45–60 phút</td><td>4–5 nap</td><td>3–4h</td></tr>
+        <tr><td><strong>6w–3 tháng</strong></td><td>EASY 3</td><td>1–1.5 giờ</td><td>4 nap</td><td>5–7h</td></tr>
+        <tr><td><strong>3–4 tháng</strong></td><td>EASY 3.5–4</td><td>1.5–2 giờ</td><td>3–4 nap</td><td>7–10h</td></tr>
+        <tr><td><strong>4–6 tháng</strong></td><td>EASY 4</td><td>2–2.5 giờ</td><td>3 nap</td><td>10–11h</td></tr>
+        <tr><td><strong>6–9 tháng</strong></td><td>EASY 2-3-4</td><td>2.5–3 giờ</td><td>2 nap</td><td>11–12h</td></tr>
+        <tr><td><strong>9–12 tháng</strong></td><td>EASY 2-3-4</td><td>3–4 giờ</td><td>2 nap</td><td>11–12h</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:9pt; color:var(--ink-soft); margin:2px 0;">💡 <strong>EASY 3</strong> = chu kỳ 3 tiếng (Ăn → Chơi → Ngủ → lặp). <strong>EASY 4</strong> = chu kỳ 4 tiếng. <strong>EASY 2-3-4</strong> = chu kỳ thức xen kẽ 2–3–4 tiếng theo giấc.</p>
+    <p style="font-size:9.5pt; color:var(--ink-soft);">📋 Lịch EASY <strong>theo giờ cụ thể</strong> → xem Template Trang 13.</p>
+
+    <div class="case-euro">
+      <div class="label">🌿 Hành trình của Euro</div>
+      <p style="font-size:10pt; margin:0;">Tôi áp dụng EASY <strong>linh hoạt từ tuần đầu</strong> — không bắt Euro đúng phút, chỉ canh <strong>cửa sổ thức</strong>. Tháng đầu cửa sổ thức 45–60 phút → tôi nhìn đồng hồ, khi gần 50 phút là <strong>đặt nằm giường</strong>, Euro tự rúc và ngủ. Sang 3 tháng, Euro vào nhịp EASY 3 giờ <strong>tự nhiên</strong> — không cần ép. Đến 6 tháng, mẹ chỉ cần nhìn đồng hồ là biết 10 phút nữa Euro cần ngủ.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>5</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 6 — PHẦN 3: 3 PHƯƠNG PHÁP DỖ NGỦ                         -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 3 · 3 phương pháp cốt lõi</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 3 — 3 phương pháp dỗ ngủ cốt lõi</h2>
+    <p class="section-subtitle">Tôi không chọn 1 phương pháp duy nhất. Tôi dùng đúng phương pháp cho đúng giai đoạn.</p>
+
+    <div class="phase-card" style="border-left:4px solid var(--maya-500);">
+      <h4>
+        <span class="icon-bubble">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 C 8 3 5 6 5 10 v6 c0 2 1.5 3 3 3 h8 c1.5 0 3-1 3-3 v-6 c0-4-3-7-7-7 z"/><circle cx="10" cy="10" r="1" fill="currentColor"/><circle cx="14" cy="10" r="1" fill="currentColor"/></svg>
+        </span>
+        1. Phương pháp 5S (Harvey Karp) — Dùng cho 0–4 tháng
+      </h4>
+      <div class="meta">5 bước mô phỏng môi trường trong bụng mẹ</div>
+      <table style="font-size:9pt;">
+        <tr><td><strong>Swaddle</strong> · Quấn</td><td>Quấn chặt thân, tay áp sát người</td></tr>
+        <tr><td><strong>Side/Stomach</strong> · Bế nghiêng/úp</td><td>Chỉ khi DỖ — không đặt ngủ úp</td></tr>
+        <tr><td><strong>Shush</strong> · Suỵt</td><td>"Sssss" sát tai, to bằng tiếng khóc của bé</td></tr>
+        <tr><td><strong>Swing</strong> · Lắc</td><td>Lắc nhẹ, biên độ 2–3cm, nhanh</td></tr>
+        <tr><td><strong>Suck</strong> · Mút</td><td>Ti mẹ, ti giả, ngón tay</td></tr>
+      </table>
+      <p style="font-size:9.5pt;margin-top:4px;"><strong>⚠️ Mục tiêu 5S là DỖ — không phải luyện tự ngủ.</strong></p>
+    </div>
+
+    <div class="phase-card" style="border-left:4px solid var(--maya-500);">
+      <h4>
+        <span class="icon-bubble">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="11" rx="2"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="7" y1="8" x2="7" y2="4"/><line x1="11" y1="8" x2="11" y2="4"/><line x1="15" y1="8" x2="15" y2="4"/><line x1="19" y1="8" x2="19" y2="4"/></svg>
+        </span>
+        2. Phương pháp 4S (Tracy Hogg) — Dùng cho 4 tháng trở lên
+      </h4>
+      <div class="meta">Đặt bé vào cũi/giường khi còn thức, để bé tự ngủ</div>
+      <table style="font-size:9pt;">
+        <tr><td><strong>Setting the stage</strong></td><td>Tối, mát (22–24°C), tiếng ồn trắng</td></tr>
+        <tr><td><strong>Swaddling</strong></td><td>Bé chưa lật → quấn; lật được → sleeping bag</td></tr>
+        <tr><td><strong>Sitting quietly</strong></td><td>3–5 phút, không nói chuyện, không lắc mạnh</td></tr>
+        <tr><td><strong>Shush-pat</strong></td><td>Đặt cũi khi buồn ngủ — vỗ mông + suỵt sát tai</td></tr>
+      </table>
+    </div>
+
+    <div class="phase-card" style="border-left:4px solid var(--maya-500);">
+      <h4>
+        <span class="icon-bubble">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4 L12 12"/><path d="M12 12 L16 8"/><path d="M12 12 L8 8"/><path d="M12 20 L12 12" stroke-dasharray="2,2"/><path d="M8 16 L12 12"/><path d="M16 16 L12 12"/></svg>
+        </span>
+        3. Bế lên–Đặt xuống (PUPD) — Dùng cho 4–8 tháng
+      </h4>
+      <div class="meta">Phương pháp trấn an có giới hạn — KHÔNG để bé khóc một mình</div>
+      <ul style="font-size:9.5pt;margin:4px 0;">
+        <li>Đặt bé vào cũi khi <strong>buồn ngủ + còn thức</strong>.</li>
+        <li>Bé khóc → <strong>bế lên dỗ đến khi NÍN</strong> (không phải đến khi ngủ).</li>
+        <li>Nín → <strong>đặt xuống ngay</strong>, dù bé vẫn thức.</li>
+        <li>Khóc tiếp → lặp lại. Lần đầu 20–80 lần. Sau 3–7 đêm: bé hiểu "cũi = nơi ngủ".</li>
+      </ul>
+    </div>
+
+    <h3 class="text-maya mt-2" style="font-size:13pt;">Bảng quyết định: Dùng phương pháp nào?</h3>
+    <table>
+      <thead><tr><th>Tình huống</th><th>Phương pháp</th></tr></thead>
+      <tbody>
+        <tr><td>Bé 0–3m, khóc dạ đề</td><td><strong>5S</strong> (đầy đủ 5 bước)</td></tr>
+        <tr><td>Bé 3–4m, đang ngủ trên tay</td><td><strong>5S</strong> + bắt đầu giảm dần lắc</td></tr>
+        <tr><td>Bé 4–6m, khó tự vào giấc</td><td><strong>4S</strong> (đặt khi còn thức)</td></tr>
+        <tr><td>Bé 4m+, đặt xuống là khóc dữ</td><td><strong>PUPD</strong></td></tr>
+        <tr><td>Bé 6m+, tỉnh giữa đêm khóc</td><td><strong>Vỗ chuyển giấc</strong> (Phần 5)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="case-euro">
+      <div class="label">🌿 Hành trình của Euro qua các phương pháp</div>
+      <p style="font-size:10pt;margin:0;"><strong>0–3.5m:</strong> Áp dụng 5S ngay từ tuần đầu — quấn + suỵt + ti giả khi cần. Euro <strong>không khóc đêm</strong>, chỉ dậy bú rồi ngủ tiếp. <strong>3.5–4m:</strong> Giảm dần quấn, chỉ còn suỵt + tiếng ồn trắng. <strong>4m:</strong> Chuyển sleeping bag, áp dụng 4S — đặt giường khi còn thức, Euro tự ngủ. <strong>Euro KHÔNG cần đến PUPD</strong> — vì nhờ áp dụng đúng từ đầu, bé chưa bao giờ có thói quen "bú-ngủ" hay "bế-ru". Đây chính là kết quả của 10 năm tôi học từ bé đầu.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>6</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 7 — PHẦN 4: QUY TRÌNH ĐẶT CŨI                            -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 4 · Quy trình đặt cũi/giường tự ngủ</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 4 — Quy trình đặt cũi/giường tự ngủ</h2>
+    <p class="section-subtitle">Phần "vàng" — nhiều mẹ thiếu chính bước này.</p>
+
+    <!-- Baby sleeping on bed illustration -->
+    <svg class="illust" width="180" height="70" viewBox="0 0 200 70">
+      <!-- Bed -->
+      <rect x="20" y="35" width="160" height="20" rx="4" fill="#FCEFD7" stroke="#E8A33D" stroke-width="1.5"/>
+      <rect x="20" y="30" width="160" height="10" rx="4" fill="#F4C97F"/>
+      <!-- Pillow -->
+      <rect x="30" y="32" width="35" height="14" rx="3" fill="white" stroke="#C7821D" stroke-width="1"/>
+      <!-- Baby head -->
+      <circle cx="48" cy="38" r="6" fill="#FFE0B8" stroke="#C7821D" stroke-width="0.8"/>
+      <path d="M44 38 Q46 41 48 41 Q50 41 52 38" stroke="#C7821D" stroke-width="0.8" fill="none"/>
+      <!-- Blanket -->
+      <path d="M55 40 Q90 32 165 50 L165 55 L55 55 Z" fill="#2E7D5B" opacity="0.9"/>
+      <!-- Z's -->
+      <text x="60" y="22" fill="#246349" font-family="Lora, serif" font-size="14" font-weight="700">Z</text>
+      <text x="72" y="14" fill="#246349" font-family="Lora, serif" font-size="10" font-weight="700">z</text>
+      <!-- Moon -->
+      <path d="M 160 12 A 6 6 0 1 0 163 22 A 4 4 0 1 1 160 12 Z" fill="#F0B963"/>
+      <circle cx="175" cy="20" r="1" fill="#E8A33D"/>
+      <circle cx="180" cy="14" r="1" fill="#E8A33D"/>
+    </svg>
+
+    <h3 class="text-maya" style="font-size:12pt; margin-top:4px;">Nhận biết dấu hiệu buồn ngủ SỚM</h3>
+    <p style="font-size:10pt; margin-bottom:4px;"><strong>Đừng đợi bé khóc mới đặt ngủ.</strong> Khóc = quá cửa sổ thức = cortisol tăng = khó ngủ.</p>
+    <div class="two-col" style="gap:8px;">
+      <div class="phase-card" style="border-left:4px solid #5BB87A; padding:6px 10px;">
+        <h4 style="font-size:9.5pt; margin-bottom:2px;">✅ SỚM — đặt ngủ NGAY</h4>
+        <p style="font-size:9pt; margin:0;">Dụi mắt · nhìn xa "lơ đãng" · ngáp · chậm phản ứng đồ chơi · quay đầu khỏi kích thích</p>
+      </div>
+      <div class="phase-card" style="border-left:4px solid #D45A5A; padding:6px 10px;">
+        <h4 style="font-size:9.5pt; margin-bottom:2px;">⚠️ MUỘN — đã quá rồi</h4>
+        <p style="font-size:9pt; margin:0;">Khóc cáu · cong người ra sau · cào mặt, dứt tóc · mắt đỏ hoe</p>
+      </div>
+    </div>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">Routine ngủ — 2 phiên bản: ĐÊM dài, NGÀY ngắn</h3>
+    <p style="font-size:10pt; margin-bottom:6px;">Cùng 1 trình tự, cùng 1 giờ, cùng 1 không gian. Lặp lại <strong>21 ngày → não bé hình thành phản xạ "đến lúc ngủ"</strong>. <strong>Routine đêm dài hơn</strong> để báo hiệu "đêm dài đến rồi"; <strong>routine ngày ngắn gọn</strong> để bé không quá hưng phấn rồi mới ngủ.</p>
+
+    <div class="two-col">
+      <div class="phase-card" style="border-left:4px solid #246349; background:#F0F8F3;">
+        <h4 style="font-size:11pt;">🌙 Routine ngủ ĐÊM (15–20 phút)</h4>
+        <div class="meta">Đầy đủ, có nghi thức báo "đêm dài đến rồi"</div>
+        <ol style="font-size:9.5pt; margin:4px 0; padding-left:18px;">
+          <li>Tắm/lau người ấm (tuỳ chọn)</li>
+          <li>Bú/ăn no (cách giờ ngủ 20–30p)</li>
+          <li>Massage nhẹ, mặc đồ ngủ + sleeping bag</li>
+          <li>Đọc sách/hát ru thì thầm</li>
+          <li>Tắt đèn 100%, bật tiếng ồn trắng</li>
+          <li>Ôm con 3 phút, không nói chuyện</li>
+          <li><strong>Đặt giường khi còn lim dim</strong> — không đã ngủ</li>
+        </ol>
+      </div>
+      <div class="phase-card" style="border-left:4px solid #F0B963; background:#FFF8EC;">
+        <h4 style="font-size:11pt;">☀️ Routine ngủ NGÀY (5–10 phút)</h4>
+        <div class="meta">Nhanh gọn, tránh kích thích bé thêm</div>
+        <ol style="font-size:9.5pt; margin:4px 0; padding-left:18px;">
+          <li>Thay tã sạch</li>
+          <li>Mặc sleeping bag (hoặc quấn nếu &lt;4m)</li>
+          <li>Bật tiếng ồn trắng</li>
+          <li>Kéo rèm tối <strong>mức 8/10</strong> (vẫn còn sáng nhẹ — bé phân biệt ngày)</li>
+          <li>Ôm 1–2 phút, không hát ru lâu</li>
+          <li><strong>Đặt giường khi còn thức</strong> — không đã ngủ</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout" style="font-size:10.5pt; font-weight:600; margin:6px 0;">"Buồn ngủ, chứ không phải đã ngủ." Nếu đặt xuống lúc đã ngủ trên tay, bé tỉnh giữa giấc sẽ hoảng — vì cảnh khác lúc ngủ.</div>
+
+    <div class="case-euro">
+      <div class="label">🌿 Hành trình của Euro — Routine từ tuần đầu</div>
+      <p style="font-size:10pt;margin:0;">Euro nằm giường (sát giường mẹ, có chắn an toàn). Từ <strong>đêm thứ 3 sau sinh</strong>, tôi áp dụng <strong>routine đêm</strong>: tắm ấm → bú no → mặc sleeping bag → tắt đèn → ôm 3 phút → đặt giường khi lim dim. Euro mở mắt vài giây rồi nhắm lại ngủ. <strong>Ban ngày tôi rút gọn routine còn 5 phút</strong> — chỉ thay tã, kéo rèm, bật tiếng ồn trắng và đặt. Cùng 1 logic — chỉ khác độ "nghi thức" để Euro <strong>phân biệt được ngày-đêm</strong>. <em>Không có khóc 1 tiếng, không có PUPD — chỉ có routine đúng từ ngày đầu.</em></p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>7</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 8 — PHẦN 5: VỖ CHUYỂN GIẤC                               -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 5 · Vỗ chuyển giấc</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 5 — Vỗ hỗ trợ chuyển giấc</h2>
+    <p class="section-subtitle">Giải pháp cho "Bé thức dậy đúng 30–45 phút".</p>
+
+    <!-- Patting hand + heartbeat illustration -->
+    <svg class="illust" width="280" height="70" viewBox="0 0 300 80" style="margin: 4px auto 8px;">
+      <!-- Hand silhouette -->
+      <g transform="translate(20,20)">
+        <path d="M 0 30 Q -5 15 5 8 L 8 5 Q 12 0 16 5 L 18 25 L 22 5 Q 26 0 30 5 L 32 25 L 36 8 Q 40 3 44 8 L 46 25 L 50 15 Q 54 12 56 18 L 56 40 Q 56 50 46 50 L 10 50 Q 0 50 0 40 Z"
+              fill="#FFE0B8" stroke="#C7821D" stroke-width="1.2"/>
+      </g>
+      <!-- Pat motion arcs -->
+      <path d="M 90 30 Q 95 20 100 30" stroke="#5A6B5F" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <path d="M 95 35 Q 100 25 105 35" stroke="#5A6B5F" stroke-width="1.5" fill="none" opacity="0.7"/>
+      <!-- Heartbeat / rhythm line -->
+      <path d="M 115 50 L 130 50 L 135 30 L 145 60 L 150 50 L 165 50 L 170 30 L 180 60 L 185 50 L 200 50 L 205 30 L 215 60 L 220 50 L 235 50"
+            stroke="#2E7D5B" stroke-width="2" fill="none"/>
+      <text x="175" y="20" text-anchor="middle" fill="#246349" font-family="Lora, serif" font-size="11" font-weight="700">60-80 nhịp/phút</text>
+      <text x="175" y="75" text-anchor="middle" fill="#5A6B5F" font-size="8">= nhịp tim của mẹ</text>
+      <!-- Sleeping baby Z -->
+      <text x="260" y="35" fill="#F0B963" font-family="Lora, serif" font-size="20" font-weight="700">Z</text>
+      <text x="278" y="22" fill="#F0B963" font-family="Lora, serif" font-size="14" font-weight="700">z</text>
+    </svg>
+
+    <h3 class="text-maya" style="font-size:12pt; margin-top:4px;">Vì sao bé chỉ ngủ được 40 phút rồi tỉnh?</h3>
+    <p style="font-size:10pt; margin-bottom:4px;">1 chu kỳ ngủ trẻ = <strong>40–50 phút</strong>. Giữa các chu kỳ, bé thức nhẹ. Nếu không tự chuyển được, bé khóc → mẹ vào dỗ → bé phụ thuộc mẹ. <strong>Vỗ hỗ trợ chuyển giấc</strong> giúp bé học tự đi tiếp vào chu kỳ thứ 2.</p>
+
+    <h3 class="text-maya" style="font-size:12pt; margin-top:6px;">Kỹ thuật vỗ Shush-Pat đúng cách (4 yếu tố)</h3>
+    <table style="margin:4px 0;">
+      <thead><tr><th>Yếu tố</th><th>Cách làm đúng</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Vị trí</strong></td><td>Vỗ <strong>MÔNG</strong> (vùng tã), KHÔNG vỗ lưng (gần phổi). Lực nhẹ + đều — bằng gõ ngón tay xuống bàn.</td></tr>
+        <tr><td><strong>Nhịp</strong></td><td><strong>60–80 nhịp/phút</strong> = nhịp tim mẹ khi nghỉ. Bé đã nghe nhịp này 9 tháng trong bụng → trấn an.</td></tr>
+        <tr><td><strong>Tiếng "Shhh"</strong></td><td>Sát tai bé (5–10cm). To bằng tiếng khóc ban đầu, <strong>giảm dần khi bé dịu</strong>. Đều, không ngắt quãng.</td></tr>
+        <tr><td><strong>Thời điểm</strong></td><td><strong>5–10 phút TRƯỚC khi bé thường tỉnh</strong> — không phải sau khi bé khóc. Ví dụ: bé ngủ 45p mới khóc → vỗ ở phút 35–40.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-maya mt-2" style="font-size:12pt;">3 lỗi mẹ hay mắc</h3>
+    <table style="margin:4px 0;">
+      <thead><tr><th>Lỗi</th><th>Hậu quả</th><th>Cách sửa</th></tr></thead>
+      <tbody>
+        <tr><td>Vỗ quá sớm (bé đang ngủ sâu)</td><td>Đánh thức bé</td><td>Vỗ trước chu kỳ tỉnh 5–10p thôi</td></tr>
+        <tr><td>Dừng vỗ quá sớm (bé vừa dịu)</td><td>Bé tỉnh hẳn</td><td>Vỗ thêm 2–3p sau khi bé dịu</td></tr>
+        <tr><td>Vỗ quá mạnh</td><td>Bé khó chịu, cong lưng</td><td>Lực bằng gõ ngón tay xuống bàn</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin:4px 0;">Khi bé khóc khẽ giữa giấc → <strong>đợi 2–3 phút trước</strong>. Nhiều khi bé tự chuyển được. Bé học "tự chuyển giấc" chỉ khi mẹ cho cơ hội.</div>
+
+    <div class="case-euro" style="margin-top:6px;">
+      <div class="label">🌿 Hành trình của Euro — Tháng thứ 4</div>
+      <p style="font-size:10pt;margin:0;">Euro mỗi giấc nap chỉ ngủ 35 phút. Tôi đặt báo thức ở phút 30, vào phòng nhẹ nhàng, vỗ mông nhịp 70/phút + suỵt. Euro nhăn mặt định khóc — tôi vỗ đều, suỵt to hơn. <strong>5 phút sau, Euro thở sâu — chuyển giấc thành công.</strong> Sau <strong>2 tuần</strong> lặp lại, Euro tự chuyển giấc không cần tôi vào — nap kéo dài <strong>1.5 giờ</strong>.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>8</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 9 — PHẦN 6: 4 GIAI ĐOẠN                                  -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 6 · 4 giai đoạn theo tháng tuổi</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 6 — 4 giai đoạn luyện ngủ theo tháng tuổi</h2>
+    <p class="section-subtitle">Roadmap rõ: tháng nào, làm gì.</p>
+
+    <!-- Growth stages illustration: sprout → small plant → tree → full tree -->
+    <svg class="illust" width="380" height="80" viewBox="0 0 400 90" style="margin: 4px auto 8px;">
+      <!-- Stage 1: sprout (0-3m) -->
+      <g transform="translate(50,60)">
+        <line x1="0" y1="20" x2="0" y2="5" stroke="#246349" stroke-width="2"/>
+        <path d="M 0 5 Q -8 0 -10 -5 Q -5 -8 0 -3" fill="#5BB87A"/>
+        <path d="M 0 5 Q 8 0 10 -5 Q 5 -8 0 -3" fill="#5BB87A"/>
+        <text x="0" y="35" text-anchor="middle" fill="#246349" font-size="9" font-weight="700">0–3m</text>
+        <text x="0" y="46" text-anchor="middle" fill="#5A6B5F" font-size="8">"Sống sót"</text>
+      </g>
+      <!-- Arrow -->
+      <path d="M 95 50 L 130 50" stroke="#C9E2D3" stroke-width="2" marker-end="url(#arrG)"/>
+      <!-- Stage 2: small plant (3-6m) -->
+      <g transform="translate(155,55)">
+        <line x1="0" y1="25" x2="0" y2="0" stroke="#246349" stroke-width="2"/>
+        <path d="M 0 5 Q -12 0 -15 -8 Q -10 -12 0 -5" fill="#5BB87A"/>
+        <path d="M 0 5 Q 12 0 15 -8 Q 10 -12 0 -5" fill="#5BB87A"/>
+        <path d="M 0 15 Q -8 12 -12 5 Q -6 0 0 8" fill="#2E7D5B"/>
+        <path d="M 0 15 Q 8 12 12 5 Q 6 0 0 8" fill="#2E7D5B"/>
+        <text x="0" y="40" text-anchor="middle" fill="#246349" font-size="9" font-weight="700">3–6m</text>
+        <text x="0" y="51" text-anchor="middle" fill="#5A6B5F" font-size="8">"Bước ngoặt"</text>
+      </g>
+      <!-- Arrow -->
+      <path d="M 195 50 L 230 50" stroke="#C9E2D3" stroke-width="2" marker-end="url(#arrG)"/>
+      <!-- Stage 3: medium tree (6-9m) -->
+      <g transform="translate(255,50)">
+        <rect x="-2" y="15" width="4" height="20" fill="#8B5A2B"/>
+        <circle cx="0" cy="5" r="14" fill="#2E7D5B"/>
+        <circle cx="-8" cy="12" r="10" fill="#5BB87A"/>
+        <circle cx="8" cy="12" r="10" fill="#5BB87A"/>
+        <text x="0" y="50" text-anchor="middle" fill="#246349" font-size="9" font-weight="700">6–9m</text>
+        <text x="0" y="61" text-anchor="middle" fill="#5A6B5F" font-size="8">"Củng cố"</text>
+      </g>
+      <!-- Arrow -->
+      <path d="M 295 50 L 330 50" stroke="#C9E2D3" stroke-width="2" marker-end="url(#arrG)"/>
+      <!-- Stage 4: full tree (9-12m) -->
+      <g transform="translate(355,45)">
+        <rect x="-3" y="15" width="6" height="25" fill="#8B5A2B"/>
+        <circle cx="0" cy="0" r="18" fill="#1A4A37"/>
+        <circle cx="-12" cy="10" r="13" fill="#2E7D5B"/>
+        <circle cx="12" cy="10" r="13" fill="#2E7D5B"/>
+        <circle cx="0" cy="-8" r="10" fill="#5BB87A"/>
+        <text x="0" y="55" text-anchor="middle" fill="#246349" font-size="9" font-weight="700">9–12m</text>
+        <text x="0" y="66" text-anchor="middle" fill="#5A6B5F" font-size="8">"Cố định"</text>
+      </g>
+      <defs>
+        <marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 z" fill="#C9E2D3"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <div class="phase-card" style="background:var(--maya-50);">
+      <h4>🌱 0–3 tháng — "Sống sót"</h4>
+      <div class="meta">Mục tiêu: Mẹ và con cùng sống sót, xây nền tảng.</div>
+      <ul style="font-size:10pt;margin:4px 0;">
+        <li>Áp dụng <strong>5S</strong> khi bé khóc.</li>
+        <li>Bắt đầu EASY 2.5h — không cứng nhắc.</li>
+        <li><strong>CHƯA luyện tự ngủ</strong> — bé sơ sinh cần được ôm.</li>
+        <li>Phòng tối ban đêm, sáng tự nhiên ban ngày → bé phân biệt ngày/đêm.</li>
+      </ul>
+      <p style="font-size:9.5pt;margin:0;"><strong style="color:#5BB87A;">✅ Đúng:</strong> Bé bú 8–12 lần/ngày, tăng cân, đêm có 1 giấc 3–4h. <strong style="color:#D45A5A;">🚩 Đỏ cờ:</strong> Bỏ bú, lờ đờ, sụt cân → đi khám.</p>
+    </div>
+
+    <div class="phase-card" style="background:var(--maya-50);">
+      <h4>🌳 3–6 tháng — "Bước ngoặt"</h4>
+      <div class="meta">Mục tiêu: Bắt đầu luyện tự ngủ thật sự.</div>
+      <ul style="font-size:10pt;margin:4px 0;">
+        <li>Chuyển sang <strong>EASY 3–3.5 giờ</strong>.</li>
+        <li><strong>4S</strong>: đặt cũi khi còn thức.</li>
+        <li>Cai dần ti giả/quấn (4–5m).</li>
+        <li><strong>Có thể bỏ bú đêm</strong> nếu bé tăng cân tốt.</li>
+      </ul>
+      <p style="font-size:9.5pt;margin:0;"><strong style="color:#5BB87A;">✅ Đúng:</strong> Đêm liền 6–8h, nap ngày ≥45 phút. <strong style="color:#D45A5A;">🚩 Đỏ cờ:</strong> Thức &gt;5 lần/đêm sau 5m, khóc thét bất thường.</p>
+    </div>
+
+    <div class="phase-card" style="background:var(--maya-50);">
+      <h4>🌲 6–9 tháng — "Củng cố"</h4>
+      <div class="meta">Mục tiêu: Cố định 2 nap ngày + đêm dài.</div>
+      <ul style="font-size:10pt;margin:4px 0;">
+        <li><strong>PUPD</strong> nếu bé chưa tự ngủ tốt.</li>
+        <li>Drop nap thứ 3 — còn 2 nap (sáng + chiều).</li>
+        <li>Chuẩn bị ứng phó <strong>sleep regression 8 tháng</strong> (lo lắng xa cách).</li>
+        <li>Bắt đầu lovey (gấu/khăn an toàn) để bé tự trấn an.</li>
+      </ul>
+      <p style="font-size:9.5pt;margin:0;"><strong style="color:#5BB87A;">✅ Đúng:</strong> Đêm 10–11h, 2 nap 1–1.5h. <strong style="color:#D45A5A;">🚩 Đỏ cờ:</strong> Ngáy to/ngưng thở khi ngủ — khám tai-mũi-họng.</p>
+    </div>
+
+    <div class="phase-card" style="background:var(--maya-50);">
+      <h4>🌳 9–12 tháng — "Cố định"</h4>
+      <div class="meta">Mục tiêu: Nếp ngủ ổn định cho cả năm tiếp theo.</div>
+      <ul style="font-size:10pt;margin:4px 0;">
+        <li>Đêm <strong>11–12 tiếng</strong> + 2 nap (sáng 30–45p, trưa 1.5–2h).</li>
+        <li>Chuẩn bị drop xuống 1 nap (thường 14–18m).</li>
+        <li>Routine trước ngủ cố định 100%.</li>
+      </ul>
+      <p style="font-size:9.5pt;margin:0;"><strong style="color:#5BB87A;">✅ Đúng:</strong> Bé tự nằm xuống cũi, không khóc, ngủ trong 5–10p. <strong style="color:#D45A5A;">🚩 Đỏ cờ:</strong> Đột nhiên thức nhiều — kiểm tra răng mọc, ốm.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>9</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 10 — PHẦN 7: ÔNG BÀ BẢO                                  -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Phần 7 · Đối thoại "Ông bà bảo"</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Phần 7 — Đối thoại "Ông bà bảo"</h2>
+    <p class="section-subtitle">Phần khác biệt nhất — không sách dịch nào có.</p>
+
+    <!-- Two speech bubbles dialogue illustration -->
+    <svg class="illust" width="320" height="60" viewBox="0 0 320 70" style="margin: 4px auto 8px;">
+      <!-- Left bubble - ông bà -->
+      <path d="M 10 10 Q 10 5 15 5 L 130 5 Q 135 5 135 10 L 135 35 Q 135 40 130 40 L 50 40 L 35 50 L 40 40 L 15 40 Q 10 40 10 35 Z"
+            fill="#FCEFD7" stroke="#E8A33D" stroke-width="1.5"/>
+      <text x="72" y="22" text-anchor="middle" fill="#C7821D" font-family="Lora, serif" font-size="9" font-weight="700">🌾 Ông bà bảo</text>
+      <text x="72" y="33" text-anchor="middle" fill="#5A6B5F" font-size="8">"Trẻ khóc là chuyện thường..."</text>
+
+      <!-- Right bubble - dược sĩ -->
+      <path d="M 185 10 Q 185 5 190 5 L 310 5 Q 315 5 315 10 L 315 35 Q 315 40 310 40 L 280 40 L 295 50 L 290 40 L 190 40 Q 185 40 185 35 Z"
+            fill="#E8F3EC" stroke="#2E7D5B" stroke-width="1.5"/>
+      <text x="250" y="22" text-anchor="middle" fill="#246349" font-family="Lora, serif" font-size="9" font-weight="700">💛 Dược sĩ trả lời</text>
+      <text x="250" y="33" text-anchor="middle" fill="#5A6B5F" font-size="8">"Mẹ ơi, con đang dạy bé tự dịu..."</text>
+    </svg>
+
+    <p style="font-size:10pt;">Mẹ Việt không chỉ luyện ngủ cho con. Mẹ Việt <strong>luyện ngủ giữa lời nói của cả nhà</strong>. Đây là phần tôi viết riêng cho bạn.</p>
+
+    <div class="ong-ba-bao">
+      <div class="label">🌾 "Để con khóc tội nghiệp, sau này con tự kỷ!"</div>
+      <p style="font-size:9.5pt;margin:4px 0;"><strong>Sự thật:</strong> Cry-it-out (để con khóc 1 mình hoàn toàn) — <strong>tôi KHÔNG khuyến khích</strong>. Phương pháp PUPD KHÔNG để con khóc 1 mình. Mẹ luôn ở bên, bế lên khi cần, đặt xuống để con học. Nghiên cứu 2012 (Pediatrics, ĐH Flinders Úc) theo dõi 326 trẻ — <strong>không thấy</strong> ảnh hưởng tâm lý sau 6 tuổi.</p>
+    </div>
+
+    <div class="ong-ba-bao">
+      <div class="label">🌾 "Phải bế ru con mới ngủ ngon!"</div>
+      <p style="font-size:9.5pt;margin:4px 0;"><strong>Câu trả lời:</strong> "Mẹ ơi, con không bỏ ôm bé đâu — con vẫn ôm rất nhiều khi bé thức. Nhưng con muốn dạy bé <strong>tự ngủ trong cũi</strong> để khi tỉnh giữa đêm bé không hoảng."</p>
+    </div>
+
+    <div class="ong-ba-bao">
+      <div class="label">🌾 "Con phải nặng đủ X kg mới luyện ngủ được!"</div>
+      <p style="font-size:9.5pt;margin:4px 0;"><strong>Sự thật:</strong> Cân nặng KHÔNG quyết định. <strong>Tuổi (từ 4 tháng)</strong> và sự sẵn sàng (đã có chu kỳ ngủ ổn định, bú ngày đủ) mới quyết định.</p>
+    </div>
+
+    <div class="ong-ba-bao">
+      <div class="label">🌾 "Con tôi ngày xưa cũng vậy mà có sao đâu!"</div>
+      <p style="font-size:9.5pt;margin:4px 0;"><strong>Phản biện nhẹ:</strong> "Đúng mẹ, các con ngày xưa lớn lên đều tốt. Nhưng con muốn cả mẹ lẫn bé đỡ vất vả hơn. Mẹ ngày xưa thức cả đêm là vì <strong>chưa biết cách</strong> thôi, không phải vì cách ấy là duy nhất."</p>
+    </div>
+
+    <div class="case-euro">
+      <div class="label">💛 5 câu trả lời thông minh cho gia đình</div>
+      <table style="font-size:9pt; margin:4px 0;">
+        <thead><tr><th>"Ông bà bảo"</th><th>Trả lời</th></tr></thead>
+        <tbody>
+          <tr><td>"Trẻ khóc là bình thường, kệ nó"</td><td>"Con không kệ ạ, con dạy bé tự dịu — khác nhau đấy."</td></tr>
+          <tr><td>"Sao không cho ti, ti là êm nhất"</td><td>"Bé bú no rồi mẹ, giờ là buồn ngủ thôi."</td></tr>
+          <tr><td>"Mẹ thấy quấn chật quá tội nghiệp"</td><td>"Quấn giúp bé thấy như trong bụng mẹ, bé ngủ ngon hơn ạ."</td></tr>
+          <tr><td>"Để đèn cho bé khỏi sợ"</td><td>"Bóng tối giúp bé tiết hormone ngủ ạ, mẹ yên tâm."</td></tr>
+          <tr><td>"Đặt cũi xa mẹ là thiệt thòi"</td><td>"Cũi sát giường mẹ thôi, bé vẫn nghe được hơi mẹ."</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">Không cần "thắng" trong cuộc tranh luận với gia đình. Chỉ cần <strong>kiên định nhẹ nhàng</strong> — và chứng minh bằng kết quả: con ngủ ngon, mẹ tỉnh táo, cả nhà êm.</div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>10</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 11 — TEMPLATE 1: NHẬT KÝ                                 -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Template #1 · Nhật ký giấc ngủ</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Template #1 — Nhật ký giấc ngủ</h2>
+    <p class="section-subtitle">In 7 bản — ghi 1 tuần — đọc pattern của con.</p>
+
+    <div style="display:flex; gap:12px; margin-bottom:8px; font-size:10pt;">
+      <div><strong>Ngày:</strong> ___ / ___ / ___</div>
+      <div><strong>Tháng tuổi bé:</strong> ___________</div>
+    </div>
+
+    <h3 class="text-maya" style="font-size:12pt;">Ban ngày</h3>
+    <table style="font-size:9pt;">
+      <thead><tr><th>Giờ thức</th><th>Giờ bú</th><th>Hoạt động</th><th>Giờ ngủ</th><th>Tg ngủ</th><th>Cách dỗ</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-maya mt-2" style="font-size:12pt;">Ban đêm</h3>
+    <table style="font-size:9pt;">
+      <thead><tr><th>Giờ ngủ đêm</th><th>Số lần tỉnh</th><th>Mỗi lần dỗ bao lâu</th><th>Cách dỗ</th><th>Giờ thức dậy sáng</th></tr></thead>
+      <tbody>
+        <tr style="height:24px;"><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">🔍 Hướng dẫn đọc nhật ký sau 7 ngày</h3>
+    <ol style="font-size:10pt;">
+      <li><strong>Tìm pattern giờ ngủ tự nhiên</strong> — bé hay ngủ vào giờ nào? → Cố định giờ đó.</li>
+      <li><strong>Tìm cửa sổ thức trung bình</strong> của bé → so với bảng Trang 4.</li>
+      <li><strong>Đếm số lần tỉnh đêm</strong> — có giảm dần không?</li>
+      <li><strong>Phương pháp dỗ nào hiệu quả nhất</strong> với bé? Tăng cường nó.</li>
+    </ol>
+
+    <div class="case-euro">
+      <div class="label">💛 Mẹo nhanh</div>
+      <p style="font-size:10pt;margin:0;">Sau 3 ngày ghi nhật ký, mẹ sẽ thấy <strong>2 khung giờ bé luôn buồn ngủ</strong> — đó chính là 2 nap "tự nhiên" của bé. Cố định 2 khung giờ này, không cần ép.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>11</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 12 — TEMPLATE 2: CHECKLIST + FLOWCHART                   -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Template #2 · Checklist & Flowchart</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Template #2 — Checklist + Flowchart</h2>
+    <p class="section-subtitle">Tra cứu nhanh khi đang loay hoay.</p>
+
+    <h3 class="text-maya" style="font-size:13pt;">✅ Checklist 10 bước trước khi đặt cũi</h3>
+    <ul class="checklist" style="columns:2; column-gap:18px;">
+      <li>Bé đã bú no (cách giờ ngủ ≥20 phút)</li>
+      <li>Tã sạch</li>
+      <li>Quấn/sleeping bag đúng kích cỡ</li>
+      <li>Tiếng ồn trắng đang bật (50dB)</li>
+      <li>Phòng tối (mức 8/10), 22–24°C</li>
+      <li>Cũi an toàn (không gối/chăn/đồ chơi)</li>
+      <li>Bé có dấu hiệu buồn ngủ (dụi mắt, ngáp)</li>
+      <li>Mẹ đã ôm 3 phút, không lắc mạnh</li>
+      <li>Mẹ bình tĩnh (bé cảm nhận được)</li>
+      <li><strong>Đặt xuống khi buồn ngủ — không phải đã ngủ</strong></li>
+    </ul>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">🔀 Flowchart: Bé khóc khi đặt cũi — phải làm gì?</h3>
+    <div class="flowchart">       BÉ KHÓC KHI ĐẶT XUỐNG
+                |
+                v
+    Khóc khẽ hay khóc thét?
+       /                  \
+   KHẼ                  THÉT
+    |                      |
+Đợi 2-3 phút         Vào ngay
+(có thể tự dịu)      Kiểm tra:
+    |                - Tã ướt?
+    v                - Đói?
+Vẫn khẽ?             - Đau (tã/quần)?
+    |                      |
+Vào vỗ shush-pat   Không có gì →
+2-3 phút           Bế lên dỗ đến NÍN
+    |                      |
+Dịu → ra           Đặt xuống NGAY
+    |                      |
+Tỉnh lại?          Khóc lại?
+    |                      |
+   LẶP              LẶP PUPD</div>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">📊 Khóc thế nào là khóc gì?</h3>
+    <table>
+      <thead><tr><th>Kiểu khóc</th><th>Có thể là</th><th>Hành động</th></tr></thead>
+      <tbody>
+        <tr><td>Khóc đều, ầm ầm</td><td>Đói</td><td>Cho bú</td></tr>
+        <tr><td>Khóc rồi ngừng, lặp</td><td>Mệt/muốn ngủ</td><td>Đặt ngủ</td></tr>
+        <tr><td>Khóc thét, cong người</td><td>Đau (đầy hơi, tã ướt)</td><td>Kiểm tra ngay</td></tr>
+        <tr><td>Khóc rền rĩ</td><td>Cần ôm/khó chịu nhẹ</td><td>Vỗ trấn an</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>12</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 13 — TEMPLATE 3: LỊCH EASY + WAKE WINDOW                 -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Template #3 · Lịch EASY + Wake Window</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Template #3 — Lịch EASY mẫu + Wake Window</h2>
+    <p class="section-subtitle">Áp dụng ngay không cần tính toán.</p>
+
+    <div class="two-col">
+      <div class="phase-card">
+        <h4>🌱 0–3 tháng (EASY 2.5h)</h4>
+        <table style="font-size:8.5pt;">
+          <tr><td>7:00</td><td>Thức + Bú</td></tr>
+          <tr><td>7:30</td><td>Tummy time, dạo</td></tr>
+          <tr><td>8:15</td><td>Đặt ngủ (nap 1)</td></tr>
+          <tr><td>9:30</td><td>Thức + Bú</td></tr>
+          <tr><td>10:45</td><td>Đặt ngủ</td></tr>
+          <tr><td>12:00</td><td>Thức + Bú</td></tr>
+          <tr><td>...</td><td>Lặp lại</td></tr>
+          <tr><td>19:00</td><td>Routine đêm + bú</td></tr>
+          <tr><td>19:30</td><td>Đặt ngủ đêm</td></tr>
+        </table>
+      </div>
+
+      <div class="phase-card">
+        <h4>🌳 3–6 tháng (EASY 3h)</h4>
+        <table style="font-size:8.5pt;">
+          <tr><td>7:00</td><td>Thức + Bú</td></tr>
+          <tr><td>8:30</td><td>Đặt nap 1</td></tr>
+          <tr><td>10:00</td><td>Thức + Bú + chơi</td></tr>
+          <tr><td>11:30</td><td>Đặt nap 2</td></tr>
+          <tr><td>13:00</td><td>Thức + Bú</td></tr>
+          <tr><td>14:30</td><td>Đặt nap 3</td></tr>
+          <tr><td>16:00</td><td>Thức + Bú</td></tr>
+          <tr><td>17:30</td><td>Nap 4 (ngắn)</td></tr>
+          <tr><td>19:00</td><td>Đặt ngủ đêm</td></tr>
+        </table>
+      </div>
+
+      <div class="phase-card">
+        <h4>🌲 6–9 tháng (4h — 2 nap)</h4>
+        <table style="font-size:8.5pt;">
+          <tr><td>7:00</td><td>Thức + Bú/ăn dặm</td></tr>
+          <tr><td>9:30</td><td>Đặt nap 1 (1h)</td></tr>
+          <tr><td>10:30</td><td>Thức + Bú</td></tr>
+          <tr><td>12:30</td><td>Ăn trưa</td></tr>
+          <tr><td>13:00</td><td>Đặt nap 2 (1.5h)</td></tr>
+          <tr><td>14:30</td><td>Thức + Bú</td></tr>
+          <tr><td>17:30</td><td>Ăn tối</td></tr>
+          <tr><td>18:30</td><td>Routine đêm</td></tr>
+          <tr><td>19:00</td><td>Đặt ngủ đêm</td></tr>
+        </table>
+      </div>
+
+      <div class="phase-card">
+        <h4>🌳 9–12 tháng (2 nap)</h4>
+        <table style="font-size:8.5pt;">
+          <tr><td>7:00</td><td>Thức + Bú/ăn sáng</td></tr>
+          <tr><td>9:30</td><td>Nap 1 (30–45p)</td></tr>
+          <tr><td>10:30</td><td>Thức + chơi/ăn</td></tr>
+          <tr><td>12:30</td><td>Ăn trưa</td></tr>
+          <tr><td>13:00</td><td>Nap 2 (1.5–2h)</td></tr>
+          <tr><td>15:00</td><td>Thức + bữa phụ</td></tr>
+          <tr><td>18:30</td><td>Ăn tối + routine</td></tr>
+          <tr><td>19:00</td><td>Đặt ngủ đêm</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="text-maya mt-3" style="font-size:13pt;">📏 Bảng Wake Window (in dán tủ lạnh)</h3>
+    <table>
+      <thead><tr><th>Tháng tuổi</th><th>Tối thiểu</th><th>Tối đa</th></tr></thead>
+      <tbody>
+        <tr><td>0–1 tháng</td><td>45 phút</td><td>60 phút</td></tr>
+        <tr><td>1–3 tháng</td><td>1 giờ</td><td>1.5 giờ</td></tr>
+        <tr><td>3–4 tháng</td><td>1.5 giờ</td><td>2 giờ</td></tr>
+        <tr><td>4–6 tháng</td><td>2 giờ</td><td>2.5 giờ</td></tr>
+        <tr><td>6–9 tháng</td><td>2.5 giờ</td><td>3.5 giờ</td></tr>
+        <tr><td>9–12 tháng</td><td>3 giờ</td><td>4 giờ</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">💡 Đặt ngủ ở <strong>giữa khoảng</strong> — không quá sớm (chưa mệt), không quá muộn (overtired).</div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>13</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 14 — FAQ                                                 -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>FAQ · 10 câu hỏi thường gặp</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">FAQ — 10 câu hỏi mẹ thường hỏi</h2>
+    <p class="section-subtitle">Câu trả lời ngắn gọn cho những lo lắng phổ biến nhất.</p>
+
+    <div class="faq-item">
+      <div class="faq-q">1. Bé khóc bao lâu thì ngưng được?</div>
+      <div class="faq-a">PUPD: bé khóc <strong>20–45 phút</strong> đêm đầu, giảm 50% mỗi đêm. Sau 5–7 đêm, tự ngủ trong &lt;10 phút. Nếu khóc thét quá 20 phút không dịu → bế lên dỗ lâu hơn rồi đặt lại.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">2. Mẹ có ngủ chung phòng với bé không?</div>
+      <div class="faq-a"><strong>Có</strong> — khuyến nghị 6 tháng đầu (AAP). Cũi riêng sát giường mẹ. Sau 6m có thể tách phòng.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">3. Đêm đầu khó khăn kéo dài bao lâu?</div>
+      <div class="faq-a"><strong>3–7 đêm</strong> "vất vả" rồi qua. Đêm 1–2 khóc 30–45p. Đêm 4–5 còn 5–10p. <strong>Quan trọng: không bỏ giữa chừng.</strong></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">4. Đang luyện thì con ốm — phải làm sao?</div>
+      <div class="faq-a"><strong>Tạm dừng.</strong> Ưu tiên ôm ấp, dỗ dành. Khỏi 3–5 ngày, quay lại đúng nơi đã dừng.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">5. Sleep regression 4 tháng — phải làm gì?</div>
+      <div class="faq-a">Não bé chuyển sang chu kỳ ngủ kiểu người lớn — <strong>bình thường</strong>, kéo dài 2–6 tuần. Giữ EASY, không đổi cách dỗ. Sau regression nhiều bé ngủ ngon hơn trước.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">6. Có nên cho ti giả không?</div>
+      <div class="faq-a"><strong>Có thể</strong>, đặc biệt 0–6m (giảm nguy cơ SIDS). Sau 6m cai dần. Tránh dùng như "cứu cánh tự động".</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">7. Đang ti mẹ có luyện được không?</div>
+      <div class="faq-a"><strong>Hoàn toàn được.</strong> Chỉ cần tách bú khỏi ngủ: bú khi thức, không bú khi lim dim. Bú trước routine ngủ ≥20 phút.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">8. Bé nửa đêm tỉnh dậy đói — phân biệt với "quen miệng" thế nào?</div>
+      <div class="faq-a"><strong>Đói thật:</strong> khóc đều, tìm ti, bú 5–10 phút mới ngủ lại. <strong>Quen miệng:</strong> khóc khẽ, bú vài hớp đã ngủ → cần cai. Sau 5m + tăng cân tốt → giảm dần cữ đêm.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">9. Bố không hợp tác — xử lý sao?</div>
+      <div class="faq-a">Cho bố đọc Phần 1 + Phần 7. <strong>Chia trách nhiệm</strong>: bố đảm nhiệm 1 routine cố định (ví dụ tắm + đặt nap 2). Bố tham gia → bố hiểu → bố ủng hộ.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">10. Bao lâu mới thấy kết quả?</div>
+      <div class="faq-a"><strong>3 đêm:</strong> khóc ít rõ rệt. <strong>7 đêm:</strong> tự ngủ trong 5–10 phút. <strong>14 đêm:</strong> thói quen ổn định. <strong>30 ngày:</strong> nếp ngủ "mặc định" — không cần cố gắng nữa.</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>14</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 15 — LỜI KẾT & CTA                                       -->
+<!-- ============================================================ -->
+<section class="page" style="background: linear-gradient(180deg, var(--cream) 0%, var(--maya-50) 100%);">
+  <div class="page-header">
+    <span class="brand">Thiều Vân Anh · Cẩm nang luyện ngủ</span>
+    <span>Lời kết</span>
+  </div>
+  <div class="content">
+    <h2 class="section-title">Lời nhắn từ chị 💛</h2>
+    <p style="font-size:11pt;">10 năm trước, tôi cũng ngồi đúng vị trí của bạn lúc này — ôm bé đầu lòng giữa đêm khuya, đọc từng dòng sách, hy vọng có lời giải cho những đêm dài.</p>
+
+    <p style="font-size:11pt;">Tôi muốn nói với bạn <strong>3 điều</strong>:</p>
+
+    <div class="phase-card" style="background:white;">
+      <h4 style="font-size:11pt;">1. Bạn không sai khi muốn con tự ngủ.</h4>
+      <p style="font-size:10pt;margin:0;">Đó không phải "lười nuôi con". Đó là dạy con một kỹ năng <strong>suốt đời</strong>.</p>
+    </div>
+
+    <div class="phase-card" style="background:white;">
+      <h4 style="font-size:11pt;">2. Bạn không cô đơn.</h4>
+      <p style="font-size:10pt;margin:0;">Hàng ngàn mẹ Việt đã đi qua hành trình này. Một số mất 5 ngày, một số mất 3 tháng — <strong>không ai sai</strong>.</p>
+    </div>
+
+    <div class="phase-card" style="background:white;">
+      <h4 style="font-size:11pt;">3. Bạn xứng đáng được ngủ.</h4>
+      <p style="font-size:10pt;margin:0;">Mẹ ngủ ngon = kiên nhẫn hơn = yêu con đúng cách hơn. Đây không phải sự ích kỷ.</p>
+    </div>
+
+    <h3 class="text-maya mt-3" style="font-size:14pt;">🌿 3 hành động tiếp theo cho bạn</h3>
+
+    <div class="cta-card">
+      <h4>1. Tham gia cộng đồng "Nghiện bầu nghiện con"</h4>
+      <p>Group Facebook nơi hàng ngàn mẹ Việt chia sẻ thật, hỏi đáp với tôi mỗi tuần. → Tìm group <strong>"Nghiện bầu nghiện con"</strong> trên Facebook.</p>
+    </div>
+
+    <div class="cta-card">
+      <h4>2. Theo dõi hành trình của Euro</h4>
+      <p>TikTok <strong>@Euro Mũi Tẹt</strong> · TikTok <strong>@Thiều Vân Anh</strong> — chia sẻ nuôi con khoa học hằng ngày.</p>
+    </div>
+
+    <div class="cta-card">
+      <h4>3. Khám phá sản phẩm Dr.Maya hỗ trợ giấc ngủ con</h4>
+      <p>Dầu Húng Chanh (giảm ho đêm) · <strong>Sáp ấm</strong> (giữ ấm bụng, ngực giúp bé ngủ sâu) · Dầu massage thư giãn · Tinh dầu khuếch tán phòng ngủ. → <strong>drmayastore.vn</strong></p>
+    </div>
+
+    <div class="callout text-center" style="margin-top:14px; font-weight:600; font-size:11pt;">
+      Nếu ebook này có ích cho bạn — hãy <strong>tag 1 người mẹ</strong> bạn nghĩ đang cần đến nó.<br>Mẹ nào cũng xứng đáng có một giấc ngủ trọn vẹn. 💛
+    </div>
+
+    <div style="text-align:center; margin-top:14px; font-size:9pt; color:var(--ink-soft);">
+      <p style="margin:2px 0;">Bản quyền © 2026 Dr.Maya · Dược sĩ Thiều Vân Anh</p>
+      <p style="margin:2px 0; font-style:italic;">Ebook miễn phí — vui lòng chia sẻ trọn vẹn, không cắt ghép.</p>
+      <p style="margin:2px 0;">📧 contact@thieuvananh.vn · 🌐 thieuvananh.vn</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="logo-mini">Dr.Maya</span>
+    <span>15</span>
+  </div>
+</section>
+
+</body>
+</html>

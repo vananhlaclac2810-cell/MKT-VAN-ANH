@@ -1,0 +1,10 @@
+[1:v]scale=320:320[wi];
+[2:v]scale=320:320[i1];
+[3:v]scale=320:320[i2];
+[4:v]scale=320:320[i3];
+[5:v]scale=320:320[i4];
+[0:v][wi]overlay=(W-w)/2:1070:enable='between(t,9.0,13.0)'[v1];
+[v1][i1]overlay=(W-w)/2:1070:enable='between(t,14.7,19.5)'[v2];
+[v2][i2]overlay=(W-w)/2:1070:enable='between(t,19.8,22.8)'[v3];
+[v3][i3]overlay=(W-w)/2:1070:enable='between(t,23.0,25.4)'[v4];
+[v4][i4]overlay=(W-w)/2:1070:enable='between(t,25.4,28.7)'[vout]

@@ -1,0 +1,295 @@
+﻿{
+    "facebookUrl":  "https://www.facebook.com/reel/1426275505657198",
+    "likers":  {
+                   "count":  161
+               },
+    "unified_reactors":  {
+                             "count":  161
+                         },
+    "total_comment_count":  4,
+    "cross_universe_feedback_info":  {
+                                         "ig_comment_count":  null,
+                                         "ig_boosted_comment_count":  0
+                                     },
+    "id":  "UzpfSTEwMDA2NDU2MDkxNDk2MjpWSzoxNDI2Mjc1NTA1NjU3MTk4",
+    "share_count_reduced":  "48",
+    "tracking":  "{\"top_level_post_id\":\"1426275505657198\",\"content_owner_id_new\":\"100064560914962\",\"page_id\":\"1089805927701159\",\"story_location\":12,\"story_attachment_style\":\"video_autoplay\",\"video_id\":\"1426275505657198\",\"ent_attachement_type\":\"VideoAttachment\",\"app_id\":\"6628568379\",\"page_insights\":{\"100064560914962\":{\"page_id\":\"100064560914962\",\"page_id_type\":\"page\",\"actor_id\":\"100064560914962\",\"dm\":{\"isShare\":0,\"originalPostOwnerID\":0,\"sharedMediaID\":0,\"sharedMediaOwnerID\":0},\"psn\":\"EntVideoCreationStory\",\"post_context\":{\"object_fbtype\":1,\"publish_time\":1771647352,\"story_name\":\"EntVideoCreationStory\",\"story_fbid\":[\"1426275505657198\"]},\"role\":1,\"sl\":12,\"targets\":[{\"actor_id\":\"100064560914962\",\"page_id\":\"100064560914962\",\"post_id\":\"1426275505657198\",\"role\":1,\"share_id\":0}]}},\"profile_id\":\"100064560914962\",\"actrs\":\"100064560914962\",\"tds_flgs\":3}",
+    "short_form_video_context":  {
+                                     "self_view_boost":  null,
+                                     "video":  {
+                                                   "id":  "1426275505657198",
+                                                   "first_frame_thumbnail":  "https://scontent-lga3-2.xx.fbcdn.net/v/t15.5256-10/637093828_1209091241377995_3969135467158984386_n.jpg?stp=dst-jpg_p960x960_tt6\u0026_nc_cat=101\u0026ccb=1-7\u0026_nc_sid=5fad0e\u0026_nc_ohc=_N_A8ubkensQ7kNvwFZISRa\u0026_nc_oc=AdoPlRirHTZbxEyTdlBH4jTQVLHIYA5ZWgKn57p3vflvOLhsKxSMmyXO4FJXXocaNnU\u0026_nc_zt=23\u0026_nc_ht=scontent-lga3-2.xx\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026oh=00_Af5pZ5N4eFn7_ApP8m_977oTws5d5wZSUb2rG-MvEgOICg\u0026oe=6A0864EE",
+                                                   "__typename":  "Video",
+                                                   "playable_duration_in_ms":  84635,
+                                                   "embeddable":  true,
+                                                   "owner":  {
+                                                                 "__typename":  "User",
+                                                                 "id":  "100064560914962"
+                                                             },
+                                                   "audio_availability":  "AVAILABLE"
+                                               },
+                                     "if_should_change_url_for_reels":  null,
+                                     "shareable_url":  "https://www.facebook.com/reel/1426275505657198",
+                                     "playback_video":  {
+                                                            "height":  1920,
+                                                            "width":  1080,
+                                                            "length_in_second":  84.635,
+                                                            "id":  "1426275505657198",
+                                                            "dubbed_track_mapping":  [
+
+                                                                                     ],
+                                                            "thumbnailImage":  {
+                                                                                   "uri":  "https://scontent-lga3-3.xx.fbcdn.net/v/t15.5256-10/638896358_2403516123413259_675905444846653592_n.jpg?stp=dst-jpg_s960x960_tt6\u0026_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=d2b52d\u0026_nc_ohc=dl_bQ0m3_IAQ7kNvwGoHOPi\u0026_nc_oc=Adr05kma26KyuXrA603fvtg5achimnbXGqS-jJFdTYNPtSsmg1MAhnUIzyI3dpgutLo\u0026_nc_zt=23\u0026_nc_ht=scontent-lga3-3.xx\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026oh=00_Af569HWtvhojn-TYHrqEDefJG7AfEfR3hx7dFyKz648xlA\u0026oe=6A08928C"
+                                                                               },
+                                                            "animated_image_caption":  null,
+                                                            "broadcaster_origin":  null,
+                                                            "broadcast_id":  null,
+                                                            "broadcast_status":  null,
+                                                            "is_live_streaming":  false,
+                                                            "is_live_trace_enabled":  false,
+                                                            "is_looping":  false,
+                                                            "is_video_broadcast":  false,
+                                                            "is_podcast_video":  false,
+                                                            "loop_count":  0,
+                                                            "is_spherical":  false,
+                                                            "is_spherical_enabled":  true,
+                                                            "unsupported_browser_message":  null,
+                                                            "pmv_metadata":  null,
+                                                            "latency_sensitive_config":  null,
+                                                            "live_playback_instrumentation_configs":  null,
+                                                            "is_ncsr":  false,
+                                                            "permalink_url":  "https://www.facebook.com/reel/1426275505657198/",
+                                                            "captions_url":  null,
+                                                            "seo_web_crawler_lookaside_url":  null,
+                                                            "dash_prefetch_experimental":  [
+                                                                                               "1877508482891674v",
+                                                                                               "1372528944700515a"
+                                                                                           ],
+                                                            "video_available_captions_locales":  [
+
+                                                                                                 ],
+                                                            "video_status_type":  "OK",
+                                                            "can_use_oz":  true,
+                                                            "min_quality_preference":  null,
+                                                            "spherical_video_fallback_urls":  null,
+                                                            "comet_video_player_nextgendash_availability":  "AVAILABLE",
+                                                            "videoDeliveryLegacyFields":  {
+                                                                                              "dash_manifest_xml_string":  "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cMPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011\" minBufferTime=\"PT2S\" type=\"static\" mediaPresentationDuration=\"PT84.636734S\" FBTagsetUsed=\"gen2hwbasicvp9\" FBManifestIdentifier=\"FgAYDmdlbjJod2Jhc2ljdnA5GVbUrb7flP63BMqb8Y/rz7oExvGKw9mT8AS0/vuisOXVBobpkdLexuwGIhgQYXVkaW9fYWFjX2xuX3ZiciI2ngEUABIA\"\u003e\u003cPeriod id=\"0\" duration=\"PT84.636734S\"\u003e\u003cAdaptationSet id=\"0\" contentType=\"video\" frameRate=\"15360/512\" subsegmentAlignment=\"true\" par=\"9:16\" FBUnifiedUploadResolutionMos=\"360:73.2,480:73.2,720:73.2,1080:73.2\"\u003e\u003cRepresentation id=\"1249013633895274v\" bandwidth=\"1772602\" codecs=\"vp09.00.40.08.00.01.01.01.00\" mimeType=\"video/mp4\" sar=\"1:1\" FBEncodingTag=\"dash_vp9-basic-gen2_1080p\" FBPlaybackResolutionMos=\"0:100,360:95.4,480:94.5,720:92.1,1080:86.8\" FBPlaybackResolutionMosConfidenceLevel=\"high\" FBPlaybackResolutionCsvqm=\"0:100,360:98.56,480:98.09,720:97.1,1080:95.5\" width=\"1080\" height=\"1920\" FBQualityClass=\"hd\" FBQualityLabel=\"1080p\"\u003e\u003cBaseURL\u003ehttps://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQPGXgU18EGG7EAremFEPw9MBUszKPzzizBpQcIoiOduhZTGXV4nP0Mztez4sojs0N6HwB-1BqaE-6Rhyp0r-sBeaGpb7breKPJkhSmk7C6mJQ.mp4?_nc_cat=105\u0026amp;_nc_sid=9ca052\u0026amp;_nc_ht=video-lga3-2.xx.fbcdn.net\u0026amp;_nc_ohc=54sRFtDnBE0Q7kNvwGxYYjM\u0026amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfdnA5LWJhc2ljLWdlbjJfMTA4MHAiLCJ2aWRlb19pZCI6MTQyNjI3NTUwNTY1NzE5OCwib2lsX3VybGdlbl9hcHBfaWQiOjAsImNsaWVudF9uYW1lIjoidW5rbm93biIsInhwdl9hc3NldF9pZCI6ODg2NDIzMjIwODI0MTczLCJhc3NldF9hZ2VfZGF5cyI6NzksInZpX3VzZWNhc2VfaWQiOjEwMTIyLCJkdXJhdGlvbl9zIjo4NCwiYml0cmF0ZSI6MTI2MTc1OCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9\u0026amp;ccb=17-1\u0026amp;_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026amp;_nc_ss=7c289\u0026amp;_nc_zt=28\u0026amp;oh=00_Af6iFSmm9DlGlNoB5jJYFI1YKO56YVN3bXoB1yUeOlbwCA\u0026amp;oe=6A0881D3\u003c/BaseURL\u003e\u003cSegmentBase indexRange=\"818-1053\" timescale=\"15360\" FBFirstSegmentRange=\"1054-786808\"\u003e\u003cInitialization range=\"0-817\"/\u003e\u003c/SegmentBase\u003e\u003c/Representation\u003e\u003cRepresentation id=\"1877508482891674v\" bandwidth=\"350192\" codecs=\"vp09.00.21.08.00.01.01.01.00\" mimeType=\"video/mp4\" sar=\"1:1\" FBEncodingTag=\"dash_vp9-basic-gen2_360p\" FBPlaybackResolutionMos=\"0:100,360:76.4,480:71.7,720:63.1,1080:53.2\" FBPlaybackResolutionMosConfidenceLevel=\"high\" FBPlaybackResolutionCsvqm=\"0:100,360:90.8,480:86.3,720:78.3,1080:68.1\" width=\"360\" height=\"640\" FBQualityClass=\"sd\" FBQualityLabel=\"360p\"\u003e\u003cBaseURL\u003ehttps://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQMHxdWWb0BQ2OPgusc2dInY_4zZl7Pc_SkUSkjTTHVdYFI3tbfdmIOtpYuSrIoJG3HpX02_abnmjjpTSaqRnjrHFkwicY9ST2wnQAfrzOp1lg.mp4?_nc_cat=102\u0026amp;_nc_sid=9ca052\u0026amp;_nc_ht=video-lga3-3.xx.fbcdn.net\u0026amp;_nc_ohc=-57yKIqqr_EQ7kNvwF9mifv\u0026amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfdnA5LWJhc2ljLWdlbjJfMzYwcCIsInZpZGVvX2lkIjoxNDI2Mjc1NTA1NjU3MTk4LCJvaWxfdXJsZ2VuX2FwcF9pZCI6MCwiY2xpZW50X25hbWUiOiJ1bmtub3duIiwieHB2X2Fzc2V0X2lkIjo4ODY0MjMyMjA4MjQxNzMsImFzc2V0X2FnZV9kYXlzIjo3OSwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjg0LCJiaXRyYXRlIjoyMzE0NzUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D\u0026amp;ccb=17-1\u0026amp;_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026amp;_nc_ss=7c289\u0026amp;_nc_zt=28\u0026amp;oh=00_Af40YZm5v0qDzJOc8CndLbCf8qzBsbXYNxeUwmQCH2mwCw\u0026amp;oe=6A089666\u003c/BaseURL\u003e\u003cSegmentBase indexRange=\"818-1053\" timescale=\"15360\" FBFirstSegmentRange=\"1054-130037\"\u003e\u003cInitialization range=\"0-817\"/\u003e\u003c/SegmentBase\u003e\u003c/Representation\u003e\u003cRepresentation id=\"1254814843283173v\" bandwidth=\"796821\" codecs=\"vp09.00.30.08.00.01.01.01.00\" mimeType=\"video/mp4\" sar=\"1:1\" FBEncodingTag=\"dash_vp9-basic-gen2_540p\" FBPlaybackResolutionMos=\"0:100,360:89,480:84.2,720:76.9,1080:70.9\" FBPlaybackResolutionMosConfidenceLevel=\"high\" FBPlaybackResolutionCsvqm=\"0:100,360:96.2,480:94.7,720:91.2,1080:85.5\" width=\"540\" height=\"960\" FBQualityClass=\"sd\" FBQualityLabel=\"540p\"\u003e\u003cBaseURL\u003ehttps://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQNdEbak643upCfV3cMKikPCRY3hfyafMTUPq8U87qe_19N1dNSnWSHj0TgynnVYRFtiwN4Kc-y1NR7eoZHdmw5TV2OKoCKpdQGWBf_0juYyqw.mp4?_nc_cat=108\u0026amp;_nc_sid=9ca052\u0026amp;_nc_ht=video-lga3-1.xx.fbcdn.net\u0026amp;_nc_ohc=YqP2NQkmp3YQ7kNvwHujItR\u0026amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfdnA5LWJhc2ljLWdlbjJfNTQwcCIsInZpZGVvX2lkIjoxNDI2Mjc1NTA1NjU3MTk4LCJvaWxfdXJsZ2VuX2FwcF9pZCI6MCwiY2xpZW50X25hbWUiOiJ1bmtub3duIiwieHB2X2Fzc2V0X2lkIjo4ODY0MjMyMjA4MjQxNzMsImFzc2V0X2FnZV9kYXlzIjo3OSwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjg0LCJiaXRyYXRlIjo1NDcyMjEsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D\u0026amp;ccb=17-1\u0026amp;_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026amp;_nc_ss=7c289\u0026amp;_nc_zt=28\u0026amp;oh=00_Af7oy9ERABFPFrlGqSL05gFlcpwD_8oSoRFOKVSuQf6m4g\u0026amp;oe=6A086BCC\u003c/BaseURL\u003e\u003cSegmentBase indexRange=\"818-1053\" timescale=\"15360\" FBFirstSegmentRange=\"1054-330043\"\u003e\u003cInitialization range=\"0-817\"/\u003e\u003c/SegmentBase\u003e\u003c/Representation\u003e\u003cRepresentation id=\"1927559665302083v\" bandwidth=\"1322359\" codecs=\"vp09.00.31.08.00.01.01.01.00\" mimeType=\"video/mp4\" sar=\"1:1\" FBEncodingTag=\"dash_vp9-basic-gen2_720p\" FBPlaybackResolutionMos=\"0:100,360:94.5,480:92.1,720:87.2,1080:77.6\" FBPlaybackResolutionMosConfidenceLevel=\"high\" FBPlaybackResolutionCsvqm=\"0:100,360:98.09,480:97.1,720:95.6,1080:91.8\" width=\"720\" height=\"1280\" FBQualityClass=\"hd\" FBQualityLabel=\"720p\"\u003e\u003cBaseURL\u003ehttps://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQN0Y0-XRJqj9PwOyyiQAQhzmObEHbJjzMXhDOYn2aWLNo1JJdgE9-tHyeu1fNe2CxPmyAIHPtc2tVT6mcOP6V4SekCKy7HNqIhtSOcOvEpPSA.mp4?_nc_cat=105\u0026amp;_nc_sid=9ca052\u0026amp;_nc_ht=video-lga3-2.xx.fbcdn.net\u0026amp;_nc_ohc=Z-6jGojmAEIQ7kNvwFzRrt7\u0026amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfdnA5LWJhc2ljLWdlbjJfNzIwcCIsInZpZGVvX2lkIjoxNDI2Mjc1NTA1NjU3MTk4LCJvaWxfdXJsZ2VuX2FwcF9pZCI6MCwiY2xpZW50X25hbWUiOiJ1bmtub3duIiwieHB2X2Fzc2V0X2lkIjo4ODY0MjMyMjA4MjQxNzMsImFzc2V0X2FnZV9kYXlzIjo3OSwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjg0LCJiaXRyYXRlIjo5MTc5MTQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D\u0026amp;ccb=17-1\u0026amp;_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026amp;_nc_ss=7c289\u0026amp;_nc_zt=28\u0026amp;oh=00_Af4AXvg6RGuheL50jqLN529AcAJy8PPbo_vOZrCJ0YJQOw\u0026amp;oe=6A087A53\u003c/BaseURL\u003e\u003cSegmentBase indexRange=\"818-1053\" timescale=\"15360\" FBFirstSegmentRange=\"1054-564106\"\u003e\u003cInitialization range=\"0-817\"/\u003e\u003c/SegmentBase\u003e\u003c/Representation\u003e\u003c/AdaptationSet\u003e\u003cAdaptationSet id=\"1\" contentType=\"audio\" subsegmentStartsWithSAP=\"1\" subsegmentAlignment=\"true\"\u003e\u003cRepresentation id=\"1372528944700515a\" bandwidth=\"76991\" codecs=\"mp4a.40.5\" mimeType=\"audio/mp4\" FBAvgBitrate=\"76991\" audioSamplingRate=\"44100\" FBEncodingTag=\"dash_ln_heaac_vbr3_audio\"\u003e\u003cAudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/\u003e\u003cBaseURL\u003ehttps://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m412/AQP89llEebzpAMjE8WSm7puYHh8tfNWmdYV8H8ToSs-iczMCvJj8SpZVxG6rQuT-LF14To_YPEJY7xMQLH0OAs-wKNhXZx-Ga0yZKDs.mp4?_nc_cat=111\u0026amp;_nc_sid=9ca052\u0026amp;_nc_ht=video-lga3-2.xx.fbcdn.net\u0026amp;_nc_ohc=piqnh-Tq3icQ7kNvwEwBEEo\u0026amp;efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjoxNDI2Mjc1NTA1NjU3MTk4LCJvaWxfdXJsZ2VuX2FwcF9pZCI6MCwiY2xpZW50X25hbWUiOiJ1bmtub3duIiwieHB2X2Fzc2V0X2lkIjo4ODY0MjMyMjA4MjQxNzMsImFzc2V0X2FnZV9kYXlzIjo3OSwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjg0LCJiaXRyYXRlIjo3NzEyMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9\u0026amp;ccb=17-1\u0026amp;_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026amp;_nc_ss=7c289\u0026amp;_nc_zt=28\u0026amp;oh=00_Af418KLqfgMvGkpqlm7nSUqj1hpt0PvJRctw0O7pZFwcZw\u0026amp;oe=6A0889F8\u003c/BaseURL\u003e\u003cSegmentBase indexRange=\"824-1371\" timescale=\"44100\" FBFirstSegmentRange=\"1372-21146\"\u003e\u003cInitialization range=\"0-823\"/\u003e\u003c/SegmentBase\u003e\u003c/Representation\u003e\u003c/AdaptationSet\u003e\u003c/Period\u003e\u003c/MPD\u003e\n",
+                                                                                              "dash_manifest_url":  "https://www.facebook.com/dash_mpd_debug.mpd?v=1426275505657198\u0026dummy=.mpd",
+                                                                                              "browser_native_sd_url":  "https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m412/AQMypwgHVWrbXupSBh9N_Ov43c7wUWdPO23Ka0z-qsGyQ-rk7RmfC7xA0XOCdw8V56DIzvgG_TDU__KF7uwNK9eluC3EgovRitU7x8gIwg.mp4?_nc_cat=105\u0026_nc_sid=8bf8fe\u0026_nc_ht=video-lga3-2.xx.fbcdn.net\u0026_nc_ohc=54AY11dyK58Q7kNvwHVbs4b\u0026efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6ODg2NDIzMjIwODI0MTczLCJhc3NldF9hZ2VfZGF5cyI6NzksInZpX3VzZWNhc2VfaWQiOjEwMTIyLCJkdXJhdGlvbl9zIjo4NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9\u0026ccb=17-1\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026_nc_zt=28\u0026oh=00_Af6BVtkvPSvaYPQkHN0TRSQMj-4yS8uTPuTG6I2ivNWVlg\u0026oe=6A087639\u0026bitrate=295870\u0026tag=sve_sd",
+                                                                                              "browser_native_hd_url":  "https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQP_FRe2T0HU_BUqrzEYR9nSHUCNWAxWwsGKfUcasiF6FuxshDJ2oqh_pXX2jHcOiU8DJvDpC1PE5TUAKohKkMVOgMBp0-EP0qim24ZqrLDG-A.mp4?_nc_cat=101\u0026_nc_sid=5e9851\u0026_nc_ht=video-lga3-2.xx.fbcdn.net\u0026_nc_ohc=-fdyn0hH3xQQ7kNvwGP2Jxs\u0026efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjg4NjQyMzIyMDgyNDE3MywiYXNzZXRfYWdlX2RheXMiOjc5LCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6ODQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D\u0026ccb=17-1\u0026vs=d13bf0e819d7d5bf\u0026_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC84MzQ5MDQ3MDM2OTM4OEZGMUFGRkMxNDYzMDA1MEU5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzJGNEYyMzNGNEUzQ0U3MUI3RERBQUIxNzgyNDVEQ0E0X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbaoZXTz4yTAxUCKAJDMywXQFUogxJul40YGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026_nc_zt=28\u0026oh=00_Af5DDMyxEeHriIuimDzUHgOz_ZiYhM8UJg2b4LKUTyy1WQ\u0026oe=6A088F83\u0026bitrate=996880\u0026tag=dash_h264-basic-gen2_720p",
+                                                                                              "id":  "1426275505657198"
+                                                                                          },
+                                                            "videoDeliveryResponseFragment":  null,
+                                                            "is_gaming_video":  false,
+                                                            "is_latency_menu_enabled":  false,
+                                                            "fbls_tier":  null,
+                                                            "is_latency_sensitive_broadcast":  false,
+                                                            "video_player_shaka_performance_logger_init":  {
+                                                                                                               "__typename":  "VideoPlayerShakaPerformanceLoggerInit",
+                                                                                                               "__module_operation_useVideoPlayerShakaPerformanceLoggerRelayImpl_video":  {
+                                                                                                                                                                                              "__dr":  "useVideoPlayerShakaPerformanceLoggerRelayImpl_init$normalization.graphql"
+                                                                                                                                                                                          },
+                                                                                                               "__module_component_useVideoPlayerShakaPerformanceLoggerRelayImpl_video":  {
+                                                                                                                                                                                              "__dr":  "VideoPlayerShakaPerformanceLogger"
+                                                                                                                                                                                          }
+                                                                                                           },
+                                                            "video_player_shaka_performance_logger_should_sample":  false,
+                                                            "video_player_shaka_performance_logger_init2":  {
+                                                                                                                "__typename":  "VideoPlayerShakaPerformanceLoggerInit",
+                                                                                                                "__module_operation_useVideoPlayerShakaPerformanceLoggerBuilder_video":  {
+                                                                                                                                                                                             "__dr":  "useVideoPlayerShakaPerformanceLoggerBuilder_init$normalization.graphql"
+                                                                                                                                                                                         },
+                                                                                                                "__module_component_useVideoPlayerShakaPerformanceLoggerBuilder_video":  {
+                                                                                                                                                                                             "__dr":  "VideoPlayerShakaPerformanceLoggerBuilder"
+                                                                                                                                                                                         },
+                                                                                                                "per_session_sampling_rate":  null
+                                                                                                            },
+                                                            "autoplay_gating_result":  "all_page_organic_allowed",
+                                                            "viewer_autoplay_setting":  "default_autoplay",
+                                                            "can_autoplay":  true,
+                                                            "drm_info":  "{\"video_license_uri_map\":{},\"graph_api_video_license_uri\":null,\"fairplay_cert\":null,\"widevine_cert\":\"CsECCAMSEBcFuRfMEgSGiwYzOi93KowYgrSCkgUijgIwggEKAoIBAQCZ7Vs7Mn2rXiTvw7YqlbWYUgrVvMs3UD4GRbgU2Ha430BRBEGtjOOtsRu4jE5yWl5KngeVKR1YWEAjp+GvDjipEnk5MAhhC28VjIeMfiG\\/+\\/7qd+EBnh5XgeikX0YmPRTmDoBYqGB63OBPrIRXsTeo1nzN6zNwXZg6IftO7L1KEMpHSQykfqpdQ4IY3brxyt4zkvE9b\\/tkQv0x4b9AsMYE0cS6TJUgpL+X7r1gkpr87vVbuvVk4tDnbNfFXHOggrmWEguDWe3OJHBwgmgNb2fG2CxKxfMTRJCnTuw3r0svAQxZ6ChD4lgvC2ufXbD8Xm7fZPvTCLRxG88SUAGcn1oJAgMBAAE6FGxpY2Vuc2Uud2lkZXZpbmUuY29tEoADrjRzFLWoNSl\\/JxOI+3u4y1J30kmCPN3R2jC5MzlRHrPMveoEuUS5J8EhNG79verJ1BORfm7BdqEEOEYKUDvBlSubpOTOD8S\\/wgqYCKqvS\\/zRnB3PzfV0zKwo0bQQQWz53ogEMBy9szTK\\/NDUCXhCOmQuVGE98K\\/PlspKkknYVeQrOnA+8XZ\\/apvTbWv4K+drvwy6T95Z0qvMdv62Qke4XEMfvKUiZrYZ\\/DaXlUP8qcu9u\\/r6DhpV51Wjx7zmVflkb1gquc9wqgi5efhn9joLK3\\/bNixbxOzVVdhbyqnFk8ODyFfUnaq3fkC3hR3f0kmYgI41sljnXXjqwMoW9wRzBMINk+3k6P8cbxfmJD4\\/Paj8FwmHDsRfuoI6Jj8M76H3CTsZCZKDJjM3BQQ6Kb2m+bQ0LMjfVDyxoRgvfF\\/\\/M\\/EEkPrKWyU2C3YBXpxaBquO4C8A0ujVmGEEqsxN1HX9lu6c5OMm8huDxwWFd7OHMs3avGpr7RP7DUnTikXrh6X0\"}",
+                                                            "p2p_settings":  null,
+                                                            "audio_settings":  null,
+                                                            "captions_settings":  null,
+                                                            "broadcast_low_latency_config":  null,
+                                                            "audio_availability":  "AVAILABLE",
+                                                            "muted_segments":  [
+
+                                                                               ],
+                                                            "spherical_video_renderer":  null,
+                                                            "preferred_thumbnail":  {
+                                                                                        "image":  {
+                                                                                                      "uri":  "https://scontent-lga3-3.xx.fbcdn.net/v/t15.5256-10/638896358_2403516123413259_675905444846653592_n.jpg?stp=dst-jpg_s960x960_tt6\u0026_nc_cat=104\u0026ccb=1-7\u0026_nc_sid=be8305\u0026_nc_ohc=dl_bQ0m3_IAQ7kNvwGoHOPi\u0026_nc_oc=Adr05kma26KyuXrA603fvtg5achimnbXGqS-jJFdTYNPtSsmg1MAhnUIzyI3dpgutLo\u0026_nc_zt=23\u0026_nc_ht=scontent-lga3-3.xx\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026oh=00_Af569HWtvhojn-TYHrqEDefJG7AfEfR3hx7dFyKz648xlA\u0026oe=6A08928C"
+                                                                                                  },
+                                                                                        "image_preview_payload":  "ABgq1l2x/MFAyOTUK39vuwCN2evOPz6f0qS6j3wsq8EjH6jP6Vkf2cpGBwQcZz29cdKV7FJXN0kN8xAz9aKhs4mWBVf72P8A9X6UUyRJruOHIPzN6D+pqqkgjUykcHGPf2rNibc5ZjjBz371aLgjG846febt/wABqJtppJX762KgpSTeyexek1JEUEAn29PxorOLBpOo+b/63qP5iirs2k11/Ayvytxk0miFYmcblxjOOTUUyuoI6L1wTzn8P1pysdjc9xUMn3fwqyUkV5dwAcnO7P149aKdcdD+FFMqyP/Z",
+                                                                                        "id":  "2403516120079926"
+                                                                                    },
+                                                            "video_imf_data":  null,
+                                                            "playback_language_on_comet":  null,
+                                                            "warning_screen_renderer":  null,
+                                                            "cix_screen":  null
+                                                        },
+                                     "video_owner":  {
+                                                         "__typename":  "User",
+                                                         "id":  "100064560914962",
+                                                         "__isActor":  "User",
+                                                         "name":  "Bác Sĩ Sữa Mẹ Anh Thy",
+                                                         "enable_reels_tab_deeplink":  true,
+                                                         "is_verified":  false,
+                                                         "url":  "https://www.facebook.com/TuVanSuaMe",
+                                                         "displayPicture":  {
+                                                                                "uri":  "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-1/326781065_595054679053372_4722575872472339324_n.jpg?stp=cp0_dst-jpg_s80x80_tt6\u0026_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=2d3e12\u0026_nc_ohc=39HtCy9PKgsQ7kNvwEvZ2NN\u0026_nc_oc=Adp-gFH88SCo3Cf8cO2TriUVvE0MejdYPSsS1BwcI-JE33UXj19XEZkMTq-GD0BYX-c\u0026_nc_zt=24\u0026_nc_ht=scontent-lga3-3.xx\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026oh=00_Af5y0Ddbj595y36nkSMmrFTgzc9MAvQlfeE-7hrF_zPLKw\u0026oe=6A08797D"
+                                                                            },
+                                                         "subscribe_status":  "CANNOT_SUBSCRIBE",
+                                                         "delegate_page":  {
+                                                                               "id":  "1089805927701159",
+                                                                               "uri_token":  "TuVanSuaMe",
+                                                                               "woodhenge_creator_info":  null
+                                                                           }
+                                                     },
+                                     "fb_shorts_reshare_context":  {
+                                                                       "is_reshare":  false,
+                                                                       "reshare_creator":  {
+                                                                                               "__typename":  "User",
+                                                                                               "__isActor":  "User",
+                                                                                               "id":  "100064560914962",
+                                                                                               "name":  "Bác Sĩ Sữa Mẹ Anh Thy",
+                                                                                               "enable_reels_tab_deeplink":  true,
+                                                                                               "is_verified":  false,
+                                                                                               "url":  "https://www.facebook.com/TuVanSuaMe"
+                                                                                           }
+                                                                   },
+                                     "remix_info":  {
+                                                        "is_remixable":  true,
+                                                        "status":  "DISABLED"
+                                                    },
+                                     "video_owner_type":  "FACEBOOK_USER",
+                                     "soundtrack_info":  {
+                                                             "id":  "33810653665248705",
+                                                             "type":  "CUSTOM_AUDIO"
+                                                         },
+                                     "track_title":  "Bác Sĩ Sữa Mẹ Anh Thy · Original audio",
+                                     "music_album_art_uri":  "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-1/326781065_595054679053372_4722575872472339324_n.jpg?stp=cp0_dst-jpg_s64x64_tt6\u0026_nc_cat=102\u0026ccb=1-7\u0026_nc_sid=2d3e12\u0026_nc_ohc=39HtCy9PKgsQ7kNvwEvZ2NN\u0026_nc_oc=Adp-gFH88SCo3Cf8cO2TriUVvE0MejdYPSsS1BwcI-JE33UXj19XEZkMTq-GD0BYX-c\u0026_nc_zt=24\u0026_nc_ht=scontent-lga3-3.xx\u0026_nc_gid=cTeSRdtB5mm7IVOWDKWEqw\u0026_nc_ss=7c289\u0026oh=00_Af4bI98tkfMqA8VIQn6GqrtH2FxBJ_aDNYyCQZlnQ3C2LQ\u0026oe=6A08797D",
+                                     "is_original_audio_on_facebook":  true
+                                 },
+    "encrypted_tracking":  "AZb8puTMeVIlIQOjG5enIQCfIVug-_F0N6-_otfMQ3UenBT9odVJ29bH8xCiy1GJeNLLkD7NAP28skG4BQx6qc9fPnxRAlyc_R-kHWkzfILdl8VBF178v26Tfw1AMDcbWDDFTIoDyeAOB3X96tRVMPUqC7qrqRQyqPOEGdbfsRWOPvwC-KLOhwEuAhqq7iofFzc9GByvNxFPj-8-YlRIBTvYUx4vvMCBNEDNnDNGhsEpcgr28PP0ZkmIYMxF2PTAC3q8oLLTvgU7TEc_IYIf6MQ0NtUSALZvSlrf_GLPZODokeuzFwC6iAZy7dr8ol9lGlAzZabII4jG-TijxJgHWcs5V2O52EBgXnIf6B55LQ6U8iFmXrpH10dke1gQ6_hTO4P5mpRBWLZxrViVUC4eFdSeVx4wC1-1Pr6Ze8H-xWUiHZE3pfTx0xuSOAQKI89_LzobCUmiclyCbQ9hbzkWRR6OoU7PFVGikA0GU68L2tYqBEv1CWJE-_fUPNXbmQNqIRb-qtHDtBBNs46yTchjTAXViQxXMcErdHI2frgpjBN9TZSYK_BhmjGxxh5YjY8VrZi_0uiiSP69v3fs-Z9GGWIYYpVMmw8Q-dwaeQD5wsEjyrxV34vTsJM2i7lZIvRHg7aVI_1x518adoZbWFkXK_nNNlMaQLsGDe2Svd-eSv-C840LAvRUzYn6SbIfIHFAcO_qdwvOmpjnwdAFMbEpQ9ZBi5RkZvR6z7-dIPTAW96N7THvdo-ute0o17dT4E9VAkCt1zF7ViW06ZT6XDXQixaAtqyohPB0g-ki2NiEcPsLKPYXo8ObUz9EBSC5McNJDQMy0ikfnkjx6gVCkfK-QGccv888wu26GxCAVWwrzmEJU9K5KFJWqkTux539hMDhKw_WFK1X4TI7zeDbX6L2d-BVppVwATD-Fp5Qcl5elz-dQUeniNL8fYvg0XmQweBOhCQ_97eWDEKKuUoo09vOUn-Czu-5KjTIfhr8l7L9gQoiXKky3Le-BMGlgLTcKuOAEFD2imJxeTlSh9tASQynnbuGFbd9rCQWtQPcqIq99E-AdIrVK8dQQYwLgb_j6tudydTjxyBzMTPeIz7klQ-a9k82VMtyGAKX2k6V5-YIcblIRrcMrIqxxJHWHjQDx2HiEh-6AB5LXmcT_8yt2RNAQXGO",
+    "encrypted_click_tracking":  "AZYM-XGrkOcoTCKWwFcuqHho4Ye_f1LYFrEQs7wPt0aIFwkhPlU1vxgH0l6Efs0ReN9B5phmZKu5Kpmcsce-E0bzyvqoIvNT5URxsm_dhRGM6Ui0KiMlszGyySwXUZb8t3y9TAyW8_I1qi-jI4e2SGLLqKp1Ra2uS4dwD4hnSdxAOA",
+    "click_tracking_linkshim_cb":  "AUBO2kk9Die5o9eMQ8YFSrp-QAvCw8FqsndvlIpXY_cB3ANLCgoAaFmyi02Q7Sy3xXRTMUwC44srkeOFg-2J_qOmTrN30vVC4fcyPM96d4pt5Tbh0EkggAw_KOXD_vxPi-bb2nejgs3ZM4SzA7xtdoQfPRUmkIGVPnhMxp2i9ZHpt0eLl0sC",
+    "privacy_scope":  {
+                          "description":  "Public",
+                          "label":  "Public",
+                          "display_label":  "Public",
+                          "icon_image":  {
+                                             "height":  36,
+                                             "scale":  3,
+                                             "uri":  "https://static.xx.fbcdn.net/rsrc.php/yH/r/ckVwrvbnQCI.webp",
+                                             "width":  36
+                                         },
+                          "privacy_scope_renderer":  null
+                      },
+    "post_id":  "1331901888971829",
+    "creation_time":  1771647381,
+    "unpublished_content_type":  "PUBLISHED",
+    "media_attribution_elements":  [
+
+                                   ],
+    "attachments":  [
+                        {
+                            "media":  {
+                                          "__typename":  "Video",
+                                          "is_made_with_meta_ai_app":  false,
+                                          "__isNode":  "Video",
+                                          "id":  "1426275505657198",
+                                          "video_delivery_response":  {
+                                                                          "transcript_urls":  [
+
+                                                                                              ],
+                                                                          "id":  "1426275505657198"
+                                                                      }
+                                      },
+                            "call_to_action_renderer":  null
+                        }
+                    ],
+    "save_info":  {
+                      "viewer_save_state":  "NOT_SAVED"
+                  },
+    "video":  {
+                  "id":  "1426275505657198",
+                  "owner":  {
+                                "__typename":  "User",
+                                "id":  "100064560914962"
+                            }
+              },
+    "transparency_ad_info":  {
+                                 "menu_label":  "Ad info",
+                                 "should_display_ad_info":  false
+                             },
+    "feedback":  {
+                     "associated_group":  null,
+                     "id":  "ZmVlZGJhY2s6MTMzMTkwMTg4ODk3MTgyOQ=="
+                 },
+    "message":  {
+                    "text":  "Hút sữa cữ đêm sao cho đỡ mệt ?  #bssuameanhthy #hutsua #Kichsuahieuqua #suame",
+                    "ranges":  [
+                                   {
+                                       "offset":  33,
+                                       "length":  14,
+                                       "entity":  {
+                                                      "__typename":  "Hashtag",
+                                                      "__isEntity":  "Hashtag",
+                                                      "mobileUrl":  "https://m.facebook.com/hashtag/bssuameanhthy",
+                                                      "url":  "https://www.facebook.com/hashtag/bssuameanhthy?__eep__=6",
+                                                      "id":  "3690783120944165",
+                                                      "__isNode":  "Hashtag"
+                                                  }
+                                   },
+                                   {
+                                       "offset":  48,
+                                       "length":  7,
+                                       "entity":  {
+                                                      "__typename":  "Hashtag",
+                                                      "__isEntity":  "Hashtag",
+                                                      "mobileUrl":  "https://m.facebook.com/hashtag/hutsua",
+                                                      "url":  "https://www.facebook.com/hashtag/hutsua?__eep__=6",
+                                                      "id":  "669688093055424",
+                                                      "__isNode":  "Hashtag"
+                                                  }
+                                   },
+                                   {
+                                       "offset":  56,
+                                       "length":  15,
+                                       "entity":  {
+                                                      "__typename":  "Hashtag",
+                                                      "__isEntity":  "Hashtag",
+                                                      "mobileUrl":  "https://m.facebook.com/hashtag/kichsuahieuqua",
+                                                      "url":  "https://www.facebook.com/hashtag/kichsuahieuqua?__eep__=6",
+                                                      "id":  "860903830682600",
+                                                      "__isNode":  "Hashtag"
+                                                  }
+                                   },
+                                   {
+                                       "offset":  72,
+                                       "length":  6,
+                                       "entity":  {
+                                                      "__typename":  "Hashtag",
+                                                      "__isEntity":  "Hashtag",
+                                                      "mobileUrl":  "https://m.facebook.com/hashtag/suame",
+                                                      "url":  "https://www.facebook.com/hashtag/suame?__eep__=6",
+                                                      "id":  "118790488323551",
+                                                      "__isNode":  "Hashtag"
+                                                  }
+                                   }
+                               ]
+                },
+    "contextualElementShortFormContext":  {
+                                              "video_label":  null
+                                          },
+    "facebookId":  "1426275505657198",
+    "pageName":  "TuVanSuaMe",
+    "pageAdLibrary":  {
+                          "id":  "1089805927701159",
+                          "uri_token":  "TuVanSuaMe",
+                          "woodhenge_creator_info":  null
+                      }
+}

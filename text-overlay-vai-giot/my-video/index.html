@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #1a1a1a;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        color: #ffffff;
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .bg-image {
+        position: absolute;
+        inset: 0;
+        background-image: url("sua-me.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.55;
+        transform-origin: center;
+      }
+
+      .bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.35) 0%,
+          rgba(0, 0, 0, 0.15) 35%,
+          rgba(0, 0, 0, 0.15) 65%,
+          rgba(0, 0, 0, 0.45) 100%
+        );
+      }
+
+      .content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 220px 80px 0;
+        gap: 36px;
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #ffe066;
+        color: #1a1a1a;
+        font-size: 44px;
+        font-weight: 800;
+        padding: 18px 44px;
+        border-radius: 999px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        white-space: nowrap;
+      }
+
+      .title {
+        font-size: 96px;
+        font-weight: 800;
+        line-height: 1.12;
+        color: #ffffff;
+        max-width: 920px;
+        text-shadow:
+          0 4px 24px rgba(0, 0, 0, 0.55),
+          0 2px 8px rgba(0, 0, 0, 0.5);
+        margin-top: 12px;
+      }
+
+      .title .accent {
+        text-decoration: underline;
+        text-decoration-thickness: 6px;
+        text-underline-offset: 12px;
+        text-decoration-color: #ffe066;
+      }
+
+      .title .num {
+        color: #ffe066;
+        font-weight: 900;
+      }
+
+      .caption-cta {
+        font-size: 38px;
+        font-style: italic;
+        font-weight: 500;
+        color: #d8d8d8;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+        margin-top: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="8"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="scene-1"
+        class="clip scene"
+        data-start="0"
+        data-duration="8"
+        data-track-index="1"
+      >
+        <div class="bg-image" id="bg"></div>
+        <div class="bg-overlay"></div>
+
+        <div class="content">
+          <div class="badge" id="badge">TỪ VÀI GIỌT LÊN 300ML/ 1 CỮ</div>
+          <div class="title" id="title">
+            Chỉ nhờ <span class="num" id="num">3</span>
+            <span class="accent" id="accent">THAY ĐỔI</span>
+          </div>
+          <div class="caption-cta" id="cta">(Đọc caption)</div>
+        </div>
+      </div>
+
+      <audio
+        id="bgm"
+        data-start="0"
+        data-duration="8"
+        data-track-index="0"
+        src="music-tension.mp3"
+        data-volume="0.8"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Slow Ken Burns on background image (0 -> 8s)
+      tl.fromTo(
+        "#bg",
+        { scale: 1.0 },
+        { scale: 1.08, duration: 8, ease: "none" },
+        0
+      );
+
+      // Badge — pop in
+      tl.from(
+        "#badge",
+        {
+          opacity: 0,
+          y: -40,
+          scale: 0.85,
+          duration: 0.7,
+          ease: "back.out(1.6)",
+        },
+        0.25
+      );
+
+      // Title — slide up + fade
+      tl.from(
+        "#title",
+        { opacity: 0, y: 60, duration: 0.9, ease: "expo.out" },
+        0.7
+      );
+
+      // Number "3" — quick scale punch a moment after title settles
+      tl.from(
+        "#num",
+        { scale: 0.5, opacity: 0, duration: 0.5, ease: "back.out(2.2)" },
+        1.4
+      );
+
+      // CTA — soft fade in last
+      tl.from(
+        "#cta",
+        { opacity: 0, y: 20, duration: 0.6, ease: "power2.out" },
+        1.9
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

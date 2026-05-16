@@ -1,0 +1,68 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Word,Arial Black,108,&H0035EBFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,11,5,2,40,40,500,1
+Style: Hook,Arial Black,96,&H00FFFFFF,&H00FFFFFF,&H000033E6,&HCC000000,-1,0,0,0,100,100,0,0,1,12,5,5,40,40,0,1
+Style: HookSub,Arial Black,72,&H0035EBFF,&H0035EBFF,&H00000000,&HCC000000,-1,0,0,0,100,100,0,0,1,9,4,5,40,40,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.10,0:00:02.20,Hook,,0,0,0,,{\fad(80,80)\pos(540,700)}BỎ NGAY\NTHÓI QUEN!
+Dialogue: 1,0:00:02.25,0:00:04.60,Hook,,0,0,0,,{\fad(80,80)\pos(540,650)}XÌ TÈ\NCHO BÉ
+Dialogue: 1,0:00:02.40,0:00:04.60,HookSub,,0,0,0,,{\fad(120,80)\pos(540,1100)}4 LÝ DO NGUY HIỂM
+Dialogue: 0,0:00:05.64,0:00:06.46,Word,,0,0,0,,DỮ THỜI QUEN
+Dialogue: 0,0:00:06.46,0:00:07.00,Word,,0,0,0,,ĐẤY NHƯNG HÔM
+Dialogue: 0,0:00:07.00,0:00:07.72,Word,,0,0,0,,NAY TÔI ĐỌC
+Dialogue: 0,0:00:07.72,0:00:08.66,Word,,0,0,0,,ĐƯỢC MỘT NGHIÊN
+Dialogue: 0,0:00:08.66,0:00:09.70,Word,,0,0,0,,CỨU NHÁ LÀ
+Dialogue: 0,0:00:09.70,0:00:10.98,Word,,0,0,0,,VIỆC SI TÈ
+Dialogue: 0,0:00:10.98,0:00:11.92,Word,,0,0,0,,CHO EM BÉ
+Dialogue: 0,0:00:11.92,0:00:12.58,Word,,0,0,0,,RẤT LÀ NGUY
+Dialogue: 0,0:00:12.58,0:00:13.70,Word,,0,0,0,,HIỂM CÁC BẠN
+Dialogue: 0,0:00:13.70,0:00:14.64,Word,,0,0,0,,THAM KHẢO NHA
+Dialogue: 0,0:00:14.64,0:00:15.58,Word,,0,0,0,,ĐẦU TIÊN LÀ
+Dialogue: 0,0:00:15.58,0:00:16.32,Word,,0,0,0,,VIỆC SI TÈ
+Dialogue: 0,0:00:16.32,0:00:17.18,Word,,0,0,0,,LÚC MÌNH BÉ
+Dialogue: 0,0:00:17.18,0:00:17.84,Word,,0,0,0,,CÓ THỂ ẢNH
+Dialogue: 0,0:00:17.84,0:00:19.26,Word,,0,0,0,,ƯỞNG ĐẾN CUỘC
+Dialogue: 0,0:00:19.26,0:00:19.80,Word,,0,0,0,,SỐNG CỦA CON
+Dialogue: 0,0:00:19.80,0:00:20.60,Word,,0,0,0,,THỨ 2 DẪN
+Dialogue: 0,0:00:20.60,0:00:21.34,Word,,0,0,0,,ĐẾN TÌNH TRẠNG
+Dialogue: 0,0:00:21.34,0:00:22.42,Word,,0,0,0,,CON SẼ ĐI
+Dialogue: 0,0:00:22.42,0:00:23.00,Word,,0,0,0,,TIỂU LẮM NHÁ
+Dialogue: 0,0:00:23.00,0:00:24.02,Word,,0,0,0,,THỨ 3 ẢNH
+Dialogue: 0,0:00:24.02,0:00:24.50,Word,,0,0,0,,ƯỞNG ĐẾN SỰ
+Dialogue: 0,0:00:24.50,0:00:24.92,Word,,0,0,0,,PHÁT TRIỂN CỦA
+Dialogue: 0,0:00:24.92,0:00:25.92,Word,,0,0,0,,CƠ BÁN THỨ
+Dialogue: 0,0:00:25.92,0:00:27.20,Word,,0,0,0,,4 GÂY GIÁN
+Dialogue: 0,0:00:27.20,0:00:28.04,Word,,0,0,0,,ĐOẠN VIỆC DẬY
+Dialogue: 0,0:00:28.04,0:00:28.70,Word,,0,0,0,,TRẺ TẬP TRUNG
+Dialogue: 0,0:00:28.70,0:00:29.82,Word,,0,0,0,,NÓI CHUNG LÀ
+Dialogue: 0,0:00:29.82,0:00:30.80,Word,,0,0,0,,MÌNH ĐỌNG MỘT
+Dialogue: 0,0:00:30.80,0:00:31.46,Word,,0,0,0,,SỐ TÀI LIỆU
+Dialogue: 0,0:00:31.46,0:00:31.88,Word,,0,0,0,,NGƯỜI TA NÓI
+Dialogue: 0,0:00:31.88,0:00:32.68,Word,,0,0,0,,LÀ ĐÃ LÀ
+Dialogue: 0,0:00:32.68,0:00:33.12,Word,,0,0,0,,THẾ KỶ 2
+Dialogue: 0,0:00:33.12,0:00:33.50,Word,,0,0,0,,MỐT RỒI THÌ
+Dialogue: 0,0:00:33.50,0:00:33.92,Word,,0,0,0,,KHÔNG CÓ AI
+Dialogue: 0,0:00:33.92,0:00:34.60,Word,,0,0,0,,CÒN ÁP DỤNG
+Dialogue: 0,0:00:34.60,0:00:35.14,Word,,0,0,0,,CÁI VIỆC XÍ
+Dialogue: 0,0:00:35.14,0:00:36.32,Word,,0,0,0,,XÍ ĐẤY ĐỂ
+Dialogue: 0,0:00:36.32,0:00:36.70,Word,,0,0,0,,CHO EM PHẢI
+Dialogue: 0,0:00:36.70,0:00:38.62,Word,,0,0,0,,TÈ NŨA MÌNH
+Dialogue: 0,0:00:38.62,0:00:39.10,Word,,0,0,0,,TẤT NHIÊN LÀ
+Dialogue: 0,0:00:39.10,0:00:39.60,Word,,0,0,0,,ĐÓNG BÌM THÔI
+Dialogue: 0,0:00:39.60,0:00:40.12,Word,,0,0,0,,VÌ CÁC BẠN
+Dialogue: 0,0:00:40.12,0:00:41.40,Word,,0,0,0,,CÓ SUY NGHĨ
+Dialogue: 0,0:00:41.40,0:00:41.96,Word,,0,0,0,,GÌ VỀ QUAN
+Dialogue: 0,0:00:41.96,0:00:42.64,Word,,0,0,0,,ĐIỂM NÀY HÔM
+Dialogue: 0,0:00:42.64,0:00:43.38,Word,,0,0,0,,NAY THÌ ĐỂ
+Dialogue: 0,0:00:43.38,0:00:43.90,Word,,0,0,0,,MÌNH ĐOẠN Ở
+Dialogue: 0,0:00:43.90,0:00:44.54,Word,,0,0,0,,DƯỚI VIDEO NÀY
+Dialogue: 0,0:00:44.54,0:00:44.70,Word,,0,0,0,,NHÉ

@@ -1,0 +1,82 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial Black,76,&H0000F0FF,&H00FFFFFF,&H00000000,&H80000000,1,0,0,0,100,100,2,0,1,5,2,2,80,80,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.59,0:00:02.22,Default,,0,0,0,,{\fad(80,80)}{\k60}Xin {\k22}thưa {\k28}các {\k12}con {\k26}dân,
+Dialogue: 0,0:00:02.29,0:00:04.28,Default,,0,0,0,,{\fad(80,80)}{\k20}sau {\k40}khi {\k24}làm {\k28}hỏng {\k72}tầm
+Dialogue: 0,0:00:04.13,0:00:05.62,Default,,0,0,0,,{\fad(80,80)}{\k36}chục {\k28}cái {\k26}núm {\k24}khi {\k20}đục
+Dialogue: 0,0:00:05.47,0:00:06.64,Default,,0,0,0,,{\fad(80,80)}{\k28}lỗ {\k26}thì {\k10}tôi {\k22}đã {\k16}có
+Dialogue: 0,0:00:06.49,0:00:08.86,Default,,0,0,0,,{\fad(80,80)}{\k28}kinh {\k70}nghiệm {\k64}và {\k36}áp {\k24}đụng
+Dialogue: 0,0:00:08.71,0:00:10.24,Default,,0,0,0,,{\fad(80,80)}{\k34}rất {\k28}là {\k16}nhiều {\k40}kinh {\k20}nghiệm
+Dialogue: 0,0:00:10.09,0:00:11.12,Default,,0,0,0,,{\fad(80,80)}{\k12}mà {\k20}các {\k10}bà {\k30}chia {\k16}sẻ
+Dialogue: 0,0:00:10.97,0:00:12.88,Default,,0,0,0,,{\fad(80,80)}{\k20}thì {\k26}bây {\k48}giờ {\k18}tôi {\k64}đụng
+Dialogue: 0,0:00:12.73,0:00:13.82,Default,,0,0,0,,{\fad(80,80)}{\k24}núm {\k20}nào {\k18}là {\k14}được {\k18}núm
+Dialogue: 0,0:00:13.67,0:00:14.60,Default,,0,0,0,,{\fad(80,80)}{\k20}đấy {\k58}nhá.
+Dialogue: 0,0:00:14.99,0:00:15.58,Default,,0,0,0,,{\fad(80,80)}{\k44}Đây,
+Dialogue: 0,0:00:15.43,0:00:15.92,Default,,0,0,0,,{\fad(80,80)}{\k12}được {\k22}chưa?
+Dialogue: 0,0:00:15.87,0:00:16.72,Default,,0,0,0,,{\fad(80,80)}{\k4}Đây {\k18}là {\k14}cái {\k22}núm {\k12}đấy
+Dialogue: 0,0:00:16.57,0:00:17.60,Default,,0,0,0,,{\fad(80,80)}{\k22}các {\k66}bà.
+Dialogue: 0,0:00:17.61,0:00:19.30,Default,,0,0,0,,{\fad(80,80)}{\k26}Nhớ {\k82}là {\k12}đục {\k16}ở {\k18}bên
+Dialogue: 0,0:00:19.15,0:00:20.12,Default,,0,0,0,,{\fad(80,80)}{\k26}ngoài {\k56}nhá,
+Dialogue: 0,0:00:20.21,0:00:20.96,Default,,0,0,0,,{\fad(80,80)}{\k10}chứ {\k8}không {\k8}phải {\k14}đục {\k20}lên
+Dialogue: 0,0:00:20.81,0:00:22.18,Default,,0,0,0,,{\fad(80,80)}{\k16}cái {\k18}núm {\k18}cũ {\k70}nhá.
+Dialogue: 0,0:00:22.29,0:00:24.30,Default,,0,0,0,,{\fad(80,80)}{\k4}Đục {\k22}ở {\k22}bên {\k112}ngoài {\k26}cái
+Dialogue: 0,0:00:24.15,0:00:25.02,Default,,0,0,0,,{\fad(80,80)}{\k18}núm {\k54}cũ,
+Dialogue: 0,0:00:25.37,0:00:26.48,Default,,0,0,0,,{\fad(80,80)}{\k28}đục {\k16}ở {\k18}bên {\k14}ngoài {\k20}cái
+Dialogue: 0,0:00:26.33,0:00:26.98,Default,,0,0,0,,{\fad(80,80)}{\k50}núm,
+Dialogue: 0,0:00:26.93,0:00:28.20,Default,,0,0,0,,{\fad(80,80)}{\k22}không {\k14}có {\k32}đục {\k24}cái {\k20}vòng
+Dialogue: 0,0:00:28.05,0:00:30.34,Default,,0,0,0,,{\fad(80,80)}{\k82}trong {\k42}cùng {\k36}với {\k14}cái {\k40}núm
+Dialogue: 0,0:00:30.19,0:00:32.10,Default,,0,0,0,,{\fad(80,80)}{\k30}của {\k56}cái {\k10}bình {\k28}luôn {\k52}đâu.
+Dialogue: 0,0:00:31.99,0:00:32.72,Default,,0,0,0,,{\fad(80,80)}{\k16}Thứ {\k42}hai,
+Dialogue: 0,0:00:32.73,0:00:33.80,Default,,0,0,0,,{\fad(80,80)}{\k22}chuẩn {\k8}bị {\k32}cái {\k30}kim.
+Dialogue: 0,0:00:34.21,0:00:34.98,Default,,0,0,0,,{\fad(80,80)}{\k14}Thứ {\k48}ba,
+Dialogue: 0,0:00:35.27,0:00:36.34,Default,,0,0,0,,{\fad(80,80)}{\k14}chuẩn {\k16}bị {\k16}cho {\k20}tôi {\k26}một
+Dialogue: 0,0:00:36.19,0:00:37.68,Default,,0,0,0,,{\fad(80,80)}{\k36}cái {\k98}bìa.
+Dialogue: 0,0:00:37.85,0:00:38.86,Default,,0,0,0,,{\fad(80,80)}{\k1}Nó {\k16}không {\k24}được {\k46}trôn.
+Dialogue: 0,0:00:39.09,0:00:40.12,Default,,0,0,0,,{\fad(80,80)}{\k20}Nếu {\k20}mà {\k24}các {\k8}bà {\k16}để
+Dialogue: 0,0:00:39.97,0:00:41.04,Default,,0,0,0,,{\fad(80,80)}{\k18}lên {\k18}cái {\k18}mặt {\k22}bàn {\k16}thì
+Dialogue: 0,0:00:40.89,0:00:41.98,Default,,0,0,0,,{\fad(80,80)}{\k14}giống {\k20}tôi {\k18}hôm {\k18}trước {\k24}là
+Dialogue: 0,0:00:41.83,0:00:42.92,Default,,0,0,0,,{\fad(80,80)}{\k2}nó {\k18}cứ {\k20}bị {\k54}trôn.
+Dialogue: 0,0:00:42.97,0:00:44.08,Default,,0,0,0,,{\fad(80,80)}{\k12}Nó {\k20}trôn {\k16}thì {\k20}nó {\k28}làm
+Dialogue: 0,0:00:43.93,0:00:44.92,Default,,0,0,0,,{\fad(80,80)}{\k22}trượt {\k16}cái {\k46}núm.
+Dialogue: 0,0:00:44.91,0:00:46.84,Default,,0,0,0,,{\fad(80,80)}{\k2}Thì {\k22}nó {\k46}không {\k90}có {\k18}ra
+Dialogue: 0,0:00:46.69,0:00:48.10,Default,,0,0,0,,{\fad(80,80)}{\k16}được {\k10}cái {\k18}miếng {\k28}xi {\k54}côn.
+Dialogue: 0,0:00:48.15,0:00:48.90,Default,,0,0,0,,{\fad(80,80)}{\k6}Còn {\k14}đây {\k12}giờ {\k20}các {\k8}bà
+Dialogue: 0,0:00:48.75,0:00:49.60,Default,,0,0,0,,{\fad(80,80)}{\k22}nhìn {\k48}nhá.
+Dialogue: 0,0:00:50.21,0:00:51.26,Default,,0,0,0,,{\fad(80,80)}{\k1}Rồi {\k10}tôi {\k32}sẽ {\k24}xác {\k24}định
+Dialogue: 0,0:00:51.11,0:00:52.60,Default,,0,0,0,,{\fad(80,80)}{\k134}điểm
+Dialogue: 0,0:00:53.92,0:00:54.91,Default,,0,0,0,,{\fad(80,80)}{\k24}chọc {\k60}này.
+Dialogue: 0,0:00:56.35,0:00:57.70,Default,,0,0,0,,{\fad(80,80)}{\k40}Sau {\k22}khi {\k20}xác {\k12}định {\k26}điểm
+Dialogue: 0,0:00:57.55,0:00:58.84,Default,,0,0,0,,{\fad(80,80)}{\k24}chọc {\k90}xong.
+Dialogue: 0,0:00:59.80,0:01:01.63,Default,,0,0,0,,{\fad(80,80)}{\k44}Thì {\k22}mình {\k30}đặt {\k50}xuống {\k22}cái
+Dialogue: 0,0:01:01.48,0:01:02.55,Default,,0,0,0,,{\fad(80,80)}{\k16}miếng {\k76}này.
+Dialogue: 0,0:01:06.66,0:01:07.25,Default,,0,0,0,,{\fad(80,80)}{\k44}Ấn.
+Dialogue: 0,0:01:14.14,0:01:15.25,Default,,0,0,0,,{\fad(80,80)}{\k12}Nó {\k20}ra {\k18}cái {\k24}miếng {\k22}xi
+Dialogue: 0,0:01:15.10,0:01:16.33,Default,,0,0,0,,{\fad(80,80)}{\k28}côn {\k80}này.
+Dialogue: 0,0:01:16.52,0:01:17.55,Default,,0,0,0,,{\fad(80,80)}{\k10}Nó {\k22}ra {\k16}đúng {\k26}một {\k14}tí
+Dialogue: 0,0:01:17.40,0:01:18.43,Default,,0,0,0,,{\fad(80,80)}{\k26}các {\k1}bà {\k12}thấy {\k50}không?
+Dialogue: 0,0:01:18.82,0:01:20.09,Default,,0,0,0,,{\fad(80,80)}{\k12}Có {\k22}một {\k16}tiệu {\k62}này.
+Dialogue: 0,0:01:20.40,0:01:21.81,Default,,0,0,0,,{\fad(80,80)}{\k42}Thì {\k32}phải {\k26}bay {\k16}được {\k10}cái
+Dialogue: 0,0:01:21.66,0:01:23.09,Default,,0,0,0,,{\fad(80,80)}{\k16}miếng {\k26}xi {\k36}côn {\k4}này {\k46}ra.
+Dialogue: 0,0:01:23.54,0:01:24.55,Default,,0,0,0,,{\fad(80,80)}{\k12}Thì {\k12}mới {\k32}ok {\k12}nha {\k18}các
+Dialogue: 0,0:01:24.40,0:01:24.91,Default,,0,0,0,,{\fad(80,80)}{\k36}bà.
+Dialogue: 0,0:01:26.04,0:01:26.97,Default,,0,0,0,,{\fad(80,80)}{\k16}Hôm {\k8}nay {\k12}tôi {\k18}phải {\k24}đục
+Dialogue: 0,0:01:26.82,0:01:27.83,Default,,0,0,0,,{\fad(80,80)}{\k22}núm {\k16}số {\k22}ba {\k10}cho {\k16}thằng
+Dialogue: 0,0:01:27.68,0:01:28.67,Default,,0,0,0,,{\fad(80,80)}{\k18}con {\k20}nhà {\k14}tôi {\k18}rồi {\k14}đây
+Dialogue: 0,0:01:28.52,0:01:29.13,Default,,0,0,0,,{\fad(80,80)}{\k46}này.
+Dialogue: 0,0:01:29.46,0:01:30.59,Default,,0,0,0,,{\fad(80,80)}{\k4}Không {\k16}biết {\k28}uống {\k26}sữa {\k24}kiểu
+Dialogue: 0,0:01:30.44,0:01:33.31,Default,,0,0,0,,{\fad(80,80)}{\k24}gì {\k174}mà {\k24}mật {\k34}lên {\k16}xa
+Dialogue: 0,0:01:33.16,0:01:34.11,Default,,0,0,0,,{\fad(80,80)}{\k24}liên {\k14}tục {\k42}luôn.
+Dialogue: 0,0:01:34.88,0:01:35.79,Default,,0,0,0,,{\fad(80,80)}{\k8}Không {\k14}biết {\k14}là {\k22}có {\k18}tăng
+Dialogue: 0,0:01:35.64,0:01:37.49,Default,,0,0,0,,{\fad(80,80)}{\k28}sữa {\k22}không {\k68}nhưng {\k34}mà {\k18}gọi
+Dialogue: 0,0:01:37.34,0:01:38.35,Default,,0,0,0,,{\fad(80,80)}{\k18}là {\k18}mẹ {\k22}suốt {\k12}ngày {\k16}đi
+Dialogue: 0,0:01:38.20,0:01:38.99,Default,,0,0,0,,{\fad(80,80)}{\k18}đục {\k24}núm {\k12}ấy {\k10}đó.

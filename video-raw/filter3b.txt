@@ -1,0 +1,9 @@
+[0:v]drawbox=x=190:y=130:w=700:h=140:color=0xE63946@0.92:t=fill:enable='between(t,9.0,11.0)',drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='NGUY HIỂM !':fontsize=78:fontcolor=white:x=(w-text_w)/2:y=130+(140-text_h)/2:enable='between(t,9.0,11.0)',drawbox=x=830:y=180:w=200:h=200:color=0xFFB6C1@0.95:t=fill:enable='between(t,14.7,18.7)',drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='1':fontsize=170:fontcolor=white:borderw=5:bordercolor=0xC0608A:x=830+(200-text_w)/2:y=180+(200-text_h)/2-15:enable='between(t,14.7,18.7)',drawbox=x=830:y=180:w=200:h=200:color=0xFFB088@0.95:t=fill:enable='between(t,19.8,22.8)',drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='2':fontsize=170:fontcolor=white:borderw=5:bordercolor=0xC0735C:x=830+(200-text_w)/2:y=180+(200-text_h)/2-15:enable='between(t,19.8,22.8)',drawbox=x=830:y=180:w=200:h=200:color=0x88D5C0@0.95:t=fill:enable='between(t,23.0,25.4)',drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='3':fontsize=170:fontcolor=white:borderw=5:bordercolor=0x4D8B7A:x=830+(200-text_w)/2:y=180+(200-text_h)/2-15:enable='between(t,23.0,25.4)',drawbox=x=830:y=180:w=200:h=200:color=0xB088E5@0.95:t=fill:enable='between(t,25.4,28.7)',drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='4':fontsize=170:fontcolor=white:borderw=5:bordercolor=0x6D4D9C:x=830+(200-text_w)/2:y=180+(200-text_h)/2-15:enable='between(t,25.4,28.7)'[vout];
+[1:a]asplit=5[c1][c2][c3][c4][c5];
+[c1]adelay=8950|8950[d1];
+[c2]adelay=14650|14650[d2];
+[c3]adelay=19750|19750[d3];
+[c4]adelay=22950|22950[d4];
+[c5]adelay=25350|25350[d5];
+[d1][d2][d3][d4][d5]amix=inputs=5:normalize=0,volume=0.85[chimes];
+[0:a][chimes]amix=inputs=2:duration=first:normalize=0[aout]

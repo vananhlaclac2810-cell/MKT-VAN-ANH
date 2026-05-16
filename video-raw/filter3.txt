@@ -1,0 +1,13 @@
+[0:v]trim=start=0.7:end=20.5,setpts=PTS-STARTPTS[v1];
+[0:v]trim=start=30.4:end=55.3,setpts=PTS-STARTPTS[v2];
+[v1][v2]concat=n=2:v=1:a=0[vc];
+[0:a]atrim=start=0.7:end=20.5,asetpts=PTS-STARTPTS[a1];
+[0:a]atrim=start=30.4:end=55.3,asetpts=PTS-STARTPTS[a2];
+[a1][a2]concat=n=2:v=0:a=1[voice];
+[vc]eq=brightness=0.04:contrast=1.06:saturation=1.12:gamma=0.97,smartblur=lr=1.3:ls=0.35:lt=8,split[base][glow];
+[glow]gblur=sigma=18[glowblur];
+[base][glowblur]blend=all_mode=screen:all_opacity=0.18[lit];
+[lit]vignette=PI/5.5:x0=w/2:y0=h/2,noise=alls=6:allf=t,scale=960:-2,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=0xFFEFE5[vout];
+[voice]volume=1.3,acompressor=threshold=-18dB:ratio=3:attack=15:release=200[voice2];
+[1:a]volume=0.14[bgm];
+[voice2][bgm]amix=inputs=2:duration=first:normalize=0[aout]
