@@ -1,0 +1,220 @@
+<template id="fs-lesson-3-template">
+  <div data-composition-id="fs-lesson-3" data-start="0" data-width="1080" data-height="1920">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+      
+:root {
+  --bg-deep: #0a0815;
+  --bg-mid: #161229;
+  --bg-card: #1f1a3d;
+  --border-glow: rgba(106, 155, 204, 0.3);
+  --accent-orange: #d97757;
+  --accent-cyan: #4dd9d9;
+  --accent-purple: #a774d9;
+  --accent-green: #5dd97a;
+  --ink: #faf9f5;
+  --ink-mute: #a8a4c4;
+  --glow-cyan: 0 0 24px rgba(77, 217, 217, 0.55);
+  --glow-orange: 0 0 24px rgba(217, 119, 87, 0.55);
+  --glow-purple: 0 0 24px rgba(167, 116, 217, 0.55);
+  --glow-green: 0 0 24px rgba(93, 217, 122, 0.55);
+}
+
+      [data-composition-id="fs-lesson-3"] {
+        width: 100%; height: 100%;
+        background: radial-gradient(ellipse 1200px 800px at 50% 30%, var(--bg-mid) 0%, var(--bg-deep) 70%);
+        color: var(--ink);
+        position: relative; overflow: hidden;
+        font-family: 'Be Vietnam Pro', sans-serif;
+      }
+      [data-composition-id="fs-lesson-3"] .particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; will-change: transform, opacity; }
+      [data-composition-id="fs-lesson-3"] .particles circle { will-change: transform, opacity; }
+      [data-composition-id="fs-lesson-3"] .grid-bg {
+        position: absolute; inset: 0; z-index: 0; opacity: 0.25;
+        background-image:
+          linear-gradient(rgba(106, 155, 204, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(106, 155, 204, 0.12) 1px, transparent 1px);
+        background-size: 60px 60px; pointer-events: none;
+      }
+      [data-composition-id="fs-lesson-3"] .vignette {
+        position: absolute; inset: 0; z-index: 2; pointer-events: none;
+        background: radial-gradient(ellipse 800px 600px at 50% 50%, transparent 30%, var(--bg-deep) 100%);
+        opacity: 0.4;
+      }
+      [data-composition-id="fs-lesson-3"] .scene-content {
+        position: relative; z-index: 5;
+        width: 100%; height: 100%;
+        padding: 200px 50px 320px;
+        box-sizing: border-box;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: flex-start;
+      }
+      [data-composition-id="fs-lesson-3"] .topic-pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 12px 24px;
+        background: rgba(31, 26, 61, 0.85);
+        border: 1.5px solid var(--accent-orange);
+        border-radius: 999px;
+        font-weight: 700; font-size: 22px; letter-spacing: 0.18em;
+        text-transform: uppercase; color: var(--accent-orange);
+        margin-bottom: 18px;
+        backdrop-filter: blur(10px);
+        will-change: transform, opacity;
+        box-shadow: var(--glow-orange);
+      }
+      [data-composition-id="fs-lesson-3"] .topic-pill .num {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 32px; height: 32px;
+        background: var(--accent-orange); color: var(--bg-deep);
+        border-radius: 50%; font-weight: 900; font-size: 20px;
+      }
+      [data-composition-id="fs-lesson-3"] .brand-title {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 900; font-size: 110px; line-height: 0.92;
+        letter-spacing: -0.04em; text-transform: uppercase;
+        margin: 0 0 28px; text-align: center;
+        text-shadow: 0 0 40px rgba(217, 119, 87, 0.4);
+        will-change: transform, opacity;
+      }
+      [data-composition-id="fs-lesson-3"] .brand-title .accent {
+        background: linear-gradient(135deg, var(--accent-orange) 0%, #f4a384 100%);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      [data-composition-id="fs-lesson-3"] .brand-title .word {
+        display: inline-block; will-change: transform, opacity; margin-right: 0.18em;
+      }
+      
+        [data-composition-id="fs-lesson-3"] .ads-dashboard { width: 720px; margin: 8px auto 14px; background: rgba(31, 26, 61, 0.92); border: 1.5px solid var(--border-glow); border-radius: 22px; padding: 18px; backdrop-filter: blur(12px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); will-change: transform, opacity; }
+        [data-composition-id="fs-lesson-3"] .dash-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid rgba(106, 155, 204, 0.15); }
+        [data-composition-id="fs-lesson-3"] .dash-title { font-weight: 700; font-size: 20px; color: var(--ink); }
+        [data-composition-id="fs-lesson-3"] .dash-status { font-size: 16px; font-weight: 700; color: var(--accent-green); }
+        [data-composition-id="fs-lesson-3"] .dash-stats { display: flex; gap: 12px; margin: 14px 0; }
+        [data-composition-id="fs-lesson-3"] .stat-cell { flex: 1; padding: 12px; background: rgba(10, 8, 21, 0.6); border-radius: 12px; text-align: left; }
+        [data-composition-id="fs-lesson-3"] .stat-label { font-size: 13px; font-weight: 700; color: var(--ink-mute); letter-spacing: 0.1em; text-transform: uppercase; }
+        [data-composition-id="fs-lesson-3"] .stat-num { font-weight: 800; font-size: 36px; line-height: 1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+        [data-composition-id="fs-lesson-3"] .stat-orange { color: var(--accent-orange); }
+        [data-composition-id="fs-lesson-3"] .stat-cyan { color: var(--accent-cyan); }
+        [data-composition-id="fs-lesson-3"] .stat-green { color: var(--accent-green); }
+        [data-composition-id="fs-lesson-3"] .creative-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 14px; }
+        [data-composition-id="fs-lesson-3"] .creative { aspect-ratio: 1; background: rgba(167, 116, 217, 0.15); border: 1.5px solid var(--accent-purple); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 28px; will-change: transform, opacity; }
+        [data-composition-id="fs-lesson-3"] .chart-line { height: 60px; padding: 0 4px; }
+        [data-composition-id="fs-lesson-3"] .chart-path { stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+
+        [data-composition-id="fs-lesson-3"] .float-badge {
+          position: absolute; z-index: 9;
+          width: 130px; height: 130px; border-radius: 50%;
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          background: rgba(31, 26, 61, 0.92);
+          backdrop-filter: blur(10px);
+          border: 2.5px solid var(--accent-cyan);
+          box-shadow: var(--glow-cyan);
+          will-change: transform, opacity;
+          padding: 8px; box-sizing: border-box; text-align: center;
+        }
+        [data-composition-id="fs-lesson-3"] .fb-ico { font-size: 26px; line-height: 1; }
+        [data-composition-id="fs-lesson-3"] .fb-num {
+          font-weight: 900; font-size: 30px; line-height: 1; margin-top: 2px;
+          color: var(--ink); font-variant-numeric: tabular-nums;
+        }
+        [data-composition-id="fs-lesson-3"] .fb-label {
+          font-weight: 600; font-size: 14px; color: var(--ink-mute);
+          letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px;
+        }
+[data-composition-id="fs-lesson-3"] .flb-0 {
+          top: 220px; right: 30px;
+          border-color: var(--accent-purple); box-shadow: var(--glow-purple);
+        }
+        [data-composition-id="fs-lesson-3"] .flb-0 .fb-num { color: var(--accent-purple); }
+    </style>
+
+    <div class="grid-bg"></div>
+    
+<svg class="particles" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+  <circle cx="120" cy="280" r="4" fill="#4dd9d9" opacity="0.6"/>
+  <circle cx="980" cy="380" r="6" fill="#a774d9" opacity="0.5"/>
+  <circle cx="200" cy="1450" r="5" fill="#d97757" opacity="0.55"/>
+  <circle cx="900" cy="1620" r="4" fill="#5dd97a" opacity="0.6"/>
+  <circle cx="540" cy="320" r="3" fill="#4dd9d9" opacity="0.4"/>
+  <circle cx="380" cy="780" r="3" fill="#a774d9" opacity="0.5"/>
+  <circle cx="700" cy="900" r="4" fill="#d97757" opacity="0.45"/>
+  <circle cx="160" cy="1100" r="5" fill="#5dd97a" opacity="0.55"/>
+  <circle cx="850" cy="1200" r="3" fill="#4dd9d9" opacity="0.5"/>
+  <circle cx="450" cy="1700" r="4" fill="#a774d9" opacity="0.4"/>
+</svg>
+
+    <div class="vignette"></div>
+    <div class="scene-content">
+      
+        <div class="topic-pill"><span class="num">3</span>Nguy cơ #3</div>
+        <h1 class="brand-title">
+          <span class="word">Tổn</span>
+          <span class="word">thương</span>
+          <span class="word accent">cơ</span>
+          <span class="word accent">bàng</span>
+          <span class="word">quang</span>
+        </h1>
+        
+        <div class="ads-dashboard">
+          <div class="dash-header">
+            <div class="dash-title">🩺 Sự phát triển cơ bàng quang</div>
+            <div class="dash-status">● Live</div>
+          </div>
+          <div class="dash-stats"><div class="stat-cell"><div class="stat-label">PHÁT TRIỂN</div><div class="stat-num stat-orange"><span id=ds-num>↓</span></div></div><div class="stat-cell"><div class="stat-label">CO BÓP</div><div class="stat-num stat-cyan">Yếu</div></div><div class="stat-cell"><div class="stat-label">PHỤC HỒI</div><div class="stat-num stat-purple">Khó</div></div></div>
+          <div class="creative-grid"><div class="creative">⚠️</div><div class="creative">🩺</div><div class="creative">💉</div><div class="creative">🏥</div><div class="creative">📉</div><div class="creative">⏱</div><div class="creative">🧬</div><div class="creative">🔬</div><div class="creative">💊</div><div class="creative">📋</div><div class="creative">🚨</div><div class="creative">❌</div></div>
+          <div class="chart-line">
+            <svg viewBox="0 0 400 60" preserveAspectRatio="none">
+              <polyline class="chart-path" points="0,55 50,50 100,40 150,38 200,30 250,20 300,18 350,8 400,5" fill="none" stroke="#5dd97a" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="float-badge flb-0">
+          <div class="fb-ico">🩺</div>
+          <div class="fb-num">?</div>
+          <div class="fb-label">Nguy hiểm</div>
+        </div>
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const ROOT = '[data-composition-id="fs-lesson-3"]';
+
+      // Particles drift
+      tl.fromTo(ROOT + ' .particles circle',
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 0.6, duration: 1.2, ease: "power2.out", stagger: 0.05 },
+        0
+      );
+      tl.to(ROOT + ' .particles circle', {
+        y: -20, duration: 2.5, ease: "sine.inOut",
+        yoyo: true, repeat: 4, stagger: { each: 0.1, yoyo: true },
+      }, 1.0);
+
+      // Topic pill
+      tl.from(ROOT + ' .topic-pill', {
+        y: -30, scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.8)",
+      }, 0.2);
+
+      // Brand title slam
+      tl.from(ROOT + ' .brand-title .word', {
+        y: 80, opacity: 0, scale: 0.7, duration: 0.55,
+        ease: "back.out(1.6)", stagger: 0.08,
+      }, 0.45);
+
+      tl.from(ROOT + ' .ads-dashboard', { y: -30, opacity: 0, scale: 0.95, duration: 0.55, ease: "back.out(1.4)" }, 1.2);
+        tl.from(ROOT + ' .creative', { scale: 0, opacity: 0, rotation: 180, duration: 0.35, ease: "back.out(2)", stagger: 0.04 }, 1.8);
+        tl.to(ROOT + ' .creative', { rotationY: 360, duration: 0.5, stagger: 0.03 }, 2.5);
+        const cnt = { v: 0 };
+        tl.to(cnt, { v: 3, duration: 1.6, ease: "power2.out", onUpdate: () => { const el = document.querySelector(ROOT + ' #ds-num'); if (el) el.textContent = Math.round(cnt.v); } }, 1.9);
+        tl.to(ROOT + ' .chart-path', { strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut" }, 2.5);
+        tl.from(ROOT + ' .flb-0', { x: 100, y: -40, scale: 0, opacity: 0, duration: 0.55, ease: "back.out(2.2)" }, 1.8);
+        tl.to(ROOT + ' .float-badge', { y: -10, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: 3, stagger: { each: 0.2, yoyo: true } }, 3.5);
+      window.__timelines["fs-lesson-3"] = tl;
+    </script>
+  </div>
+</template>

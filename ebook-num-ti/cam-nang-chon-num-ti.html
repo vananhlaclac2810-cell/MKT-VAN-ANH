@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soi Miệng Con — Chọn Đúng Bình Sữa | Mẹ Thu Hương</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf8f3; --cream-2:#f8efe5; --ink:#3c3231; --ink-soft:#776864;
+    --peach:#f1a07d; --peach-deep:#e07a52; --rose:#e98a9a; --sage:#84b986; --gold:#e3a93f;
+    --line:#eaddd0; --card:#fffdfb; --shadow:0 12px 32px rgba(180,120,90,.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);
+    background:var(--cream);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+
+  /* COVER */
+  .cover{min-height:96vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:54px 24px;position:relative;overflow:hidden;
+    background:radial-gradient(125% 75% at 50% -5%, #fff7ef 0%, var(--cream-2) 55%, var(--cream) 100%);}
+  .cover .deco{position:absolute;opacity:.16;font-size:clamp(38px,8vw,80px);}
+  .d1{top:9%;left:9%;transform:rotate(-12deg);} .d2{bottom:12%;right:9%;transform:rotate(13deg);}
+  .d3{top:15%;right:13%;font-size:clamp(26px,5vw,52px);} .d4{bottom:18%;left:12%;font-size:clamp(26px,5vw,52px);}
+  .cover .badge{font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--peach-deep);
+    font-weight:700;margin-bottom:22px;border:1.5px solid var(--peach);border-radius:50px;padding:8px 20px;background:#fff;}
+  .cover h1{font-family:'Playfair Display',serif;font-size:clamp(36px,8.5vw,58px);line-height:1.08;
+    margin:0;font-weight:800;}
+  .cover h1 .hl{color:var(--peach-deep);font-style:italic;}
+  .cover .sub{font-size:clamp(16px,3.6vw,20px);color:var(--ink-soft);max-width:480px;margin:18px auto 0;}
+  .cover .author{margin-top:38px;font-size:15px;color:var(--ink-soft);}
+  .cover .author b{display:block;font-size:22px;color:var(--peach-deep);font-weight:800;margin-top:3px;font-family:'Playfair Display',serif;}
+  .cover .scroll{position:absolute;bottom:22px;font-size:13px;color:var(--ink-soft);opacity:.7;}
+
+  section{padding:42px 0;}
+  .kicker{text-align:center;font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--peach-deep);font-weight:700;margin-bottom:8px;}
+  h2.chapter{font-family:'Playfair Display',serif;font-size:clamp(26px,5.4vw,36px);text-align:center;line-height:1.18;margin:0 0 12px;font-weight:800;}
+  .lead{font-size:17.5px;color:var(--ink-soft);text-align:center;max-width:560px;margin:0 auto 16px;}
+  .divider{width:56px;height:4px;background:var(--peach);border-radius:4px;margin:0 auto 24px;}
+  p{margin:0 0 15px;} strong{color:var(--peach-deep);font-weight:700;}
+
+  /* INTRO */
+  .intro{background:var(--cream-2);}
+  .intro p{text-align:center;max-width:560px;margin-left:auto;margin-right:auto;}
+
+  /* QUIZ */
+  #quiz{scroll-margin-top:14px;}
+  .quizbox{background:var(--card);border:1px solid var(--line);border-radius:24px;
+    padding:30px 24px 26px;box-shadow:var(--shadow);min-height:340px;}
+  .screen{display:none;} .screen.active{display:block;animation:fade .35s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .q-pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    color:var(--peach-deep);background:#fdeee6;border-radius:50px;padding:5px 14px;margin-bottom:14px;}
+  .q-title{font-size:23px;font-weight:700;line-height:1.35;margin:0 0 6px;}
+  .q-help{font-size:15px;color:var(--ink-soft);margin:0 0 20px;}
+  .answers{display:flex;flex-direction:column;gap:12px;}
+  .ans{display:flex;align-items:center;gap:14px;width:100%;text-align:left;cursor:pointer;
+    background:#fffaf6;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;
+    font-family:inherit;font-size:16.5px;color:var(--ink);transition:all .15s;line-height:1.45;}
+  .ans:hover{border-color:var(--peach);background:#fff3eb;transform:translateY(-2px);box-shadow:0 6px 16px rgba(224,122,82,.14);}
+  .ans .emo{font-size:26px;flex:0 0 auto;}
+  .ans b{font-weight:700;display:block;}
+  .ans small{display:block;font-size:13.5px;color:var(--ink-soft);font-weight:400;margin-top:2px;}
+  .navrow{margin-top:18px;display:flex;justify-content:center;}
+  .btn-ghost{background:none;border:none;color:var(--ink-soft);font-family:inherit;font-size:14px;
+    cursor:pointer;padding:8px 14px;border-radius:50px;}
+  .btn-ghost:hover{background:#f3e7da;color:var(--ink);}
+
+  /* RESULT */
+  .result-head{text-align:center;margin-bottom:6px;}
+  .result-head .yay{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+  .result-head .dot{width:16px;height:16px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:8px;box-shadow:inset 0 -2px 4px rgba(0,0,0,.2);}
+  .result-head h3{font-family:'Playfair Display',serif;font-size:clamp(25px,6vw,34px);margin:4px 0 0;line-height:1.15;}
+  .rsig{background:var(--cream-2);border-radius:14px;padding:14px 18px;margin:18px 0;}
+  .rsig .lbl,.rbuy .lbl{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px;}
+  .rsig ul{margin:0;padding:0;list-style:none;}
+  .rsig li{padding:3px 0 3px 26px;position:relative;font-size:15.5px;}
+  .rsig li::before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:800;}
+  .rbuy{margin:16px 0;}
+  .rbuy .head{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;color:var(--peach-deep);margin-bottom:8px;}
+  .brands{display:flex;flex-wrap:wrap;gap:8px;}
+  .brands span{background:#f3f9f2;border:1px solid #d6e9d5;border-radius:50px;padding:5px 13px;font-size:14px;font-weight:500;}
+  .stagebox{border:1.5px dashed var(--peach);border-radius:14px;padding:14px 16px;margin:12px 0;background:#fffaf6;}
+  .stagebox .age{font-weight:700;color:var(--peach-deep);font-size:14px;margin-bottom:6px;}
+  .mini{font-size:14.5px;color:var(--ink-soft);margin:10px 0 0;}
+
+  /* DIAGRAMS */
+  .guide{background:var(--cream-2);}
+  .dblock{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 20px 16px;margin:16px 0;box-shadow:var(--shadow);}
+  .dblock .dh{display:flex;align-items:center;gap:12px;margin-bottom:2px;}
+  .dblock .dh .n{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:var(--peach);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .dblock .dh b{font-size:18px;}
+  .dblock .dsub{font-size:14.5px;color:var(--ink-soft);margin:2px 0 14px;padding-left:46px;}
+  .lipgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .lipcell{background:#fffaf6;border:1px solid var(--line);border-radius:14px;padding:8px 8px 12px;text-align:center;}
+  .lipcell svg{width:100%;max-width:128px;height:auto;}
+  .lipcell .cap{font-size:13.5px;font-weight:600;margin-top:2px;line-height:1.3;}
+  .lipcell .who{font-size:12px;color:var(--peach-deep);font-weight:600;}
+  .fingerwrap{text-align:center;}
+  .fingerwrap svg{width:100%;max-width:230px;height:auto;}
+  .pillrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px;}
+  .pillrow .p{background:#fffaf6;border:1px solid var(--line);border-radius:50px;padding:7px 15px;font-size:13.5px;font-weight:500;}
+  .pillrow .p b{color:var(--peach-deep);}
+  .jawwrap{display:flex;gap:6px;}
+  .jawcell{flex:1 1 0;min-width:0;text-align:center;}
+  .jawcell svg{width:100%;max-width:118px;height:auto;}
+  .jawcell .cap{font-size:13px;font-weight:600;margin-top:0;line-height:1.25;}
+  .jawcell .who{font-size:11.5px;color:var(--peach-deep);}
+  .qillus{text-align:center;margin:-4px 0 16px;}
+  .qillus svg{height:auto;}
+  .qjaw{display:flex;gap:6px;justify-content:center;}
+  .qjaw .jawcell{max-width:110px;}
+  .ans .lipmini{flex:0 0 auto;display:flex;}
+  .ans .lipmini svg{width:56px;height:auto;display:block;}
+
+  /* FLOWCHART (PDF) */
+  .flow{max-width:560px;margin:0 auto;}
+  .flow .fstep{background:#fff;border:1.5px solid var(--peach);border-radius:14px;padding:11px 16px;text-align:center;font-weight:700;font-size:14px;}
+  .flow .farrow{text-align:center;color:var(--peach-deep);font-size:18px;margin:5px 0;}
+  .flow .fres{background:#f3f9f2;border:1px solid #d6e9d5;border-radius:12px;padding:8px 12px;font-size:12.5px;margin:5px 0;}
+  .flow .fres b{color:var(--ink);}
+  .flow .fbranch{display:flex;gap:10px;align-items:flex-start;}
+  .flow .fcol{flex:1;}
+  .flow .fq{background:#fffaf6;border:1px dashed var(--peach);border-radius:12px;padding:9px 12px;font-size:13px;font-weight:600;text-align:center;}
+
+  .box{border-radius:14px;padding:14px 18px;margin:14px 0;}
+  .box p{margin:0;} .box .t{font-weight:700;display:flex;gap:7px;margin-bottom:4px;font-size:15px;}
+  .tip{background:#f2f9f1;border-left:5px solid var(--sage);} .tip .t{color:#5a8a58;}
+  .stop{background:#fdeef0;border-left:5px solid var(--rose);} .stop .t{color:#cf5a6d;}
+  .warn{background:#fdf6ec;border-left:5px solid var(--gold);} .warn .t{color:#c2901f;}
+
+  .result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;}
+  .btn{font-family:inherit;font-size:15px;font-weight:600;border-radius:50px;padding:11px 22px;cursor:pointer;border:none;text-decoration:none;display:inline-block;}
+  .btn-main{background:var(--peach-deep);color:#fff;} .btn-main:hover{background:#cf6a44;}
+  .btn-soft{background:#f3e7da;color:var(--ink);} .btn-soft:hover{background:#ead8c6;}
+
+  /* LIVE LINK CTA */
+  .livebar{background:linear-gradient(135deg,#fff1e8,#fde7ee);}
+  .livecta{max-width:560px;margin:0 auto;text-align:center;background:#fff;border:1.5px solid var(--peach);border-radius:20px;padding:22px 22px 20px;box-shadow:var(--shadow);}
+  .livecta .lc-emoji{font-size:34px;line-height:1;}
+  .livecta .lc-title{font-weight:700;font-size:17.5px;margin:8px 0 4px;color:var(--ink);}
+  .livecta .lc-sub{font-size:14px;color:var(--ink-soft);margin:0 0 16px;}
+  .livecta .lc-btn{display:inline-block;background:var(--peach-deep);color:#fff;font-weight:700;font-size:17px;text-decoration:none;padding:14px 32px;border-radius:50px;box-shadow:0 8px 20px rgba(224,122,82,.32);}
+  .livecta .lc-btn:hover{background:#cf6a44;}
+  .livecta .lc-url{font-size:12.5px;color:var(--ink-soft);margin:14px 0 0;word-break:break-all;}
+  .livecta .lc-url a{color:var(--peach-deep);font-weight:600;text-decoration:none;}
+
+  /* READING SECTIONS */
+  .read{background:var(--cream-2);}
+  .tip-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0;box-shadow:var(--shadow);}
+  .tip-card .h{display:flex;align-items:center;gap:12px;margin-bottom:4px;}
+  .tip-card .n{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:var(--peach);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .tip-card .h b{font-size:18px;} .tip-card p{margin:6px 0 0;font-size:15.5px;}
+  .mistake{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow);}
+  .mistake .num{font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--rose);line-height:1.2;flex:0 0 auto;}
+  .mistake p{margin:0;font-size:15.5px;}
+  .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;line-height:1.5;text-align:center;color:var(--peach-deep);background:#fff;border-radius:16px;padding:24px 22px;margin:24px 0;box-shadow:var(--shadow);}
+
+  .closing{background:linear-gradient(160deg,#fff6ee,var(--cream-2));text-align:center;}
+  .closing .heart{font-size:44px;}
+  .footer{text-align:center;padding:30px 20px 46px;color:var(--ink-soft);font-size:13.5px;background:var(--cream-2);}
+  .footer b{color:var(--peach-deep);}
+
+  .print-only{display:none;}
+  @media print{
+    body{font-size:12.5px;}
+    .cover{min-height:auto;page-break-after:always;} .cover .scroll,.scroll{display:none;}
+    .screen{display:block!important;page-break-inside:avoid;border-top:1px dashed #ddd;padding-top:14px;margin-top:14px;}
+    .navrow,.result-actions{display:none;}
+    .print-only{display:block;}
+    section{page-break-inside:auto;padding:18px 0;}
+    .tip-card,.mistake,.group{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="deco d1">🍼</span><span class="deco d2">🤱</span><span class="deco d3">💗</span><span class="deco d4">👶</span>
+  <div class="badge">Cẩm nang cho mẹ bỉm</div>
+  <h1>Soi Miệng Con<br><span class="hl">Là Biết Mua Bình Gì</span></h1>
+  <p class="sub">Trả lời vài câu hỏi đơn giản về con, ebook sẽ chỉ ngay loại bình hợp nhất. Hết cảnh mua 4–5 bình mà con vẫn đẩy ra.</p>
+  <div class="author">Biên soạn bởi<b>Mẹ Thu Hương</b></div>
+  <div class="scroll">⌄ Lướt xuống bắt đầu ⌄</div>
+</div>
+
+<!-- LIVE LINK -->
+<section class="livebar"><div class="wrap">
+  <div class="livecta">
+    <div class="lc-emoji">📱</div>
+    <p class="lc-title">Muốn bấm chọn trực tiếp trên điện thoại?</p>
+    <p class="lc-sub">Bấm nút dưới đây để làm trắc nghiệm "soi miệng con" ngay (chia sẻ được cho mẹ khác).</p>
+    <a class="lc-btn" href="https://scintillating-mochi-43253a.netlify.app/cam-nang-chon-num-ti.html" target="_blank" rel="noopener">👉 Mở bản bấm chọn</a>
+    <p class="lc-url">Hoặc mở link: <a href="https://scintillating-mochi-43253a.netlify.app/cam-nang-chon-num-ti.html" target="_blank" rel="noopener">scintillating-mochi-43253a.netlify.app/cam-nang-chon-num-ti.html</a></p>
+  </div>
+</div></section>
+
+<!-- INTRO -->
+<section class="intro"><div class="wrap">
+  <div class="kicker">Mẹ ơi, đọc cái này trước nhé</div>
+  <h2 class="chapter">Con đẩy bình — không phải lỗi của mẹ</h2>
+  <div class="divider"></div>
+  <p>Mua hết bình này tới bình khác, cái nào cũng review tốt, mà con cứ ngậm vào là khóc, đẩy ra? Mẹ ơi, đó <strong>không phải vì con khó tính</strong>, cũng không phải mẹ chọn dở.</p>
+  <p>Lý do đơn giản lắm: <strong>dáng núm ti đó không vừa miệng con thôi.</strong> Giống đôi giày — số đẹp mấy mà sai cỡ thì vẫn đau chân.</p>
+  <p>Miệng mỗi bé một kiểu. Mẹ chỉ cần ngắm con 1 phút, trả lời vài câu bên dưới, là biết ngay nên mua bình nào 👇</p>
+</div></section>
+
+<!-- HƯỚNG DẪN SOI -->
+<section class="guide"><div class="wrap">
+  <div class="kicker">Xem trước cho dễ hình dung</div>
+  <h2 class="chapter">Cách soi miệng con (có hình)</h2>
+  <div class="divider"></div>
+  <p class="lead">Ngắm con theo 3 hình dưới đây, rồi xuống làm trắc nghiệm sẽ rất nhanh.</p>
+
+  <!-- 1. Dáng môi -->
+  <div class="dblock">
+    <div class="dh"><div class="n">1</div><b>Nhìn dáng môi của con</b></div>
+    <p class="dsub">Ngắm lúc con ngủ hoặc há miệng khóc. Con giống hình nào nhất?</p>
+    <div class="lipgrid">
+
+      <div class="lipcell">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-label="Miệng rộng">
+          <path d="M18,52 C30,42 48,36 58,38 C66,39 74,42 80,44 C86,42 94,39 102,38 C112,36 130,42 142,52 C120,58 100,58 80,57 C60,58 40,58 18,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M24,59 C44,55 116,55 136,59 C122,75 100,79 80,79 C60,79 38,75 24,59 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="cap">Miệng há to, rộng<br>hai môi cân đối, mỏng vừa</div>
+        <div class="who">→ Bé Háu Đói</div>
+      </div>
+
+      <div class="lipcell">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-label="Hai môi dày mọng">
+          <path d="M34,52 C42,38 56,28 64,32 C70,34 76,38 80,40 C84,38 90,34 96,32 C104,28 118,38 126,52 C112,62 96,62 80,61 C64,62 48,62 34,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M40,59 C56,55 104,55 120,59 C116,84 100,92 80,92 C60,92 44,84 40,59 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="cap">Hai môi đều dày, mọng<br>có viền môi rõ</div>
+        <div class="who">→ Bé Môi Mọng</div>
+      </div>
+
+      <div class="lipcell">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-label="Môi trên mỏng môi dưới dày">
+          <path d="M36,52 C46,46 58,44 66,47 C72,46 76,47 80,48 C84,47 88,46 94,47 C102,44 114,46 124,52 C112,57 96,57 80,56 C64,57 48,57 36,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M40,58 C56,54 104,54 120,58 C116,83 100,91 80,91 C60,91 44,83 40,58 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+          <text x="130" y="46" font-size="11" fill="#9a8a86">mỏng</text>
+          <text x="128" y="86" font-size="11" fill="#9a8a86">dày</text>
+        </svg>
+        <div class="cap">Môi trên mỏng,<br>môi dưới dày hơn</div>
+        <div class="who">→ Bé Miệng Xinh</div>
+      </div>
+
+      <div class="lipcell">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-label="Miệng nhỏ hai môi mỏng">
+          <path d="M52,52 C60,46 68,45 74,48 C77,47 79,47 80,48 C81,47 83,47 86,48 C92,45 100,46 108,52 C99,57 90,57 80,56 C70,57 61,57 52,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M56,58 C66,55 94,55 104,58 C100,70 90,74 80,74 C70,74 60,70 56,58 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="cap">Miệng nhỏ nhắn,<br>cả hai môi đều mỏng</div>
+        <div class="who">→ Bé Miệng Nhỏ</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. Lực mút -->
+  <div class="dblock">
+    <div class="dh"><div class="n">2</div><b>Thử lực mút bằng ngón út</b></div>
+    <p class="dsub">Rửa tay thật sạch, đặt nhẹ ngón út vào miệng con.</p>
+    <div class="fingerwrap">
+      <svg viewBox="0 0 230 130" xmlns="http://www.w3.org/2000/svg" aria-label="Thử lực mút">
+        <circle cx="78" cy="66" r="50" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5"/>
+        <circle cx="30" cy="66" r="10" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5"/>
+        <circle cx="70" cy="52" r="3.6" fill="#3c3231"/>
+        <circle cx="52" cy="80" r="8" fill="#ef9aa8" opacity="0.45"/>
+        <path d="M104,60 C112,55 124,55 132,60" fill="none" stroke="#d96c7e" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M104,76 C112,82 124,82 132,76" fill="none" stroke="#d96c7e" stroke-width="3.2" stroke-linecap="round"/>
+        <rect x="118" y="61" width="92" height="15" rx="7.5" fill="#ffd9c2" stroke="#e6a583" stroke-width="2"/>
+        <line x1="198" y1="64" x2="198" y2="73" stroke="#e6a583" stroke-width="2"/>
+        <path d="M150,34 C140,34 132,40 129,49" fill="none" stroke="#e07a52" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M129,49 l9,-2 m-9,2 l2,-9" fill="none" stroke="#e07a52" stroke-width="2.6" stroke-linecap="round"/>
+        <text x="150" y="28" font-size="11.5" fill="#e07a52" font-weight="700">con kéo vào</text>
+      </svg>
+    </div>
+    <div class="pillrow">
+      <span class="p">💪 <b>Mút mạnh:</b> lưỡi ôm chặt, kéo ngón tay vào sâu</span>
+      <span class="p">🍃 <b>Mút nhẹ:</b> chỉ ngậm hờ đầu ngón, nhấp nhẹ</span>
+    </div>
+  </div>
+
+  <!-- 3. Dáng cằm -->
+  <div class="dblock">
+    <div class="dh"><div class="n">3</div><b>Nhìn nghiêng dáng cằm</b></div>
+    <p class="dsub">Ngắm con từ bên cạnh. Đường gạch là trục mũi – cằm.</p>
+    <div class="jawwrap">
+
+      <div class="jawcell">
+        <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg" aria-label="Cằm cân đối">
+          <line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C102,100 105,102 108,104 C98,116 82,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="70" cy="48" r="3" fill="#3c3231"/>
+        </svg>
+        <div class="cap">Cằm – mũi thẳng hàng</div>
+        <div class="who">✓ Cân đối</div>
+      </div>
+
+      <div class="jawcell">
+        <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg" aria-label="Cằm lẹm">
+          <line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C99,100 96,102 92,104 C86,116 78,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="70" cy="48" r="3" fill="#3c3231"/>
+        </svg>
+        <div class="cap">Cằm thụt vào trong</div>
+        <div class="who">→ Cằm lẹm</div>
+      </div>
+
+      <div class="jawcell">
+        <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg" aria-label="Móm">
+          <line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C104,99 114,101 120,104 C112,116 86,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="70" cy="48" r="3" fill="#3c3231"/>
+        </svg>
+        <div class="cap">Hàm dưới chìa ra</div>
+        <div class="who">→ Móm</div>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+<!-- QUIZ -->
+<section class="wrap" id="quiz">
+  <div class="kicker">Soi miệng con</div>
+  <h2 class="chapter">Bấm chọn câu đúng với con bạn</h2>
+  <div class="divider"></div>
+
+  <div class="quizbox">
+
+    <!-- Q1 special -->
+    <div class="screen active" id="q1">
+      <span class="q-pill">Câu hỏi đầu tiên</span>
+      <p class="q-title">Con có gặp vấn đề đặc biệt nào ở miệng không?</p>
+      <p class="q-help">Ví dụ: dính thắng lưỡi / dính môi nặng, sứt môi, hở hàm ếch.</p>
+      <div class="answers">
+        <button class="ans" onclick="go('r5')"><span class="emo">🏥</span><span><b>Có, con có một trong các vấn đề trên</b><small>Con cần dòng bình y tế chuyên dụng</small></span></button>
+        <button class="ans" onclick="go('q2')"><span class="emo">😊</span><span><b>Không, miệng con bình thường</b><small>Đi tiếp để soi kỹ hơn</small></span></button>
+      </div>
+    </div>
+
+    <!-- Q2 jaw -->
+    <div class="screen" id="q2">
+      <span class="q-pill">Nhìn con từ bên cạnh</span>
+      <p class="q-title">Cằm và hàm con trông thế nào?</p>
+      <p class="q-help">Mẹ ngắm con nghiêng, để ý đường cằm – mũi.</p>
+      <div class="qillus qjaw">
+        <div class="jawcell">
+          <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C102,100 105,102 108,104 C98,116 82,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/><circle cx="70" cy="48" r="3" fill="#3c3231"/></svg>
+          <div class="who">✓ Cân đối</div>
+        </div>
+        <div class="jawcell">
+          <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C99,100 96,102 92,104 C86,116 78,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/><circle cx="70" cy="48" r="3" fill="#3c3231"/></svg>
+          <div class="who">Cằm lẹm</div>
+        </div>
+        <div class="jawcell">
+          <svg viewBox="0 0 130 145" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="62" x2="110" y2="130" stroke="#c9bcb2" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M38,22 C66,14 92,24 96,52 C97,57 104,60 110,66 C111,69 106,71 100,72 C98,75 99,79 101,82 C104,84 104,88 98,89 C103,91 103,96 99,97 C104,99 114,101 120,104 C112,116 86,124 64,122 C44,120 30,108 28,84 C24,60 22,38 38,22 Z" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5" stroke-linejoin="round"/><circle cx="70" cy="48" r="3" fill="#3c3231"/></svg>
+          <div class="who">Móm</div>
+        </div>
+      </div>
+      <div class="answers">
+        <button class="ans" onclick="go('r4')"><span class="emo">↩️</span><span><b>Cằm thụt vào trong, hoặc hàm dưới chìa ra</b><small>Kiểu cằm lẹm / móm</small></span></button>
+        <button class="ans" onclick="go('q3')"><span class="emo">🙂</span><span><b>Cằm – mũi thẳng hài hòa, cân đối</b><small>Bình thường, đi tiếp nhé</small></span></button>
+      </div>
+      <div class="navrow"><button class="btn-ghost" onclick="back()">← Quay lại</button></div>
+    </div>
+
+    <!-- Q3 suck -->
+    <div class="screen" id="q3">
+      <span class="q-pill">Thử bằng ngón tay út sạch</span>
+      <p class="q-title">Cho con mút ngón tay — con mút ra sao?</p>
+      <p class="q-help">Rửa tay thật sạch, đặt nhẹ ngón út vào miệng con.</p>
+      <div class="qillus fingerwrap">
+        <svg viewBox="0 0 230 130" xmlns="http://www.w3.org/2000/svg" style="max-width:210px"><circle cx="78" cy="66" r="50" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5"/><circle cx="30" cy="66" r="10" fill="#ffe1d0" stroke="#f1a07d" stroke-width="2.5"/><circle cx="70" cy="52" r="3.6" fill="#3c3231"/><circle cx="52" cy="80" r="8" fill="#ef9aa8" opacity="0.45"/><path d="M104,60 C112,55 124,55 132,60" fill="none" stroke="#d96c7e" stroke-width="3.2" stroke-linecap="round"/><path d="M104,76 C112,82 124,82 132,76" fill="none" stroke="#d96c7e" stroke-width="3.2" stroke-linecap="round"/><rect x="118" y="61" width="92" height="15" rx="7.5" fill="#ffd9c2" stroke="#e6a583" stroke-width="2"/><line x1="198" y1="64" x2="198" y2="73" stroke="#e6a583" stroke-width="2"/><path d="M150,34 C140,34 132,40 129,49" fill="none" stroke="#e07a52" stroke-width="2.6" stroke-linecap="round"/><path d="M129,49 l9,-2 m-9,2 l2,-9" fill="none" stroke="#e07a52" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </div>
+      <div class="answers">
+        <button class="ans" onclick="go('q4')"><span class="emo">💪</span><span><b>Mút mạnh, lưỡi ôm chặt, kéo ngón tay vào sâu</b><small>Con háu ăn, mút khỏe</small></span></button>
+        <button class="ans" onclick="go('q5')"><span class="emo">🍃</span><span><b>Ngậm hờ đầu ngón tay, nhấp nhẹ nhàng</b><small>Con mút vừa / nhẹ</small></span></button>
+      </div>
+      <div class="navrow"><button class="btn-ghost" onclick="back()">← Quay lại</button></div>
+    </div>
+
+    <!-- Q4 lips strong -->
+    <div class="screen" id="q4">
+      <span class="q-pill">Con mút khỏe</span>
+      <p class="q-title">Vậy miệng và môi con trông thế nào?</p>
+      <p class="q-help">Ngắm lúc con ngủ hoặc há miệng khóc.</p>
+      <div class="answers">
+        <button class="ans" onclick="go('r1')"><span class="lipmini"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg"><path d="M18,52 C30,42 48,36 58,38 C66,39 74,42 80,44 C86,42 94,39 102,38 C112,36 130,42 142,52 C120,58 100,58 80,57 C60,58 40,58 18,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/><path d="M24,59 C44,55 116,55 136,59 C122,75 100,79 80,79 C60,79 38,75 24,59 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span><b>Miệng há to rộng, hai môi cân đối, mỏng vừa</b><small>Miệng rộng rãi</small></span></button>
+        <button class="ans" onclick="go('r2')"><span class="lipmini"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg"><path d="M34,52 C42,38 56,28 64,32 C70,34 76,38 80,40 C84,38 90,34 96,32 C104,28 118,38 126,52 C112,62 96,62 80,61 C64,62 48,62 34,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/><path d="M40,59 C56,55 104,55 120,59 C116,84 100,92 80,92 C60,92 44,84 40,59 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span><b>Hai môi dày, mọng, có viền môi rõ</b><small>Môi đầy đặn</small></span></button>
+      </div>
+      <div class="navrow"><button class="btn-ghost" onclick="back()">← Quay lại</button></div>
+    </div>
+
+    <!-- Q5 lips weak -->
+    <div class="screen" id="q5">
+      <span class="q-pill">Con mút nhẹ nhàng</span>
+      <p class="q-title">Hai bờ môi con trông thế nào?</p>
+      <p class="q-help">So sánh độ dày môi trên và môi dưới.</p>
+      <div class="answers">
+        <button class="ans" onclick="go('r3a')"><span class="lipmini"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg"><path d="M36,52 C46,46 58,44 66,47 C72,46 76,47 80,48 C84,47 88,46 94,47 C102,44 114,46 124,52 C112,57 96,57 80,56 C64,57 48,57 36,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/><path d="M40,58 C56,54 104,54 120,58 C116,83 100,91 80,91 C60,91 44,83 40,58 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span><b>Môi trên mỏng hơn, môi dưới dày và đầy hơn</b><small>Hai môi không đều nhau</small></span></button>
+        <button class="ans" onclick="go('r3b')"><span class="lipmini"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg"><path d="M52,52 C60,46 68,45 74,48 C77,47 79,47 80,48 C81,47 83,47 86,48 C92,45 100,46 108,52 C99,57 90,57 80,56 C70,57 61,57 52,52 Z" fill="#ef9aa8" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/><path d="M56,58 C66,55 94,55 104,58 C100,70 90,74 80,74 C70,74 60,70 56,58 Z" fill="#ea8090" stroke="#d96c7e" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span><b>Cả hai môi đều mỏng dẹt, miệng nhỏ nhắn</b><small>Miệng xinh nhỏ</small></span></button>
+      </div>
+      <div class="navrow"><button class="btn-ghost" onclick="back()">← Quay lại</button></div>
+    </div>
+
+    <!-- ===== RESULTS ===== -->
+
+    <!-- R1 -->
+    <div class="screen" id="r1">
+      <div class="result-head"><div class="yay">🎉 Con bạn là</div>
+        <h3><span class="dot" style="background:#e5544b"></span>Bé Háu Đói – Miệng Rộng</h3></div>
+      <div class="rsig"><p class="lbl">Đúng con bạn nếu…</p><ul>
+        <li>Miệng há to, rộng rãi</li><li>Mút mạnh, nuốt ừng ực</li><li>Thích ngậm thật sâu tận gốc</li></ul></div>
+      <div class="rbuy"><div class="head">🛒 Mẹ nên mua</div>
+        <p class="lbl">Bình bầu rộng, núm mềm đàn hồi tốt</p>
+        <div class="brands"><span>Pigeon cổ rộng</span><span>Moyuum</span><span>Grosmimi</span><span>Tommee Tippee</span><span>Lansinoh</span><span>Green Finger</span><span>Tomoro</span><span>Ubon</span><span>Wesser cổ rộng</span><span>GB Baby</span><span>Pur Pro-flo cổ rộng</span></div></div>
+      <div class="box tip"><div class="t">💡 Vì sao</div><p>Con mút khỏe lắm nên cần núm dày dặn, đàn hồi để không bị bẹp đầu ti. <b>Moyuum</b> và <b>Grosmimi</b> là "chân ái" cho bé mút mạnh.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+    <!-- R2 -->
+    <div class="screen" id="r2">
+      <div class="result-head"><div class="yay">🎉 Con bạn là</div>
+        <h3><span class="dot" style="background:#5b8fd6"></span>Bé Môi Mọng – Hay Tuột Bình</h3></div>
+      <div class="rsig"><p class="lbl">Đúng con bạn nếu…</p><ul>
+        <li>Miệng vừa, hai môi dày mọng</li><li>Mút mạnh nhưng chỉ ngậm nông</li><li>Tiết nhiều nước bọt khi bú</li></ul></div>
+      <div class="rbuy"><div class="head">🛒 Mẹ nên mua</div>
+        <p class="lbl">Núm có bề mặt nhám / gân nổi để bám chắc</p>
+        <div class="brands"><span>Bebepick (nhám mờ)</span><span>Hegen (cổ vuông)</span><span>Avent Natural Response</span><span>MAM</span><span>Olababy</span><span>Chuchu Baby</span><span>Ombee</span><span>Farlin Silky</span><span>Wesser cổ rộng</span></div></div>
+      <div class="box stop"><div class="t">⛔ Tránh mua</div><p>Núm trơn bóng, siêu mềm, dài (Green Finger, Lansinoh, Moyuum) — môi dày + nước bọt sẽ làm núm <b>tuột ra ngay</b>.</p></div>
+      <div class="box tip"><div class="t">💡 Vì sao</div><p>Môi dày trơn trượt nên núm cần "nhám" để giữ chặt, con mới bám khớp mà không nhả bình.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+    <!-- R3A -->
+    <div class="screen" id="r3a">
+      <div class="result-head"><div class="yay">🎉 Con bạn là</div>
+        <h3><span class="dot" style="background:#5fae5b"></span>Bé Miệng Xinh – Môi Dưới Dày Hơn</h3></div>
+      <div class="rsig"><p class="lbl">Đúng con bạn nếu…</p><ul>
+        <li>Miệng nhỏ, mút nhẹ nhàng</li><li>Thích ngậm sâu</li><li>Môi trên mỏng, môi dưới dày hơn</li></ul></div>
+      <p class="mini"><b>Lưu ý quan trọng:</b> kiểu bé này cần đổi bình theo tháng tuổi 👇</p>
+      <div class="stagebox"><div class="age">👶 Giai đoạn 0–3 tháng — dùng bình cổ hẹp</div>
+        <div class="brands"><span>Dr. Brown's cổ hẹp</span><span>Pigeon cổ hẹp</span><span>Wesser cổ hẹp</span><span>Nuk cổ hẹp</span><span>Betta cổ hẹp</span><span>Pur Orthodontic</span><span>Edison</span></div></div>
+      <div class="stagebox"><div class="age">🧒 Từ 4 tháng trở đi — môi dưới dài ra, cấn vào ren bình</div>
+        <p class="mini" style="margin-top:0"><b>Cách 1:</b> đổi sang bình cổ rộng dáng thon dài</p>
+        <div class="brands"><span>Theesy</span><span>Farlin Crystal Clear</span><span>Tomoro</span><span>Ubon</span></div>
+        <p class="mini"><b>Cách 2:</b> mua <b>vòng chuyển đổi cổ bình</b> để lắp núm cổ hẹp (con quen) vào thân bình cổ rộng.</p></div>
+      <div class="box stop"><div class="t">⛔ Khi con lớn, tránh</div><p>Hegen, Green Finger, Moyuum, Lansinoh, Grosmimi — bầu núm quá to so với miệng nhỏ của con.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+    <!-- R3B -->
+    <div class="screen" id="r3b">
+      <div class="result-head"><div class="yay">🎉 Con bạn là</div>
+        <h3><span class="dot" style="background:#5fae5b"></span>Bé Miệng Nhỏ Nhắn – Môi Mỏng</h3></div>
+      <div class="rsig"><p class="lbl">Đúng con bạn nếu…</p><ul>
+        <li>Miệng nhỏ xinh</li><li>Cả hai môi đều mỏng dẹt</li><li>Lực mút trung bình đến nhẹ</li></ul></div>
+      <div class="rbuy"><div class="head">🛒 Mẹ nên mua</div>
+        <p class="lbl">Bình cổ hẹp gọn nhẹ, dùng được lâu dài</p>
+        <div class="brands"><span>Dr. Brown's cổ hẹp</span><span>Pigeon cổ hẹp</span><span>Wesser cổ hẹp</span><span>Medela</span><span>Kamidi cổ hẹp</span><span>Pur Pro-flo cổ hẹp</span></div></div>
+      <div class="box tip"><div class="t">💡 Vì sao</div><p>Môi mỏng dễ mỏi, nên núm nhỏ gọn nhẹ giúp con đỡ tốn sức, bú lâu không mệt.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+    <!-- R4 -->
+    <div class="screen" id="r4">
+      <div class="result-head"><div class="yay">🎉 Con bạn là</div>
+        <h3><span class="dot" style="background:#e8b33e"></span>Bé Hàm Hơi Lệch</h3></div>
+      <div class="rsig"><p class="lbl">Đúng con bạn nếu…</p><ul>
+        <li>Nhìn nghiêng thấy cằm thụt vào (cằm lẹm)</li><li>Hoặc hàm dưới chìa ra (móm)</li></ul></div>
+      <div class="rbuy"><div class="head">🛒 Mẹ nên mua</div>
+        <p class="lbl">Núm dẹt, dáng nghiêng để lấp đầy khoảng hụt của hàm</p>
+        <div class="brands"><span>MAM (đầu dẹt phẳng)</span><span>Nuk chỉnh nha</span><span>Edison</span><span>Ombee</span><span>Betta dáng cong</span><span>Pur Orthodontic</span></div></div>
+      <div class="box tip"><div class="t">💡 Vì sao</div><p>Núm dẹt nghiêng sẽ ôm kín khóe môi con, lấp chỗ hàm bị hụt nên không bị tràn sữa. Bề mặt MAM mịn như nhung bám rất tốt.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+    <!-- R5 -->
+    <div class="screen" id="r5">
+      <div class="result-head"><div class="yay">🎉 Con bạn cần</div>
+        <h3><span class="dot" style="background:#444"></span>Bình Y Tế Chuyên Dụng</h3></div>
+      <div class="rsig"><p class="lbl">Dành cho bé…</p><ul>
+        <li>Dính thắng lưỡi / dính môi nặng</li><li>Sứt môi, hở hàm ếch</li></ul></div>
+      <div class="rbuy"><div class="head">🛒 Mẹ nên mua</div>
+        <p class="lbl">Dòng y tế, có van trợ lực giúp mẹ bơm sữa theo nhịp con nuốt</p>
+        <div class="brands"><span>Medela SpecialNeed</span><span>Pigeon Special Nursing</span><span>Farlin Cleft Palate</span></div></div>
+      <div class="box warn"><div class="t">⚠️ Quan trọng</div><p>Kiểu bé này mẹ nên hỏi thêm <b>bác sĩ nhi</b> để được hướng dẫn cách cho bú an toàn, tránh sặc nhé.</p></div>
+      <div class="result-actions"><button class="btn btn-main" onclick="restart()">↻ Soi lại từ đầu</button><a class="btn btn-soft" href="#themtips">Đọc thêm mẹo cho mẹ ↓</a></div>
+    </div>
+
+  </div><!--/quizbox-->
+
+  <!-- FLOWCHART chỉ hiện khi in PDF -->
+  <div class="print-only" style="margin-top:22px">
+    <h3 style="text-align:center;font-family:'Playfair Display',serif;font-size:24px;margin:0 0 4px">🗺️ Sơ Đồ Soi Con (bản in)</h3>
+    <p style="text-align:center;color:var(--ink-soft);margin:0 0 16px;font-size:13px">Mẹ dò theo mũi tên: trả lời từng câu rồi đi xuống, gặp ô xanh là ra bình nên mua.</p>
+    <div class="flow">
+      <div class="fq">1. Con có vấn đề đặc biệt? (dính thắng lưỡi/sứt môi/hở hàm ếch)</div>
+      <div class="fbranch" style="margin-top:6px">
+        <div class="fcol" style="flex:0 0 42%"><div class="fres"><b>CÓ →</b> Bình y tế: Medela SpecialNeed, Pigeon Special Nursing, Farlin Cleft Palate</div></div>
+        <div class="fcol" style="text-align:center;align-self:center"><div style="color:var(--peach-deep);font-weight:700;font-size:13px">KHÔNG ↓</div></div>
+      </div>
+      <div class="farrow">↓</div>
+      <div class="fq">2. Nhìn nghiêng, cằm có lệch không? (cằm lẹm / móm)</div>
+      <div class="fbranch" style="margin-top:6px">
+        <div class="fcol" style="flex:0 0 42%"><div class="fres"><b>CÓ →</b> Núm dẹt: MAM, Nuk chỉnh nha, Edison, Ombee, Betta cong, Pur Orthodontic</div></div>
+        <div class="fcol" style="text-align:center;align-self:center"><div style="color:var(--peach-deep);font-weight:700;font-size:13px">KHÔNG ↓</div></div>
+      </div>
+      <div class="farrow">↓</div>
+      <div class="fq">3. Con mút mạnh hay nhẹ?</div>
+      <div class="fbranch" style="margin-top:8px">
+        <div class="fcol">
+          <div class="fstep" style="font-size:13px">💪 MÚT MẠNH</div>
+          <div class="farrow" style="font-size:14px">↓</div>
+          <div class="fq" style="font-size:12px">Miệng rộng, môi cân đối?</div>
+          <div class="fres"><b>→</b> Bầu rộng: Pigeon cổ rộng, Moyuum, Grosmimi, Tommee Tippee</div>
+          <div class="fq" style="font-size:12px;margin-top:6px">Hai môi dày, mọng?</div>
+          <div class="fres"><b>→</b> Núm nhám: Bebepick, Hegen, MAM, Avent, Chuchu</div>
+        </div>
+        <div class="fcol">
+          <div class="fstep" style="font-size:13px">🍃 MÚT NHẸ</div>
+          <div class="farrow" style="font-size:14px">↓</div>
+          <div class="fq" style="font-size:12px">Môi trên mỏng, dưới dày?</div>
+          <div class="fres"><b>→</b> 0–3m cổ hẹp (Dr.Brown's, Pigeon cổ hẹp); từ 4m đổi cổ rộng thon dài (Theesy, Tomoro)</div>
+          <div class="fq" style="font-size:12px;margin-top:6px">Cả hai môi đều mỏng?</div>
+          <div class="fres"><b>→</b> Cổ hẹp lâu dài: Pigeon cổ hẹp, Dr.Brown's, Medela, Kamidi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THÊM MẸO -->
+<section class="read" id="themtips"><div class="wrap">
+  <div class="kicker">Mẹo thêm cho mẹ</div>
+  <h2 class="chapter">Để con vừa ti mẹ vừa ti bình</h2>
+  <div class="divider"></div>
+  <p class="lead">Muốn con không "bỏ" bên nào, mẹ chọn núm thỏa thêm 3 điều giống ti mẹ:</p>
+
+  <div class="tip-card"><div class="h"><div class="n">1</div><b>Núm "phải mút mới ra sữa"</b></div>
+    <p>Chọn núm lỗ chữ Y/X hoặc có van (Chuchu Baby, Avent Natural Response). Sữa chỉ chảy khi con chủ động mút — để con không sinh thói lười khi quay lại ti mẹ.</p></div>
+  <div class="tip-card"><div class="h"><div class="n">2</div><b>Núm bầu thuôn như bầu ngực mẹ</b></div>
+    <p>Chọn núm dốc thuôn đều, không thắt eo (Pigeon, Moyuum, Tommee Tippee) để khi bú môi con loe ra như bông hoa, giống ngậm ti mẹ.</p></div>
+  <div class="tip-card"><div class="h"><div class="n">3</div><b>Núm mềm, hơi nhám như da mẹ</b></div>
+    <p>Chọn silicone siêu mềm, bề mặt nhám nhẹ (Avent, MAM, Bebepick, Farlin Silky) để con thấy quen thuộc, không như đang ngậm khối nhựa lạ.</p></div>
+
+  <div class="box tip"><div class="t">💡 Mẹo vàng</div><p>Ngâm núm vào nước ấm <b>37–40°C</b> trước khi bú cho giống hơi ấm mẹ. Mấy ngày đầu để <b>bố hoặc bà</b> tập bình — kẻo con ngửi thấy hơi mẹ là khóc đòi, không chịu bình.</p></div>
+</div></section>
+
+<!-- 5 SAI LẦM -->
+<section class="wrap">
+  <div class="kicker">Tránh kẻo phí tiền</div>
+  <h2 class="chapter">5 điều khiến con chê bình</h2>
+  <div class="divider"></div>
+  <div class="mistake"><div class="num">1</div><p><b>Bé mút mạnh mà mua núm quá mềm.</b> Núm mềm gặp lực mút mạnh sẽ xẹp lép, sữa không ra được → con bực bỏ bình. Bé mút khỏe cần núm dày, đứng phom.</p></div>
+  <div class="mistake"><div class="num">2</div><p><b>Bé miệng nhỏ mà ép bình cổ rộng quá sớm.</b> 0–3 tháng dùng cổ rộng sẽ kéo căng môi, mỏi hàm, hở khóe miệng → nuốt hơi, đầy bụng, nôn trớ.</p></div>
+  <div class="mistake"><div class="num">3</div><p><b>Bé môi dày mà mua núm trơn bóng.</b> Nước bọt nhiều + núm trơn = tuột hoài. Nhóm này phải dùng núm nhám/gân nổi.</p></div>
+  <div class="mistake"><div class="num">4</div><p><b>Tự lấy kim/kéo khoét rộng lỗ núm.</b> Sẽ làm rách núm, sữa chảy ồ ạt gây <b>sặc nguy hiểm</b>. Hãy mua dụng cụ đục lỗ chuyên dụng.</p></div>
+  <div class="mistake"><div class="num">5</div><p><b>Dùng một bình từ bé tới lớn.</b> Miệng con thay đổi theo tháng (nhất là mốc 4 tháng). Cứ giữ nguyên sẽ khiến con cấn đau môi rồi chê bình.</p></div>
+</section>
+
+<!-- KHI CON VẪN CHÊ -->
+<section class="read"><div class="wrap">
+  <div class="kicker">Bình tĩnh nhé mẹ</div>
+  <h2 class="chapter">Chọn đúng rồi mà con vẫn chê?</h2>
+  <div class="divider"></div>
+  <div class="tip-card"><div class="h"><b>⏳ Con cần thời gian học bú núm mới</b></div>
+    <p>Đổi núm mới, cơ hàm con cần <b>5–7 ngày</b> để quen. Con đẩy ra 1–2 ngày đầu là <b>bình thường</b>, đừng vội đổi tiếp.</p></div>
+  <div class="tip-card"><div class="h"><b>🌸 Mỗi bé một cá tính</b></div>
+    <p>Có bé kén mùi chỉ chịu silicone không mùi; có bé nghiện cao su mềm ấm. Mẹ chiều theo sở thích bẩm sinh của con.</p></div>
+  <div class="tip-card"><div class="h"><b>🌡️ Đôi khi không phải lỗi núm</b></div>
+    <p>Con chê bình có khi vì sữa chưa đủ ấm, con đang mọc răng, tuần khủng hoảng (wonder week), hoặc người cho bú lạ — chứ không phải do núm.</p></div>
+  <div class="quote">Dùng ebook này làm kim chỉ nam để mua chiếc bình đầu tiên.<br>Con chê thì bình tĩnh quan sát, tinh chỉnh — tuyệt đối đừng ép, kẻo con sợ bình.</div>
+</div></section>
+
+<!-- DÙNG ĐÚNG -->
+<section class="wrap">
+  <div class="kicker">Đừng quên</div>
+  <h2 class="chapter">Dùng &amp; vệ sinh đúng cho an toàn</h2>
+  <div class="divider"></div>
+  <div class="box tip"><div class="t">💨 Thông van khí trước khi bú</div><p>Trước khi cho bú (nhất là bình mới hoặc sau tiệt trùng), bóp nhẹ vào van ở chân núm để van mở thông — giúp núm không méo bẹp khi con bú.</p></div>
+  <div class="box warn"><div class="t">🔄 Thay núm định kỳ</div><p>Thay núm mỗi <b>2–3 tháng</b>, hoặc thay ngay khi núm ngả đục, dính, mềm nhão. Núm cũ làm lỗ sữa giãn rộng, dễ gây sặc.</p></div>
+</section>
+
+<!-- KẾT -->
+<section class="wrap closing">
+  <div class="heart">💗</div>
+  <h2 class="chapter">Lời nhắn từ Mẹ Thu Hương</h2>
+  <div class="divider"></div>
+  <p class="lead">Không có chiếc bình nào "tốt nhất" — chỉ có chiếc bình <strong>hợp nhất với con mình</strong>. Mẹ chịu khó đọc tới đây là đã yêu con đủ nhiều để làm đúng rồi.</p>
+  <p style="text-align:center;color:var(--ink-soft)">Chúc mẹ con mình những cữ bú thật bình yên 🍼</p>
+</section>
+
+<div class="footer">
+  <b>Soi Miệng Con — Chọn Đúng Bình Sữa Cho Bé</b><br>
+  Biên soạn &amp; chia sẻ bởi Mẹ Thu Hương<br>
+  <span style="font-size:12px;opacity:.85">Tài liệu mang tính tham khảo, định hướng theo số đông. Trường hợp đặc biệt, mẹ hãy hỏi thêm bác sĩ nhi.</span>
+</div>
+
+<script>
+  let current = 'q1';
+  const hist = [];
+  function show(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const top = document.getElementById('quiz').getBoundingClientRect().top + window.scrollY - 12;
+    window.scrollTo({top, behavior:'smooth'});
+  }
+  function go(id){ hist.push(current); current = id; show(id); }
+  function back(){ if(hist.length){ current = hist.pop(); show(current); } }
+  function restart(){ hist.length = 0; current = 'q1'; show('q1'); }
+</script>
+</body>
+</html>

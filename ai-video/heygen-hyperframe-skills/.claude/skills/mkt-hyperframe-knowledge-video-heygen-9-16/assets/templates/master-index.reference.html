@@ -1,0 +1,294 @@
+<!doctype html>
+<!--
+  ============================================================================
+  MASTER index.html REFERENCE — 9:16 FULL↔SPLIT (1080×1920).
+  Copy into project as index.html, then REPLACE only the marked bits:
+    [1] <title>                               → project title
+    [2] data-duration="60.650" everywhere     → ffprobe duration of FINAL re-encoded source.mp4
+    [3] SFX <audio> block (track 70+)         → SFX hits at beat moments (references/sfx-layer.md)
+    [4] scene mounts m1..mN (track 40+)       → 1 per beat; data-start = beat.start,
+        data-duration = beat.brollEnd - beat.start (mount ENDS at brollEnd so the
+        framework hides it during the full-face breath window)
+    [5] transitions[] array                   → wipe/flash at a FEW major boundaries
+    [6] SCENES[] array                        → {start, brollEnd, hasBreath} per beat (FULL↔SPLIT)
+    [7] SCENE_STARTS[]                        → beat starts (skip t=0) for avatar punch-in
+    [8] TOTAL const                           → same as [2]
+  Mechanic: avatar video is FULL-SCREEN by default. At each scene start the
+  avatar shrinks to the BOTTOM HALF (1080×960) while the slide scene shows in
+  the TOP HALF. At brollEnd the avatar expands back to full-screen ("breath")
+  for the punchline. Captions sub-comp mounts LAST at track 60.
+  DO NOT touch: the CSS, #avatar-stage wrapper DOM, #root selector,
+  breathing/punch logic, data-layout-allow-overflow attrs, gsap 3.14.2 CDN tag.
+  ============================================================================
+-->
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>REPLACE-WITH-TITLE — Knowledge Keynote 9:16</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #FFFBEE; font-family: 'Be Vietnam Pro', sans-serif; }
+
+  #root {
+    position: relative; width: 1080px; height: 1920px;
+    overflow: hidden; background: #FFFBEE;
+  }
+
+  /* Full-canvas light base (visible behind slide pane while scene fades in) */
+  #slide-bg {
+    position: absolute; top: 0; left: 0;
+    width: 1080px; height: 1920px;
+    background: #FFFBEE; z-index: 5;
+  }
+
+  /* THUMBNAIL / title card — giật tít hook over avatar first frame (0–2.4s) */
+  #thumbnail-card { position: absolute; inset: 0; z-index: 58; opacity: 0; pointer-events: none; }
+  #thumbnail-card .tc-scrim { position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.10) 42%, rgba(0,0,0,0.34) 100%); }
+  #thumbnail-card .tc-text { position: absolute; left: 0; right: 0; top: 300px; text-align: center; padding: 0 56px; }
+  #thumbnail-card .tc-kicker { font: 900 100px/1.0 'Be Vietnam Pro', sans-serif; text-transform: uppercase;
+    color: #FFFFFF; letter-spacing: -0.01em; text-shadow: 0 6px 30px rgba(0,0,0,0.55), 0 2px 0 rgba(0,0,0,0.35); }
+  #thumbnail-card .tc-title { margin-top: 26px; font: 800 60px/1.12 'Be Vietnam Pro', sans-serif;
+    text-transform: uppercase; color: #F2B705; text-shadow: 0 4px 22px rgba(0,0,0,0.6); }
+
+  /* Avatar stage — FULL screen by default, tweens to BOTTOM HALF for SPLIT. */
+  #avatar-stage {
+    position: absolute; top: 0; left: 0;
+    width: 1080px; height: 1920px;
+    overflow: hidden; z-index: 10;
+    will-change: height, top;
+  }
+  .avatar-breathing { position: absolute; inset: 0; will-change: transform; }
+  .avatar-punch     { position: absolute; inset: 0; will-change: transform; }
+  #v-source {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  /* Slide pane mounts (TOP half). Mount clip ENDS at brollEnd (see [4]). */
+  .slide-mount {
+    position: absolute; top: 0; left: 0;
+    width: 1080px; height: 960px;
+    overflow: hidden; background: transparent;
+    z-index: 20; opacity: 0;
+    will-change: opacity;
+  }
+  .slide-mount > [data-composition-id] {
+    width: 100% !important; height: 100% !important;
+    position: absolute !important; top: 0; left: 0;
+  }
+
+  /* Divider line at the split boundary */
+  #split-divider {
+    position: absolute; top: 956px; left: 0;
+    width: 1080px; height: 4px; z-index: 30;
+    background: linear-gradient(90deg, transparent, #0A6F3E 30%, #F2B705 70%, transparent);
+    box-shadow: 0 0 20px rgba(245,183,5,0.40);
+    opacity: 0; pointer-events: none;
+    will-change: opacity, transform;
+  }
+
+  /* Scene wipe / flash overlays (top pane only) */
+  #scene-wipe {
+    position: absolute; top: 0; height: 960px; left: -220px;
+    width: 160px; z-index: 50; opacity: 0; pointer-events: none;
+  }
+  #scene-wipe.gold  { background: linear-gradient(90deg, transparent, #F2B705 50%, transparent); box-shadow: 0 0 160px 36px rgba(245,183,5,0.45); }
+  #scene-wipe.green { background: linear-gradient(90deg, transparent, #0A6F3E 50%, transparent); box-shadow: 0 0 160px 36px rgba(10,111,62,0.40); }
+  #scene-wipe.cream { background: linear-gradient(90deg, transparent, #FFFDF4 50%, transparent); box-shadow: 0 0 160px 36px rgba(255,253,244,0.55); }
+  #scene-flash {
+    position: absolute; top: 0; left: 0; width: 1080px; height: 960px;
+    background: #FFFDF4; z-index: 51; opacity: 0; pointer-events: none;
+    mix-blend-mode: screen;
+  }
+
+  /* Brand mark top-left (text only) */
+  #brand-mark {
+    position: absolute; top: 40px; left: 48px; z-index: 45;
+    font: 800 14px/1 'Be Vietnam Pro', sans-serif;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #0A6F3E;
+    display: inline-flex; align-items: center; gap: 10px;
+    opacity: 0;
+  }
+  #brand-mark .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #F2B705; box-shadow: 0 0 10px rgba(245,183,5,0.6);
+  }
+  #brand-mark .at  { color: #F2B705; }
+  #brand-mark .sep { opacity: 0.4; }
+</style>
+</head>
+<body>
+
+<div id="root" data-composition-id="main" data-start="0" data-duration="60.650" data-width="1080" data-height="1920">
+
+  <!-- backdrop -->
+  <div id="slide-bg"></div>
+
+  <!-- THUMBNAIL / title card (0–2.4s giật tít). [T1]/[T2] filled from script title. -->
+  <div id="thumbnail-card" class="clip" data-start="0" data-duration="2.4" data-track-index="58">
+    <div class="tc-scrim"></div>
+    <div class="tc-text">
+      <div class="tc-kicker">DÒNG TRÊN</div><!-- [T1] script.title.kicker -->
+      <div class="tc-title">TIÊU ĐỀ GIẬT TÍT</div><!-- [T2] script.title.headline -->
+    </div>
+  </div>
+
+  <!-- avatar audio (drives voiceover) -->
+  <audio id="a-source" class="clip" data-start="0" data-duration="60.650" data-track-index="1" data-volume="1.0" src="source.mp4"></audio>
+
+  <!-- [3] SFX layer (track 70+) -->
+  <audio id="sfx-hook-flash" class="clip" data-start="0.20"  data-duration="1.6"  data-track-index="70" data-volume="0.42" src="assets/sfx/camera-flash.mp3"></audio>
+  <audio id="sfx-s2-snap"    class="clip" data-start="15.54" data-duration="0.30" data-track-index="71" data-volume="0.45" src="assets/sfx/búng tay.mp3"></audio>
+
+  <!-- avatar stage (FULL by default) -->
+  <div id="avatar-stage">
+    <div class="avatar-breathing" data-layout-allow-overflow>
+      <div class="avatar-punch" data-layout-allow-overflow>
+        <video id="v-source" class="clip" data-start="0" data-duration="60.650" data-track-index="0" src="source.mp4" muted playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- [4] scene mounts (TOP pane) — track 40+; duration ends at brollEnd -->
+  <div id="m1" class="clip slide-mount" data-start="15.590" data-duration="8.460" data-track-index="40" data-composition-id="scene-01-slug" data-composition-src="scenes/scene-01-slug.html"></div>
+  <div id="m2" class="clip slide-mount" data-start="25.550" data-duration="9.140" data-track-index="41" data-composition-id="scene-02-slug" data-composition-src="scenes/scene-02-slug.html"></div>
+
+  <!-- split divider -->
+  <div id="split-divider"></div>
+
+  <!-- slide-pane transition overlays -->
+  <div id="scene-wipe" class="clip gold" data-start="0" data-duration="60.650" data-track-index="55"></div>
+  <div id="scene-flash" class="clip" data-start="0" data-duration="60.650" data-track-index="56"></div>
+
+  <!-- brand mark -->
+  <div id="brand-mark" class="clip" data-start="0" data-duration="60.650" data-track-index="2">
+    <span class="dot"></span>
+    <span><span class="at">@</span>drmaya</span>
+    <span class="sep">·</span>
+    <span>Mẹo cho mẹ</span>
+  </div>
+
+  <!-- captions LAST (track 60 + z-index 100) -->
+  <div class="clip captions-mount"
+       data-composition-src="compositions/captions.html"
+       data-start="0" data-duration="60.650"
+       data-composition-id="captions"
+       data-track-index="60"
+       style="z-index: 100;"></div>
+
+</div>
+
+<script>
+(function () {
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+
+  const TOTAL = 60.650; /* [8] */
+
+  // ---- Initial entrance ----
+  tl.fromTo('#brand-mark', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.3);
+
+  // ---- Thumbnail / title card hook (0–2.4s giật tít over avatar first frame) ----
+  tl.set('#thumbnail-card', { opacity: 1 }, 0);
+  tl.fromTo('#thumbnail-card .tc-kicker', { opacity: 0, scale: 1.14, y: -16 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)' }, 0.08);
+  tl.fromTo('#thumbnail-card .tc-title', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.32);
+  tl.to('#thumbnail-card', { opacity: 0, duration: 0.4, ease: 'power2.in' }, 2.0);
+  tl.set('#thumbnail-card', { opacity: 0 }, 2.42);
+
+  // ---- Hook punch-zoom opener (sync camera-flash SFX @0.2) ----
+  tl.fromTo('.avatar-punch', { scale: 1.16 }, { scale: 1.0, duration: 0.85, ease: 'power3.out', transformOrigin: 'center center' }, 0.05);
+  // Ken-burns slow push-in while full-face at open
+  tl.fromTo('#v-source', { scale: 1.0 }, { scale: 1.07, duration: 3.6, ease: 'sine.inOut', transformOrigin: 'center 30%' }, 0.1);
+
+  // ---- Scene mounts: fade in + alternating punch-zoom at each start ----
+  const mounts = [
+    { id: '#m1', start: 15.590 },
+    { id: '#m2', start: 25.550 },
+  ];
+  mounts.forEach((m, i) => {
+    tl.fromTo(m.id, { opacity: 0 }, { opacity: 1, duration: 0.55, ease: 'power2.out', overwrite: 'auto' }, m.start);
+    const fromScale = (i % 2 === 0) ? 1.06 : 0.95;  // odd zooms in, even zooms out
+    tl.fromTo(m.id, { scale: fromScale }, { scale: 1.0, duration: 0.65, ease: 'power3.out', transformOrigin: 'center center', overwrite: 'auto' }, m.start);
+  });
+
+  // ---- [5] Wipe / flash at a few major boundaries ----
+  const transitions = [
+    { end: 25.550, color: 'green', dir: 'ltr', flash: false },
+  ];
+  transitions.forEach(({ end, color, dir, flash }) => {
+    const t0 = end - 0.20;
+    tl.set('#scene-wipe', { className: 'clip ' + color }, t0);
+    if (dir === 'ltr') {
+      tl.fromTo('#scene-wipe', { x: -220, opacity: 0 }, { x: 1240, opacity: 1, duration: 0.55, ease: 'power2.inOut', overwrite: 'auto' }, t0);
+    } else {
+      tl.fromTo('#scene-wipe', { x: 1240, opacity: 0 }, { x: -220, opacity: 1, duration: 0.55, ease: 'power2.inOut', overwrite: 'auto' }, t0);
+    }
+    tl.to('#scene-wipe', { opacity: 0, duration: 0.15, ease: 'power2.out', overwrite: 'auto' }, t0 + 0.45);
+    tl.set('#scene-wipe', { opacity: 0 }, t0 + 0.62);
+    if (flash) {
+      tl.fromTo('#scene-flash', { opacity: 0 }, { opacity: 0.38, duration: 0.08, ease: 'power2.out', overwrite: 'auto' }, t0 + 0.18);
+      tl.to('#scene-flash', { opacity: 0, duration: 0.22, ease: 'power2.in', overwrite: 'auto' }, t0 + 0.26);
+      tl.set('#scene-flash', { opacity: 0 }, t0 + 0.50);
+    }
+  });
+
+  // ---- FULL <-> SPLIT ----
+  const TRANS = 0.45;
+  const PRE_SHRINK = 0.30; // start shrinking slightly before the scene mounts
+  function goSplit(t) {
+    tl.to('#avatar-stage', { height: 960, top: 960, duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+    tl.to('#v-source', { objectPosition: 'center 58%', scale: 1.0, duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+    tl.to('#split-divider', { opacity: 1, duration: 0.35, overwrite: 'auto' }, t + 0.1);
+    tl.to('[data-composition-id="captions"] .caption-stage', { bottom: 920, duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+  }
+  function goFull(t) {
+    tl.to('#avatar-stage', { height: 1920, top: 0, duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+    tl.to('#v-source', { objectPosition: 'center 25%', duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+    tl.to('#split-divider', { opacity: 0, duration: 0.3, overwrite: 'auto' }, t);
+    tl.set('#split-divider', { opacity: 0 }, t + 0.32);
+    tl.to('[data-composition-id="captions"] .caption-stage', { bottom: 160, duration: TRANS, ease: 'power2.inOut', overwrite: 'auto' }, t);
+    // Breath overshoot punch + ken-burns slow push while full-face
+    tl.fromTo('.avatar-punch', { scale: 1.10 }, { scale: 1.0, duration: 0.7, ease: 'power3.out', transformOrigin: 'center center', overwrite: 'auto' }, t + 0.1);
+    tl.fromTo('#v-source', { scale: 1.0 }, { scale: 1.06, duration: 1.4, ease: 'sine.out', transformOrigin: 'center 30%', overwrite: 'auto' }, t + TRANS);
+  }
+  tl.set('[data-composition-id="captions"] .caption-stage', { bottom: 160 }, 0);
+
+  // [6] SCENES: each beat → shrink at start-PRE_SHRINK, breathe back at brollEnd
+  const SCENES = [
+    { start: 15.590, brollEnd: 24.050, hasBreath: true },
+    { start: 25.550, brollEnd: 34.690, hasBreath: true },
+  ];
+  SCENES.forEach((sc) => {
+    goSplit(sc.start - PRE_SHRINK);
+    if (sc.hasBreath) goFull(sc.brollEnd);
+  });
+
+  // ---- Breathing (subtle yoyo) ----
+  tl.to('.avatar-breathing', { scale: 1.025, duration: 4.5, ease: 'sine.inOut',
+    yoyo: true, repeat: Math.max(1, Math.ceil(TOTAL / 9) - 1), transformOrigin: 'center center' }, 1);
+
+  // ---- [7] Punch-in at each scene start ----
+  const SCENE_STARTS = [15.590, 25.550];
+  SCENE_STARTS.forEach(t => {
+    tl.to('.avatar-punch', { scale: 1.06, duration: 0.35, ease: 'power2.out', transformOrigin: 'center center', overwrite: 'auto' }, t);
+    tl.to('.avatar-punch', { scale: 1.0, duration: 0.7, ease: 'power3.out', overwrite: 'auto' }, t + 0.45);
+  });
+
+  // ---- Final fade ----
+  tl.to(['#avatar-stage', '#brand-mark'], { opacity: 0, duration: 0.5, ease: 'power2.in', overwrite: 'auto' }, TOTAL - 0.5);
+
+  window.__timelines["main"] = tl;
+})();
+</script>
+
+</body>
+</html>

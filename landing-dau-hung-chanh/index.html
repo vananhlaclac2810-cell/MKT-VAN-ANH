@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dầu Húng Chanh Dr.Maya — Dịu cơn ho cho bé từ thiên nhiên</title>
+  <meta name="description" content="Dầu Húng Chanh Dr.Maya — chiết xuất 100% thiên nhiên từ húng chanh, mật ong rừng, gừng và bạc hà. Hỗ trợ giảm ho, an toàn cho bé từ 6 tháng tuổi." />
+  <meta name="theme-color" content="#2E7D5B" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maya: {
+              50:  '#F0F8F3',
+              100: '#E8F3EC',
+              200: '#C9E2D3',
+              500: '#2E7D5B',
+              600: '#246349',
+              700: '#1A4A37',
+              900: '#0F2A1F',
+            },
+            honey: {
+              100: '#FCEFD7',
+              300: '#F4C97F',
+              400: '#F0B963',
+              500: '#E8A33D',
+              600: '#C7821D',
+            },
+            cream: '#FBF7F0',
+            ink: {
+              DEFAULT: '#1A2E22',
+              soft:    '#5A6B5F',
+              line:    '#E4DFD3',
+            },
+          },
+          fontFamily: {
+            serif: ['"Lora"', 'Georgia', 'serif'],
+            sans:  ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 8px 30px -10px rgba(15, 42, 31, 0.12)',
+            card: '0 4px 24px -8px rgba(15, 42, 31, 0.08)',
+          },
+          borderRadius: {
+            '2xl': '1.25rem',
+            '3xl': '1.75rem',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Be Vietnam Pro', system-ui, sans-serif; background: #FBF7F0; color: #1A2E22; -webkit-font-smoothing: antialiased; }
+    .font-serif { font-family: 'Lora', Georgia, serif; font-weight: 600; }
+
+    *:focus-visible { outline: 3px solid #E8A33D; outline-offset: 3px; border-radius: 6px; }
+
+    /* Subtle decorative leaves */
+    .leaf-deco { position: absolute; pointer-events: none; opacity: 0.5; }
+
+    /* ============ KEYFRAMES ============ */
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+    @keyframes leafSway {
+      0%, 100% { transform: rotate(-3deg); }
+      50%      { transform: rotate(5deg); }
+    }
+    @keyframes leafSwayReverse {
+      0%, 100% { transform: rotate(48deg); }
+      50%      { transform: rotate(42deg); }
+    }
+    @keyframes shimmerSlide {
+      0%   { transform: translateX(-150%) skewX(-15deg); }
+      100% { transform: translateX(350%)  skewX(-15deg); }
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.55); }
+      80%  { box-shadow: 0 0 0 14px rgba(232, 163, 61, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(232, 163, 61, 0); }
+    }
+    @keyframes badgeTwinkle {
+      0%, 100% { transform: rotate(0deg)   scale(1);   }
+      50%      { transform: rotate(8deg)   scale(1.08);}
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes marqueeX {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Reveal on scroll */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal       { opacity: 0; transform: translateY(20px); transition: opacity .65s ease-out, transform .65s ease-out; }
+      .reveal.in    { opacity: 1; transform: translateY(0); }
+      .reveal[data-delay="1"].in { transition-delay: .08s; }
+      .reveal[data-delay="2"].in { transition-delay: .16s; }
+      .reveal[data-delay="3"].in { transition-delay: .24s; }
+      .reveal[data-delay="4"].in { transition-delay: .32s; }
+      .reveal[data-delay="5"].in { transition-delay: .40s; }
+
+      .bottle-float { animation: floatY 5.5s ease-in-out infinite; }
+      .leaf-anim-1  { animation: leafSway 9s ease-in-out infinite; transform-origin: 60% 60%; }
+      .leaf-anim-2  { animation: leafSwayReverse 11s ease-in-out infinite; transform-origin: 50% 50%; }
+      .twinkle      { animation: badgeTwinkle 3.2s ease-in-out infinite; transform-origin: center; }
+      .hero-gradient { background-size: 200% 200%; animation: gradientShift 14s ease-in-out infinite; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    /* ============ HOVER & MICRO INTERACTIONS ============ */
+    .card-hover { transition: transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 40px -12px rgba(15, 42, 31, 0.2); }
+
+    .icon-pop { transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+    .card-hover:hover .icon-pop { transform: scale(1.12) rotate(-4deg); }
+
+    /* Shine sweep on primary button */
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.45) 50%, transparent 100%);
+      transform: translateX(-150%) skewX(-15deg);
+    }
+    .btn-shine:hover::after { animation: shimmerSlide 1s ease forwards; }
+
+    /* Nav underline */
+    .nav-link { position: relative; padding-bottom: 4px; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+      background: linear-gradient(90deg, #2E7D5B, #E8A33D); transition: width .3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Scroll progress */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
+      background: linear-gradient(90deg, #2E7D5B 0%, #E8A33D 100%);
+      transform-origin: 0 50%; transform: scaleX(0); transition: transform .12s linear;
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 40;
+      transform: translateY(140%); transition: transform .4s cubic-bezier(.22,.61,.36,1);
+    }
+    .sticky-cta.show { transform: translateY(0); }
+    @media (min-width: 768px) { .sticky-cta { display: none; } }
+
+    /* Pulse ring on step circles */
+    .step-pulse { animation: pulseRing 2.6s ease-out infinite; }
+
+    /* Marquee trust row */
+    .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .marquee-track { display: flex; gap: 2.5rem; width: max-content; animation: marqueeX 28s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+
+    /* Pretty disc bullets */
+    .check-list li { position: relative; padding-left: 1.75rem; }
+    .check-list li::before {
+      content: ''; position: absolute; left: 0; top: 0.35rem; width: 1.1rem; height: 1.1rem; border-radius: 999px;
+      background: #E8F3EC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232E7D5B'%3E%3Cpath fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center / 75% no-repeat;
+    }
+
+    details > summary { list-style: none; cursor: pointer; transition: background-color .2s ease; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .25s ease; }
+    details > summary:hover { background-color: #F0F8F3; }
+    details > div { animation: fadeInUp .35s ease-out; }
+
+    /* Bottle illustration shadow */
+    .bottle-shadow { filter: drop-shadow(0 18px 30px rgba(15, 42, 31, 0.18)); }
+
+    /* Soft star rating sparkle */
+    .star-row svg { transition: transform .3s ease; }
+    .star-row:hover svg { transform: scale(1.15) rotate(-6deg); }
+    .star-row:hover svg:nth-child(2) { transition-delay: .05s; }
+    .star-row:hover svg:nth-child(3) { transition-delay: .10s; }
+    .star-row:hover svg:nth-child(4) { transition-delay: .15s; }
+    .star-row:hover svg:nth-child(5) { transition-delay: .20s; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ============== SCROLL PROGRESS BAR ============== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============== STICKY MOBILE CTA ============== -->
+  <a href="#mua-ngay" id="stickyCta" class="sticky-cta inline-flex items-center justify-center gap-2 bg-maya-500 hover:bg-maya-600 text-white font-semibold px-6 py-4 rounded-full shadow-soft btn-shine min-h-[52px]" aria-label="Đặt mua ngay">
+    <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 3h2l2 10h10l2-7H6"/><circle cx="9" cy="17" r="1.5"/><circle cx="16" cy="17" r="1.5"/></svg>
+    Đặt mua — 250.000đ
+  </a>
+
+  <!-- ============== HEADER ============== -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-cream/85 border-b border-ink-line/60">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16 sm:h-20" aria-label="Điều hướng chính">
+        <a href="#top" class="flex items-center gap-2 font-serif text-xl sm:text-2xl text-maya-700">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-maya-500 text-cream font-serif">M</span>
+          Dr.Maya
+        </a>
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-soft">
+          <li><a class="nav-link hover:text-maya-600 transition-colors" href="#san-pham">Sản phẩm</a></li>
+          <li><a class="nav-link hover:text-maya-600 transition-colors" href="#thanh-phan">Thành phần</a></li>
+          <li><a class="nav-link hover:text-maya-600 transition-colors" href="#cach-dung">Cách dùng</a></li>
+          <li><a class="nav-link hover:text-maya-600 transition-colors" href="#review">Mẹ nói gì</a></li>
+          <li><a class="nav-link hover:text-maya-600 transition-colors" href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#mua-ngay" class="btn-shine inline-flex items-center gap-2 bg-maya-500 hover:bg-maya-600 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-soft transition-colors min-h-[44px]">
+          Mua ngay
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L13.6 11H4a1 1 0 110-2h9.6l-3.3-3.3a1 1 0 010-1.4z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-maya-50 via-cream to-honey-100/40 hero-gradient" aria-hidden="true"></div>
+
+    <!-- Leaf decoration -->
+    <svg class="leaf-deco leaf-anim-1 -left-10 top-20 w-40 h-40 sm:w-56 sm:h-56" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M30 110 C 40 40, 110 30, 170 60 C 150 130, 90 170, 30 110 Z" fill="#C9E2D3"/>
+      <path d="M50 110 C 80 80, 120 70, 160 80" stroke="#2E7D5B" stroke-width="2" fill="none" opacity="0.5"/>
+    </svg>
+    <svg class="leaf-deco leaf-anim-2 right-0 bottom-10 w-48 h-48 rotate-45" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M30 110 C 40 40, 110 30, 170 60 C 150 130, 90 170, 30 110 Z" fill="#FCEFD7"/>
+    </svg>
+
+    <div class="relative mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-16 sm:pb-24">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-honey-100 text-honey-600 text-xs font-semibold tracking-wide uppercase">
+            <svg class="w-4 h-4 twinkle" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2l2.4 5 5.6.8-4 3.9.9 5.5L10 14.8 5.1 17.2l.9-5.5-4-3.9 5.6-.8L10 2z"/></svg>
+            Bài thuốc dân gian — Công nghệ hiện đại
+          </span>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-maya-900 mt-5">
+            Dầu Húng Chanh<br/>
+            <span class="text-maya-600">Dr.Maya</span>
+          </h1>
+
+          <p class="mt-5 text-lg sm:text-xl text-ink-soft leading-relaxed">
+            Dịu cơn ho — nhẹ nhàng cho bé <span class="font-semibold text-ink">từ 6 tháng tuổi</span>.
+            Chiết xuất 100% thiên nhiên từ húng chanh, mật ong rừng, gừng tươi và bạc hà.
+          </p>
+
+          <ul class="check-list mt-6 space-y-2 text-ink">
+            <li>An toàn cho bé từ 6 tháng và mẹ bầu</li>
+            <li>Không corticoid, không kháng sinh</li>
+            <li>Đạt chuẩn GMP &amp; GACP-WHO</li>
+          </ul>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#mua-ngay" class="btn-shine inline-flex items-center justify-center gap-2 bg-maya-500 hover:bg-maya-600 text-white font-semibold px-7 py-4 rounded-full shadow-soft transition-colors min-h-[52px]">
+              Đặt mua — 250.000đ
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L13.6 11H4a1 1 0 110-2h9.6l-3.3-3.3a1 1 0 010-1.4z"/></svg>
+            </a>
+            <a href="#cach-dung" class="inline-flex items-center justify-center gap-2 bg-cream border-2 border-maya-200 hover:border-maya-500 text-maya-700 font-semibold px-7 py-4 rounded-full transition-colors min-h-[52px]">
+              Xem cách dùng
+            </a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <div class="flex -space-x-2">
+              <span class="w-9 h-9 rounded-full bg-maya-200 border-2 border-cream flex items-center justify-center text-maya-700 font-semibold text-sm">MA</span>
+              <span class="w-9 h-9 rounded-full bg-honey-300 border-2 border-cream flex items-center justify-center text-honey-600 font-semibold text-sm">TH</span>
+              <span class="w-9 h-9 rounded-full bg-maya-500 border-2 border-cream flex items-center justify-center text-white font-semibold text-sm">PT</span>
+            </div>
+            <p class="text-sm text-ink-soft">
+              <span class="font-semibold text-ink"><span data-count="12000" data-suffix="+">0</span> mẹ bỉm</span> tin dùng cho con
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottle illustration -->
+        <div class="relative reveal">
+          <div class="aspect-square max-w-md mx-auto relative">
+            <!-- soft circle bg -->
+            <div class="absolute inset-4 rounded-full bg-gradient-to-br from-maya-100 to-honey-100" aria-hidden="true"></div>
+            <!-- bottle SVG -->
+            <svg viewBox="0 0 240 320" class="relative w-full h-full bottle-shadow bottle-float" role="img" aria-label="Chai Dầu Húng Chanh Dr.Maya">
+              <!-- cap -->
+              <rect x="92" y="20" width="56" height="40" rx="8" fill="#1A4A37"/>
+              <rect x="88" y="55" width="64" height="14" rx="4" fill="#246349"/>
+              <!-- neck -->
+              <rect x="104" y="68" width="32" height="22" fill="#2E7D5B"/>
+              <!-- bottle body -->
+              <path d="M70 92 Q 70 88 76 88 L 164 88 Q 170 88 170 92 L 170 280 Q 170 296 154 296 L 86 296 Q 70 296 70 280 Z" fill="#2E7D5B"/>
+              <!-- highlight -->
+              <path d="M82 110 L 82 270 Q 82 282 92 282" stroke="#3D9C72" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+              <!-- label -->
+              <rect x="80" y="130" width="80" height="120" rx="6" fill="#FBF7F0"/>
+              <!-- label content -->
+              <text x="120" y="158" text-anchor="middle" fill="#1A4A37" font-family="Lora, serif" font-size="14">Dr.Maya</text>
+              <line x1="92" y1="168" x2="148" y2="168" stroke="#E4DFD3" stroke-width="1"/>
+              <text x="120" y="190" text-anchor="middle" fill="#246349" font-family="Lora, serif" font-size="11">Dầu Húng</text>
+              <text x="120" y="206" text-anchor="middle" fill="#246349" font-family="Lora, serif" font-size="11">Chanh</text>
+              <!-- leaf icon -->
+              <path d="M105 220 C 110 210, 130 210, 135 220 C 130 230, 110 230, 105 220 Z" fill="#2E7D5B" opacity="0.7"/>
+              <text x="120" y="244" text-anchor="middle" fill="#5A6B5F" font-family="Be Vietnam Pro, sans-serif" font-size="7">30ml</text>
+            </svg>
+
+            <!-- floating ingredient badges -->
+            <div class="absolute top-6 -right-2 bg-white rounded-2xl shadow-card px-3 py-2 flex items-center gap-2 text-sm">
+              <span class="w-7 h-7 rounded-full bg-maya-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-maya-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2C6 6 4 9 4 12a6 6 0 1012 0c0-3-2-6-6-10z"/></svg>
+              </span>
+              <span class="font-medium text-ink">Húng chanh</span>
+            </div>
+            <div class="absolute bottom-16 -left-2 bg-white rounded-2xl shadow-card px-3 py-2 flex items-center gap-2 text-sm">
+              <span class="w-7 h-7 rounded-full bg-honey-100 flex items-center justify-center">
+                <svg class="w-4 h-4 text-honey-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l1.8 4 4.4.4-3.3 3 1 4.3L10 10.5l-3.9 2.2 1-4.3-3.3-3 4.4-.4L10 1z"/></svg>
+              </span>
+              <span class="font-medium text-ink">Mật ong rừng</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST BAR ============== -->
+  <section aria-label="Chứng nhận và uy tín" class="border-y border-ink-line/60 bg-white/60">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 py-6 sm:py-7">
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-5 text-sm">
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-maya-100 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-maya-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V4l7-3zm-1 13l5-5-1.4-1.4L9 11.2 7.4 9.6 6 11l3 3z"/></svg>
+          </span>
+          <div><div class="font-semibold text-ink">GMP &amp; GACP-WHO</div><div class="text-ink-soft text-xs">Đạt chuẩn quốc tế</div></div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-maya-100 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-maya-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2C6 6 4 9 4 12a6 6 0 1012 0c0-3-2-6-6-10z"/></svg>
+          </span>
+          <div><div class="font-semibold text-ink">100% thiên nhiên</div><div class="text-ink-soft text-xs">Không phụ gia, không paraben</div></div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-maya-100 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-maya-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 3a4 4 0 014 4c0 3-4 8-4 8s-4-5-4-8a4 4 0 014-4zm0 2.5A1.5 1.5 0 1010 8.5 1.5 1.5 0 0010 5.5z"/></svg>
+          </span>
+          <div><div class="font-semibold text-ink">Bác sĩ Nhi khuyên dùng</div><div class="text-ink-soft text-xs">Đã qua kiểm nghiệm lâm sàng</div></div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-maya-100 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-maya-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3.2 9.8a7 7 0 1113.6 0 7 7 0 01-13.6 0zM10 5v5l4 2"/></svg>
+          </span>
+          <div><div class="font-semibold text-ink">Hiệu quả sau 24–48h</div><div class="text-ink-soft text-xs">Đo đạc lâm sàng</div></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== PROBLEM / SOLUTION ============== -->
+  <section id="san-pham" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="inline-block text-honey-600 text-xs font-bold uppercase tracking-widest">Vấn đề mẹ thường gặp</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-maya-900 mt-3">Khi bé ho đêm, cả nhà thao thức</h2>
+        <p class="text-ink-soft mt-4">Ho không chỉ làm bé mệt mỏi, biếng ăn, mà còn khiến mẹ lo ngại khi phải dùng nhiều kháng sinh, corticoid sớm.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-6 lg:gap-8">
+
+        <article class="rounded-3xl bg-honey-100/50 p-6 sm:p-8 reveal">
+          <h3 class="font-serif text-xl text-ink mb-4">Nỗi lo của mẹ</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink">
+              <svg class="w-5 h-5 text-honey-600 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+              Bé ho khan, ho có đờm về đêm, ngủ không sâu giấc
+            </li>
+            <li class="flex gap-3 text-ink">
+              <svg class="w-5 h-5 text-honey-600 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+              Lo ngại dùng kháng sinh sớm ảnh hưởng đường ruột
+            </li>
+            <li class="flex gap-3 text-ink">
+              <svg class="w-5 h-5 text-honey-600 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+              Thuốc Tây khiến bé mệt, biếng ăn, hay nôn trớ
+            </li>
+            <li class="flex gap-3 text-ink">
+              <svg class="w-5 h-5 text-honey-600 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+              Bài thuốc dân gian khó pha chế, không tiện dùng
+            </li>
+          </ul>
+        </article>
+
+        <article class="rounded-3xl bg-maya-500 text-cream p-6 sm:p-8 shadow-soft reveal">
+          <h3 class="font-serif text-xl mb-4">Giải pháp Dr.Maya</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg>
+              Kế thừa bài thuốc dân gian — chiết xuất bằng công nghệ hiện đại
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg>
+              Mùi dịu nhẹ, dễ dùng — bé hợp tác, mẹ nhàn tênh
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg>
+              Giảm ho rõ rệt sau 24–48 giờ sử dụng
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg>
+              An toàn dùng dài ngày, không gây nhờn, không tác dụng phụ
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== INGREDIENTS ============== -->
+  <section id="thanh-phan" class="py-16 sm:py-24 bg-maya-50">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="inline-block text-honey-600 text-xs font-bold uppercase tracking-widest">Thành phần thiên nhiên</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-maya-900 mt-3">4 dược liệu vàng — tinh túy từ đất Việt</h2>
+        <p class="text-ink-soft mt-4">Nguồn nguyên liệu sạch, được tuyển chọn từ vùng trồng đạt chuẩn GACP-WHO.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+
+        <article class="bg-white rounded-3xl p-6 shadow-card card-hover reveal" data-delay="1">
+          <div class="icon-pop w-16 h-16 rounded-2xl bg-maya-100 flex items-center justify-center mb-4">
+            <svg class="w-9 h-9 text-maya-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <path d="M16 3 C 10 8, 7 13, 7 19 a 9 9 0 0 0 18 0 C 25 13, 22 8, 16 3 Z" opacity="0.9"/>
+              <path d="M16 8 C 13 14, 12 18, 13 22" stroke="#FBF7F0" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg text-ink">Húng chanh</h3>
+          <p class="text-sm text-ink-soft mt-2 leading-relaxed">Tinh dầu cavacrol giúp long đờm, giảm ho, kháng khuẩn đường hô hấp.</p>
+        </article>
+
+        <article class="bg-white rounded-3xl p-6 shadow-card card-hover reveal" data-delay="2">
+          <div class="icon-pop w-16 h-16 rounded-2xl bg-honey-100 flex items-center justify-center mb-4">
+            <svg class="w-9 h-9 text-honey-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <path d="M16 4 L 26 10 L 26 22 L 16 28 L 6 22 L 6 10 Z" opacity="0.9"/>
+              <circle cx="16" cy="16" r="3" fill="#FBF7F0"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg text-ink">Mật ong rừng</h3>
+          <p class="text-sm text-ink-soft mt-2 leading-relaxed">Kháng khuẩn tự nhiên, dịu cổ họng, bổ sung vitamin, tăng đề kháng.</p>
+        </article>
+
+        <article class="bg-white rounded-3xl p-6 shadow-card card-hover reveal" data-delay="3">
+          <div class="icon-pop w-16 h-16 rounded-2xl bg-honey-100 flex items-center justify-center mb-4">
+            <svg class="w-9 h-9 text-honey-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <path d="M8 14 C 8 10, 12 6, 18 8 C 24 10, 26 16, 22 22 C 18 28, 10 26, 8 20 Z" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg text-ink">Gừng tươi</h3>
+          <p class="text-sm text-ink-soft mt-2 leading-relaxed">Làm ấm cơ thể, kích thích tuần hoàn, hỗ trợ giảm cảm lạnh.</p>
+        </article>
+
+        <article class="bg-white rounded-3xl p-6 shadow-card card-hover reveal" data-delay="4">
+          <div class="icon-pop w-16 h-16 rounded-2xl bg-maya-100 flex items-center justify-center mb-4">
+            <svg class="w-9 h-9 text-maya-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <path d="M16 4 C 11 8, 9 13, 11 18 C 13 23, 18 25, 22 22 C 26 19, 25 13, 22 9 C 20 6, 18 5, 16 4 Z" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg text-ink">Bạc hà</h3>
+          <p class="text-sm text-ink-soft mt-2 leading-relaxed">Tinh dầu menthol thông mũi, dễ thở, làm dịu cảm giác nghẹt mũi.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HOW TO USE ============== -->
+  <section id="cach-dung" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="inline-block text-honey-600 text-xs font-bold uppercase tracking-widest">Cách dùng</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-maya-900 mt-3">3 cách dùng — tiện lợi cho mẹ</h2>
+        <p class="text-ink-soft mt-4">Linh hoạt theo độ tuổi và tình trạng của bé.</p>
+      </div>
+
+      <ol class="mt-12 grid md:grid-cols-3 gap-6">
+        <li class="relative bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal" data-delay="1">
+          <div class="w-12 h-12 rounded-full bg-maya-500 text-cream font-serif text-xl flex items-center justify-center mb-4 step-pulse">1</div>
+          <h3 class="font-serif text-xl text-ink">Massage</h3>
+          <p class="text-ink-soft mt-2 leading-relaxed">Nhỏ 3–5 giọt, thoa nhẹ lên ngực, lưng và gan bàn chân bé. Day đều 2–3 phút.</p>
+          <p class="text-xs text-maya-600 mt-3 font-medium">Phù hợp: bé từ 6 tháng</p>
+        </li>
+        <li class="relative bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal" data-delay="2">
+          <div class="w-12 h-12 rounded-full bg-maya-500 text-cream font-serif text-xl flex items-center justify-center mb-4">2</div>
+          <h3 class="font-serif text-xl text-ink">Xông hơi</h3>
+          <p class="text-ink-soft mt-2 leading-relaxed">Nhỏ 5–7 giọt vào bát nước ấm 60°C, đặt trong phòng ngủ trước khi bé đi ngủ.</p>
+          <p class="text-xs text-maya-600 mt-3 font-medium">Phù hợp: bé từ 6 tháng</p>
+        </li>
+        <li class="relative bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal" data-delay="3">
+          <div class="w-12 h-12 rounded-full bg-maya-500 text-cream font-serif text-xl flex items-center justify-center mb-4">3</div>
+          <h3 class="font-serif text-xl text-ink">Uống</h3>
+          <p class="text-ink-soft mt-2 leading-relaxed">Pha 2–3 giọt với 10ml nước ấm hoặc mật ong. Ngày 2–3 lần sau ăn.</p>
+          <p class="text-xs text-maya-600 mt-3 font-medium">Phù hợp: bé từ 1 tuổi trở lên</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== BENEFITS ============== -->
+  <section class="py-16 sm:py-24 bg-maya-700 text-cream relative overflow-hidden">
+    <svg class="absolute -top-10 -right-10 w-72 h-72 opacity-10" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M30 110 C 40 40, 110 30, 170 60 C 150 130, 90 170, 30 110 Z" fill="#FBF7F0"/>
+    </svg>
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="inline-block text-honey-300 text-xs font-bold uppercase tracking-widest">Lợi ích nổi bật</span>
+        <h2 class="font-serif text-3xl sm:text-4xl mt-3">Vì sao mẹ tin Dr.Maya</h2>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V4l7-3z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">An toàn cho bé từ 6 tháng</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Đã kiểm nghiệm da liễu — không kích ứng, không corticoid.</p>
+        </article>
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2C6 6 4 9 4 12a6 6 0 1012 0c0-3-2-6-6-10z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">100% thành phần thiên nhiên</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Không hương liệu tổng hợp, không paraben, không kháng sinh.</p>
+        </article>
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2v6.6L5.1 5.7 4 7l5 5 5-5-1.1-1.3L11 8.6V2H9zm-5 13h12v2H4z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">Mùi thơm dịu, bé dễ chịu</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Hương thảo mộc thoang thoảng — bé hợp tác, mẹ đỡ vất vả.</p>
+        </article>
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 8V5H9v6l4 2 1-1.5L11 10z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">Hiệu quả sau 24–48h</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Cảm nhận rõ bé ngủ sâu hơn, giảm ho rõ rệt từ ngày đầu.</p>
+        </article>
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.2c2.5 0 4.6 1.6 5.4 3.8C17.4 7.6 19 9.6 19 12c0 2.8-2.2 5-5 5H6c-2.8 0-5-2.2-5-5 0-2.5 1.9-4.6 4.3-4.9C6.3 5 8 3.2 10 3.2z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">Không corticoid, không kháng sinh</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Dùng dài ngày an toàn — không lo tác dụng phụ, không nhờn thuốc.</p>
+        </article>
+        <article class="bg-maya-600/60 backdrop-blur rounded-2xl p-6 card-hover reveal">
+          <div class="w-11 h-11 rounded-xl bg-honey-400 text-maya-900 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path d="M3.2 6L10 2l6.8 4L10 10 3.2 6zM3 8.4l7 4 7-4V14l-7 4-7-4V8.4z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg">Bác sĩ Nhi khoa khuyên dùng</h3>
+          <p class="text-cream/80 text-sm mt-2 leading-relaxed">Được khuyên dùng tại nhiều phòng khám Nhi trên cả nước.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIALS ============== -->
+  <section id="review" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="inline-block text-honey-600 text-xs font-bold uppercase tracking-widest">Mẹ bỉm nói gì</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-maya-900 mt-3">Hơn 12.000 mẹ đã tin chọn</h2>
+        <div class="star-row flex items-center justify-center gap-1 mt-3 text-honey-500">
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.4 5 5.6.8-4 3.9.9 5.5L10 13.8 5.1 16.2l.9-5.5-4-3.9 5.6-.8L10 1z"/></svg>
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.4 5 5.6.8-4 3.9.9 5.5L10 13.8 5.1 16.2l.9-5.5-4-3.9 5.6-.8L10 1z"/></svg>
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.4 5 5.6.8-4 3.9.9 5.5L10 13.8 5.1 16.2l.9-5.5-4-3.9 5.6-.8L10 1z"/></svg>
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.4 5 5.6.8-4 3.9.9 5.5L10 13.8 5.1 16.2l.9-5.5-4-3.9 5.6-.8L10 1z"/></svg>
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.4 5 5.6.8-4 3.9.9 5.5L10 13.8 5.1 16.2l.9-5.5-4-3.9 5.6-.8L10 1z"/></svg>
+          <span class="ml-2 text-sm text-ink-soft">4.9 / 5 từ 2.300+ đánh giá</span>
+        </div>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+
+        <article class="bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal">
+          <svg class="w-8 h-8 text-honey-400 mb-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7v6H4V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2zm13 0v6h-3V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2z" transform="scale(-1,1) translate(-24,0)"/></svg>
+          <p class="text-ink leading-relaxed">"Bé mình 18 tháng, mỗi lần giao mùa là ho cả tuần. Dùng Dr.Maya 2 hôm là dịu hẳn, đêm bé ngủ ngon. Mùi rất thơm, bé không quấy."</p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="w-11 h-11 rounded-full bg-maya-500 text-cream font-semibold flex items-center justify-center">MA</span>
+            <div>
+              <div class="font-semibold text-ink">Chị Minh Anh</div>
+              <div class="text-xs text-ink-soft">Hà Nội · Mẹ bé 18 tháng</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal">
+          <svg class="w-8 h-8 text-honey-400 mb-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7v6H4V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2zm13 0v6h-3V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2z" transform="scale(-1,1) translate(-24,0)"/></svg>
+          <p class="text-ink leading-relaxed">"Mình rất ngại cho bé uống kháng sinh. Dr.Maya là cứu cánh — vừa massage vừa xông, bé dễ chịu mà mẹ cũng yên tâm. Mua lại lần thứ 3 rồi!"</p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="w-11 h-11 rounded-full bg-honey-500 text-cream font-semibold flex items-center justify-center">TH</span>
+            <div>
+              <div class="font-semibold text-ink">Chị Thu Hằng</div>
+              <div class="text-xs text-ink-soft">TP. Hồ Chí Minh · Mẹ bé 3 tuổi</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-cream rounded-3xl p-6 sm:p-7 border border-ink-line/60 card-hover reveal">
+          <svg class="w-8 h-8 text-honey-400 mb-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7v6H4V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2zm13 0v6h-3V7zm0 0c0-3 2-5 5-5v3a2 2 0 00-2 2z" transform="scale(-1,1) translate(-24,0)"/></svg>
+          <p class="text-ink leading-relaxed">"Bé mới 8 tháng nên mình rất kén sản phẩm. Tham khảo bác sĩ Nhi quen, ai cũng giới thiệu Dr.Maya. Đúng là êm dịu, an toàn, hiệu quả thật."</p>
+          <div class="mt-5 flex items-center gap-3">
+            <span class="w-11 h-11 rounded-full bg-maya-700 text-cream font-semibold flex items-center justify-center">PT</span>
+            <div>
+              <div class="font-semibold text-ink">Chị Phương Thảo</div>
+              <div class="text-xs text-ink-soft">Đà Nẵng · Mẹ bé 8 tháng</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FAQ ============== -->
+  <section id="faq" class="py-16 sm:py-24 bg-maya-50">
+    <div class="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
+      <div class="text-center reveal">
+        <span class="inline-block text-honey-600 text-xs font-bold uppercase tracking-widest">Câu hỏi thường gặp</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-maya-900 mt-3">Mẹ thường thắc mắc</h2>
+      </div>
+
+      <div class="mt-10 space-y-3">
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal" open>
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Bé bao nhiêu tháng tuổi thì dùng được?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Dầu Húng Chanh Dr.Maya phù hợp cho bé <strong>từ 6 tháng tuổi trở lên</strong> với cách dùng massage và xông hơi. Với cách uống, mẹ nên đợi bé từ 1 tuổi để hệ tiêu hóa hoàn thiện hơn.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Mẹ bầu, mẹ cho con bú có dùng được không?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Hoàn toàn an toàn cho mẹ bầu và mẹ cho con bú. Mẹ có thể dùng để xông phòng hoặc massage để giảm cảm, thông mũi.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Dùng bao lâu thì thấy hiệu quả?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Đa số mẹ phản hồi <strong>thấy bé giảm ho rõ rệt sau 24–48 giờ</strong>. Với các trường hợp ho lâu ngày, nên dùng liên tục 5–7 ngày để đạt hiệu quả tốt nhất.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Có dùng kết hợp với thuốc Tây được không?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Có thể dùng song song. Tuy nhiên mẹ nên dùng cách nhau ít nhất 30 phút, và tham khảo ý kiến bác sĩ Nhi nếu bé đang dùng thuốc đặc trị.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Bảo quản như thế nào?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp. Đậy kín nắp sau khi dùng. Hạn sử dụng <strong>24 tháng</strong> kể từ ngày sản xuất.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-ink-line/60 group reveal">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5 font-semibold text-ink">
+            <span>Mua chính hãng ở đâu?</span>
+            <svg class="faq-icon w-5 h-5 text-maya-600 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </summary>
+          <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-ink-soft leading-relaxed">
+            Mẹ có thể đặt mua trực tiếp tại website chính thức Dr.Maya, hệ thống nhà thuốc, hoặc qua hotline <strong>1900 xxxx</strong>. Miễn phí ship đơn từ 2 chai.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FINAL CTA ============== -->
+  <section id="mua-ngay" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+      <div class="relative rounded-3xl bg-gradient-to-br from-maya-500 to-maya-700 text-cream p-8 sm:p-12 lg:p-16 overflow-hidden shadow-soft">
+        <svg class="absolute -top-12 -right-10 w-72 h-72 opacity-10" viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M30 110 C 40 40, 110 30, 170 60 C 150 130, 90 170, 30 110 Z" fill="#FBF7F0"/>
+        </svg>
+        <div class="relative grid lg:grid-cols-[1.5fr,1fr] gap-8 items-center">
+          <div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">Cho bé một giấc ngủ ngon — bắt đầu từ hôm nay</h2>
+            <p class="text-cream/80 mt-4 text-lg">Đặt hàng trực tiếp tại đây — miễn phí ship đơn từ 2 chai. Cam kết hoàn tiền 100% nếu không hài lòng trong 7 ngày.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="tel:1900xxxx" class="btn-shine inline-flex items-center justify-center gap-2 bg-honey-500 hover:bg-honey-600 text-maya-900 font-semibold px-7 py-4 rounded-full min-h-[52px] transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 4c0-1 1-2 2-2h2c1 0 2 1 2 2v3l-2 1c1 2 2 3 4 4l1-2h3c1 0 2 1 2 2v2c0 1-1 2-2 2C8 16 4 12 2 4z"/></svg>
+                Gọi đặt hàng — 1900 xxxx
+              </a>
+              <a href="#" class="inline-flex items-center justify-center gap-2 bg-cream/10 hover:bg-cream/20 backdrop-blur text-cream font-semibold px-7 py-4 rounded-full border border-cream/30 min-h-[52px] transition-colors">
+                Đặt online
+                <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L13.6 11H4a1 1 0 110-2h9.6l-3.3-3.3a1 1 0 010-1.4z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-cream/10 backdrop-blur rounded-2xl p-6 border border-cream/20">
+            <div class="text-sm text-cream/70 line-through">350.000đ</div>
+            <div class="font-serif text-5xl mt-1">250.000<span class="text-2xl align-top">đ</span></div>
+            <div class="text-sm text-cream/80 mt-1">/ chai 30ml</div>
+            <ul class="mt-5 space-y-2 text-sm text-cream/90">
+              <li class="flex gap-2"><svg class="w-4 h-4 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg> Miễn phí ship đơn 2+ chai</li>
+              <li class="flex gap-2"><svg class="w-4 h-4 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg> Đổi trả 7 ngày — không lý do</li>
+              <li class="flex gap-2"><svg class="w-4 h-4 text-honey-400 mt-1 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/></svg> Quà tặng: túi giữ ấm cho bé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="bg-maya-900 text-cream/80">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 font-serif text-2xl text-cream">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-honey-500 text-maya-900">M</span>
+            Dr.Maya
+          </div>
+          <p class="mt-4 text-sm leading-relaxed max-w-md">
+            Dr.Maya — thương hiệu chăm sóc sức khỏe mẹ và bé từ tinh túy thảo dược Việt. Bài thuốc dân gian kết hợp công nghệ chiết xuất hiện đại.
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <a href="#" aria-label="Facebook Dr.Maya" class="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M11 7h2V4h-2c-1.7 0-3 1.3-3 3v1H6v3h2v6h3v-6h2l1-3h-3V7z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube Dr.Maya" class="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M18 7c0-1.7-1.3-3-3-3H5C3.3 4 2 5.3 2 7v6c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V7zM8 13V7l5 3-5 3z"/></svg>
+            </a>
+            <a href="#" aria-label="Zalo Dr.Maya" class="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16c1.5 0 2.9-.4 4.1-1.1l3 1-1-3A8 8 0 0010 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-cream font-semibold mb-4">Sản phẩm</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="hover:text-cream transition-colors" href="#">Dầu Húng Chanh</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Cao xoa bóp</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Trà thảo mộc</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Tinh dầu xông</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-cream font-semibold mb-4">Hỗ trợ</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="hover:text-cream transition-colors" href="#">Hotline: 1900 xxxx</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Chính sách đổi trả</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Chính sách bảo mật</a></li>
+            <li><a class="hover:text-cream transition-colors" href="#">Tìm điểm bán</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-cream/10 text-xs text-cream/60">
+        <p>© 2026 Dr.Maya Pharma. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============ Reveal on scroll ============
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '-40px 0px' });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+
+    // ============ Scroll progress bar ============
+    const progressBar = document.getElementById('scrollProgress');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const total = h.scrollHeight - h.clientHeight;
+      const pct = total > 0 ? (h.scrollTop / total) : 0;
+      progressBar.style.transform = `scaleX(${pct})`;
+
+      // Sticky CTA shows after scrolling 70% of viewport height
+      const sticky = document.getElementById('stickyCta');
+      if (h.scrollTop > window.innerHeight * 0.7) sticky.classList.add('show');
+      else sticky.classList.remove('show');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ============ Count-up animation ============
+    const countEls = document.querySelectorAll('[data-count]');
+    const formatNum = (n) => n.toLocaleString('vi-VN');
+    const animateCount = (el) => {
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now) => {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
+        el.textContent = formatNum(Math.floor(target * eased)) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window) {
+      const co = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            animateCount(e.target);
+            co.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      countEls.forEach((el) => co.observe(el));
+    } else {
+      countEls.forEach((el) => animateCount(el));
+    }
+  </script>
+</body>
+</html>

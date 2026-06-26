@@ -1,0 +1,155 @@
+{
+  "query": "lactational mastitis treatment OR mastitis breastfeeding management",
+  "expanded_query": "(lactational mastitis treatment OR mastitis breastfeeding management) AND (\"last 5 years\"[PDat]) AND (\"Randomized Controlled Trial\"[Publication Type] OR \"Meta-Analysis\"[Publication Type] OR \"Systematic Review\"[Publication Type] OR \"Review\"[Publication Type])",
+  "total_found": 70,
+  "returned": 6,
+  "fetched_at": "2026-05-23T14:25:58.318124+00:00",
+  "papers": [
+    {
+      "pmid": "39172675",
+      "title": "Mastitis: Rapid Evidence Review.",
+      "abstract": "Mastitis represents a spectrum of inflammatory conditions. Lactational mastitis is the most common, with an approximate incidence of 10% in the United States, and it usually occurs in the first 3 months postpartum. Diagnosis is made clinically based on the presence of symptoms such as fever, malaise, focal breast tenderness, and overlying skin erythema or hyperpigmentation without the need for laboratory tests or imaging. However, obtaining milk cultures should be considered to guide antibiotic therapy, and ultrasonography should be performed to identify abscesses in immuno-compromised patients or those with worsening or recurrent symptoms. Because most cases of mastitis are caused by inflammation and not a true infection, a 1- to 2-day trial of conservative measures (i.e., nonsteroidal anti-inflammatory drugs, ice application, feeding the infant directly from the breast, and minimizing pumping) is often sufficient for treatment. If there is no improvement in symptoms, narrow-spectrum antibiotics may be prescribed to cover common skin flora (e.g., Staphylococcus, Streptococcus). Most patients can be treated as outpatients with oral antibiotics; however, if the condition worsens or there is a concern for sepsis, intravenous antibiotics and hospital admission may be required. Use of probiotics for treatment or prevention is not supported by good evidence. Factors that increase the risk of mastitis include overstimulation of milk production and tissue trauma from aggressive breast massage; therefore, frequent overfeeding, excessive pumping to empty the breast, heat application, and breast massage are no longer recommended because they may worsen the condition. The best prevention is a proper lactation technique, including a good infant latch, and encouraging physiologic breastfeeding rather than pumping, if possible.",
+      "authors": [
+        "Morcomb EF",
+        "Dargel CM",
+        "Anderson SA"
+      ],
+      "journal": "American family physician",
+      "year": "2024",
+      "pub_date": "2024 Aug",
+      "doi": "",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39172675/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "34991976",
+      "title": "Inflammatory diseases of the breast.",
+      "abstract": "Inflammatory disorders of the breast are common benign breast conditions. Lactational mastitis occurs in breastfeeding women and may be associated with breast abscess in severe cases. Non-lactational inflammatory disorders are less common and include idiopathic granulomatous mastitis, periductal mastitis, and tuberculous mastitis. While these disorders have some similarities in their presentation, each disorder requires a specific treatment regimen for resolution, and correct diagnosis is crucial for appropriate treatment. In this chapter, we will review the presentation, diagnosis, and management of each of these distinct clinical entities.",
+      "authors": [
+        "Scott DM"
+      ],
+      "journal": "Best practice & research. Clinical obstetrics & gynaecology",
+      "year": "2022",
+      "pub_date": "2022 Sep",
+      "doi": "10.1016/j.bpobgyn.2021.11.013",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/34991976/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "33509059",
+      "title": "Advances in therapeutic and managemental approaches of bovine mastitis: a comprehensive review.",
+      "abstract": "Mastitis (intramammary inflammation) caused by infectious pathogens is still considered a devastating condition of dairy animals affecting animal welfare as well as economically incurring huge losses to the dairy industry by means of decreased production performance and increased culling rates. Bovine mastitis is the inflammation of the mammary glands/udder of bovines, caused by bacterial pathogens, in most cases. Routine diagnosis is based on clinical and subclinical forms of the disease. This underlines the significance of early and rapid identification/detection of etiological agents at the farm level, for which several diagnostic techniques have been developed. Therapeutic regimens such as antibiotics, immunotherapy, bacteriocins, bacteriophages, antimicrobial peptides, probiotics, stem cell therapy, native secretory factors, nutritional, dry cow and lactation therapy, genetic selection, herbs, and nanoparticle technology-based therapy have been evaluated for their efficacy in the treatment of mastitis. Even though several strategies have been developed over the years for the purpose of managing both clinical and subclinical forms of mastitis, all of them lacked the efficacy to eliminate the associated etiological agent when used as a monotherapy. Further, research has to be directed towards the development of new therapeutic agents/techniques that can both replace conventional techniques and also solve the problem of emerging antibiotic resistance. The objective of the present review is to describe the etiological agents, pathogenesis, and diagnosis in brief along with an extensive discussion on the advances in the treatment and management of mastitis, which would help safeguard the health of dairy animals.",
+      "authors": [
+        "Sharun K",
+        "Dhama K",
+        "Tiwari R",
+        "Gugjoo MB",
+        "Iqbal Yatoo M",
+        "Patel SK",
+        "Pathak M",
+        "Karthik K",
+        "Khurana SK",
+        "Singh R",
+        "Puvvala B",
+        "Amarpal",
+        "Singh R",
+        "Singh KP",
+        "Chaicumpa W"
+      ],
+      "journal": "The veterinary quarterly",
+      "year": "2021",
+      "pub_date": "2021 Dec",
+      "doi": "10.1080/01652176.2021.1882713",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/33509059/",
+      "pmc_id": "PMC7906113",
+      "is_free_full_text": true
+    },
+    {
+      "pmid": "36084006",
+      "title": "The preventive and therapeutic effects of probiotics on mastitis: A systematic review and meta-analysis.",
+      "abstract": "Acute mastitis is one of the main reasons why breastfeeding women stop breastfeeding, and medication should be used with caution. Considering the uncertainty of mastitis infection and the indications of antibiotic use, as well as the problem of drug resistance and the safety of medication during lactation, probiotics have become an alternative treatment choice. However, a meta-analysis of the effects of probiotics in preventing and treating lactational mastitis is still lacking. Therefore, we searched six electronic databases and the sites of clinical trial registration, a total of six randomized controlled trials were included in this meta-analysis, which showed that oral probiotics during pregnancy can reduce the incidence of mastitis (RR: 0.49, 95% CI: 0.35 to 0.69; p<0.0001). After oral administration of probiotics, the counts of bacteria in the milk of healthy people and mastitis patients were both significantly reduced (in healthy people: MD: -0.19, 95% CI: -0.23 to -0.16, p<0.00001; in mastitis patients: MD: -0.89, 95% CI: -1.34 to -0.43, p = 0.0001). These indicate that to a certain extent, probiotics are beneficial in reducing the incidence rate of mastitis during lactation and some related mastitis symptoms. However, high-quality multicenter clinical trials are still needed to support this result.",
+      "authors": [
+        "Yu Q",
+        "Xu C",
+        "Wang M",
+        "Zhu J",
+        "Yu L",
+        "Yang Z",
+        "Liu S",
+        "Gao X"
+      ],
+      "journal": "PloS one",
+      "year": "2022",
+      "pub_date": "2022",
+      "doi": "10.1371/journal.pone.0274467",
+      "pub_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36084006/",
+      "pmc_id": "PMC9462749",
+      "is_free_full_text": true
+    },
+    {
+      "pmid": "38473200",
+      "title": "The Most Important Metabolic Diseases in Dairy Cattle during the Transition Period.",
+      "abstract": "This review paper provides an in-depth analysis of three critical metabolic diseases affecting dairy cattle such as subacute ruminal acidosis (SARA), ketosis, and hypocalcemia. SARA represents a disorder of ruminal fermentation that is characterized by extended periods of depressed ruminal pH below 5.5-5.6. In the long term, dairy herds experiencing SARA usually exhibit secondary signs of the disease, such as episodes of laminitis, weight loss and poor body condition despite adequate energy intake, and unexplained abscesses usually 3-6 months after an episode of SARA. Depressed milk-fat content is commonly used as a diagnostic tool for SARA. A normal milk-fat test in Holstein dairy cows is >4%, so a milk-fat test of <3% can indicate SARA. However, bulk tank testing of milk fat is inappropriate to diagnose SARA at the herd level, so when >4 cows out of 12 and <60 days in milk are suspected to have SARA it can be considered that the herd has a problem. The rapid or abrupt introduction of fresh cows to high-concentrate diets is the most common cause of SARA. Changes in ruminal bacterial populations when exposed to higher concentrate rations require at least about 3 weeks, and it is recommended that concentrate levels increase by no more than 400 g/day during this period to avoid SARA. Ketosis, a prevalent metabolic disorder in dairy cattle, is scrutinized with a focus on its etiological factors and the physiological changes leading to elevated ketone bodies. In total mix ration-fed herds, an increased risk of mastitis and reduced fertility are usually the first clinical signs of ketosis. All dairy cows in early lactation are at risk of ketosis, with most cases occurring in the first 2-4 weeks of lactation. Cows with a body condition score ≥3.75 on a 5-point scale at calving are at a greater risk of ketosis than those with lower body condition scores. The determination of serum or whole blood acetone, acetoacetate, beta-hydroxybutyrate (BHB) concentration, non-esterified fatty acids (NEFA), and liver biopsies is considered the best way to detect and monitor subclinical ketosis, while urine or milk cowside tests can also be used in on-farm monitoring programs. Concentrations >1.0 mmol/L or 1.4 mmol/L blood or serum BHB are considered diagnostic of subclinical ketosis. The standard threshold used for blood is 1.2 mmol/L, which corresponds to thresholds of 100 mcmol/L for milk and 15 mg/dL for urine. Oral administration of propylene glycol (250-400 g, every 24 h for 3-5 days) is the standard and most efficacious treatment, as well as additional therapy with bolus glucose treatment. Hypocalcemia is a disease of adult dairy cows in which acute hypocalcemia causes acute to peracute, afebrile, flaccid paralysis that occurs most commonly at or soon after parturition. Dairy cows are at considerable risk for hypocalcemia at the onset of lactation, when daily calcium excretion suddenly increases from about 10 g to 30 g per day. Cows with hypocalcemia have a more profound decrease in blood calcium concentration-typically below 5.5 mg/dL. The prevention of parturient paresis has been historically approached by feeding cows low-calcium diets during the dry period. Negative calcium balance triggers calcium mobilization before calving and better equips the cow to respond to the massive calcium needs at the onset of lactation. Calcium intake must be limited to <20 g per day for calcium restriction to be effective. The most practical and proven method for monitoring hypocalcemia is by feeding cows an acidogenic diet for ~3 weeks before calving. Throughout the review, emphasis is placed on the importance of early diagnosis and proactive management strategies to mitigate the impact of these metabolic diseases on dairy cattle health and productivity. The comprehensive nature of this paper aims to serve as a valuable resource for veterinarians, researchers, and dairy farmers seeking a deeper understanding of these prevalent metabolic disorders in dairy cattle.",
+      "authors": [
+        "Tufarelli V",
+        "Puvača N",
+        "Glamočić D",
+        "Pugliese G",
+        "Colonna MA"
+      ],
+      "journal": "Animals : an open access journal from MDPI",
+      "year": "2024",
+      "pub_date": "2024 Mar 06",
+      "doi": "10.3390/ani14050816",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/38473200/",
+      "pmc_id": "PMC10930595",
+      "is_free_full_text": true
+    },
+    {
+      "pmid": "39818691",
+      "title": "Lactation, mastitis, and probiotics.",
+      "abstract": "Exclusive breastfeeding during the first six months of life, and prolonged with complementary feeding until 2 years of age or more, is the best nutritional approach in the first stage of life. Mastitis is a pathology that can jeopardize the continuity of breastfeeding. Different methods have been proposed for the prevention and treatment of mastitis, including probiotics. This narrative review aims to describe the problem of mastitis during lactation and the role of probiotics in its prevention. Mastitis should not be confused with the physiological phenomenon known as milk coming in. In persistent pain, timely medical consultation is key to avoiding complications. The administration of specific probiotics in the perinatal period has shown efficacy in reducing the incidence of mastitis.",
+      "authors": [
+        "Fernández G",
+        "Santagada AL",
+        "Vecchiarelli C",
+        "Vinderola G"
+      ],
+      "journal": "Archivos argentinos de pediatria",
+      "year": "2025",
+      "pub_date": "2025 Oct 01",
+      "doi": "10.5546/aap.2024-10490.eng",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39818691/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    }
+  ]
+}

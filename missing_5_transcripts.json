@@ -1,0 +1,67 @@
+﻿{
+    "https://www.tiktok.com/@bssuame_bmc/video/7128974710687190299":  {
+                                                                          "processor":  "https://apify.com/truefetch/video-to-text?fpr=aiagentapi",
+                                                                          "processed_at":  "2026-05-12T04:30:27+00:00",
+                                                                          "platform":  "TikTok",
+                                                                          "title":  "ĂN UỐNG LẠNH KHI CHO CON BÚ ? #bssuameanhthy #bsanhthy #uongnuoclanhk...",
+                                                                          "description":  "ĂN UỐNG LẠNH KHI CHO CON BÚ ? #bssuameanhthy #bsanhthy #uongnuoclanhkhichoconbu #uongnuocamkhichoconbu #suame",
+                                                                          "author":  "bssuame_bmc",
+                                                                          "author_id":  "Bác sĩ sữa mẹ BMC",
+                                                                          "author_url":  "https://www.tiktok.com/@bssuame_bmc",
+                                                                          "duration":  45,
+                                                                          "audio_title":  "original sound - Bs Anh Thy_kích sữa_khớp ngậm",
+                                                                          "audio_artist":  "Bác sĩ sữa mẹ BMC",
+                                                                          "view_count":  310900,
+                                                                          "like_count":  7591,
+                                                                          "shares_count":  564,
+                                                                          "dislike_count":  null,
+                                                                          "comment_count":  253,
+                                                                          "categories":  [
+
+                                                                                         ],
+                                                                          "tags":  [
+
+                                                                                   ],
+                                                                          "published_at":  "2022-08-14T02:13:26+00:00",
+                                                                          "thumbnail":  "https://p16-common-sign.tiktokcdn.com/tos-useast2a-p-0037-aiso/59cad65bb8fb464b8b23fb7d0016e95d_1660443208~tplv-tiktokx-origin.image?dr=14575\u0026x-expires=1778731200\u0026x-signature=OhshbT%2F2fWvN3RhQguLWeMrrITQ%3D\u0026t=4d5b0474\u0026ps=13740610\u0026shp=81f88b70\u0026shcp=43f4a2f9\u0026idc=my3",
+                                                                          "transcript":  {
+                                                                                             "language":  "Vietnamese",
+                                                                                             "text":  "Uống nước ấm sẽ nhiều sữa hơn nè. Đúng không ta? Uống nước ấm thì sẽ tốt hơn. Có thật sự như phải không ta? Thật ra mình phải hiểu có chế tạo sữa nha. Bá nói nhiều lần rồi bây giờ đó lại ha. Nàng sửa như thế này, khi em bé nó bú, nó sẽ rút sửa ra liên tục ra khỏi ngực, vừa thể sẽ hiểu ai em bé đang cần, nó tiếp tục tiết sửa ra, mẹ nào có sư hướng đại dành vài tiếng, nhiều tiếng quá cho bú, nghĩ là phải định. Sựa ứ trong đây, cơ thể hiểu là em bé không cần ngoài nó sẽ giảm sữa. Nên càng để danh, sữa sẽ càng giảm đi. Muốn nhiều sữa thì phải cho bú nhiều hoặc là nếu em ghé hông bú thì phải hốt đủ khoảng 2-3 tiếng một lần Cho nên uống nước lạnh lạnh hay uống nước ấm Sẽ không ảnh hưởng gì tới chuyện tiết sữa cả Rất nhiều mẹ uống nước mắt mắt trong tụi lạnh cũng không sao Mình đi uống quá lạnh thôi Quá lạnh cũng sẽ không tốt cho sức khỏe răng miệng của mình Mình uống nước mát trong tủ lạnh, ăn trái cây mát trong tủ lạnh, ăn sủ chua trong tủ lạnh, đều được hết nha mọi người!",
+                                                                                             "segments":  [
+                                                                                                              {
+                                                                                                                  "start":  "00:00:00.160",
+                                                                                                                  "end":  "00:00:09.759",
+                                                                                                                  "text":  "Uống nước ấm sẽ nhiều sữa hơn nè. Đúng không ta? Uống nước ấm thì sẽ tốt hơn. Có thật sự như phải không ta? Thật ra mình phải hiểu có chế tạo sữa nha. Bá nói nhiều lần rồi bây giờ đó lại ha."
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "start":  "00:00:09.759",
+                                                                                                                  "end":  "00:00:19.660",
+                                                                                                                  "text":  "Nàng sửa như thế này, khi em bé nó bú, nó sẽ rút sửa ra liên tục ra khỏi ngực, vừa thể sẽ hiểu ai em bé đang cần, nó tiếp tục tiết sửa ra, mẹ nào có sư hướng đại dành vài tiếng, nhiều tiếng quá cho bú, nghĩ là phải định."
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "start":  "00:00:19.660",
+                                                                                                                  "end":  "00:00:25.469",
+                                                                                                                  "text":  "Sựa ứ trong đây, cơ thể hiểu là em bé không cần ngoài nó sẽ giảm sữa. Nên càng để danh, sữa sẽ càng giảm đi."
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "start":  "00:00:25.469",
+                                                                                                                  "end":  "00:00:30.309",
+                                                                                                                  "text":  "Muốn nhiều sữa thì phải cho bú nhiều hoặc là nếu em ghé hông bú thì phải hốt đủ khoảng 2-3 tiếng một lần"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "start":  "00:00:30.399",
+                                                                                                                  "end":  "00:00:40.369",
+                                                                                                                  "text":  "Cho nên uống nước lạnh lạnh hay uống nước ấm Sẽ không ảnh hưởng gì tới chuyện tiết sữa cả Rất nhiều mẹ uống nước mắt mắt trong tụi lạnh cũng không sao Mình đi uống quá lạnh thôi Quá lạnh cũng sẽ không tốt cho sức khỏe răng miệng của mình"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "start":  "00:00:40.369",
+                                                                                                                  "end":  "00:00:44.549",
+                                                                                                                  "text":  "Mình uống nước mát trong tủ lạnh, ăn trái cây mát trong tủ lạnh, ăn sủ chua trong tủ lạnh, đều được hết nha mọi người!"
+                                                                                                              }
+                                                                                                          ]
+                                                                                         },
+                                                                          "translation":  {
+
+                                                                                          }
+                                                                      }
+}

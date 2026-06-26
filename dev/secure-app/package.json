@@ -1,0 +1,13 @@
+{
+  "name": "secure-modular-app",
+  "version": "1.0.0",
+  "description": "Web app bảo mật 2 tầng (mật khẩu + OTP email qua gws), kiến trúc module, SQLite cục bộ — ZERO dependency (thuần Node built-in)",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

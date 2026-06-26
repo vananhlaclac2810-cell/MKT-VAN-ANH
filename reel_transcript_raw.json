@@ -1,0 +1,95 @@
+﻿{
+    "processor":  "https://apify.com/truefetch/video-to-text?fpr=aiagentapi",
+    "processed_at":  "2026-05-12T04:15:53+00:00",
+    "platform":  "Upload",
+    "title":  "AQP_FRe2T0HU_BUqrzEYR9nSHUCNWAxWwsGKfUcasiF6FuxshDJ2oqh_pXX2jHcOiU8DJvDpC1PE5TUAKohKkMVOgMBp0-EP0qim24ZqrLDG-A.mp4",
+    "description":  "User uploaded video file",
+    "author":  null,
+    "author_id":  null,
+    "author_url":  null,
+    "duration":  84,
+    "audio_title":  null,
+    "audio_artist":  null,
+    "view_count":  null,
+    "like_count":  null,
+    "shares_count":  null,
+    "dislike_count":  null,
+    "comment_count":  null,
+    "categories":  [
+
+                   ],
+    "tags":  [
+
+             ],
+    "published_at":  null,
+    "thumbnail":  "",
+    "transcript":  {
+                       "language":  "Vietnamese",
+                       "text":  "Em nên hút sữa cử đêm như thế nào cho đỡ mệt Để mà em cứ thức giải lục đụng hút sợ em mệt quá và em rất là xị trés luôn. Thật ra là học môn Prolactin nó sẽ tăng cao nhất. trong khoảng cũng giờ khoảng 23h đêm cho tới khoảng 5-6h sáng cho nên thường là bác cũng hay quyên các mẹ sẽ hút một cái cục đêm để cho cái việc kích sữa đó được tốt hơn Các bạn có thể sắp xếp với cử đêm, cắt ra khoảng từ 4-5 tiếng cho đậm mạc. hoài tra là mình có thể nương theo bây giờ con bú để mình thí dụng mình thất dậy mình cho con bú xong có thể là bú bình hay bú mẹ đều áp dụng nước an là mình cho con búi xong thì mình hút sữa luôn cái khung giờ đó bác phí dụng an mình có thể hút 0h4h hoặc 0h5h Như nhiên, các phùng cử 3 ngày mình sẽ có những cái cử mình hút. gần hơn xíu, 2-3 tiếng mình hút 1 lần, bạn đi mình diễn ra xíu cho nó đỡm mệt. Hoặc là một số mẹ, ví dụ em bé hay tức chạy giúp khoảng 2 giờ sáng vào bú. thì mẹ có thể phối hợp ở cái vị thức dậy của bé để mình có thể hút sự cựu đêm là mình hút khoảng 3 giờ chẳng hạn. Từ 3 giờ mình tính mượt lại là mình có thể hút đâu đó khoảng. 22 giờ hoặc 23 giờ xong rồi sau đó 3 giờ mình hút lại xong bắt đầu 6 giờ sáng hoặc là 7 giờ sáng mình hút lại nữa ha Vậy thì tấm lại cái cụ đêm mình sẽ sắp xếp dẹn cử ra khoảng 4-5 tiếng cho đỡ mệt nè. Mình có thể phối hợp tập dụng cái thời gian mà mình thức dậy để mình cho con mua. Và mà đi không sợ luôn hả các bạn?",
+                       "segments":  [
+                                        {
+                                            "start":  "00:00:00.700",
+                                            "end":  "00:00:03.870",
+                                            "text":  "Em nên hút sữa cử đêm như thế nào cho đỡ mệt"
+                                        },
+                                        {
+                                            "start":  "00:00:03.870",
+                                            "end":  "00:00:12.640",
+                                            "text":  "Để mà em cứ thức giải lục đụng hút sợ em mệt quá và em rất là xị trés luôn. Thật ra là học môn Prolactin nó sẽ tăng cao nhất."
+                                        },
+                                        {
+                                            "start":  "00:00:12.759",
+                                            "end":  "00:00:22.670",
+                                            "text":  "trong khoảng cũng giờ khoảng 23h đêm cho tới khoảng 5-6h sáng cho nên thường là bác cũng hay quyên các mẹ sẽ hút một cái cục đêm để cho cái việc kích sữa đó được tốt hơn"
+                                        },
+                                        {
+                                            "start":  "00:00:22.670",
+                                            "end":  "00:00:27.519",
+                                            "text":  "Các bạn có thể sắp xếp với cử đêm, cắt ra khoảng từ 4-5 tiếng cho đậm mạc."
+                                        },
+                                        {
+                                            "start":  "00:00:27.769",
+                                            "end":  "00:00:35.200",
+                                            "text":  "hoài tra là mình có thể nương theo bây giờ con bú để mình thí dụng mình thất dậy mình cho con bú xong có thể là bú bình hay bú mẹ"
+                                        },
+                                        {
+                                            "start":  "00:00:35.549",
+                                            "end":  "00:00:43.880",
+                                            "text":  "đều áp dụng nước an là mình cho con búi xong thì mình hút sữa luôn cái khung giờ đó bác phí dụng an mình có thể hút 0h4h hoặc 0h5h"
+                                        },
+                                        {
+                                            "start":  "00:00:43.899",
+                                            "end":  "00:00:46.829",
+                                            "text":  "Như nhiên, các phùng cử 3 ngày mình sẽ có những cái cử mình hút."
+                                        },
+                                        {
+                                            "start":  "00:00:46.829",
+                                            "end":  "00:00:55.590",
+                                            "text":  "gần hơn xíu, 2-3 tiếng mình hút 1 lần, bạn đi mình diễn ra xíu cho nó đỡm mệt. Hoặc là một số mẹ, ví dụ em bé hay tức chạy giúp khoảng 2 giờ sáng vào bú."
+                                        },
+                                        {
+                                            "start":  "00:00:55.770",
+                                            "end":  "00:01:05.299",
+                                            "text":  "thì mẹ có thể phối hợp ở cái vị thức dậy của bé để mình có thể hút sự cựu đêm là mình hút khoảng 3 giờ chẳng hạn. Từ 3 giờ mình tính mượt lại là mình có thể hút đâu đó khoảng."
+                                        },
+                                        {
+                                            "start":  "00:01:05.299",
+                                            "end":  "00:01:12.680",
+                                            "text":  "22 giờ hoặc 23 giờ xong rồi sau đó 3 giờ mình hút lại xong bắt đầu 6 giờ sáng hoặc là 7 giờ sáng mình hút lại nữa ha"
+                                        },
+                                        {
+                                            "start":  "00:01:12.730",
+                                            "end":  "00:01:22.640",
+                                            "text":  "Vậy thì tấm lại cái cụ đêm mình sẽ sắp xếp dẹn cử ra khoảng 4-5 tiếng cho đỡ mệt nè. Mình có thể phối hợp tập dụng cái thời gian mà mình thức dậy để mình cho con mua."
+                                        },
+                                        {
+                                            "start":  "00:01:22.640",
+                                            "end":  "00:01:24.640",
+                                            "text":  "Và mà đi không sợ luôn hả các bạn?"
+                                        }
+                                    ]
+                   },
+    "translation":  {
+
+                    }
+}

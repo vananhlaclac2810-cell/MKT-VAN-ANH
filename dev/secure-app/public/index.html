@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Modular App</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🔐</text></svg>" />
+</head>
+<body>
+  <!-- ===== Khu xác thực (2 tầng) ===== -->
+  <div id="auth-view">
+    <!-- Tầng 1: đăng nhập -->
+    <form class="auth-card" id="login-card" autocomplete="off">
+      <h1>🔐 Đăng nhập</h1>
+      <p class="sub">Bảo mật 2 tầng · mật khẩu + OTP email</p>
+      <div class="field">
+        <label for="login-username">Tên đăng nhập</label>
+        <input id="login-username" name="username" value="admin" autocomplete="username" />
+      </div>
+      <div class="field">
+        <label for="login-password">Mật khẩu</label>
+        <input id="login-password" name="password" type="password" value="admin" autocomplete="current-password" />
+      </div>
+      <button class="btn btn-primary" type="submit" id="login-btn">Đăng nhập</button>
+      <div class="msg" id="login-msg"></div>
+    </form>
+
+    <!-- Tầng 2: OTP -->
+    <form class="auth-card" id="otp-card" hidden autocomplete="off">
+      <h1>✉️ Nhập mã OTP</h1>
+      <p class="sub" id="otp-sub">Mã xác thực đã gửi tới email của bạn.</p>
+      <div class="field">
+        <label for="otp-code">Mã OTP (6 số)</label>
+        <input id="otp-code" class="otp-input" maxlength="6" inputmode="numeric" placeholder="••••••" />
+      </div>
+      <button class="btn btn-primary" type="submit" id="otp-btn">Xác minh</button>
+      <div class="msg" id="otp-msg"></div>
+      <div style="margin-top:14px;text-align:center">
+        <button type="button" class="link-btn" id="otp-back">← Quay lại đăng nhập</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ===== Ứng dụng (3 mục) ===== -->
+  <div id="app-view" hidden>
+    <!-- Top header cố định -->
+    <header class="topbar">
+      <div class="brand">
+        <button class="btn btn-sm menu-toggle" id="menu-toggle">☰</button>
+        <span class="logo">🔐</span>
+        <span>Secure Modular App</span>
+      </div>
+      <div class="acct">
+        <button class="acct-btn" id="acct-btn">
+          <span class="avatar" id="acct-avatar">A</span>
+          <span id="acct-name">admin</span>
+          <span style="color:var(--muted)">▾</span>
+        </button>
+        <div class="acct-menu" id="acct-menu" hidden>
+          <div class="info">
+            <div class="name" id="menu-name">admin</div>
+            <div class="mail" id="menu-mail">—</div>
+          </div>
+          <button class="menu-item" id="mi-account">👤 Thông tin tài khoản</button>
+          <button class="menu-item" id="mi-password">🔑 Đổi mật khẩu</button>
+          <button class="menu-item danger" id="mi-logout">⎋ Đăng xuất</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar trái: danh sách module -->
+    <aside class="sidebar" id="sidebar">
+      <div class="group-label">Module</div>
+      <div id="module-nav"></div>
+      <div class="group-label" style="margin-top:14px">Hệ thống</div>
+      <button class="nav-item" id="nav-settings"><span class="ic">⚙️</span> Cấu hình</button>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content" id="main-content"></main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast"></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

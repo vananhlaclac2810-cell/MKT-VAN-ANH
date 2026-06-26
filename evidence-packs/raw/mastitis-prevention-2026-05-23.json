@@ -1,0 +1,68 @@
+{
+  "query": "milk duct blockage OR breast engorgement prevention lactation",
+  "expanded_query": "(milk duct blockage OR breast engorgement prevention lactation) AND (\"last 5 years\"[PDat]) AND (\"Randomized Controlled Trial\"[Publication Type] OR \"Meta-Analysis\"[Publication Type] OR \"Systematic Review\"[Publication Type] OR \"Review\"[Publication Type])",
+  "total_found": 3,
+  "returned": 2,
+  "fetched_at": "2026-05-23T14:26:08.205039+00:00",
+  "papers": [
+    {
+      "pmid": "37486652",
+      "title": "Cabergoline for Lactation Inhibition After Second-Trimester Abortion or Pregnancy Loss: A Randomized Controlled Trial.",
+      "abstract": "OBJECTIVE: To assess cabergoline's efficacy at decreasing breast symptoms after second-trimester abortion or pregnancy loss.\nMETHODS: This was a double-blinded, block-randomized superiority trial comparing cabergoline 1 mg once to placebo for preventing bothersome breast engorgement after second-trimester uterine evacuation. We enrolled pregnant people at 18-28 weeks of gestation who were English- or Spanish-speaking and without contraindication to the study drug. Participants completed a validated, piloted, electronic survey at baseline and at multiple timepoints through 2 weeks postprocedure to assess breast symptoms, side effects, and bother. Our primary outcome was any breast symptoms (a composite of engorgement, milk leakage, tenderness, and need for pain relief) on day 4; we planned to enroll 80 patients to show a 30% difference in breast symptoms (80% power, α=0.049). A subgroup of participants returned for serum prolactin levels.\nRESULTS: After screening 150 patients from April 2021 to June 2022, we enrolled 73 participants. Baseline demographics were balanced between groups: median gestational age was 21 weeks (range 18-26 weeks), 56.2% of participants were nulliparous, 34.2% self-identified as Hispanic, and 37.0% had public insurance. At baseline, reported breast symptoms were similar between groups. Among 69 participants who returned surveys on day 4, significantly fewer participants receiving cabergoline reported any breast symptoms compared with placebo (27.8% vs 97.0%, P<.001) (primary outcome) and fewer reported significant bother (2.8% vs 33.3%, P=.001) (secondary outcome). These differences persisted through day 14. Reported incidence and severity of bother from side effects were similar between groups: most common were constipation, fatigue, and headache. Serum prolactin levels were similar at baseline. On day 4, mean serum prolactin level was 6.5 ng/mL (SD 2.2) for those who received cabergoline and 18.0 ng/mL (SD 5.9) for placebo (P=.049).\nCONCLUSION: Cabergoline is an effective and well-tolerated strategy to prevent breast symptoms after second-trimester abortion or pregnancy loss.\nCLINICAL TRIAL REGISTRATION: ClinicalTrials.gov, NCT04701333.",
+      "authors": [
+        "Henkel A",
+        "Johnson SA",
+        "Reeves MF",
+        "Cahill EP",
+        "Blumenthal PD",
+        "Shaw KA"
+      ],
+      "journal": "Obstetrics and gynecology",
+      "year": "2023",
+      "pub_date": "2023 Jun 01",
+      "doi": "10.1097/AOG.0000000000005190",
+      "pub_types": [
+        "Randomized Controlled Trial",
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Equivalence Trial"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/37486652/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "41538804",
+      "title": "Cabergoline for Lactation Inhibition After Early Second-Trimester Abortion or Pregnancy Loss: A Randomized Controlled Trial.",
+      "abstract": "OBJECTIVE: To evaluate cabergoline's efficacy at decreasing lactation symptoms after early second-trimester abortion or pregnancy loss.\nMETHODS: This is a multisite, double-blind, gestational-age stratified superiority trial that compared cabergoline 1 mg once with placebo for preventing bothersome breast symptoms immediately after uterine evacuation. We enrolled pregnant people at 16-20 weeks of gestation who were English- or Spanish-speaking and without contraindication to the study drug. Participants received cabergoline within 4 hours of uterine evacuation or fetal expulsion and, at baseline and at multiple time points through 2 weeks postprocedure, completed a validated electronic survey that assessed breast symptoms, side effects, and bother. Our primary outcome was breast symptoms (a composite of engorgement, milk leakage, tenderness, and need for pain relief) on day 4; we planned to enroll 30 participants in each gestational duration strata to show a 40% difference in breast symptoms (80% power, α=0.049).\nRESULTS: After screening 145 patients from February 2024 through May 2025, we enrolled 69 eligible participants. Baseline demographics were balanced between groups: Median gestational duration was 18 weeks (range 16 0/7-19 6/7 weeks), 53.0% were nulliparous, 63.6% self-identified as Hispanic, and 68.2% had public insurance. On day 4, significantly fewer participants who received cabergoline reported any breast symptoms compared with placebo (50.0% vs 88.2%, P<.001) (primary outcome) and fewer participants reported significant bother from breast symptoms (3.1% vs 20.6%, P=.05) (secondary outcome). These differences persist even in the earlier gestational duration strata.\nCONCLUSION: Cabergoline is an effective and well-tolerated medication to prevent breast symptoms after early second-trimester abortion or pregnancy loss.\nCLINICAL TRIAL REGISTRATION: ClinicalTrials.gov: NCT06029673.",
+      "authors": [
+        "Henkel A",
+        "Cahill EP",
+        "Chavez S",
+        "Shorter JM",
+        "Amaya SI",
+        "Kaur S",
+        "Soltani A",
+        "Caron J",
+        "Crowe S",
+        "Williams Z",
+        "Mastey N",
+        "Lyell DJ",
+        "Shaw KA"
+      ],
+      "journal": "Obstetrics and gynecology",
+      "year": "2026",
+      "pub_date": "2026 Feb 01",
+      "doi": "10.1097/AOG.0000000000006137",
+      "pub_types": [
+        "Clinical Trial, Phase II",
+        "Journal Article",
+        "Multicenter Study",
+        "Randomized Controlled Trial"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/41538804/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    }
+  ]
+}

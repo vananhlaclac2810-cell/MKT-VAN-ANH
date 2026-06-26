@@ -1,0 +1,124 @@
+<template id="captions-template">
+  <div data-composition-id="captions" data-start="0" data-width="1080" data-height="1920">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      [data-composition-id="captions"] {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      [data-composition-id="captions"] .caption-stage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 280px;
+      }
+      [data-composition-id="captions"] .caption-group {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 60px;
+        box-sizing: border-box;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        will-change: transform, opacity;
+      }
+      [data-composition-id="captions"] .caption-group .text {
+        display: inline-block;
+        font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 1.25;
+        color: #faf9f5;
+        background: rgba(20, 20, 19, 0.84);
+        padding: 18px 28px;
+        border-radius: 14px;
+        letter-spacing: -0.005em;
+        -webkit-text-stroke: 0;
+        box-shadow: 0 6px 20px rgba(20, 20, 19, 0.35);
+      }
+    </style>
+
+    <div class="caption-stage" id="caption-stage"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      // ============ CAPTION GROUPS ============
+      // Pre-cleaned word groups from transcript.json (absolute timing 0-106.94s,
+      // matches captions sub-comp data-duration so internal timeline is RELATIVE = same).
+      const CAPTION_GROUPS = [
+        { text: "mẹ tôi vẫn giữ thói", start: 4.40, end: 6.24 },
+        { text: "quen đấy nhưng hôm nay", start: 6.24, end: 7.18 },
+        { text: "tôi đọc được một nghiên", start: 7.18, end: 8.66 },
+        { text: "cứu nhá là việc xi", start: 8.66, end: 10.62 },
+        { text: "tè cho em bé rất", start: 10.62, end: 12.26 },
+        { text: "là nguy hiểm các bạn", start: 12.26, end: 13.70 },
+        { text: "tham khảo nha đầu tiên", start: 13.70, end: 15.44 },
+        { text: "là việc xi tè lúc", start: 15.44, end: 16.62 },
+        { text: "mình bé có thể ảnh", start: 16.62, end: 17.84 },
+        { text: "hưởng đến cuộc sống của", start: 17.84, end: 19.68 },
+        { text: "con thứ 2, dẫn đến", start: 19.68, end: 20.74 },
+        { text: "tình trạng con sẽ đi", start: 20.74, end: 22.42 },
+        { text: "tiểu lắm nhá thứ 3", start: 22.42, end: 23.70 },
+        { text: "ảnh hưởng đến sự phát", start: 23.86, end: 24.64 },
+        { text: "triển của cơ bàng thứ", start: 24.64, end: 25.92 },
+        { text: "4, gây gián đoạn việc", start: 25.92, end: 27.70 },
+        { text: "dạy trẻ tập trung nói", start: 27.70, end: 29.34 },
+        { text: "chung là mình đọc một", start: 29.34, end: 30.80 },
+        { text: "số tài liệu người ta", start: 30.80, end: 31.72 },
+        { text: "nói là đã là thế", start: 31.72, end: 32.78 },
+        { text: "kỷ 2 mốt rồi thì", start: 32.78, end: 33.50 },
+        { text: "không có ai còn áp", start: 33.50, end: 34.42 },
+        { text: "dụng cái việc xi tè", start: 34.42, end: 35.46 },
+        { text: "đấy để cho em phải", start: 35.46, end: 36.70 },
+        { text: "tè nữa mình tất nhiên", start: 36.70, end: 39.04 },
+        { text: "là đóng bỉm thôi vì", start: 39.04, end: 39.84 },
+        { text: "các bạn có suy nghĩ", start: 39.84, end: 41.40 },
+        { text: "gì về quan điểm này", start: 41.40, end: 42.38 },
+        { text: "hôm nay thì để bình", start: 42.38, end: 43.56 },
+        { text: "luận ở dưới video này", start: 43.56, end: 44.54 },
+        { text: "nhé", start: 44.54, end: 44.70 },
+      ];
+
+      // Inject caption DOM (sync, before timeline construction)
+      const stage = document.getElementById("caption-stage");
+      CAPTION_GROUPS.forEach((g, i) => {
+        const wrap = document.createElement("div");
+        wrap.id = "cg-" + i;
+        wrap.className = "caption-group";
+        wrap.innerHTML = '<span class="text">' + g.text + "</span>";
+        stage.appendChild(wrap);
+      });
+
+      // ============ TIMELINE (relative 0 → 106.94) ============
+      const tl = gsap.timeline({ paused: true });
+
+      CAPTION_GROUPS.forEach((g, i) => {
+        const id = "#cg-" + i;
+        // Entrance — set to visible+y=18+opacity=0 just before start
+        tl.set(id, { opacity: 0, visibility: "visible", y: 18 }, g.start - 0.001);
+        // Animate to settle
+        tl.to(id, {
+          opacity: 1, y: 0, duration: 0.18, ease: "power2.out",
+        }, g.start);
+        // Hard kill at end (deterministic)
+        tl.set(id, { opacity: 0, visibility: "hidden" }, g.end);
+      });
+
+      window.__timelines["captions"] = tl;
+    </script>
+  </div>
+</template>

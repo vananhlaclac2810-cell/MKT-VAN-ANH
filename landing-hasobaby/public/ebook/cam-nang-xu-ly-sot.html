@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cẩm nang xử lý sốt tại nhà cho bé — Dr.Maya × Hasobaby</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; font-family: 'Be Vietnam Pro', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif; color: #143B39; line-height: 1.55; font-size: 10.5pt; }
+
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 16mm 14mm 16mm 14mm;
+    page-break-after: always;
+    position: relative; background: white; overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .pg-footer {
+    position: absolute; bottom: 7mm; left: 14mm; right: 14mm;
+    font-size: 8.5pt; color: #94a3b8;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #e5e7eb; padding-top: 3mm;
+  }
+  .pg-footer .brand { font-weight: 700; color: #22B8B2; letter-spacing: 0.4px; }
+
+  h2.section { font-size: 17pt; color: #143B39; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #FFD24C; font-weight: 800; letter-spacing: -0.2px; }
+  h2.section .num { color: #FFD24C; margin-right: 8px; }
+  h3 { font-size: 12.5pt; color: #143B39; margin: 5mm 0 2mm; font-weight: 700; }
+  p { margin: 0 0 2.5mm; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 2mm 0; }
+  table th { background: #143B39; color: white; padding: 6px 7px; text-align: left; font-weight: 600; font-size: 9pt; }
+  table td { padding: 5px 7px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .tag { display: inline-block; padding: 1px 6px; border-radius: 5px; font-size: 8pt; font-weight: 700; }
+
+  .box { border-radius: 10px; padding: 8px 13px; margin: 2.5mm 0; font-size: 10pt; }
+  .box-note { background: #ecfdf5; border-left: 4px solid #2F8A4A; }
+  .box-warn { background: #fff1ec; border-left: 4px solid #ED5424; }
+  .box-tip { background: #e6f7f6; border-left: 4px solid #22B8B2; }
+  .box-mem { background: #fff8e0; border-left: 4px solid #FFD24C; }
+  .box-title { font-weight: 700; margin-bottom: 3px; }
+
+  .source { font-size: 8.5pt; color: #6b7280; font-style: italic; margin-top: 2mm; }
+
+  /* ---------------- COVER ---------------- */
+  .cover { background: radial-gradient(120% 80% at 50% 0%, #FFF2BD 0%, #FFFCF3 45%, #E6F7F6 100%); padding: 0;
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; position: relative; }
+  .cover::before { content: ''; position: absolute; top: -40mm; left: -40mm; width: 110mm; height: 110mm; border-radius: 50%; background: rgba(255,210,76,0.35); }
+  .cover::after { content: ''; position: absolute; bottom: -50mm; right: -45mm; width: 130mm; height: 130mm; border-radius: 50%; background: rgba(34,184,178,0.22); }
+  .cover .top { padding: 24mm 16mm 0; position: relative; z-index: 2; }
+  .cover .badge { display: inline-block; padding: 6px 16px; border-radius: 999px; background: #FFD24C; color: #5a3a00; font-size: 10pt; font-weight: 800; margin-bottom: 8mm; letter-spacing: 0.5px; box-shadow: 0 4px 14px rgba(255,210,76,0.5); }
+  .cover h1 { font-family: 'Quicksand', 'Be Vietnam Pro', sans-serif; font-size: 32pt; color: #143B39; margin: 0 0 6mm; line-height: 1.1; font-weight: 800; letter-spacing: -0.5px; }
+  .cover h1 .accent { color: #ED5424; }
+  .cover .sub { font-size: 12.5pt; color: #2a4f4d; max-width: 78%; margin: 0 auto; line-height: 1.55; }
+  .cover .sub strong { color: #ED5424; }
+  .cover .ill-wrap { width: 92mm; height: 92mm; margin: 4mm auto 0; border-radius: 50%; overflow: hidden; border: 6px solid white; box-shadow: 0 14px 40px rgba(20,59,57,0.18); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FFF8DE, #DCF5F2); position: relative; z-index: 2; }
+  .cover .ill-wrap .ill-svg { width: 75%; height: 75%; }
+  .cover .by { padding: 0 16mm 22mm; font-size: 10pt; color: #2a4f4d; line-height: 1.7; position: relative; z-index: 2; }
+  .cover .by strong { color: #22B8B2; font-weight: 800; font-size: 11pt; letter-spacing: 0.5px; }
+  .cover .edition { margin-top: 5mm; font-size: 9pt; color: #94a3b8; }
+
+  /* ---------------- LỜI NGỎ ---------------- */
+  .letter h2 { font-family: 'Quicksand', sans-serif; font-size: 22pt; color: #22B8B2; margin: 0 0 4mm; font-weight: 800; }
+  .letter .lead { font-size: 13pt; color: #143B39; font-weight: 600; line-height: 1.5; margin-bottom: 4mm; }
+  .letter p { font-size: 11pt; line-height: 1.7; color: #2a4f4d; margin-bottom: 3mm; }
+  .letter p strong { color: #143B39; }
+  .letter .quote-card { background: linear-gradient(135deg, #FFF8DE 0%, #E6F7F6 100%); border-left: 5px solid #FFD24C; border-radius: 12px; padding: 5mm 6mm; margin: 4mm 0; font-style: italic; font-size: 10.5pt; color: #143B39; line-height: 1.6; }
+  .letter .sign { margin-top: 5mm; font-style: italic; color: #22B8B2; font-weight: 700; font-size: 11pt; }
+
+  /* ---------------- MỤC LỤC ---------------- */
+  .toc-list { margin-top: 3mm; }
+  .toc-item { display: flex; align-items: center; padding: 3mm 4mm; margin-bottom: 2mm; border-radius: 10px; background: linear-gradient(90deg, #FFFCF3 0%, white 100%); border-left: 4px solid #FFD24C; }
+  .toc-item:nth-child(even) { border-left-color: #22B8B2; background: linear-gradient(90deg, #E6F7F6 0%, white 100%); }
+  .toc-item .toc-num { width: 13mm; flex-shrink: 0; font-size: 18pt; font-weight: 800; color: #143B39; font-family: 'Quicksand', sans-serif; }
+  .toc-item:nth-child(even) .toc-num { color: #22B8B2; }
+  .toc-item .toc-body { flex: 1; }
+  .toc-item .toc-title { font-size: 11pt; font-weight: 800; color: #143B39; }
+  .toc-item .toc-desc { font-size: 9pt; color: #6b7280; margin-top: 0.5mm; }
+  .toc-item .toc-page { font-size: 9.5pt; color: #94a3b8; font-weight: 600; }
+
+  /* ---------------- BẢNG SỐT ---------------- */
+  .fever-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0; }
+  .fever-card { border-radius: 12px; padding: 4mm 5mm; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .fever-card.c1 { background: linear-gradient(135deg, #2F8A4A, #4FB371); }
+  .fever-card.c2 { background: linear-gradient(135deg, #22B8B2, #6FD6D2); }
+  .fever-card.c3 { background: linear-gradient(135deg, #FFD24C, #FFB833); color: #5a3a00; }
+  .fever-card.c4 { background: linear-gradient(135deg, #ED5424, #ff7a4b); }
+  .fever-card .fc-label { font-size: 9pt; font-weight: 700; opacity: 0.85; letter-spacing: 0.4px; }
+  .fever-card .fc-temp { font-size: 18pt; font-weight: 800; font-family: 'Quicksand', sans-serif; margin: 1mm 0 1.5mm; }
+  .fever-card .fc-desc { font-size: 9pt; line-height: 1.5; }
+
+  /* ---------------- 9 DẤU HIỆU NGUY HIỂM ---------------- */
+  .danger-page { background: #fff8f4; }
+  .danger-page h2.section { color: #b3380c; border-bottom-color: #ED5424; }
+  .danger-page h2.section .num { color: #ED5424; }
+  .alert-banner { background: linear-gradient(135deg, #ED5424, #ff7a4b); color: white; padding: 5mm 6mm; border-radius: 14px; text-align: center; margin-bottom: 4mm; box-shadow: 0 8px 22px rgba(237,84,36,0.25); }
+  .alert-banner .big { font-size: 15pt; font-weight: 800; font-family: 'Quicksand', sans-serif; }
+  .alert-banner .sub { font-size: 9.5pt; margin-top: 1mm; opacity: 0.95; line-height: 1.5; }
+
+  .sign-list { list-style: none; padding: 0; counter-reset: slist; margin: 0; }
+  .sign-list li { background: white; border-left: 5px solid #ED5424; padding: 7px 12px 7px 38px; margin-bottom: 3px; font-size: 9.8pt; border-radius: 4px; position: relative; counter-increment: slist; line-height: 1.5; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .sign-list li::before { content: counter(slist); position: absolute; left: 9px; top: 7px; background: #ED5424; color: white; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 50%; font-weight: 800; font-size: 10pt; }
+  .sign-list li strong { color: #b3380c; }
+  .sign-list .note { display: block; color: #6b7280; font-size: 8.8pt; margin-top: 1mm; font-style: italic; }
+
+  .hotline { background: white; border: 2px dashed #ED5424; padding: 4mm 5mm; border-radius: 12px; margin-top: 4mm; text-align: center; }
+  .hotline .num { font-size: 22pt; font-weight: 800; color: #ED5424; letter-spacing: 2px; font-family: 'Quicksand', sans-serif; }
+  .hotline .lbl { font-size: 9pt; color: #6b7280; }
+
+  /* ---------------- 5 BƯỚC ---------------- */
+  .steps-list { counter-reset: step; margin: 3mm 0; padding: 0; list-style: none; }
+  .steps-list li { position: relative; padding: 4mm 4mm 4mm 18mm; margin-bottom: 3mm; background: linear-gradient(90deg, #FFFCF3, white); border-radius: 12px; counter-increment: step; border-left: 4px solid #FFD24C; }
+  .steps-list li::before { content: counter(step); position: absolute; left: 4mm; top: 4mm; width: 11mm; height: 11mm; background: #FFD24C; color: #5a3a00; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15pt; font-family: 'Quicksand', sans-serif; box-shadow: 0 4px 10px rgba(255,210,76,0.4); }
+  .steps-list li h4 { margin: 0 0 1.5mm; font-size: 11pt; color: #143B39; font-weight: 800; }
+  .steps-list li p { font-size: 9.8pt; color: #2a4f4d; margin: 0; line-height: 1.55; }
+  .steps-list li p + p { margin-top: 1mm; }
+
+  /* ---------------- THUỐC HẠ SỐT ---------------- */
+  .compare-table table { font-size: 9.5pt; }
+  .compare-table th { background: #143B39; }
+  .compare-table .col-pa { background: rgba(34,184,178,0.06); }
+  .compare-table .col-ib { background: rgba(255,210,76,0.08); }
+
+  /* ---------------- 7 LẦM TƯỞNG ---------------- */
+  .myth-list { margin: 3mm 0; padding: 0; list-style: none; }
+  .myth-item { background: white; border-radius: 10px; padding: 4mm 5mm; margin-bottom: 3mm; box-shadow: 0 2px 6px rgba(0,0,0,0.05); border-top: 3px solid #ED5424; }
+  .myth-item .myth-bad { color: #b3380c; font-weight: 800; font-size: 10pt; }
+  .myth-item .myth-bad::before { content: '✗ '; }
+  .myth-item .myth-good { color: #2F8A4A; font-size: 9.5pt; line-height: 1.55; margin-top: 1mm; }
+  .myth-item .myth-good::before { content: '✓ '; font-weight: 800; }
+
+  /* ---------------- MẸO AN TOÀN ---------------- */
+  .safe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 3mm; }
+  .safe-card { background: #ecfdf5; border-radius: 10px; padding: 4mm 5mm; border-left: 4px solid #2F8A4A; }
+  .safe-card .sc-icon { font-size: 16pt; }
+  .safe-card .sc-name { font-weight: 800; color: #143B39; font-size: 10pt; margin: 1mm 0; }
+  .safe-card .sc-desc { font-size: 9.5pt; line-height: 1.55; color: #2a4f4d; }
+  .safe-wide { grid-column: span 2; }
+
+  /* ---------------- HASOBABY CARD ---------------- */
+  .hb-card { border: 2px solid #22B8B2; border-radius: 16px; padding: 6mm; background: linear-gradient(135deg, #E6F7F6 0%, #FFFCF3 100%); margin: 4mm 0; }
+  .hb-card h4 { margin: 0 0 2mm; color: #143B39; font-size: 14pt; font-weight: 800; font-family: 'Quicksand', sans-serif; }
+  .hb-card .hb-tag { display: inline-block; background: #22B8B2; color: white; padding: 2px 10px; border-radius: 999px; font-size: 8.5pt; font-weight: 700; margin-bottom: 3mm; }
+  .hb-card .hb-desc { font-size: 10pt; line-height: 1.6; color: #2a4f4d; }
+  .hb-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 4mm 0; }
+  .hb-feat { background: white; border-radius: 8px; padding: 3mm 4mm; font-size: 9.5pt; line-height: 1.5; border-left: 3px solid #FFD24C; }
+  .hb-feat strong { color: #22B8B2; display: block; margin-bottom: 1mm; font-size: 10pt; }
+  .hb-cta { background: #143B39; color: white; padding: 4mm 5mm; border-radius: 10px; text-align: center; margin-top: 3mm; }
+  .hb-cta .cta-line1 { font-size: 9pt; opacity: 0.9; }
+  .hb-cta .cta-line2 { font-size: 13pt; font-weight: 800; font-family: 'Quicksand', sans-serif; margin-top: 1mm; color: #FFD24C; }
+
+  /* ---------------- FAQ ---------------- */
+  .faq-item { margin-bottom: 4mm; font-size: 10pt; padding-bottom: 3mm; border-bottom: 1px dashed #e5e7eb; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-weight: 700; color: #143B39; font-size: 10.5pt; }
+  .faq-q::before { content: 'Q: '; color: #ED5424; font-weight: 800; }
+  .faq-a { margin-top: 2mm; padding-left: 6mm; color: #2a4f4d; line-height: 1.6; font-size: 9.8pt; }
+  .faq-a::before { content: 'A: '; color: #22B8B2; font-weight: 800; margin-left: -6mm; padding-right: 2mm; }
+
+  /* ---------------- THANK YOU ---------------- */
+  .thanks { background: linear-gradient(180deg, #FFFCF3 0%, #E6F7F6 100%); }
+  .thanks h2 { color: #143B39; font-family: 'Quicksand', sans-serif; font-size: 22pt; margin: 0 0 4mm; font-weight: 800; }
+  .thanks p { font-size: 10.5pt; line-height: 1.7; color: #2a4f4d; }
+  .thanks .signature { font-style: italic; color: #22B8B2; font-weight: 700; margin-top: 5mm; font-size: 11pt; }
+  .links { background: white; border-radius: 14px; padding: 5mm 6mm; margin-top: 5mm; box-shadow: 0 4px 16px rgba(20,59,57,0.06); }
+  .links h4 { margin: 0 0 3mm; color: #143B39; font-size: 11pt; font-weight: 800; }
+  .links a { display: block; color: #143B39; text-decoration: none; padding: 4px 0; font-size: 10pt; border-bottom: 1px dashed #e5e7eb; }
+  .links a:last-child { border-bottom: none; }
+  .links a strong { color: #22B8B2; }
+  .disclaimer { background: #fff8e0; border: 1px solid #FFD24C; border-radius: 10px; padding: 3mm 4mm; margin-top: 4mm; font-size: 8.8pt; color: #5a3a00; line-height: 1.55; font-style: italic; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Quicksand:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- =============================== TRANG 1 — BÌA =============================== -->
+<div class="page cover">
+  <div class="top">
+    <div class="badge">🎁 QUÀ TẶNG TỪ DR.MAYA × HASOBABY</div>
+    <h1>Cẩm nang xử lý <span class="accent">sốt</span><br>tại nhà cho bé</h1>
+    <p class="sub"><strong>9 dấu hiệu bắt buộc phải đưa bé đi viện ngay</strong> &nbsp;•&nbsp; 5 bước xử lý đúng cách tại nhà &nbsp;•&nbsp; Liều thuốc hạ sốt theo cân nặng</p>
+  </div>
+  <div class="ill-wrap">
+    <svg class="ill-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Nhiệt kế -->
+      <g transform="translate(60,30)">
+        <rect x="20" y="0" width="14" height="105" rx="7" fill="white" stroke="#22B8B2" stroke-width="2.5"/>
+        <circle cx="27" cy="118" r="16" fill="#ED5424"/>
+        <rect x="23" y="40" width="8" height="78" rx="4" fill="#ED5424"/>
+        <line x1="38" y1="20" x2="44" y2="20" stroke="#143B39" stroke-width="2" stroke-linecap="round"/>
+        <line x1="38" y1="40" x2="44" y2="40" stroke="#143B39" stroke-width="2" stroke-linecap="round"/>
+        <line x1="38" y1="60" x2="44" y2="60" stroke="#143B39" stroke-width="2" stroke-linecap="round"/>
+        <line x1="38" y1="80" x2="44" y2="80" stroke="#143B39" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <!-- Em bé -->
+      <g transform="translate(110,70)">
+        <circle cx="35" cy="35" r="32" fill="#FFE9CC"/>
+        <circle cx="25" cy="32" r="2.5" fill="#143B39"/>
+        <circle cx="45" cy="32" r="2.5" fill="#143B39"/>
+        <path d="M28 45 Q35 50 42 45" stroke="#143B39" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="18" cy="40" rx="4" ry="3" fill="#FFB3B3" opacity="0.7"/>
+        <ellipse cx="52" cy="40" rx="4" ry="3" fill="#FFB3B3" opacity="0.7"/>
+        <!-- Tóc xoắn -->
+        <path d="M15 18 Q20 10 30 12 Q40 8 50 12 Q60 10 60 22" stroke="#7B4B1C" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- Trái tim nhỏ -->
+      <g transform="translate(150,40)">
+        <path d="M10 8 C10 4 6 2 4 4 C2 2 -2 4 -2 8 C-2 12 4 16 4 16 C4 16 10 12 10 8 Z" fill="#ED5424" opacity="0.7"/>
+      </g>
+    </svg>
+  </div>
+  <div class="by">
+    Biên soạn bởi đội ngũ chuyên môn<br>
+    <strong>DR.MAYA × HASOBABY</strong>
+    <div class="edition">Phiên bản 1.0 &nbsp;•&nbsp; 05/2026 &nbsp;•&nbsp; 12 trang</div>
+  </div>
+</div>
+
+<!-- =============================== TRANG 2 — LỜI NGỎ =============================== -->
+<div class="page letter">
+  <h2>Lời ngỏ từ Dr.Maya</h2>
+
+  <p class="lead">Mẹ ơi, không ai dạy mình cách đối mặt với đêm đầu tiên con sốt 39 độ.</p>
+
+  <p>Em biết — khi nhìn nhiệt kế nhảy lên con số đỏ, tim mình thắt lại. Tay mình run lên. Đầu mình hỏi hàng trăm câu cùng lúc: <em>"Có nên gọi bác sĩ không? Cho con uống thuốc bây giờ có sớm quá không? Lau bằng nước lạnh có nguy hiểm không? Sao bà nội bảo cạo gió mà mình lại nghe trên mạng nói không nên?"</em></p>
+
+  <p>Cuốn cẩm nang này, em viết cho mẹ — <strong>mẹ của những đứa con mà đêm hôm nào cũng có thể bắt đầu sốt đột ngột</strong>. Mẹ của những đứa con mà ranh giới giữa "sốt vặt bình thường" và "phải đi viện ngay" chỉ cách nhau vài độ.</p>
+
+  <div class="quote-card">
+    "Cẩm nang này không thay thế bác sĩ — nhưng nó giúp mẹ <strong>bình tĩnh trong 30 phút vàng đầu tiên</strong>: biết đo nhiệt độ thế nào cho đúng, biết khi nào cần xịt — lau — bù nước, biết khi nào phải xách con ra viện ngay không chần chừ."
+  </div>
+
+  <p>Tất cả nội dung trong cẩm nang được tổng hợp từ <strong>hướng dẫn của Bộ Y Tế, WHO và American Academy of Pediatrics (AAP)</strong>, được diễn giải lại bằng ngôn ngữ mẹ-bỉm dễ hiểu, kèm những lưu ý thực tế mà các Dược sĩ Dr.Maya đã tích luỹ qua hàng ngàn ca tư vấn cho mẹ Việt.</p>
+
+  <p>Đọc kỹ <strong>Chương 2 (9 dấu hiệu nguy hiểm)</strong> trước — đó là chương quan trọng nhất. Sau đó là <strong>5 bước xử lý tại nhà</strong>. Phần còn lại mẹ có thể đọc khi rảnh, hoặc khi tình huống thật sự xảy ra.</p>
+
+  <p>Em chúc mẹ con mình luôn an lành.</p>
+
+  <div class="sign">— Đội ngũ Dược sĩ Dr.Maya × Hasobaby ♥</div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>2 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 3 — MỤC LỤC =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">📑</span>Mục lục</h2>
+
+  <p style="font-size: 10pt; color: #6b7280;">Cẩm nang gồm 8 chương — đọc theo thứ tự hoặc nhảy thẳng đến chương cần khi tình huống xảy ra.</p>
+
+  <div class="toc-list">
+    <div class="toc-item">
+      <div class="toc-num">01</div>
+      <div class="toc-body">
+        <div class="toc-title">Hiểu đúng về sốt ở trẻ</div>
+        <div class="toc-desc">Sốt là gì, bảng phân loại theo nhiệt độ, tại sao sốt là phản ứng tự nhiên</div>
+      </div>
+      <div class="toc-page">trang 4</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">02</div>
+      <div class="toc-body">
+        <div class="toc-title">9 dấu hiệu PHẢI đưa bé đi viện NGAY ⚠️</div>
+        <div class="toc-desc">Chương quan trọng nhất — đọc kỹ và ghi nhớ</div>
+      </div>
+      <div class="toc-page">trang 5</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">03</div>
+      <div class="toc-body">
+        <div class="toc-title">5 bước xử lý sốt tại nhà đúng cách</div>
+        <div class="toc-desc">Đo nhiệt độ → mặc thoáng → bù nước → lau ấm → dùng thuốc/xịt</div>
+      </div>
+      <div class="toc-page">trang 6</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">04</div>
+      <div class="toc-body">
+        <div class="toc-title">Paracetamol vs Ibuprofen — dùng thuốc khi nào</div>
+        <div class="toc-desc">Bảng liều theo cân nặng, khoảng cách giữa 2 liều, tác dụng phụ</div>
+      </div>
+      <div class="toc-page">trang 7</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">05</div>
+      <div class="toc-body">
+        <div class="toc-title">7 lầm tưởng nguy hiểm khi con sốt</div>
+        <div class="toc-desc">Cạo gió, chườm đá, đắp chăn dày... những việc mẹ TUYỆT ĐỐI không làm</div>
+      </div>
+      <div class="toc-page">trang 8</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">06</div>
+      <div class="toc-body">
+        <div class="toc-title">Mẹo dân gian AN TOÀN có thể áp dụng</div>
+        <div class="toc-desc">Lau khăn ấm, phòng thoáng mát, cho uống thìa từng giọt</div>
+      </div>
+      <div class="toc-page">trang 9</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">07</div>
+      <div class="toc-body">
+        <div class="toc-title">Xịt Hasobaby — bạn đồng hành của mẹ</div>
+        <div class="toc-desc">Làm mát 3 giây, hạ thân nhiệt nhẹ nhàng, an toàn cho bé 0 tháng</div>
+      </div>
+      <div class="toc-page">trang 10</div>
+    </div>
+
+    <div class="toc-item">
+      <div class="toc-num">08</div>
+      <div class="toc-body">
+        <div class="toc-title">FAQ — 8 câu mẹ hay hỏi nhất</div>
+        <div class="toc-desc">Sốt mọc răng, sốt sau tiêm, tắm khi sốt, đo nhiệt độ bao lâu/lần</div>
+      </div>
+      <div class="toc-page">trang 11</div>
+    </div>
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>3 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 4 — CHƯƠNG 1 =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">01</span>Hiểu đúng về sốt ở trẻ</h2>
+
+  <p>Trước khi xử lý, mẹ cần hiểu sốt thực ra là gì. Nhiều mẹ cứ thấy con ấm là cuống — nhưng <strong>sốt KHÔNG phải bệnh</strong>, sốt là <em>phản ứng</em> của cơ thể.</p>
+
+  <h3>🌡️ Sốt là gì?</h3>
+  <p>Sốt là khi nhiệt độ cơ thể tăng cao hơn mức bình thường (≥ 37.5°C đo nách hoặc ≥ 38°C đo hậu môn) do trung tâm điều nhiệt ở não bộ "chỉnh" mức nhiệt mục tiêu lên cao hơn. Đây là <strong>cơ chế tự vệ thông minh</strong> — virus và vi khuẩn hoạt động kém ở nhiệt độ cao, đồng thời hệ miễn dịch của bé hoạt động mạnh hơn khi sốt.</p>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Điều quan trọng mẹ cần biết</div>
+    Mục tiêu khi xử lý sốt <strong>KHÔNG phải là hạ nhiệt độ về bình thường ngay lập tức</strong> — mà là <em>giúp bé thoải mái hơn</em> để bú/ngủ/chơi được. Nhiệt độ cao bao nhiêu không quan trọng bằng việc bé có đang tỉnh táo và tương tác hay không.
+  </div>
+
+  <h3>📊 Bảng phân loại sốt theo nhiệt độ</h3>
+  <div class="fever-grid">
+    <div class="fever-card c1">
+      <div class="fc-label">BÌNH THƯỜNG</div>
+      <div class="fc-temp">36.5 – 37.4°C</div>
+      <div class="fc-desc">Đo ở nách. Hậu môn: 37 – 37.9°C. Không cần làm gì.</div>
+    </div>
+    <div class="fever-card c2">
+      <div class="fc-label">SỐT NHẸ</div>
+      <div class="fc-temp">37.5 – 38.4°C</div>
+      <div class="fc-desc">Theo dõi, bù nước, mặc thoáng. Chưa cần thuốc.</div>
+    </div>
+    <div class="fever-card c3">
+      <div class="fc-label">SỐT VỪA</div>
+      <div class="fc-temp">38.5 – 39.4°C</div>
+      <div class="fc-desc">Lau ấm + xịt Hasobaby. Cân nhắc dùng thuốc nếu bé khó chịu.</div>
+    </div>
+    <div class="fever-card c4">
+      <div class="fc-label">SỐT CAO</div>
+      <div class="fc-temp">≥ 39.5°C</div>
+      <div class="fc-desc">Dùng thuốc hạ sốt + lau ấm + theo dõi sát. &gt; 40°C → đi viện ngay.</div>
+    </div>
+  </div>
+
+  <h3>🤔 Tại sao sốt KHÔNG hẳn là xấu?</h3>
+  <p>Khi bé sốt, các tế bào miễn dịch (bạch cầu, kháng thể) <strong>được kích hoạt mạnh gấp 2-3 lần</strong>. Đây là lý do các chuyên gia nhi khoa luôn nói: "Đừng cố hạ sốt bằng mọi giá." Sốt giúp con học cách chiến đấu với mầm bệnh — thậm chí sốt sau tiêm vắc xin là dấu hiệu cho thấy hệ miễn dịch của con đang phản ứng đúng cách.</p>
+
+  <div class="box box-mem">
+    <div class="box-title">📌 Mẹ ghi nhớ — đo nhiệt độ ở đâu chính xác nhất?</div>
+    • <strong>Nách</strong> (phổ biến, dễ làm): kết quả thấp hơn nhiệt độ thật ~0.5°C. Giữ nhiệt kế 3-5 phút.<br>
+    • <strong>Hậu môn</strong> (chính xác nhất, dùng cho bé &lt; 3 tháng): kết quả ≈ nhiệt độ thật. Giữ 1-2 phút.<br>
+    • <strong>Tai</strong> (nhanh, tiện nhưng dễ sai): chỉ chính xác từ 6 tháng trở lên, kéo tai ra sau khi đo.<br>
+    • <strong>Trán</strong> (hồng ngoại): tiện nhất nhưng dao động ±0.3°C tuỳ độ ẩm da và môi trường.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>4 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 5 — CHƯƠNG 2: 9 DẤU HIỆU =============================== -->
+<div class="page danger-page">
+  <h2 class="section"><span class="num">02</span>9 DẤU HIỆU phải đưa bé đi viện NGAY</h2>
+
+  <div class="alert-banner">
+    <div class="big">🚨 NẾU BÉ CÓ 1 TRONG 9 DẤU HIỆU NÀY</div>
+    <div class="sub">KHÔNG chờ, KHÔNG tự xử lý ở nhà, KHÔNG hỏi google nữa — đưa bé đến bệnh viện ngay lập tức</div>
+  </div>
+
+  <ol class="sign-list">
+    <li>
+      <strong>Bé dưới 3 tháng tuổi sốt ≥ 38°C</strong> — dù chỉ là sốt nhẹ.
+      <span class="note">Sơ sinh có hệ miễn dịch chưa hoàn thiện, có thể là dấu hiệu nhiễm trùng máu, viêm màng não.</span>
+    </li>
+    <li>
+      <strong>Sốt &gt; 39.5°C không hạ</strong> dù đã xử lý đúng cách (xịt + lau ấm + thuốc hạ sốt) sau 1-2 giờ.
+      <span class="note">Có thể là dấu hiệu nhiễm khuẩn nặng cần điều trị y tế.</span>
+    </li>
+    <li>
+      <strong>Sốt kéo dài &gt; 72 giờ (3 ngày)</strong> liên tục, dù đỉnh nhiệt không quá cao.
+      <span class="note">Cần loại trừ sốt xuất huyết, viêm phổi, viêm tai giữa, nhiễm trùng đường tiểu.</span>
+    </li>
+    <li>
+      <strong>Co giật, run rẩy bất thường</strong> — cơ tay/chân/mắt giật, cứng người, sùi bọt mép, mất ý thức.
+      <span class="note">Co giật do sốt cao xảy ra ở 2-5% trẻ, nhất là 6 tháng – 5 tuổi. Phải khám để loại trừ động kinh, viêm màng não.</span>
+    </li>
+    <li>
+      <strong>Lừ đừ, khó đánh thức, không phản ứng</strong> với tiếng gọi hoặc kích thích.
+      <span class="note">Đây là dấu hiệu não bị ảnh hưởng — nguy hiểm hơn nhiều so với nhiệt độ cao đơn thuần.</span>
+    </li>
+    <li>
+      <strong>Khóc thét bất thường, không dỗ được</strong> — tiếng khóc rít cao, the thé, khác hẳn ngày thường, kéo dài &gt; 2 giờ.
+      <span class="note">Có thể là dấu hiệu đau dữ dội: viêm tai, viêm màng não, lồng ruột.</span>
+    </li>
+    <li>
+      <strong>Nôn liên tục, không uống nước được</strong> (&gt; 3 lần trong 1 giờ) kèm dấu hiệu mất nước: môi khô, mắt trũng, ít đi tiểu, không có nước mắt khi khóc.
+      <span class="note">Mất nước ở trẻ nhỏ diễn tiến rất nhanh, cần truyền dịch tại viện.</span>
+    </li>
+    <li>
+      <strong>Phát ban tím, chấm xuất huyết, da nổi vân tím</strong> (dùng ly thủy tinh ấn lên ban — không mờ đi).
+      <span class="note">Nghi ngờ nhiễm trùng huyết não mô cầu — đây là cấp cứu sống còn, mỗi phút đều quý giá.</span>
+    </li>
+    <li>
+      <strong>Khó thở, thở nhanh, môi tím, rút lõm lồng ngực</strong> — bé thở &gt; 60 lần/phút (sơ sinh) hoặc &gt; 40 lần/phút (1-3 tuổi).
+      <span class="note">Có thể là viêm phổi nặng, viêm tiểu phế quản, hoặc sốc — cần thở oxy.</span>
+    </li>
+  </ol>
+
+  <div class="hotline">
+    <div class="lbl">Cấp cứu 24/7 — Số khẩn cấp quốc gia</div>
+    <div class="num">📞 115</div>
+    <div style="font-size: 9pt; color: #2a4f4d; margin-top: 2mm;">
+      Hà Nội: <strong>BV Nhi TƯ</strong> 024-6273-8532 &nbsp;•&nbsp; HCM: <strong>BV Nhi Đồng 1</strong> 028-3927-1119
+    </div>
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>5 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 6 — CHƯƠNG 3: 5 BƯỚC XỬ LÝ =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">03</span>5 BƯỚC xử lý sốt tại nhà đúng cách</h2>
+
+  <p>Khi đã loại trừ 9 dấu hiệu nguy hiểm ở Chương 2, mẹ áp dụng quy trình 5 bước dưới đây. Thứ tự rất quan trọng — đừng vội đi thẳng tới bước thuốc hạ sốt.</p>
+
+  <ol class="steps-list">
+    <li>
+      <h4>Đo nhiệt độ — chuẩn xác trước khi quyết định</h4>
+      <p>Dùng nhiệt kế điện tử đo nách (cho bé &gt; 3 tháng) hoặc hậu môn (cho bé &lt; 3 tháng). <strong>Cộng 0.5°C nếu đo ở nách</strong> để ra nhiệt độ thật. Ghi lại nhiệt độ và giờ đo — quan trọng khi gặp bác sĩ. Đo lại sau mỗi 30 phút – 1 giờ để theo dõi xu hướng.</p>
+    </li>
+    <li>
+      <h4>Mặc thoáng + phòng mát 26 – 28°C</h4>
+      <p>Cởi bớt lớp áo dày, chỉ để bé mặc 1 lớp cotton mỏng. <strong>Tắt điều hòa quá lạnh</strong> (dưới 25°C bé dễ run, làm tăng thân nhiệt). Mở cửa sổ cho thông gió. Nếu mùa hè, bật quạt nhẹ hướng vào tường (KHÔNG quạt thẳng vào người bé).</p>
+    </li>
+    <li>
+      <h4>Bù nước + sữa — liên tục, từng ngụm nhỏ</h4>
+      <p>Cho bé bú mẹ thường xuyên hơn 30% so với bình thường. Bé &gt; 6 tháng: cho uống thêm nước ấm, oresol pha đúng tỉ lệ, nước ép trái cây loãng. Mỗi lần 2-3 thìa, cách 10-15 phút. <strong>Tuyệt đối không ép uống quá nhiều một lần</strong> — dễ nôn.</p>
+    </li>
+    <li>
+      <h4>Lau khăn ấm 36 – 37°C ở nách, bẹn, trán, gáy</h4>
+      <p>Nhúng khăn xô vào nước ấm <strong>cùng nhiệt độ với thân bé hoặc ấm hơn 1°C</strong>, vắt ráo, lau nhẹ ở nách, bẹn, trán, gáy. Lặp lại 5-10 phút. <strong>TUYỆT ĐỐI KHÔNG dùng nước đá, nước lạnh, hoặc cồn</strong> — gây co mạch, run rẩy, làm tăng nhiệt độ ngược.</p>
+    </li>
+    <li>
+      <h4>Dùng thuốc hạ sốt + xịt Hasobaby hỗ trợ</h4>
+      <p>Nếu nhiệt độ ≥ 38.5°C và bé khó chịu, cho uống Paracetamol theo cân nặng (xem bảng liều ở Chương 4). Song song, <strong>xịt Hasobaby vào lòng bàn chân, gáy, sau tai</strong> để hỗ trợ làm mát nhẹ nhàng. Sau 30-45 phút đo lại — nếu nhiệt độ vẫn không hạ, đi viện.</p>
+    </li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">⚠️ Cảnh báo — KHÔNG dùng 1 mình mẹo dân gian</div>
+    Nhiều mẹ chỉ áp dụng lau ấm + cho uống nước rồi đợi — nếu sốt &gt; 39°C kéo dài &gt; 30 phút không hạ, <strong>phải dùng thuốc hạ sốt</strong>. Đừng để cơ thể bé tự "đấu" với cơn sốt cao quá lâu.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>6 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 7 — CHƯƠNG 4: THUỐC HẠ SỐT =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">04</span>Paracetamol vs Ibuprofen — dùng khi nào</h2>
+
+  <p>Hai loại thuốc hạ sốt phổ biến nhất ở Việt Nam là <strong>Paracetamol</strong> (Hapacol, Tylenol, Efferalgan) và <strong>Ibuprofen</strong> (Brufen, Sotstop). Cả hai đều an toàn nếu dùng đúng liều — nhưng có khác biệt quan trọng.</p>
+
+  <div class="compare-table">
+  <table>
+    <thead>
+      <tr><th style="width:24%">Tiêu chí</th><th class="col-pa" style="width:38%; color:white;">Paracetamol (Hapacol)</th><th class="col-ib" style="width:38%; color:white;">Ibuprofen (Brufen)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Độ tuổi tối thiểu</strong></td>
+        <td class="col-pa"><strong>Từ sơ sinh</strong> (theo chỉ định bác sĩ với bé &lt; 3 tháng)</td>
+        <td class="col-ib"><strong>Từ 6 tháng trở lên</strong>. KHÔNG dùng cho bé &lt; 6 tháng.</td>
+      </tr>
+      <tr>
+        <td><strong>Liều mỗi lần</strong></td>
+        <td class="col-pa">10 – 15 mg/kg cân nặng</td>
+        <td class="col-ib">5 – 10 mg/kg cân nặng</td>
+      </tr>
+      <tr>
+        <td><strong>Cách 2 liều</strong></td>
+        <td class="col-pa">4 – 6 giờ</td>
+        <td class="col-ib">6 – 8 giờ</td>
+      </tr>
+      <tr>
+        <td><strong>Tối đa / 24h</strong></td>
+        <td class="col-pa">4 lần. KHÔNG quá 60 mg/kg/ngày.</td>
+        <td class="col-ib">3-4 lần. KHÔNG quá 40 mg/kg/ngày.</td>
+      </tr>
+      <tr>
+        <td><strong>Bắt đầu có tác dụng</strong></td>
+        <td class="col-pa">30 – 60 phút</td>
+        <td class="col-ib">30 – 60 phút (hạ sốt mạnh hơn, kéo dài hơn)</td>
+      </tr>
+      <tr>
+        <td><strong>Khi nào chọn</strong></td>
+        <td class="col-pa">Lựa chọn đầu tiên cho mọi tình huống, đặc biệt bé &lt; 6 tháng.</td>
+        <td class="col-ib">Khi Paracetamol không hạ đủ, hoặc bé có viêm/đau kèm theo.</td>
+      </tr>
+      <tr>
+        <td><strong>Lưu ý kiêng kỵ</strong></td>
+        <td class="col-pa">Bé suy gan, suy thận nặng — tham vấn bác sĩ.</td>
+        <td class="col-ib">Bé bị sốt xuất huyết, mất nước, dạ dày yếu — KHÔNG dùng.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>⚖️ Bảng liều Paracetamol theo cân nặng</h3>
+  <table style="font-size:10pt;">
+    <thead>
+      <tr><th style="width:22%">Cân nặng</th><th style="width:28%">Liều mỗi lần</th><th>Gói/viên Hapacol phù hợp</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>4 – 7 kg</strong></td><td>60 – 100 mg</td><td>Hapacol 80mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>8 – 12 kg</strong></td><td>100 – 180 mg</td><td>Hapacol 150mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>13 – 17 kg</strong></td><td>150 – 250 mg</td><td>Hapacol 250mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>18 – 25 kg</strong></td><td>200 – 375 mg</td><td>Hapacol 250mg — <strong>1 – 1.5 gói</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="box box-warn">
+    <div class="box-title">🚨 4 nguyên tắc VÀNG khi dùng thuốc hạ sốt</div>
+    1. <strong>KHÔNG dùng Aspirin</strong> cho bé &lt; 12 tuổi — nguy cơ hội chứng Reye (tổn thương não, gan, có thể tử vong).<br>
+    2. <strong>KHÔNG kết hợp</strong> Paracetamol + Ibuprofen cùng lúc nếu không có chỉ định bác sĩ.<br>
+    3. <strong>KHÔNG tự ý tăng liều</strong> khi thấy thuốc chưa hạ sốt — đợi đủ 4-6 giờ trước khi dùng liều tiếp.<br>
+    4. <strong>KHÔNG dùng thuốc quá 3 ngày liên tục</strong> — phải đưa bé đi khám để tìm nguyên nhân.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>7 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 8 — CHƯƠNG 5: 7 LẦM TƯỞNG =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">05</span>7 lầm tưởng NGUY HIỂM khi con sốt</h2>
+
+  <p>Đây là 7 sai lầm phổ biến mẹ Việt thường mắc — phần lớn do nghe truyền miệng từ bà/cô/hàng xóm. Mỗi sai lầm đều có cơ sở khoa học giải thích vì sao <strong>không nên</strong>.</p>
+
+  <ul class="myth-list">
+    <li class="myth-item">
+      <div class="myth-bad">Cạo gió cho bé khi sốt</div>
+      <div class="myth-good">Da bé mỏng manh, cạo gió gây xước, bầm tím, đau đớn — không có bằng chứng khoa học giúp hạ sốt. Có thể gây nhiễm trùng da nếu dụng cụ không sạch.</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Chườm đá lạnh, lau cồn để hạ nhanh</div>
+      <div class="myth-good">Nước đá và cồn gây <em>co mạch ngoại biên</em>, làm bé run rẩy, nhiệt độ lõi cơ thể TĂNG ngược. Cồn còn có thể hấp thu qua da gây ngộ độc. Chỉ dùng khăn ấm 36-37°C.</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Đắp chăn dày, ủ kín cho bé "đổ mồ hôi"</div>
+      <div class="myth-good">Cơ thể không thoát nhiệt được, nhiệt độ tăng nhanh, dễ co giật. Đắp chăn dày khi sốt = <strong>cực kỳ nguy hiểm</strong>. Mặc 1 lớp cotton mỏng là đủ.</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Cho bé uống Aspirin để hạ sốt nhanh</div>
+      <div class="myth-good">Aspirin gây <strong>hội chứng Reye</strong> (tổn thương gan, não, có thể tử vong) ở trẻ &lt; 12 tuổi, đặc biệt khi sốt do virus (cúm, thuỷ đậu). TUYỆT ĐỐI KHÔNG dùng. Chỉ Paracetamol/Ibuprofen.</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Xông hơi tinh dầu cho bé sơ sinh để "thoát mồ hôi"</div>
+      <div class="myth-good">Đường hô hấp bé sơ sinh nhỏ và nhạy cảm — xông hơi nóng gây bỏng đường thở, kích ứng, co thắt phế quản. Chỉ áp dụng cho người lớn.</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Cho ăn dồn để bé "có sức chống sốt"</div>
+      <div class="myth-good">Khi sốt, dạ dày tiêu hoá kém — ép ăn dễ nôn ói, mất nước thêm. Cho bú/ăn theo nhu cầu, ưu tiên đồ lỏng dễ tiêu (cháo, sữa, súp).</div>
+    </li>
+    <li class="myth-item">
+      <div class="myth-bad">Cho nhịn nước vì sợ "đái dầm" hoặc nôn</div>
+      <div class="myth-good">Mất nước là nguy cơ lớn nhất khi sốt. Phải <strong>bù nước liên tục từng ngụm nhỏ</strong> mỗi 10-15 phút. Bé tiểu ít hơn 4 lần/24h = dấu hiệu mất nước cần đi viện.</div>
+    </li>
+  </ul>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>8 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 9 — CHƯƠNG 6: MẸO DÂN GIAN AN TOÀN =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">06</span>Mẹo dân gian AN TOÀN có thể áp dụng</h2>
+
+  <p>Không phải mọi mẹo dân gian đều xấu — nhiều mẹo nếu dùng đúng cách thực sự giúp bé thoải mái hơn. Dưới đây là <strong>6 mẹo Dr.Maya khuyến nghị</strong>, đã có cơ sở khoa học hoặc đã qua kinh nghiệm thực tế hàng ngàn mẹ.</p>
+
+  <div class="safe-grid">
+    <div class="safe-card">
+      <div class="sc-icon">🧣</div>
+      <div class="sc-name">Lau khăn ấm 36 – 37°C ở 4 vị trí</div>
+      <div class="sc-desc">Nách, bẹn, trán, gáy — 4 nơi có mạch máu nông sát da. Lau 5-10 phút, vắt khăn ráo, lặp lại 2-3 lần/giờ khi bé còn sốt.</div>
+    </div>
+
+    <div class="safe-card">
+      <div class="sc-icon">💨</div>
+      <div class="sc-name">Phòng thoáng mát 26 – 28°C</div>
+      <div class="sc-desc">Bật điều hoà ở 26-28°C hoặc mở cửa sổ thông gió. Tránh phòng kín bí — bé thoát nhiệt khó hơn.</div>
+    </div>
+
+    <div class="safe-card">
+      <div class="sc-icon">👕</div>
+      <div class="sc-name">Mặc 1 lớp cotton mỏng</div>
+      <div class="sc-desc">Cotton thấm hút mồ hôi, mềm mịn không kích ứng. Tránh chất liệu dày, polyester, len trong lúc sốt.</div>
+    </div>
+
+    <div class="safe-card">
+      <div class="sc-icon">🥄</div>
+      <div class="sc-name">Cho uống thìa từng giọt</div>
+      <div class="sc-desc">Bé biếng uống nước khi sốt — dùng thìa cà phê cho từng giọt, mỗi 5-10 phút. Có thể trộn với sữa, nước ép loãng.</div>
+    </div>
+
+    <div class="safe-card">
+      <div class="sc-icon">🍋</div>
+      <div class="sc-name">Tinh dầu tràm gió thoa nhẹ (1+ tháng)</div>
+      <div class="sc-desc">Tinh dầu tràm gió (cineol) đã được nghiên cứu giúp hạ nhiệt nhẹ và kháng khuẩn. Thoa loãng ở lòng bàn chân, gáy. KHÔNG bôi nguyên chất.</div>
+    </div>
+
+    <div class="safe-card">
+      <div class="sc-icon">🤱</div>
+      <div class="sc-name">Da kề da với mẹ</div>
+      <div class="sc-desc">Tiếp xúc da-kề-da giúp bé bình tĩnh, ổn định nhịp tim, ngủ ngon hơn. Hiệu quả đặc biệt với bé &lt; 6 tháng đang sốt.</div>
+    </div>
+
+    <div class="safe-card safe-wide">
+      <div class="sc-icon">🍲</div>
+      <div class="sc-name">Cháo loãng + nước hầm rau củ cho bé &gt; 6 tháng</div>
+      <div class="sc-desc">Cháo trắng loãng nấu với nước hầm rau củ (cà rốt, su su) hoặc nước hầm gà nhạt — bổ sung nước + điện giải + năng lượng nhẹ, dễ tiêu khi bé biếng ăn.</div>
+    </div>
+  </div>
+
+  <div class="box box-note">
+    <div class="box-title">✅ Lưu ý chung</div>
+    Các mẹo này <strong>hỗ trợ</strong> — không thay thế thuốc hạ sốt khi nhiệt độ ≥ 38.5°C và bé khó chịu. Mẹ kết hợp linh hoạt: mẹo dân gian + thuốc + xịt Hasobaby tuỳ mức độ sốt.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>9 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 10 — CHƯƠNG 7: HASOBABY =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">07</span>Xịt Hasobaby — bạn đồng hành của mẹ</h2>
+
+  <p>Trong hành trình chăm con sốt, mẹ cần một <strong>"trợ thủ làm mát nhanh"</strong> để dùng song song với lau ấm và (khi cần) thuốc hạ sốt. Đó là lý do Dr.Maya phát triển <strong>Xịt thảo dược Hasobaby 0+</strong> — sản phẩm dành riêng cho bé Việt, an toàn từ 0 tháng tuổi.</p>
+
+  <div class="hb-card">
+    <span class="hb-tag">✓ AN TOÀN TỪ 0 THÁNG</span>
+    <h4>🌿 Xịt Hasobaby 0+</h4>
+    <p class="hb-desc">Không thuốc tây, không cồn, không paraben. Công thức 6 tinh chất thảo dược (tràm gió, bạc hà, húng chanh, hương nhu, đinh hương, lô hội) thẩm thấu qua da, hạ thân nhiệt nhẹ nhàng + làm mát tức thì. Sản xuất đạt chuẩn GMP-WHO, Bộ Y Tế Việt Nam cấp phép.</p>
+
+    <div class="hb-feats">
+      <div class="hb-feat">
+        <strong>❄️ Làm mát 3 giây</strong>
+        Tinh chất bạc hà + tràm gió thẩm thấu cực nhanh qua da, cảm giác mát lan toả tức thì khi bé đang quấy do sốt.
+      </div>
+      <div class="hb-feat">
+        <strong>🌡️ Hạ nhiệt 2-3 phút</strong>
+        Cơ chế bay hơi sinh lý kết hợp giãn mạch ngoại biên giúp hỗ trợ hạ nhiệt độ da rõ rệt sau 2-3 phút xịt.
+      </div>
+      <div class="hb-feat">
+        <strong>🌿 100% thảo dược</strong>
+        Không thuốc tây, không hoá chất tổng hợp, dùng được cho bé sơ sinh — an toàn cho mẹ yên tâm dùng dài hạn.
+      </div>
+      <div class="hb-feat">
+        <strong>💧 Không hấp thu vào máu</strong>
+        Chỉ tác động bề mặt da, không ảnh hưởng gan/thận như thuốc uống — phối hợp tốt với Paracetamol khi cần.
+      </div>
+    </div>
+
+    <h3 style="margin-top:4mm; color:#22B8B2;">📍 Cách dùng — 3 ĐIỂM VÀNG hạ sốt</h3>
+    <p style="font-size:10pt;">
+      <strong>1.</strong> Lòng bàn chân (2 bên) &nbsp;•&nbsp; <strong>2.</strong> Gáy (sau cổ) &nbsp;•&nbsp; <strong>3.</strong> Sau tai (2 bên)
+    </p>
+    <p style="font-size:10pt;"><strong>Liều:</strong> 2-3 cú xịt mỗi điểm, lặp lại mỗi 4-6 giờ khi bé còn ấm/sốt. Mặc đồ thoáng sau xịt.</p>
+
+    <div class="hb-cta">
+      <div class="cta-line1">Mua hàng chính hãng tại</div>
+      <div class="cta-line2">drmayastore.vn &nbsp;•&nbsp; xithasot.thieuvananh.vn</div>
+    </div>
+  </div>
+
+  <div class="box box-mem">
+    <div class="box-title">📌 Mẹ ghi nhớ — Khi nào dùng Hasobaby?</div>
+    Dùng <strong>sớm</strong> khi bé bắt đầu ấm (37 – 38°C) — giúp 60-80% bé hạ thân nhiệt trước khi cần thuốc. Khi sốt &gt; 38.5°C: dùng <strong>song song với thuốc hạ sốt</strong> — bé hạ nhanh hơn, ngủ ngon hơn.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>10 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 11 — CHƯƠNG 8: FAQ =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">08</span>FAQ — 8 câu mẹ hay hỏi nhất</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé sốt sau tiêm phòng có nên cho uống thuốc hạ sốt ngay không?</div>
+    <div class="faq-a"><strong>Không nên</strong> uống dự phòng. Chỉ uống khi nhiệt độ ≥ 38.5°C và bé khó chịu. Một số nghiên cứu cho thấy uống Paracetamol dự phòng <em>có thể giảm đáp ứng miễn dịch</em> của vắc xin. Mẹ ưu tiên xịt Hasobaby + lau ấm + bù nước trước.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Sốt mọc răng kéo dài bao lâu? Có cần dùng thuốc không?</div>
+    <div class="faq-a">Sốt mọc răng thường <strong>chỉ 1-2 ngày</strong>, nhiệt độ &lt; 38.5°C. Nếu sốt &gt; 38.5°C hoặc kéo dài &gt; 48h thì không phải do răng — phải tìm nguyên nhân khác (viêm họng, tai, đường tiểu). Mọc răng đơn thuần ít khi cần thuốc — xịt Hasobaby + cho nhai dụng cụ gặm răng lạnh là đủ.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Có nên cho bé tắm khi đang sốt không?</div>
+    <div class="faq-a"><strong>Có thể tắm</strong> với nước ấm 36-37°C, thời gian ngắn 5-10 phút, trong phòng kín gió. Tắm thực ra giúp bé thoải mái và hạ nhiệt độ. <strong>Tránh</strong> nước lạnh, tắm lâu, tắm khi bé đang run/lừ đừ.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bao lâu phải đo nhiệt độ một lần?</div>
+    <div class="faq-a">Khi bé bắt đầu sốt: đo <strong>mỗi 30 phút – 1 giờ</strong>. Khi đã ổn định (sốt nhẹ &lt; 38°C, bé bú/chơi bình thường): đo <strong>mỗi 2-3 giờ</strong>. Ban đêm đo trước khi đi ngủ và 1 lần giữa đêm nếu bé sốt cao.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé sốt cao co giật rồi tỉnh lại — có cần đi viện không?</div>
+    <div class="faq-a"><strong>CÓ, đi viện ngay</strong> — kể cả khi bé đã tỉnh lại bình thường. Cần loại trừ động kinh, viêm màng não, rối loạn điện giải. Co giật lần đầu phải có bác sĩ khám trực tiếp. Mẹ ghi lại: thời gian giật, kiểu giật (toàn thân hay 1 bên), có sùi bọt mép không.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé sốt nhưng tay chân lạnh — có nguy hiểm không?</div>
+    <div class="faq-a">Có thể là dấu hiệu sốt đang lên đỉnh — cơ thể co mạch ngoại biên để giữ máu cho cơ quan nội tạng. Mẹ <strong>không xoa, không ủ ấm tay chân</strong> mà mặc thoáng, lau ấm thân, bù nước. Nếu kèm môi tím, da nổi vân tím → đi viện ngay.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Có thể cho uống Paracetamol và Ibuprofen xen kẽ không?</div>
+    <div class="faq-a"><strong>Chỉ khi có chỉ định bác sĩ</strong>. Không tự ý xen kẽ ở nhà vì dễ nhầm liều, dễ quá liều. Nếu Paracetamol không hiệu quả sau 4-6h, đưa bé đi khám để bác sĩ đánh giá nguyên nhân.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé bị sốt xuất huyết — có cách nào nhận biết tại nhà?</div>
+    <div class="faq-a">Dấu hiệu nghi ngờ: sốt cao &gt; 39°C kéo dài 2-3 ngày + đau cơ + đau hốc mắt + da nổi chấm xuất huyết / chảy máu chân răng / chảy máu cam. <strong>Phải đi viện làm xét nghiệm máu</strong> để xác định. TUYỆT ĐỐI KHÔNG dùng Ibuprofen, Aspirin trong sốt xuất huyết — chỉ dùng Paracetamol.</div>
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>11 / 12</span></div>
+</div>
+
+<!-- =============================== TRANG 12 — LIÊN HỆ + DISCLAIMER =============================== -->
+<div class="page thanks">
+  <h2>Liên hệ Dr.Maya</h2>
+
+  <p>Mẹ thân mến,</p>
+  <p>Cảm ơn mẹ đã đọc đến trang cuối cùng. Cuốn cẩm nang này được team Dr.Maya × Hasobaby biên soạn với một mong muốn duy nhất: <strong>giúp mẹ bình tĩnh hơn trong những đêm con sốt</strong>.</p>
+  <p>Không có cuốn sách nào thay thế được trực giác của mẹ. Nhưng cuốn sách tốt sẽ giúp mẹ tin vào trực giác đó — biết khi nào ở nhà xử lý, biết khi nào phải xách con đi viện. Em hy vọng cuốn này làm được đúng điều đó.</p>
+  <p>Có bất cứ câu hỏi nào, mẹ cứ nhắn cho team Dr.Maya — đội ngũ Dược sĩ luôn ở đây để hỗ trợ mẹ 24/7.</p>
+
+  <div class="signature">— Đội ngũ chuyên môn Dr.Maya × Hasobaby ♥</div>
+
+  <div class="links">
+    <h4>🔗 Kết nối với Dr.Maya</h4>
+    <a href="tel:0942486825">☎️ Hotline tư vấn — <strong>0942 486 825</strong></a>
+    <a href="https://drmayastore.vn">🛒 Cửa hàng chính hãng — <strong>drmayastore.vn</strong></a>
+    <a href="https://xithasot.thieuvananh.vn">🌿 Landing xịt Hasobaby — <strong>xithasot.thieuvananh.vn</strong></a>
+    <a href="https://web.facebook.com/hasobaby.drmaya">📘 Fanpage Hasobaby — <strong>fb.com/hasobaby.drmaya</strong></a>
+    <a href="https://web.facebook.com/groups/nghienbaunghiencon">👥 Group "Nghiện bầu nghiện con" — <strong>10.000+ mẹ bỉm</strong></a>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠️ Lưu ý quan trọng:</strong> Cẩm nang này mang tính chất tham khảo và giáo dục, không thay thế chỉ định, chẩn đoán hay điều trị của bác sĩ. Trong trường hợp khẩn cấp hoặc khi bé có dấu hiệu bất thường, mẹ vui lòng liên hệ ngay với cơ sở y tế gần nhất hoặc gọi cấp cứu 115. Liều thuốc trong cẩm nang là liều tham khảo tổng quát — liều thực tế cho bé cần được bác sĩ tư vấn dựa trên cân nặng, độ tuổi và tình trạng sức khỏe cụ thể.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>12 / 12</span></div>
+</div>
+
+</body>
+</html>

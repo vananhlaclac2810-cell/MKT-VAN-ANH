@@ -1,0 +1,343 @@
+{
+  "main": {
+    "id": "31a5158563a32f9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0935b5aff97c334a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "219568dd721b534f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chào mừng.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chào mừng"
+            }
+          },
+          {
+            "id": "2ceae287e6c69f2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GHI CHÚ1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GHI CHÚ1"
+            }
+          },
+          {
+            "id": "0eca54dd61c8c8fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chưa đặt tên.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chưa đặt tên"
+            }
+          },
+          {
+            "id": "2488f4ccb2afd872",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HỌC THẦY TRỌNG/GHI CHÚ THƯ MỤC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GHI CHÚ THƯ MỤC"
+            }
+          },
+          {
+            "id": "b41272a476390c88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chưa đặt tên 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chưa đặt tên 1"
+            }
+          },
+          {
+            "id": "302b0915e4a03712",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KIẾN THỨC HỌC CÔ LONG/16 concept truyền thông.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "16 concept truyền thông"
+            }
+          },
+          {
+            "id": "396fb0f2cced56d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-06-23.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-23"
+            },
+            "group": "505158be70a9c4d9"
+          }
+        ],
+        "currentTab": 6
+      },
+      {
+        "id": "29bbb8a2eda489a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "71a0916c8e31f7a3",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "2026-06-23.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Biểu đồ của 2026-06-23"
+            },
+            "group": "505158be70a9c4d9"
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "11a78f4801303f97",
+    "type": "split",
+    "children": [
+      {
+        "id": "e06c350ba02d7169",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "440c4a98ff76259d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Trình duyệt tệp"
+            }
+          },
+          {
+            "id": "d6f247a4561ef599",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Tìm kiếm"
+            }
+          },
+          {
+            "id": "8f8f9b77822dc3f6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Đánh dấu"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "848c01a52c30851f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8225f95aa5c358f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12606a0b6ac57336",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2026-06-23.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Liên kết đến của 2026-06-23"
+            }
+          },
+          {
+            "id": "a031893fc972e5f1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2026-06-23.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liên kết đi ra từ 2026-06-23"
+            }
+          },
+          {
+            "id": "ed795798403bdd7e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Thẻ"
+            }
+          },
+          {
+            "id": "86288778b0cafe05",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tất cả thuộc tính"
+            }
+          },
+          {
+            "id": "e9d0f8685bb68919",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-06-23.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Đề cương của 2026-06-23"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Mở bộ chuyển đổi nhanh": false,
+      "graph:Mở xem biểu đồ": false,
+      "canvas:Tạo bảng mới": false,
+      "daily-notes:Mở ghi chú hôm nay": false,
+      "templates:Chèn mẫu": false,
+      "command-palette:Mở khay lệnh": false,
+      "bases:Tạo cơ sở mới": false
+    }
+  },
+  "active": "ed795798403bdd7e",
+  "lastOpenFiles": [
+    "Chưa đặt tên.canvas",
+    "2026-06-23.md",
+    "SÁCH/nuôi con không phải cuộc chiến.md",
+    "luyện ngủ.md",
+    "dầu húng chanh.md",
+    "PHÒNG MKT/tư liệu sản phẩm.md",
+    "KIẾN THỨC HỌC THẦY LONG/egale camp.md",
+    "KIẾN THỨC HỌC CÔ LONG/16 concept truyền thông.md",
+    "HỌC THẦY TRỌNG/bộ não số 2.md",
+    "HỌC SALE/8 BƯỚC CHỐT SALE.md",
+    "HỌC THẦY TRỌNG/GHI CHÚ THƯ MỤC.md",
+    "Chưa đặt tên 2.md",
+    "Chưa đặt tên 1.md",
+    "HỌC SALE",
+    "SÁCH",
+    "KIẾN THỨC HỌC CÔ LONG",
+    "KIẾN THỨC HỌC THẦY LONG",
+    "PHÒNG MKT",
+    "Chưa đặt tên.md",
+    "GHI CHÚ 2.md",
+    "HỌC THẦY TRỌNG",
+    "GHI CHÚ1.md",
+    "Chưa đặt tên",
+    "Chào mừng.md"
+  ]
+}

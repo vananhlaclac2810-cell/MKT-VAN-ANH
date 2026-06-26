@@ -1,0 +1,142 @@
+{
+  "type": "lessons",
+  "total_duration": 44.7,
+  "scenes": [
+    {
+      "kind": "lesson",
+      "num": 1,
+      "start": 15.4,
+      "end": 19.68,
+      "kicker": "Nguy cơ #1",
+      "heading": "Ảnh hưởng cuộc sống",
+      "accent_words": [2],
+      "mockup_variant": "dashboard",
+      "content": {
+        "dashboard_title": "🚨 Tác động lâu dài lên con",
+        "stats": [
+          { "label": "TÂM LÝ", "value": "⚠️", "color": "orange" },
+          { "label": "HÀNH VI", "value": "↓", "color": "cyan" },
+          { "label": "SỨC KHỎE", "value": "↓", "color": "green" }
+        ],
+        "creatives": ["😰", "😔", "😢", "😟", "😣", "🥺", "😪", "😞", "💭", "🛌", "🍼", "🚼"],
+        "counter_target": 4
+      },
+      "badges": [
+        { "pos": "tr", "color": "orange", "icon": "🧠", "num": "4", "label": "Nguy cơ" }
+      ],
+      "brollEnd": 19.68,
+      "hasBreath": false
+    },
+    {
+      "kind": "lesson",
+      "num": 2,
+      "start": 19.68,
+      "end": 23.5,
+      "kicker": "Nguy cơ #2",
+      "heading": "Đi tiểu quá nhiều",
+      "accent_words": [1, 2],
+      "mockup_variant": "app-card",
+      "content": {
+        "app_icon": "💧",
+        "app_name": "Tần suất ↑",
+        "app_desc": "Con đi tiểu nhiều lần · khó kiểm soát",
+        "app_stats": ["⏱ Mỗi 30'", "🌙 Đêm thức", "📉 Bàng quang yếu"],
+        "build_text": "Bàng quang trẻ <strong>chưa đủ phát triển</strong> để xí tè theo lịch"
+      },
+      "badges": [
+        { "pos": "tr", "color": "cyan", "icon": "💧", "num": "10+", "label": "Lần/ngày" }
+      ],
+      "brollEnd": 23.5,
+      "hasBreath": false
+    },
+    {
+      "kind": "lesson",
+      "num": 3,
+      "start": 23.5,
+      "end": 25.92,
+      "kicker": "Nguy cơ #3",
+      "heading": "Tổn thương cơ bàng quang",
+      "accent_words": [2, 3],
+      "mockup_variant": "dashboard",
+      "content": {
+        "dashboard_title": "🩺 Sự phát triển cơ bàng quang",
+        "stats": [
+          { "label": "PHÁT TRIỂN", "value": "↓", "color": "orange" },
+          { "label": "CO BÓP", "value": "Yếu", "color": "cyan" },
+          { "label": "PHỤC HỒI", "value": "Khó", "color": "purple" }
+        ],
+        "creatives": ["⚠️", "🩺", "💉", "🏥", "📉", "⏱", "🧬", "🔬", "💊", "📋", "🚨", "❌"],
+        "counter_target": 3
+      },
+      "badges": [
+        { "pos": "tr", "color": "purple", "icon": "🩺", "num": "?", "label": "Nguy hiểm" }
+      ],
+      "brollEnd": 25.92,
+      "hasBreath": false
+    },
+    {
+      "kind": "lesson",
+      "num": 4,
+      "start": 25.92,
+      "end": 29.34,
+      "kicker": "Nguy cơ #4",
+      "heading": "Gián đoạn tập trung",
+      "accent_words": [1, 2],
+      "mockup_variant": "app-card",
+      "content": {
+        "app_icon": "🧠",
+        "app_name": "Tập trung ↓",
+        "app_desc": "Ngắt quãng giấc ngủ · ảnh hưởng phát triển não",
+        "app_stats": ["💤 Ngủ -2h", "📚 Học -30%", "😵 Mệt mỏi"],
+        "build_text": "Trẻ cần <strong>giấc ngủ liền mạch</strong> để não phát triển"
+      },
+      "badges": [
+        { "pos": "tr", "color": "green", "icon": "🧠", "num": "↓", "label": "Tập trung" }
+      ],
+      "brollEnd": 29.34,
+      "hasBreath": false
+    },
+    {
+      "kind": "recap",
+      "num": "⏱",
+      "start": 29.34,
+      "end": 39.04,
+      "kicker": "Thế kỷ 21",
+      "heading": "Thời đại đã đổi",
+      "accent_words": [2],
+      "mockup_variant": "team-grid",
+      "content": {
+        "header_label": "Phụ huynh dùng xí tè",
+        "from_value": 100,
+        "to_value": 5,
+        "unit": "%",
+        "multiplier": 20,
+        "mult_text": "<strong>Bỉm hiện đại</strong> đã giải quyết tất cả",
+        "tag": "🍼 Bỉm hiện đại · An toàn · Tiện lợi"
+      },
+      "brollEnd": 36.5,
+      "hasBreath": true
+    },
+    {
+      "kind": "cta",
+      "num": "💬",
+      "start": 39.04,
+      "end": 44.7,
+      "kicker": "Quan điểm bạn",
+      "heading": "Bình luận bên dưới",
+      "accent_words": [0, 1],
+      "mockup_variant": "comment-box",
+      "content": {
+        "avatar_letter": "M",
+        "keyword": "Quan điểm",
+        "gifts": [
+          { "thumb": "📚", "tag": "TÀI LIỆU FREE", "title": "Cẩm nang nuôi con không xí tè", "badge": "FREE" },
+          { "thumb": "🎁", "tag": "TƯ VẤN 1-1", "title": "Tư vấn từ Dr.Maya", "badge": "FREE" }
+        ],
+        "cta_text": "👇 Comment quan điểm của bạn 👇"
+      },
+      "brollEnd": 41.5,
+      "hasBreath": true
+    }
+  ]
+}

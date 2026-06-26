@@ -1,0 +1,31 @@
+﻿Loading model (medium, int8)...
+Transcribing...
+[  0.59 ->   7.47] Xin thưa các con dân, sau khi làm hỏng tầm chục cái núm khi đục lỗ thì tôi đã có kinh nghiệm
+[  7.47 ->  10.97] và áp đụng rất là nhiều kinh nghiệm mà các bà chia sẻ
+[ 10.97 ->  14.45] thì bây giờ tôi đụng núm nào là được núm đấy nhá.
+[ 14.99 ->  17.45] Đây, được chưa? Đây là cái núm đấy các bà.
+[ 17.61 ->  22.03] Nhớ là đục ở bên ngoài nhá, chứ không phải đục lên cái núm cũ nhá.
+[ 22.29 ->  28.87] Đục ở bên ngoài cái núm cũ, đục ở bên ngoài cái núm, không có đục cái vòng trong
+[ 28.87 ->  31.95] cùng với cái núm của cái bình luôn đâu.
+[ 31.99 ->  33.65] Thứ hai, chuẩn bị cái kim.
+[ 34.21 ->  37.53] Thứ ba, chuẩn bị cho tôi một cái bìa.
+[ 37.85 ->  38.71] Nó không được trôn.
+[ 39.09 ->  42.77] Nếu mà các bà để lên cái mặt bàn thì giống tôi hôm trước là nó cứ bị trôn.
+[ 42.97 ->  44.77] Nó trôn thì nó làm trượt cái núm.
+[ 44.91 ->  47.95] Thì nó không có ra được cái miếng xi côn.
+[ 48.15 ->  49.45] Còn đây giờ các bà nhìn nhá.
+[ 50.21 ->  54.76] Rồi tôi sẽ xác định điểm chọc này.
+[ 56.35 ->  58.69] Sau khi xác định điểm chọc xong.
+[ 59.80 ->  62.40] Thì mình đặt xuống cái miếng này.
+[ 66.66 ->  67.10] Ấn.
+[ 74.14 ->  76.18] Nó ra cái miếng xi côn này.
+[ 76.52 ->  78.28] Nó ra đúng một tí các bà thấy không?
+[ 78.82 ->  79.94] Có một tiệu này.
+[ 80.40 ->  82.94] Thì phải bay được cái miếng xi côn này ra.
+[ 83.54 ->  84.76] Thì mới ok nha các bà.
+[ 86.04 ->  88.98] Hôm nay tôi phải đục núm số ba cho thằng con nhà tôi rồi đây này.
+[ 89.46 ->  93.96] Không biết uống sữa kiểu gì mà mật lên xa liên tục luôn.
+[ 94.88 ->  98.84] Không biết là có tăng sữa không nhưng mà gọi là mẹ suốt ngày đi đục núm ấy đó.
+
+Saved: D:\SKILL MARKETING AGENT\duc_lo_num_transcript.json
+Total segments: 26

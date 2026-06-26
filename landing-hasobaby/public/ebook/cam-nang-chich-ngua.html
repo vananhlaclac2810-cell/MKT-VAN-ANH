@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cẩm nang chích ngừa an toàn cho bé 0-24 tháng — Dr.Maya × Hasobaby</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif; color: #1f2937; line-height: 1.55; font-size: 10.5pt; }
+
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 16mm 14mm 16mm 14mm;
+    page-break-after: always;
+    position: relative; background: white; overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .pg-footer {
+    position: absolute; bottom: 7mm; left: 14mm; right: 14mm;
+    font-size: 8.5pt; color: #94a3b8;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #e5e7eb; padding-top: 3mm;
+  }
+  .pg-footer .brand { font-weight: 700; color: #179B96; letter-spacing: 0.4px; }
+
+  h2.section { font-size: 17pt; color: #143B39; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #fbbf24; font-weight: 800; }
+  h2.section .num { color: #fbbf24; margin-right: 8px; }
+  h3 { font-size: 12.5pt; color: #143B39; margin: 5mm 0 2mm; font-weight: 700; }
+  p { margin: 0 0 2.5mm; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 2mm 0; }
+  table th { background: #143B39; color: white; padding: 6px 7px; text-align: left; font-weight: 600; font-size: 9pt; }
+  table td { padding: 5px 7px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .tag { display: inline-block; padding: 1px 6px; border-radius: 5px; font-size: 8pt; font-weight: 700; }
+  .tag-free { background: #d1fae5; color: #047857; }
+  .tag-paid { background: #fef3c7; color: #b45309; }
+
+  .box { border-radius: 10px; padding: 8px 13px; margin: 2.5mm 0; font-size: 10pt; }
+  .box-note { background: #ecfdf5; border-left: 4px solid #10b981; }
+  .box-warn { background: #fef2f2; border-left: 4px solid #ef4444; }
+  .box-tip { background: #eff6ff; border-left: 4px solid #3b82f6; }
+  .box-mem { background: #fffbeb; border-left: 4px solid #fbbf24; }
+  .box-title { font-weight: 700; margin-bottom: 3px; }
+
+  .source { font-size: 8.5pt; color: #6b7280; font-style: italic; margin-top: 2mm; }
+
+  /* Cover */
+  .cover { background: linear-gradient(180deg, #fffbeb 0%, #ecfdf5 55%, #f0fdf4 100%); padding: 0;
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; }
+  .cover .top { padding: 28mm 16mm 0; }
+  .cover .badge { display: inline-block; padding: 6px 16px; border-radius: 999px; background: #fef3c7; color: #b45309; font-size: 10pt; font-weight: 700; margin-bottom: 8mm; letter-spacing: 0.5px; }
+  .cover h1 { font-size: 30pt; color: #143B39; margin: 0 0 6mm; line-height: 1.12; font-weight: 800; }
+  .cover .sub { font-size: 12.5pt; color: #475569; max-width: 75%; margin: 0 auto; line-height: 1.55; }
+  .cover .ill-wrap { width: 90mm; height: 90mm; margin: 6mm auto 0; border-radius: 50%; overflow: hidden; border: 6px solid white; box-shadow: 0 10px 40px rgba(20,59,57,0.15); }
+  .cover .ill-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .cover .by { padding: 0 16mm 22mm; font-size: 10pt; color: #64748b; line-height: 1.7; }
+  .cover .by strong { color: #179B96; font-weight: 800; font-size: 11pt; letter-spacing: 0.5px; }
+  .cover .edition { margin-top: 5mm; font-size: 9pt; color: #94a3b8; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 28mm; margin-top: 3mm; }
+  .timeline::before { content: ''; position: absolute; left: 22mm; top: 4mm; bottom: 4mm; width: 3px; background: #fbbf24; }
+  .tl-item { position: relative; margin-bottom: 4mm; }
+  .tl-item .tl-month { position: absolute; left: -28mm; top: 1mm; width: 20mm; text-align: right; font-weight: 800; color: #143B39; font-size: 10.5pt; }
+  .tl-item .tl-dot { position: absolute; left: -8mm; top: 2mm; width: 11px; height: 11px; border-radius: 50%; background: #fbbf24; border: 3px solid white; box-shadow: 0 0 0 2px #fbbf24; }
+  .tl-item .tl-content { background: #f9fafb; padding: 6px 11px; border-radius: 6px; font-size: 10pt; line-height: 1.55; }
+  .tl-item .tl-content strong { color: #143B39; }
+
+  /* Reaction grid */
+  .react-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 3mm; }
+  .react-card { background: #f9fafb; border-radius: 8px; padding: 8px 11px; border-left: 4px solid #10b981; font-size: 10pt; }
+  .react-card .rc-icon { font-size: 18pt; line-height: 1; }
+  .react-card .rc-name { font-weight: 700; color: #143B39; margin-top: 2px; margin-bottom: 2px; }
+  .react-card .rc-time { color: #6b7280; font-size: 9pt; }
+  .react-card .rc-desc { font-size: 9.5pt; margin-top: 2px; }
+  .react-wide { grid-column: span 2; border-left-color: #fbbf24; background: #fffbeb; }
+
+  /* Hasobaby card — expanded */
+  .hb-card { border: 2px solid #179B96; border-radius: 16px; padding: 5mm; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); margin: 3mm 0; }
+  .hb-card .hb-row { display: flex; gap: 5mm; align-items: flex-start; }
+  .hb-card .hb-img { width: 32mm; flex-shrink: 0; }
+  .hb-card .hb-img img { width: 100%; border-radius: 10px; box-shadow: 0 6px 18px rgba(20,59,57,0.12); }
+  .hb-card .hb-img .hb-tag { display: block; text-align: center; margin-top: 2mm; font-size: 7.5pt; color: #047857; font-weight: 700; }
+  .hb-card .hb-info { flex: 1; }
+  .hb-card h4 { margin: 0 0 1.5mm; color: #143B39; font-size: 11.5pt; font-weight: 800; }
+  .hb-card .hb-ing { display: flex; flex-wrap: wrap; gap: 3px; margin: 2mm 0; }
+  .hb-card .hb-ing span { background: white; padding: 2px 7px; border-radius: 999px; font-size: 8pt; color: #143B39; font-weight: 600; border: 1px solid #d1fae5; }
+  .hb-card .hb-desc { font-size: 9pt; line-height: 1.5; color: #374151; }
+
+  .hb-emphasis { background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px; padding: 6px 10px; margin: 3mm 0; font-size: 9.5pt; color: #78350f; }
+  .hb-emphasis strong { color: #b45309; }
+
+  .hb-use { margin-top: 3mm; }
+  .hb-use h5 { margin: 0 0 2mm; color: #143B39; font-size: 10pt; font-weight: 800; }
+  .hb-steps-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5mm; }
+  .hb-step { background: white; border-radius: 7px; padding: 4px; text-align: center; }
+  .hb-step img { width: 100%; border-radius: 4px; aspect-ratio: 1; object-fit: cover; }
+  .hb-step .step-num { display: inline-block; background: #fbbf24; color: white; width: 16px; height: 16px; line-height: 16px; border-radius: 50%; font-weight: 800; font-size: 8.5pt; margin-top: 2mm; }
+  .hb-step .step-label { margin-top: 1mm; font-weight: 700; color: #143B39; font-size: 8.5pt; line-height: 1.25; }
+
+  .hb-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm; }
+  .hb-method { background: white; border-radius: 7px; padding: 6px 9px; font-size: 9pt; line-height: 1.5; }
+  .hb-method strong { color: #143B39; display: block; margin-bottom: 1.5mm; font-size: 9.5pt; }
+  .hb-method em { color: #b45309; font-style: normal; font-weight: 700; }
+
+  .hb-warn-inline { background: #fef2f2; border-left: 3px solid #ef4444; padding: 4px 9px; margin-top: 2.5mm; font-size: 9pt; color: #991b1b; font-weight: 600; border-radius: 4px; }
+  .hb-note-inline { background: rgba(255,255,255,0.7); padding: 4px 9px; margin-top: 2mm; font-size: 8.5pt; color: #475569; border-radius: 4px; }
+
+  /* Medication page */
+  .med-when { background: #ecfdf5; border-radius: 10px; padding: 8px 13px; margin: 2mm 0 4mm; font-size: 10pt; }
+  .med-when ul { margin: 0; padding-left: 5mm; }
+  .med-when li { margin-bottom: 1.5mm; line-height: 1.5; }
+
+  .dose-table table { font-size: 10pt; }
+  .dose-table th, .dose-table td { padding: 6px 8px; }
+
+  .med-forms { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3mm; margin: 3mm 0; }
+  .med-form-card { background: #f9fafb; border-radius: 8px; padding: 7px 9px; border-top: 4px solid #179B96; font-size: 9pt; }
+  .med-form-card h5 { margin: 0 0 2mm; color: #143B39; font-size: 10pt; font-weight: 800; }
+  .med-form-card ul { margin: 0; padding-left: 4mm; line-height: 1.55; }
+  .med-form-card li { margin-bottom: 1mm; }
+
+  .hb-mep { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 10px; padding: 9px 13px; margin: 3mm 0; font-size: 9.5pt; line-height: 1.6; border: 2px solid #fbbf24; }
+  .hb-mep .mep-title { font-weight: 800; color: #78350f; font-size: 10.5pt; margin-bottom: 2mm; }
+  .hb-mep ul { margin: 0; padding-left: 5mm; }
+  .hb-mep li { margin-bottom: 1mm; }
+
+  /* Danger */
+  .danger { background: #fef7f7; }
+  .danger h2.section { color: #b91c1c; border-bottom-color: #ef4444; }
+  .danger .alert-banner { background: #ef4444; color: white; padding: 5mm; border-radius: 10px; text-align: center; margin-bottom: 4mm; }
+  .danger .alert-banner .big { font-size: 16pt; font-weight: 800; }
+  .danger .alert-banner .sub { font-size: 10pt; margin-top: 1mm; opacity: 0.95; }
+  .danger-list { list-style: none; padding: 0; counter-reset: dlist; margin: 0; }
+  .danger-list li { background: white; border-left: 5px solid #ef4444; padding: 8px 12px 8px 38px; margin-bottom: 4px; font-size: 10pt; border-radius: 4px; position: relative; counter-increment: dlist; line-height: 1.45; }
+  .danger-list li::before { content: counter(dlist); position: absolute; left: 10px; top: 7px; background: #ef4444; color: white; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 50%; font-weight: 800; font-size: 10pt; }
+  .danger-list li strong { color: #b91c1c; }
+  .hotline { background: white; border: 2px dashed #ef4444; padding: 4mm; border-radius: 10px; margin-top: 4mm; text-align: center; }
+  .hotline .num { font-size: 24pt; font-weight: 800; color: #ef4444; letter-spacing: 2px; }
+  .hotline .lbl { font-size: 9pt; color: #6b7280; }
+
+  /* FAQ */
+  .faq-item { margin-bottom: 3.5mm; font-size: 10pt; }
+  .faq-q { font-weight: 700; color: #143B39; }
+  .faq-a { margin-top: 1.5mm; padding-left: 5mm; color: #374151; line-height: 1.55; }
+  .faq-a::before { content: '→ '; color: #fbbf24; font-weight: 800; margin-left: -5mm; padding-right: 2mm; }
+
+  /* Track template */
+  .track-table table { font-size: 9pt; }
+  .track-table th, .track-table td { padding: 6px 5px; }
+  .track-table td { height: 9mm; }
+
+  /* Thanks */
+  .thanks { background: linear-gradient(180deg, #fffbeb 0%, #ecfdf5 100%); }
+  .thanks-content { padding: 6mm 4mm; }
+  .thanks h2 { color: #143B39; font-size: 19pt; margin: 0 0 4mm; font-weight: 800; }
+  .thanks p { font-size: 10.5pt; line-height: 1.65; }
+  .signature { font-style: italic; color: #179B96; font-weight: 700; margin-top: 5mm; font-size: 11pt; }
+  .links { background: white; border-radius: 14px; padding: 5mm 6mm; margin-top: 5mm; box-shadow: 0 4px 16px rgba(20,59,57,0.06); }
+  .links h4 { margin: 0 0 3mm; color: #143B39; font-size: 11pt; font-weight: 800; }
+  .links a { display: block; color: #143B39; text-decoration: none; padding: 4px 0; font-size: 10pt; border-bottom: 1px dashed #e5e7eb; }
+  .links a:last-child { border-bottom: none; }
+  .links a strong { color: #179B96; }
+</style>
+</head>
+<body>
+
+<!-- =============================== TRANG 1 — BÌA =============================== -->
+<div class="page cover">
+  <div class="top">
+    <div class="badge">🎁 QUÀ TẶNG TỪ DR.MAYA × HASOBABY</div>
+    <h1>Cẩm nang chích ngừa<br>an toàn cho bé</h1>
+    <p class="sub">Lịch tiêm đầy đủ 0–24 tháng &nbsp;•&nbsp; Cách xử lý phản ứng sau tiêm &nbsp;•&nbsp; Dùng thuốc hạ sốt an toàn</p>
+  </div>
+  <div class="ill-wrap"><img src="../illustrations/mom-holding-baby.jpg" alt=""></div>
+  <div class="by">
+    Biên soạn bởi đội ngũ chuyên môn<br>
+    <strong>DR.MAYA × HASOBABY</strong>
+    <div class="edition">Phiên bản 1.1 &nbsp;•&nbsp; 05/2026 &nbsp;•&nbsp; 10 trang</div>
+  </div>
+</div>
+
+<!-- =============================== TRANG 2 — TCMR =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">01</span>Lịch tiêm chủng mở rộng (TCMR) <span class="tag tag-free" style="font-size:9pt; vertical-align:middle;">MIỄN PHÍ</span></h2>
+
+  <p>Chương trình Tiêm Chủng Mở Rộng được Bộ Y Tế triển khai miễn phí tại trạm y tế phường/xã và bệnh viện công. Đây là <strong>lịch tối thiểu</strong> mọi bé Việt Nam đều cần.</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:25%">Mốc tuổi</th><th style="width:30%">Vắc xin</th><th>Phòng bệnh</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Trong 24h sau sinh</strong></td><td>BCG</td><td>Lao</td></tr>
+      <tr><td><strong>Trong 24h sau sinh</strong></td><td>Viêm gan B mũi 0</td><td>Viêm gan B</td></tr>
+      <tr><td><strong>2 tháng</strong></td><td>5in1 (DPT-VGB-Hib) mũi 1</td><td>Bạch hầu, Ho gà, Uốn ván, Hib, Viêm gan B</td></tr>
+      <tr><td><strong>2 tháng</strong></td><td>OPV (uống) mũi 1</td><td>Bại liệt</td></tr>
+      <tr><td><strong>2 tháng</strong></td><td>Rotavin-M1 (uống) liều 1 <span style="color:#047857; font-size:8.5pt; font-weight:700;">🆕 mới vào TCMR</span></td><td>Tiêu chảy do Rotavirus</td></tr>
+      <tr><td><strong>3 tháng</strong></td><td>5in1 mũi 2 + OPV mũi 2</td><td>(như mũi 1)</td></tr>
+      <tr><td><strong>3 tháng</strong></td><td>Rotavin-M1 (uống) liều 2</td><td>Tiêu chảy do Rotavirus</td></tr>
+      <tr><td><strong>4 tháng</strong></td><td>5in1 mũi 3 + OPV mũi 3</td><td>(như mũi 1)</td></tr>
+      <tr><td><strong>5 tháng</strong></td><td>IPV (tiêm)</td><td>Bại liệt</td></tr>
+      <tr><td><strong>9 tháng</strong></td><td>Sởi mũi 1</td><td>Sởi</td></tr>
+      <tr><td><strong>18 tháng</strong></td><td>5in1 mũi 4 (nhắc lại)</td><td>(như mũi 1)</td></tr>
+      <tr><td><strong>18 tháng</strong></td><td>Sởi – Rubella (MR)</td><td>Sởi, Rubella</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box box-mem">
+    <div class="box-title">📌 Mẹ ghi nhớ</div>
+    Tổng cộng <strong>12 mũi/liều TCMR</strong> trong 24 tháng đầu (gồm 2 liều Rota uống mới được đưa vào TCMR từ 2024). Sổ tiêm chủng giấy của trạm y tế sẽ ghi rõ — mẹ giữ kỹ vì cần dùng cho đăng ký học và xuất cảnh sau này.
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Mẹo nhỏ</div>
+    Mẹ có thể đăng ký lịch nhắc qua app <strong>Sổ sức khỏe điện tử</strong> (Bộ Y Tế) — báo tự động đến ngày tiêm.
+  </div>
+
+  <p class="source">Nguồn: Quyết định 1596/QĐ-BYT 2024 (bổ sung Rotavin-M1 vào TCMR) + Quyết định 1492/QĐ-BYT 2025 (lịch TCMR hiện hành) — Bộ Y Tế Việt Nam.</p>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>2 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 3 — TIMELINE =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">02</span>Lịch tổng hợp theo tháng tuổi</h2>
+  <p>Lịch tổng hợp <strong>TCMR (bắt buộc) + dịch vụ phổ biến</strong>. Mẹ có thể in trang này dán tường để theo dõi.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-month">Sơ sinh</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>BCG (Lao)</strong> + <strong>Viêm gan B mũi 0</strong> — tiêm trong 24h đầu tại bệnh viện sinh</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">2 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>5in1/6in1 mũi 1</strong> + <strong>OPV mũi 1</strong> + <strong>Rotavin-M1 liều 1</strong> + <em>Phế cầu mũi 1</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">3 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>5in1/6in1 mũi 2</strong> + <strong>OPV mũi 2</strong> + <strong>Rotavin-M1 liều 2</strong> + <em>Phế cầu mũi 2</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">4 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>5in1/6in1 mũi 3</strong> + <strong>OPV mũi 3</strong> &nbsp;|&nbsp; <em>Rotateq liều 3 (nếu dùng vắc xin dịch vụ 3 liều)</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">5 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>IPV (Bại liệt tiêm)</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">6 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><em>Cúm mũi 1</em> &nbsp;|&nbsp; <em>Phế cầu mũi 3 nhắc</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">9 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>Sởi mũi 1</strong> + <em>Viêm não Nhật Bản (Imojev) mũi 1</em> + <em>Não mô cầu ACYW mũi 1</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">12 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><em>MMR (Sởi-Quai bị-Rubella) mũi 1</em> + <em>Thủy đậu mũi 1</em> + <em>Phế cầu nhắc</em></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">18 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><strong>5in1 mũi 4 (nhắc)</strong> + <strong>Sởi-Rubella (MR)</strong></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">24 tháng</div><div class="tl-dot"></div>
+      <div class="tl-content"><em>Viêm não Nhật Bản mũi nhắc</em> &nbsp;|&nbsp; <em>Thương hàn (cho bé hay đi du lịch)</em></div>
+    </div>
+  </div>
+
+  <div class="box box-note" style="margin-top: 6mm;">
+    <div class="box-title">📖 Cách đọc</div>
+    <strong>Chữ đậm</strong> = TCMR miễn phí (bắt buộc). <em>Chữ nghiêng</em> = dịch vụ (tự chọn). Lịch có thể xê dịch ±2 tuần.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>3 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 4 — CHUẨN BỊ =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">03</span>Chuẩn bị trước khi tiêm</h2>
+
+  <h3>📅 Trước 1 tuần</h3>
+  <ul style="margin: 0 0 3mm; padding-left: 5mm; font-size: 10pt; line-height: 1.7;">
+    <li><strong>Kiểm tra sức khỏe</strong> — bé không sốt, không tiêu chảy, không cảm nặng. Nếu có, hoãn 3-7 ngày.</li>
+    <li><strong>Rà lại sổ tiêm</strong> — xem mũi gần nhất, mũi tiếp theo, cách bao nhiêu tuần.</li>
+    <li><strong>Đặt lịch hẹn</strong> — tránh giờ cao điểm (sáng thứ 2 & cuối tuần đông nhất).</li>
+  </ul>
+
+  <h3>🌅 Sáng hôm tiêm</h3>
+  <ul style="margin: 0 0 3mm; padding-left: 5mm; font-size: 10pt; line-height: 1.7;">
+    <li><strong>Cho bé ăn nhẹ trước 1h</strong> — không ăn quá no (dễ nôn), không để đói (dễ tụt đường).</li>
+    <li><strong>Mặc đồ rộng</strong> — áo cài nút hoặc liền thân ngắn tay để dễ vén tay/đùi cho y tá.</li>
+    <li><strong>Mang theo</strong>: sổ tiêm, bình nước/sữa, khăn xô, 1 món đồ chơi bé yêu thích, <strong>xịt Hasobaby</strong> để dùng ngay khi cần.</li>
+  </ul>
+
+  <h3>❓ 5 câu mẹ phải hỏi bác sĩ trước khi tiêm</h3>
+  <div class="box box-tip" style="padding: 12px 14px;">
+    <ol style="margin: 0; padding-left: 5mm; font-size: 10pt; line-height: 1.7;">
+      <li>"Hôm nay con tiêm <strong>những mũi gì</strong>, vắc xin tên thương mại là gì?"</li>
+      <li>"<strong>Nguồn gốc và hạn dùng</strong> vắc xin?" (yêu cầu xem vỏ hộp nếu có thể)</li>
+      <li>"Mũi này có thể kết hợp với mũi dịch vụ khác cùng buổi không?"</li>
+      <li>"<strong>Mũi tiếp theo cách bao lâu</strong>? Ngày chính xác là khi nào?"</li>
+      <li>"Bé cần lưu ý gì sau tiêm? Có dấu hiệu nào phải gọi lại bệnh viện?"</li>
+    </ol>
+  </div>
+
+  <div class="box box-mem">
+    <div class="box-title">📌 Mẹ ghi nhớ</div>
+    Sau tiêm, <strong>ở lại theo dõi 30 phút</strong> tại điểm tiêm. Đây là khoảng thời gian phản ứng nặng có thể xuất hiện — phải có y tá cấp cứu kịp thời.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>4 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 5 — 5 PHẢN ỨNG =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">04</span>5 phản ứng BÌNH THƯỜNG sau tiêm</h2>
+
+  <p>Sau tiêm, cơ thể bé "kích hoạt" hệ miễn dịch để học cách nhận diện mầm bệnh. Đây là <strong>quá trình tự nhiên</strong> — 5 phản ứng dưới đây hoàn toàn bình thường, mẹ <strong>không cần quá lo lắng</strong>.</p>
+
+  <div class="react-grid">
+    <div class="react-card">
+      <div class="rc-icon">🌡️</div>
+      <div class="rc-name">1. Sốt nhẹ &lt; 38.5°C</div>
+      <div class="rc-time">⏱ 1-2 ngày tự hết</div>
+      <div class="rc-desc">Bé hơi hâm hấp, mặt đỏ. Cứ 4h đo lại 1 lần.</div>
+    </div>
+
+    <div class="react-card">
+      <div class="rc-icon">🔴</div>
+      <div class="rc-name">2. Sưng, đỏ chỗ tiêm</div>
+      <div class="rc-time">⏱ 2-3 ngày tự lặn</div>
+      <div class="rc-desc">Vết tiêm sưng nhẹ, đỏ vài cm. Không xoa bóp.</div>
+    </div>
+
+    <div class="react-card">
+      <div class="rc-icon">😢</div>
+      <div class="rc-name">3. Quấy khóc nhiều</div>
+      <div class="rc-time">⏱ 1-2 ngày</div>
+      <div class="rc-desc">Bé khó chịu do đau cơ + sốt nhẹ. Ôm vỗ về.</div>
+    </div>
+
+    <div class="react-card">
+      <div class="rc-icon">🍼</div>
+      <div class="rc-name">4. Biếng ăn / biếng bú</div>
+      <div class="rc-time">⏱ 1-3 ngày</div>
+      <div class="rc-desc">Bé bú/ăn ít hơn 20-30%. Không ép, cho bú vặt.</div>
+    </div>
+
+    <div class="react-card react-wide">
+      <div class="rc-icon">😴</div>
+      <div class="rc-name">5. Lừ đừ, ngủ nhiều hơn bình thường</div>
+      <div class="rc-time">⏱ Trong 24h đầu sau tiêm</div>
+      <div class="rc-desc">Bé ngủ sâu, mệt do cơ thể đang "làm việc" tạo kháng thể. Vẫn cho bú bình thường khi bé thức.</div>
+    </div>
+  </div>
+
+  <div class="box box-note">
+    <div class="box-title">✅ Khi nào KHÔNG cần lo</div>
+    Sốt &lt; 38.5°C, bé vẫn tỉnh táo, vẫn bú/ăn được (dù ít), vẫn chơi nhẹ. Các triệu chứng <strong>giảm dần sau 24-48h</strong>.
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">⚠️ Khi nào cần xử lý</div>
+    Sốt &gt; 38.5°C kéo dài 4h+, bé li bì khó đánh thức, bỏ bú hoàn toàn, vùng sưng to nhanh (&gt; 5cm). Xem cách xử lý <strong>ở Trang 6 (Hasobaby)</strong> và <strong>Trang 7 (thuốc hạ sốt)</strong>. Dấu hiệu nguy hiểm xem <strong>Trang 8</strong>.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>5 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 6 — XỬ LÝ + HASOBABY (EXPANDED) =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">05</span>Cách xử lý phản ứng sau tiêm</h2>
+
+  <h3 style="margin-top:2mm;">🌡️ 4 cách hạ sốt khoa học không cần thuốc</h3>
+  <ol style="margin: 0 0 3mm; padding-left: 5mm; font-size: 9.5pt; line-height: 1.6;">
+    <li>Cho bé bú/uống đủ nước — bù mất nước do sốt.</li>
+    <li>Lau ấm bằng khăn xô (~37°C) ở nách, bẹn, trán, gáy. KHÔNG nước lạnh.</li>
+    <li>Mặc đồ thoáng, phòng 26-28°C. Không ủ kín.</li>
+    <li>⭐ <strong>Xịt Hasobaby ngay khi bé bắt đầu ấm</strong> — chi tiết bên dưới.</li>
+  </ol>
+
+  <div class="hb-card">
+    <div class="hb-row">
+      <div class="hb-img">
+        <img src="../products/hasobaby-main.jpg" alt="Xịt thảo dược Hasobaby">
+        <span class="hb-tag">✓ AN TOÀN TỪ 0 THÁNG</span>
+      </div>
+      <div class="hb-info">
+        <h4>🌿 Xịt thảo dược Hasobaby 0+</h4>
+        <div class="hb-desc">Không thuốc tây, không cồn, không paraben. 6 tinh chất thảo dược thẩm thấu qua da, hạ thân nhiệt nhẹ nhàng + giảm đau tại chỗ. Đạt chuẩn GMP, Bộ Y Tế cấp phép.</div>
+        <div class="hb-ing">
+          <span>🌿 Tràm gió</span><span>🌿 Bạc hà</span><span>🌿 Húng chanh</span>
+          <span>🌿 Hương nhu</span><span>🌿 Đinh hương</span><span>🌿 Lô hội</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hb-emphasis">
+      ⭐ <strong>DÙNG NGAY KHI BÉ BẮT ĐẦU ẤM (37–38°C)</strong> — không đợi đến lúc sốt cao. Xịt sớm = hỗ trợ hạ sốt sớm = <strong>hạn chế phải uống thuốc hạ sốt</strong>. Đây là điểm khác biệt quan trọng nhất.
+    </div>
+
+    <div class="hb-use">
+      <h5>💎 CÔNG DỤNG 1 — Hỗ trợ hạ sốt: 3 ĐIỂM VÀNG</h5>
+      <div class="hb-steps-grid">
+        <div class="hb-step">
+          <img src="../illustrations/step-1.jpg" alt="">
+          <div class="step-num">1</div>
+          <div class="step-label">Lòng<br>bàn chân</div>
+        </div>
+        <div class="hb-step">
+          <img src="../illustrations/step-2.jpg" alt="">
+          <div class="step-num">2</div>
+          <div class="step-label">Gáy<br>(sau cổ)</div>
+        </div>
+        <div class="hb-step">
+          <img src="../illustrations/step-3.jpg" alt="">
+          <div class="step-num">3</div>
+          <div class="step-label">Sau tai<br>2 bên</div>
+        </div>
+      </div>
+      <div class="hb-note-inline"><strong>Liều:</strong> 2-3 cú xịt mỗi điểm, lặp lại mỗi 4-6h khi bé còn ấm/sốt. Mặc đồ thoáng sau xịt.</div>
+    </div>
+
+    <div class="hb-use">
+      <h5>💎 CÔNG DỤNG 2 — Giảm đau vết tiêm: 2 CÁCH</h5>
+      <div class="hb-methods">
+        <div class="hb-method">
+          <strong>Cách 1 — Xịt xung quanh</strong>
+          Xịt 2-3 cú <em>xung quanh vết tiêm, cách lỗ tiêm ~2cm</em>. Tinh dầu thẩm thấu qua da giúp giảm đau và giảm sưng tại chỗ.
+        </div>
+        <div class="hb-method">
+          <strong>Cách 2 — Đắp khăn xịt</strong>
+          Xịt 5-7 cú vào khăn xô sạch, đắp <em>xung quanh vết tiêm, chừa lỗ tiêm</em>. Giữ 5-10 phút, lặp lại 2-3 lần/ngày.
+        </div>
+      </div>
+      <div class="hb-warn-inline">⚠️ TUYỆT ĐỐI KHÔNG xịt trực tiếp vào lỗ tiêm hở hoặc vết thương chưa lành da.</div>
+    </div>
+  </div>
+
+  <p style="font-size: 9pt; color: #6b7280; margin-top: 2mm;">
+    <strong style="color:#143B39;">😢 Quấy khóc:</strong> ôm da kề da, cho bú/ti giả, tắt đèn ru ngủ nhẹ. &nbsp;
+    <strong style="color:#143B39;">😴 Lừ đừ:</strong> để bé ngủ, đánh thức 3-4h/lần để cho bú.
+  </p>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>6 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 7 — DÙNG THUỐC HẠ SỐT (NEW) =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">06</span>Dùng thuốc hạ sốt an toàn cho bé</h2>
+
+  <p style="font-size: 10pt;">Khi xịt Hasobaby + lau ấm + bú đủ nước vẫn không đủ — đây là cách dùng thuốc <strong>đúng cách, đúng liều</strong>. Mẹ đọc kỹ trước khi cho con uống.</p>
+
+  <h3>🩺 Khi nào cho bé dùng thuốc?</h3>
+  <div class="med-when">
+    <ul>
+      <li>✅ Sốt <strong>≥ 38.5°C</strong> kéo dài sau 1h xịt + lau ấm không hạ.</li>
+      <li>✅ Bé khó chịu, quấy khóc, không ngủ được vì sốt.</li>
+      <li>✅ Bé có <strong>tiền sử co giật do sốt</strong> → cho uống sớm hơn (từ 38°C).</li>
+      <li>⛔ Bé <strong>dưới 3 tháng tuổi</strong> — KHÔNG tự ý cho thuốc, ĐI KHÁM bác sĩ ngay.</li>
+    </ul>
+  </div>
+
+  <h3>⚖️ Bảng liều Paracetamol theo cân nặng <span style="font-size:9pt; color:#6b7280; font-weight:500;">(10–15 mg/kg/lần, cách 4–6h)</span></h3>
+  <div class="dose-table">
+  <table>
+    <thead>
+      <tr><th style="width:22%">Cân nặng bé</th><th style="width:28%">Liều mỗi lần</th><th>Gói Hapacol phù hợp</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>4 – 7 kg</strong></td><td>60 – 100 mg</td><td>Hapacol 80mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>8 – 12 kg</strong></td><td>100 – 180 mg</td><td>Hapacol 150mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>13 – 17 kg</strong></td><td>150 – 250 mg</td><td>Hapacol 250mg — <strong>1 gói</strong></td></tr>
+      <tr><td><strong>18 – 25 kg</strong></td><td>200 – 375 mg</td><td>Hapacol 250mg — <strong>1-1.5 gói</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size: 9pt; color: #b91c1c; margin-top: 1mm;"><strong>⚠️ Tối đa 4 lần/24h. Tổng liều không vượt 60 mg/kg/ngày.</strong></p>
+
+  <h3 style="margin-top:3mm;">💊 3 dạng phổ biến — cách dùng đúng</h3>
+  <div class="med-forms">
+    <div class="med-form-card">
+      <h5>🥤 Gói bột</h5>
+      <em style="color:#6b7280; font-size:8.5pt;">Hapacol, Doliprane</em>
+      <ul style="margin-top:2mm;">
+        <li>Pha với 5-10ml nước nguội/sữa</li>
+        <li>Khuấy đều, uống ngay</li>
+        <li>KHÔNG pha sẵn để lâu</li>
+        <li>Phổ biến nhất cho bé</li>
+      </ul>
+    </div>
+    <div class="med-form-card">
+      <h5>🍯 Siro</h5>
+      <em style="color:#6b7280; font-size:8.5pt;">Tylenol siro, Efferalgan</em>
+      <ul style="margin-top:2mm;">
+        <li>Lắc đều chai trước rót</li>
+        <li>Dùng xy-lanh đong chính xác</li>
+        <li>Cho uống từ từ</li>
+        <li>Mở rồi dùng trong 1 tháng</li>
+      </ul>
+    </div>
+    <div class="med-form-card">
+      <h5>💊 Viên đặt</h5>
+      <em style="color:#6b7280; font-size:8.5pt;">Efferalgan viên đặt</em>
+      <ul style="margin-top:2mm;">
+        <li>Khi bé nôn/không chịu uống</li>
+        <li>Bé nằm nghiêng, gấp gối</li>
+        <li>Đẩy nhẹ vào hậu môn ~2cm</li>
+        <li>Hiệu quả sau 30-60 phút</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hb-mep">
+    <div class="mep-title">🌿 MẸO HASOBABY — Giảm số lần dùng thuốc</div>
+    <strong>Mục tiêu:</strong> dùng thuốc <strong>1-2 lần/đợt sốt</strong>, không phải 3-4 lần. Cách phối hợp:
+    <ul>
+      <li>Bé ấm 37-38°C: <strong>xịt Hasobaby + lau ấm</strong> → 60-80% bé hạ trước khi cần thuốc.</li>
+      <li>Sốt &gt; 38.5°C: <strong>uống thuốc + tiếp tục xịt Hasobaby</strong> → hạ nhanh hơn, ngủ ngon hơn.</li>
+      <li>Chưa đến giờ uống liều tiếp (cách &lt; 4h) mà bé ấm lại: <strong>xịt Hasobaby thay thế</strong>, không "dồn" thuốc.</li>
+    </ul>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚨 Cảnh báo quan trọng</div>
+    • <strong>KHÔNG dùng Aspirin</strong> cho bé &lt; 12 tuổi — nguy cơ hội chứng Reye (tổn thương não, gan).<br>
+    • <strong>KHÔNG kết hợp</strong> Paracetamol + Ibuprofen cùng lúc nếu không có chỉ định bác sĩ.<br>
+    • <strong>KHÔNG quá liều</strong> &gt; 15 mg/kg/lần, không quá 4 lần/24h.<br>
+    • <strong>KHÔNG dùng thuốc &gt; 3 ngày</strong> liên tục — đưa bé đi khám.
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>7 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 8 — DẤU HIỆU NGUY HIỂM =============================== -->
+<div class="page danger">
+  <h2 class="section"><span class="num" style="color:#ef4444;">⚠️</span>7 dấu hiệu NGUY HIỂM — đưa bé đi viện NGAY</h2>
+
+  <div class="alert-banner">
+    <div class="big">🚨 KHẨN CẤP</div>
+    <div class="sub">Nếu bé có 1 trong 7 dấu hiệu dưới — KHÔNG chờ, KHÔNG tự xử lý, đi viện ngay</div>
+  </div>
+
+  <ol class="danger-list">
+    <li><strong>Sốt cao &gt; 39.5°C</strong> không hạ sau 1h xử lý đúng cách (lau ấm + xịt + uống thuốc).</li>
+    <li><strong>Co giật</strong> — bé giật cơ tay/chân/mắt, hoặc <strong>mất ý thức</strong>, gọi không phản ứng.</li>
+    <li><strong>Khóc thét dai dẳng &gt; 3 tiếng</strong> liên tục không dỗ được, tiếng khóc khác lạ (rít cao, nức nở).</li>
+    <li><strong>Phát ban toàn thân</strong> / nổi mề đay xuất hiện trong vòng 15 phút – 4h sau tiêm.</li>
+    <li><strong>Thở khò khè, khó thở, môi tím</strong>, ngực phập phồng — dấu hiệu sốc phản vệ.</li>
+    <li><strong>Nôn ói liên tục</strong> (&gt; 3 lần trong 1h), bỏ bú/ăn hoàn toàn, lừ đừ không tỉnh.</li>
+    <li><strong>Sưng phù to ở chỗ tiêm &gt; 5cm</strong>, lan rộng, đỏ tím, đau dữ dội khi chạm.</li>
+  </ol>
+
+  <div class="hotline">
+    <div class="lbl">Số khẩn cấp quốc gia — Cấp cứu 24/7</div>
+    <div class="num">📞 115</div>
+    <div style="font-size: 9.5pt; color: #374151; margin-top: 2mm;">
+      Hà Nội: <strong>BV Nhi TƯ</strong> 024-6273-8532 &nbsp;•&nbsp; HCM: <strong>BV Nhi Đồng 1</strong> 028-3927-1119
+    </div>
+  </div>
+
+  <div class="box box-warn" style="margin-top: 4mm;">
+    <div class="box-title">📌 Khi đi cấp cứu, mang theo</div>
+    Sổ tiêm chủng (để bác sĩ biết bé vừa tiêm vắc xin gì) &nbsp;•&nbsp; Tờ ghi giờ tiêm chính xác &nbsp;•&nbsp; Ghi lại triệu chứng và giờ xuất hiện
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>8 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 9 — FAQ =============================== -->
+<div class="page">
+  <h2 class="section"><span class="num">07</span>FAQ — 10 câu hỏi mẹ hỏi nhiều nhất</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé đang sổ mũi nhẹ có tiêm được không?</div>
+    <div class="faq-a"><strong>Có</strong>, nếu bé không sốt và không kèm ho nặng. Bác sĩ sẽ khám kiểm tra trước khi quyết định. Sổ mũi do dị ứng, thời tiết — vẫn tiêm được.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Lỡ bỏ mũi 2-3 tháng giờ mới quay lại, có phải tiêm lại từ đầu không?</div>
+    <div class="faq-a"><strong>Không</strong>. Lịch tiêm chỉ <em>trễ</em> chứ không phải <em>lại từ đầu</em>. Mẹ chỉ cần tiếp tục ở mũi gần nhất. Vắc xin đã tiêm vẫn còn hiệu lực.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Tiêm xong có tắm cho bé được không?</div>
+    <div class="faq-a">Có, <strong>sau 6-8h</strong>. Dùng nước ấm, tránh chà xát chỗ tiêm. Không tắm quá lâu, không ngâm bồn.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Có nên cho bé bú/ăn ngay sau tiêm?</div>
+    <div class="faq-a">Có, <strong>sau 30 phút theo dõi tại điểm tiêm</strong>. Cho bú/ăn nhẹ. Không ép nếu bé biếng — cho bú vặt nhiều lần là OK.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Tiêm dịch vụ và TCMR có thể kết hợp không?</div>
+    <div class="faq-a"><strong>Có và nên kết hợp</strong>. Phổ biến: TCMR (miễn phí) cho 5in1, Sởi, Bại liệt — dịch vụ bổ sung phế cầu, rota, thủy đậu, JEV. Cần lên lịch để tránh trùng tuần.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé sốt sau tiêm bao lâu là bình thường?</div>
+    <div class="faq-a">Sốt &lt; 38.5°C trong <strong>1-2 ngày sau tiêm</strong> là bình thường. Sốt &gt; 39°C kéo dài &gt; 48h, hoặc bé lừ đừ khó đánh thức → đi khám.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Có thể uống paracetamol dự phòng trước khi tiêm không?</div>
+    <div class="faq-a"><strong>KHÔNG nên</strong>. Nghiên cứu cho thấy uống paracetamol dự phòng có thể <em>giảm đáp ứng miễn dịch</em> của vắc xin. Chỉ dùng khi bé sốt thực sự &gt; 38.5°C.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Tiêm trùng vắc xin (đã tiêm rồi tiêm lại) có nguy hiểm?</div>
+    <div class="faq-a"><strong>Đa số không nguy hiểm</strong> — cơ thể đã có kháng thể sẽ xử lý. Nhưng có thể gây phản ứng cục bộ mạnh hơn. Mẹ giữ sổ tiêm cẩn thận để tránh.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Bé sinh non lịch tiêm có khác không?</div>
+    <div class="faq-a">Tính theo <strong>tuổi thật (ngày sinh)</strong>, không phải tuổi điều chỉnh. Bé sinh non vẫn tiêm theo lịch chuẩn. Nếu cân nặng &lt; 1.5kg lúc tiêm BCG, sẽ hoãn — trao đổi bác sĩ.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Sau tiêm bao lâu có thể đi du lịch / cho bé ra ngoài?</div>
+    <div class="faq-a"><strong>Sau 48h</strong>, nếu bé khỏe và không sốt. Tránh đi xa ngay vì có thể có phản ứng muộn (24-72h). Mang theo Hasobaby & thuốc hạ sốt khi đi xa.</div>
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>9 / 10</span></div>
+</div>
+
+<!-- =============================== TRANG 10 — PHỤ LỤC + THANKS =============================== -->
+<div class="page thanks">
+  <h2 class="section"><span class="num">08</span>Phụ lục &amp; Lời cảm ơn</h2>
+
+  <h3>🌡️ Bảng theo dõi sốt 24h sau tiêm (in để điền)</h3>
+  <div class="track-table">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:14%">Giờ</th>
+        <th style="width:18%">Nhiệt độ (°C)</th>
+        <th style="width:22%">Đã xử lý gì</th>
+        <th>Triệu chứng khác (quấy, bỏ bú, sưng…)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="thanks-content">
+    <p style="font-size: 11pt;">Mẹ thân mến,</p>
+    <p>Cảm ơn mẹ đã tin tưởng <strong>Dr.Maya × Hasobaby</strong> đồng hành cùng con. Cuốn cẩm nang này được biên soạn từ kinh nghiệm thực tế của hàng ngàn mẹ đã đồng hành cùng team Dr.Maya — em hy vọng nó <em>nhẹ gánh</em> cho mẹ phần nào trong hành trình chăm con.</p>
+    <p>Tiêm chủng là <strong>lá chắn an toàn nhất</strong> mẹ có thể tặng con. Mỗi mũi tiêm là một lần con khỏe lên. Mỗi đêm sốt sau tiêm là một lần cơ thể con đang "tập trận" với kẻ thù vô hình — và mẹ chính là hậu phương vững nhất.</p>
+    <p>Có gì cần hỏi thêm, mẹ cứ nhắn em — đội ngũ Dược sĩ Dr.Maya luôn ở đây.</p>
+    <div class="signature">— Đội ngũ chuyên môn Dr.Maya × Hasobaby ❤️</div>
+  </div>
+
+  <div class="links">
+    <h4>🔗 Kết nối với Dr.Maya</h4>
+    <a href="https://xithasot.thieuvananh.vn">🌿 Xịt hạ sốt Hasobaby — <strong>xithasot.thieuvananh.vn</strong></a>
+    <a href="https://drmayastore.vn">🛒 Cửa hàng Dr.Maya — <strong>drmayastore.vn</strong></a>
+    <a href="https://web.facebook.com/hasobaby.drmaya">📘 Fanpage Hasobaby — <strong>fb.com/hasobaby.drmaya</strong></a>
+    <a href="https://web.facebook.com/groups/nghienbaunghiencon">👥 Group "Nghiện bầu nghiện con" — <strong>10.000+ mẹ bỉm</strong></a>
+  </div>
+
+  <div class="pg-footer"><span class="brand">DR.MAYA × HASOBABY</span><span>10 / 10</span></div>
+</div>
+
+</body>
+</html>

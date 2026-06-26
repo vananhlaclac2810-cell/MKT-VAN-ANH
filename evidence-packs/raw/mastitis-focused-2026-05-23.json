@@ -1,0 +1,225 @@
+{
+  "query": "lactational mastitis AND humans[mh] AND breastfeeding",
+  "expanded_query": "(lactational mastitis AND humans[mh] AND breastfeeding) AND (\"last 5 years\"[PDat])",
+  "total_found": 126,
+  "returned": 10,
+  "fetched_at": "2026-05-23T14:26:55.454392+00:00",
+  "papers": [
+    {
+      "pmid": "39172675",
+      "title": "Mastitis: Rapid Evidence Review.",
+      "abstract": "Mastitis represents a spectrum of inflammatory conditions. Lactational mastitis is the most common, with an approximate incidence of 10% in the United States, and it usually occurs in the first 3 months postpartum. Diagnosis is made clinically based on the presence of symptoms such as fever, malaise, focal breast tenderness, and overlying skin erythema or hyperpigmentation without the need for laboratory tests or imaging. However, obtaining milk cultures should be considered to guide antibiotic therapy, and ultrasonography should be performed to identify abscesses in immuno-compromised patients or those with worsening or recurrent symptoms. Because most cases of mastitis are caused by inflammation and not a true infection, a 1- to 2-day trial of conservative measures (i.e., nonsteroidal anti-inflammatory drugs, ice application, feeding the infant directly from the breast, and minimizing pumping) is often sufficient for treatment. If there is no improvement in symptoms, narrow-spectrum antibiotics may be prescribed to cover common skin flora (e.g., Staphylococcus, Streptococcus). Most patients can be treated as outpatients with oral antibiotics; however, if the condition worsens or there is a concern for sepsis, intravenous antibiotics and hospital admission may be required. Use of probiotics for treatment or prevention is not supported by good evidence. Factors that increase the risk of mastitis include overstimulation of milk production and tissue trauma from aggressive breast massage; therefore, frequent overfeeding, excessive pumping to empty the breast, heat application, and breast massage are no longer recommended because they may worsen the condition. The best prevention is a proper lactation technique, including a good infant latch, and encouraging physiologic breastfeeding rather than pumping, if possible.",
+      "authors": [
+        "Morcomb EF",
+        "Dargel CM",
+        "Anderson SA"
+      ],
+      "journal": "American family physician",
+      "year": "2024",
+      "pub_date": "2024 Aug",
+      "doi": "",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39172675/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "34991976",
+      "title": "Inflammatory diseases of the breast.",
+      "abstract": "Inflammatory disorders of the breast are common benign breast conditions. Lactational mastitis occurs in breastfeeding women and may be associated with breast abscess in severe cases. Non-lactational inflammatory disorders are less common and include idiopathic granulomatous mastitis, periductal mastitis, and tuberculous mastitis. While these disorders have some similarities in their presentation, each disorder requires a specific treatment regimen for resolution, and correct diagnosis is crucial for appropriate treatment. In this chapter, we will review the presentation, diagnosis, and management of each of these distinct clinical entities.",
+      "authors": [
+        "Scott DM"
+      ],
+      "journal": "Best practice & research. Clinical obstetrics & gynaecology",
+      "year": "2022",
+      "pub_date": "2022 Sep",
+      "doi": "10.1016/j.bpobgyn.2021.11.013",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/34991976/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "36701134",
+      "title": "Risk Factors, Symptoms, and Treatment of Lactational Mastitis.",
+      "abstract": "",
+      "authors": [
+        "Louis-Jacques AF",
+        "Berwick M",
+        "Mitchell KB"
+      ],
+      "journal": "JAMA",
+      "year": "2023",
+      "pub_date": "2023 Feb 21",
+      "doi": "10.1001/jama.2023.0004",
+      "pub_types": [
+        "Journal Article"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36701134/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "35576513",
+      "title": "Academy of Breastfeeding Medicine Clinical Protocol #36: The Mastitis Spectrum, Revised 2022.",
+      "abstract": "A central goal of the Academy of Breastfeeding Medicine is the development of clinical protocols for managing common medical problems that may impact breastfeeding success. These protocols serve only as guidelines for the care of breastfeeding mothers and infants and do not delineate an exclusive course of treatment or serve as standards of medical care. Variations in treatment may be appropriate according to the needs of an individual patient. The Academy of Breastfeeding Medicine recognizes that not all lactating individuals identify as women. Using gender-inclusive language, however, is not possible in all languages and all countries and for all readers. The position of the Academy of Breastfeeding Medicine (https://doi.org/10.1089/bfm.2021.29188.abm) is to interpret clinical protocols within the framework of inclusivity of all breastfeeding, chestfeeding, and human milk-feeding individuals.",
+      "authors": [
+        "Mitchell KB",
+        "Johnson HM",
+        "Rodríguez JM",
+        "Eglash A",
+        "Scherzinger C",
+        "Zakarija-Grkovic I",
+        "Cash KW",
+        "Berens P",
+        "Miller B",
+        "Academy of Breastfeeding Medicine"
+      ],
+      "journal": "Breastfeeding medicine : the official journal of the Academy of Breastfeeding Medicine",
+      "year": "2022",
+      "pub_date": "2022 May",
+      "doi": "10.1089/bfm.2022.29207.kbm",
+      "pub_types": [
+        "Journal Article"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/35576513/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "36084006",
+      "title": "The preventive and therapeutic effects of probiotics on mastitis: A systematic review and meta-analysis.",
+      "abstract": "Acute mastitis is one of the main reasons why breastfeeding women stop breastfeeding, and medication should be used with caution. Considering the uncertainty of mastitis infection and the indications of antibiotic use, as well as the problem of drug resistance and the safety of medication during lactation, probiotics have become an alternative treatment choice. However, a meta-analysis of the effects of probiotics in preventing and treating lactational mastitis is still lacking. Therefore, we searched six electronic databases and the sites of clinical trial registration, a total of six randomized controlled trials were included in this meta-analysis, which showed that oral probiotics during pregnancy can reduce the incidence of mastitis (RR: 0.49, 95% CI: 0.35 to 0.69; p<0.0001). After oral administration of probiotics, the counts of bacteria in the milk of healthy people and mastitis patients were both significantly reduced (in healthy people: MD: -0.19, 95% CI: -0.23 to -0.16, p<0.00001; in mastitis patients: MD: -0.89, 95% CI: -1.34 to -0.43, p = 0.0001). These indicate that to a certain extent, probiotics are beneficial in reducing the incidence rate of mastitis during lactation and some related mastitis symptoms. However, high-quality multicenter clinical trials are still needed to support this result.",
+      "authors": [
+        "Yu Q",
+        "Xu C",
+        "Wang M",
+        "Zhu J",
+        "Yu L",
+        "Yang Z",
+        "Liu S",
+        "Gao X"
+      ],
+      "journal": "PloS one",
+      "year": "2022",
+      "pub_date": "2022",
+      "doi": "10.1371/journal.pone.0274467",
+      "pub_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36084006/",
+      "pmc_id": "PMC9462749",
+      "is_free_full_text": true
+    },
+    {
+      "pmid": "35441543",
+      "title": "Re-thinking benign inflammation of the lactating breast: Classification, prevention, and management.",
+      "abstract": "Despite the known benefits of breastfeeding for both infant and mother, clinical support for problems such as benign inflammation of the lactating breast remain a research frontier. Breast pain associated with inflammation is a common reason for premature weaning. Multiple diagnoses are used for benign inflammatory conditions of the lactating breast which lack agreed or evidence-based aetiology, definitions, and treatment. This article is the second in a three-part series. This second review analyses the heterogeneous research literature concerning benign lactation-related breast inflammation from the perspectives of the mechanobiological model and complexity science, to re-think classification, prevention, and management of lactation-related breast inflammation. Benign lactation-related breast inflammation is a spectrum condition, either localized or generalized. Acute benign lactation-related breast inflammation includes engorgement and the commonly used but poorly defined diagnoses of blocked ducts, phlegmon, mammary candidiasis, subacute mastitis, and mastitis. End-stage (non-malignant) lactation-related breast inflammation presents as the active inflammations of abscess, fistula, and septicaemia, and the inactive condition of a galactocoele. The first preventive or management principle of breast inflammation is avoidance of excessively high intra-alveolar and intra-ductal pressures, which prevents strain and rupture of a critical mass of lactocyte tight junctions. This is achieved by frequent and flexible milk removal. The second preventive or management principle is elimination of the mechanical forces which result in high intra-alveolar pressures. This requires elimination of conflicting vectors of force upon the nipple and breast tissue during milk removal; avoidance of focussed external pressure applied to the breast, including avoidance of lump massage or vibration; and avoidance of other prolonged external pressures upon the breast. Three other key preventive or management principles are discussed. Conservative management is expected to be effective for most, once recommendations to massage or vibrate out lumps, which worsen micro-vascular trauma and inflammation, are ceased.",
+      "authors": [
+        "Douglas P"
+      ],
+      "journal": "Women's health (London, England)",
+      "year": "2022",
+      "pub_date": "2022",
+      "doi": "10.1177/17455057221091349",
+      "pub_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/35441543/",
+      "pmc_id": "PMC9024158",
+      "is_free_full_text": true
+    },
+    {
+      "pmid": "37615570",
+      "title": "Mastitis in Breastfeeding.",
+      "abstract": "",
+      "authors": [],
+      "journal": "Breastfeeding medicine : the official journal of the Academy of Breastfeeding Medicine",
+      "year": "2023",
+      "pub_date": "2023 Aug",
+      "doi": "10.1089/bfm.2023.29250.abm",
+      "pub_types": [
+        "Journal Article"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/37615570/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "36316214",
+      "title": "Idiopathic granulomatous mastitis.",
+      "abstract": "Idiopathic granulomatous mastitis mainly affects women of childbearing age, mostly several months to years after breastfeeding. The etiopathogenesis is unknown to this day. Because clinical manifestations can mimic infectious mastitis or inflammatory carcinoma, the dia-gnostic process is often prolonged. The correct dia-gnosis is determined only on the basis of histopathological findings. To this day, there is no uniform consensus on the treatment of idiopathic granulomatous mastitis. The chronic nature of the disease as well as the tendency to recurrences despite the benign nature of the disease affects the quality of life of patients. Case reports from the Gynecoly and Obstetrics Clinic in University Hospital in Tren&#269;ín also point to an adverse effect on womens lives.",
+      "authors": [
+        "Ivanička Vincent",
+        "Kaščák Peter"
+      ],
+      "journal": "Ceska gynekologie",
+      "year": "2022",
+      "pub_date": "2022",
+      "doi": "10.48095/cccg2022334",
+      "pub_types": [
+        "Journal Article"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36316214/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "39818691",
+      "title": "Lactation, mastitis, and probiotics.",
+      "abstract": "Exclusive breastfeeding during the first six months of life, and prolonged with complementary feeding until 2 years of age or more, is the best nutritional approach in the first stage of life. Mastitis is a pathology that can jeopardize the continuity of breastfeeding. Different methods have been proposed for the prevention and treatment of mastitis, including probiotics. This narrative review aims to describe the problem of mastitis during lactation and the role of probiotics in its prevention. Mastitis should not be confused with the physiological phenomenon known as milk coming in. In persistent pain, timely medical consultation is key to avoiding complications. The administration of specific probiotics in the perinatal period has shown efficacy in reducing the incidence of mastitis.",
+      "authors": [
+        "Fernández G",
+        "Santagada AL",
+        "Vecchiarelli C",
+        "Vinderola G"
+      ],
+      "journal": "Archivos argentinos de pediatria",
+      "year": "2025",
+      "pub_date": "2025 Oct 01",
+      "doi": "10.5546/aap.2024-10490.eng",
+      "pub_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39818691/",
+      "pmc_id": "",
+      "is_free_full_text": false
+    },
+    {
+      "pmid": "40640753",
+      "title": "Maternal knowledge, attitudes, and practices regarding breastfeeding and mastitis.",
+      "abstract": "BACKGROUND: This study aimed to investigate maternal knowledge, attitude, and practice towards breastfeeding and mastitis.\nMETHOD: This cross-sectional study was conducted between March and August 2023 in author's Hospital, using a self-administered questionnaire.\nRESULTS: A total of 682 (an average age of 28.83 ± 4.86 years) valid questionnaires were enrolled, including 372 (54.55%) married. The mean knowledge, attitude and practice scores were 8.96 ± 4.66 (possible range: 0-22), 51.65 ± 11.55 (possible range: 15-75), and 63.83 ± 17.05 (possible range: 18-90), respectively. Multivariate logistic regression analysis showed that urban area (OR = 2.031, 95% CI: 1.194-3.454, P = 0.009), high school or vocational school (OR = 0.355, 95% CI: 0.153-0.825, P = 0.016), non-working (OR = 0.484, 95% CI: 0.31-0.756, P = 0.001), history of breast surgery (OR = 0.572, 95% CI: 0.361-0.906, P = 0.017) were independently associated with knowledge. Junior college or bachelor's degree (OR = 2.288, 95% CI: 1.365-3.836, P = 0.002), monthly household income more than 10,000 CNY (OR = 1.538, 95% CI: 1.013-2.336, P = 0.044), history of breast surgery (OR = 0.595, 95% CI: 0.428-0.829, P = 0.002) were independently associated with attitude. Attitude (OR = 1.016, 95% CI: 1.001-1.03, P = 0.032), and maternity insurance (OR = 1.435, 95% CI: 1.02-2.019, P = 0.038) were independently associated with practice.\nCONCLUSION: Mothers had inadequate knowledge, suboptimal attitude and proactive practice towards breastfeeding and mastitis. It's recommended to target interventions for breastfeeding knowledge in urban areas, enhance attitudes among higher-educated individuals and those with a history of breast surgery, and prioritize support for maternity insurance to promote better breastfeeding practices and mastitis prevention in clinical practice.",
+      "authors": [
+        "Wang X",
+        "He J",
+        "Cui X",
+        "Zheng Y",
+        "Li Y",
+        "Shi Y",
+        "Zhang Y",
+        "Liu R"
+      ],
+      "journal": "BMC pregnancy and childbirth",
+      "year": "2025",
+      "pub_date": "2025 Jul 10",
+      "doi": "10.1186/s12884-025-07867-8",
+      "pub_types": [
+        "Journal Article"
+      ],
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/40640753/",
+      "pmc_id": "PMC12243307",
+      "is_free_full_text": true
+    }
+  ]
+}

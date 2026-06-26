@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0d2f15;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        color: #fff8e7;
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 160px;
+        text-align: center;
+        gap: 28px;
+        box-sizing: border-box;
+      }
+
+      /* Scene 1 — Hook: deep green radial */
+      #scene-1 {
+        z-index: 1;
+        background: radial-gradient(
+          ellipse at center,
+          #1b5e20 0%,
+          #0d3517 65%,
+          #06200c 100%
+        );
+      }
+      .hook-eyebrow {
+        font-size: 38px;
+        font-weight: 700;
+        color: #ffb300;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+      }
+      .hook-title {
+        font-size: 150px;
+        font-weight: 900;
+        line-height: 1.05;
+        color: #fff8e7;
+        max-width: 1500px;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+      .hook-sub {
+        font-size: 52px;
+        font-weight: 500;
+        color: #ffd166;
+        max-width: 1500px;
+        margin-top: 16px;
+      }
+
+      /* Scene 2 — Product: mid green radial */
+      #scene-2 {
+        z-index: 2;
+        background: radial-gradient(
+          ellipse at 50% 45%,
+          #2e7d32 0%,
+          #144d1a 65%,
+          #06200c 100%
+        );
+      }
+      .product-brand {
+        font-size: 34px;
+        font-weight: 700;
+        color: #ffb300;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+      }
+      .product-name {
+        font-size: 132px;
+        font-weight: 900;
+        color: #fff8e7;
+        line-height: 1.0;
+        max-width: 1600px;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        margin-bottom: 24px;
+      }
+      .product-benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        max-width: 1400px;
+      }
+      .benefit {
+        font-size: 46px;
+        font-weight: 500;
+        color: #fff8e7;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+        padding: 12px 32px;
+      }
+      .check {
+        color: #ffb300;
+        font-size: 56px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      /* Scene 3 — CTA: honey gold radial */
+      #scene-3 {
+        z-index: 3;
+        background: radial-gradient(
+          ellipse at center,
+          #ffb300 0%,
+          #c98a00 60%,
+          #6e4a00 100%
+        );
+      }
+      .cta-label {
+        font-size: 50px;
+        font-weight: 700;
+        color: #1b5e20;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+      }
+      .cta-url {
+        font-size: 150px;
+        font-weight: 900;
+        color: #1b5e20;
+        background: #fff8e7;
+        padding: 32px 100px;
+        border-radius: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      }
+      .cta-incentive {
+        font-size: 44px;
+        font-weight: 800;
+        color: #ffffff;
+        background: #1b5e20;
+        padding: 18px 48px;
+        border-radius: 999px;
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="10"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- Scene 1: Hook (0 - 3.7s) -->
+      <div
+        id="scene-1"
+        class="clip scene"
+        data-start="0"
+        data-duration="3.7"
+        data-track-index="1"
+      >
+        <div class="hook-eyebrow" id="s1-eyebrow">Mẹ bỉm chú ý</div>
+        <div class="hook-title" id="s1-title">Bé ho khò khè cả đêm?</div>
+        <div class="hook-sub" id="s1-sub">Mẹ thức trắng vì lo lắng…</div>
+      </div>
+
+      <!-- Scene 2: Product (3.3 - 7.0s, overlaps for crossfade) -->
+      <div
+        id="scene-2"
+        class="clip scene"
+        data-start="3.3"
+        data-duration="3.7"
+        data-track-index="2"
+      >
+        <div class="product-brand" id="s2-brand">Dr.Maya</div>
+        <div class="product-name" id="s2-name">Dầu Húng Chanh</div>
+        <div class="product-benefits">
+          <div class="benefit" id="s2-b1">
+            <span class="check">✓</span> 100% thảo dược tự nhiên
+          </div>
+          <div class="benefit" id="s2-b2">
+            <span class="check">✓</span> An toàn cho bé từ 3 tháng tuổi
+          </div>
+          <div class="benefit" id="s2-b3">
+            <span class="check">✓</span> Massage 15 phút — bé ngủ ngon
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 3: CTA (6.7 - 10s, overlaps for crossfade) -->
+      <div
+        id="scene-3"
+        class="clip scene"
+        data-start="6.7"
+        data-duration="3.3"
+        data-track-index="3"
+      >
+        <div class="cta-label" id="s3-label">Đặt mua ngay tại</div>
+        <div class="cta-url" id="s3-url">drmayastore.vn</div>
+        <div class="cta-incentive" id="s3-incentive">FREESHIP đơn từ 50K</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* Scene 1 — Hook (0 - 3.7s) */
+      tl.from(
+        "#s1-eyebrow",
+        { opacity: 0, y: -30, duration: 0.6, ease: "power3.out" },
+        0.2
+      );
+      tl.from(
+        "#s1-title",
+        { opacity: 0, y: 70, duration: 0.9, ease: "expo.out" },
+        0.5
+      );
+      tl.from(
+        "#s1-sub",
+        { opacity: 0, y: 40, duration: 0.6, ease: "power2.out" },
+        1.3
+      );
+
+      /* Scene 2 entry — crossfade in over scene 1, starts 3.3s */
+      tl.from(
+        "#scene-2",
+        { opacity: 0, duration: 0.4, ease: "power2.inOut" },
+        3.3
+      );
+      tl.from(
+        "#s2-brand",
+        { opacity: 0, y: -20, duration: 0.5, ease: "power2.out" },
+        3.6
+      );
+      tl.from(
+        "#s2-name",
+        { opacity: 0, scale: 0.85, duration: 0.8, ease: "back.out(1.4)" },
+        3.8
+      );
+      tl.from(
+        "#s2-b1",
+        { opacity: 0, x: -50, duration: 0.5, ease: "power3.out" },
+        4.6
+      );
+      tl.from(
+        "#s2-b2",
+        { opacity: 0, x: -50, duration: 0.5, ease: "power3.out" },
+        4.85
+      );
+      tl.from(
+        "#s2-b3",
+        { opacity: 0, x: -50, duration: 0.5, ease: "power3.out" },
+        5.1
+      );
+
+      /* Scene 3 entry — crossfade in over scene 2, starts 6.7s */
+      tl.from(
+        "#scene-3",
+        { opacity: 0, duration: 0.4, ease: "power2.inOut" },
+        6.7
+      );
+      tl.from(
+        "#s3-label",
+        { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" },
+        7.0
+      );
+      tl.from(
+        "#s3-url",
+        { opacity: 0, scale: 0.7, duration: 0.8, ease: "back.out(1.6)" },
+        7.2
+      );
+      tl.from(
+        "#s3-incentive",
+        { opacity: 0, scale: 0.8, duration: 0.5, ease: "back.out(1.5)" },
+        8.0
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

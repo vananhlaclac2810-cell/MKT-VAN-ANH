@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cẩm nang Ăn – Ngủ cho bé | Hiền Pea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --cream: #FBF7F0;
+    --cream-deep: #F4ECDD;
+    --peach: #F8D7C4;
+    --peach-deep: #E8A88E;
+    --rose: #D67B6B;
+    --rose-deep: #B95543;
+    --sage: #9DB89C;
+    --sage-deep: #6B8A6A;
+    --ink: #2D2418;
+    --ink-soft: #5C4F3F;
+    --gold: #C19A4A;
+    --warning: #C0392B;
+    --warning-bg: #FBEAE6;
+  }
+
+  /* ============ BASE ============ */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 11pt;
+    line-height: 1.65;
+  }
+
+  /* ============ PAGE LAYOUT ============ */
+  @page {
+    size: A4;
+    margin: 18mm 16mm 22mm 16mm;
+  }
+  @page :first { margin: 0; }
+
+  .page {
+    page-break-after: always;
+    min-height: 240mm;
+    padding: 4mm 0;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ============ COVER ============ */
+  .cover {
+    page-break-after: always;
+    height: 297mm;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--peach) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 40mm 25mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: var(--rose);
+    opacity: 0.12;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -150px; left: -150px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: var(--sage);
+    opacity: 0.15;
+  }
+  .cover-brand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: var(--rose-deep);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+  }
+  .cover-brand::before {
+    content: '✿';
+    margin-right: 8px;
+    color: var(--peach-deep);
+  }
+  .cover-main {
+    position: relative;
+    z-index: 2;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 56pt;
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 0 0 24px 0;
+    letter-spacing: -1px;
+  }
+  .cover-illustration {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 20mm 0;
+  }
+  .cover-illustration-icon {
+    display: inline-flex;
+    width: 60mm;
+    height: 60mm;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    align-items: center;
+    justify-content: center;
+    font-size: 30mm;
+    box-shadow: 0 8px 24px rgba(216, 123, 107, 0.2);
+    border: 4px solid white;
+  }
+  .cover-footer {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(0,0,0,0.15);
+    padding-top: 16px;
+  }
+  .cover-author {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt;
+    color: var(--rose-deep);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .cover-author::before { content: '— '; }
+  .cover-author::after { content: ' —'; }
+  .cover-note {
+    font-size: 10pt;
+    color: var(--ink-soft);
+    letter-spacing: 1px;
+  }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-top: 0;
+  }
+
+  h2.chapter-title {
+    font-size: 26pt;
+    color: var(--rose-deep);
+    border-bottom: 3px solid var(--peach);
+    padding-bottom: 8px;
+    margin: 0 0 6mm 0;
+    page-break-after: avoid;
+    text-align: center;
+  }
+  h2.chapter-title .chapter-num {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 11pt;
+    color: var(--peach-deep);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  /* ============ CHAPTER ILLUSTRATION ============ */
+  .chapter-illustration {
+    display: flex;
+    justify-content: center;
+    margin: 4mm 0 6mm 0;
+  }
+  .illustration-icon {
+    width: 32mm;
+    height: 32mm;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cream-deep) 0%, var(--peach) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16mm;
+    box-shadow: 0 6px 18px rgba(216, 123, 107, 0.18);
+    border: 3px solid white;
+  }
+
+  /* ============ SECTION ILLUSTRATION (inside chapter) ============ */
+  .section-illustration {
+    display: flex;
+    justify-content: center;
+    margin: 4mm 0;
+  }
+  .section-illustration-icon {
+    font-size: 24pt;
+    width: 18mm;
+    height: 18mm;
+    border-radius: 50%;
+    background: var(--cream-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 16pt;
+    color: var(--ink);
+    margin: 8mm 0 3mm 0;
+    page-break-after: avoid;
+    border-left: 4px solid var(--sage);
+    padding-left: 12px;
+  }
+  h4 {
+    font-size: 13pt;
+    color: var(--rose-deep);
+    margin: 6mm 0 2mm 0;
+    page-break-after: avoid;
+    font-weight: 700;
+  }
+
+  p { margin: 0 0 4mm 0; orphans: 3; widows: 3; }
+
+  /* ============ LISTS ============ */
+  ul, ol { margin: 0 0 4mm 0; padding-left: 22px; }
+  ul li, ol li { margin-bottom: 2mm; }
+  ul li::marker { color: var(--rose); }
+  ol li::marker { color: var(--rose); font-weight: 700; }
+
+  /* ============ BLOCKQUOTES ============ */
+  blockquote {
+    background: var(--cream-deep);
+    border-left: 4px solid var(--peach-deep);
+    margin: 5mm 0;
+    padding: 4mm 6mm;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: var(--ink-soft);
+    page-break-inside: avoid;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  blockquote strong { color: var(--rose-deep); font-style: normal; }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5mm 0;
+    font-size: 10pt;
+    page-break-inside: avoid;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  thead { background: var(--rose-deep); color: white; }
+  th { padding: 8px 12px; text-align: left; font-weight: 600; font-size: 10pt; }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--cream-deep); vertical-align: top; }
+  tbody tr:nth-child(even) { background: var(--cream); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* ============ SPECIAL BOXES ============ */
+  .callout {
+    background: var(--cream-deep);
+    border: 1px solid var(--peach);
+    border-radius: 8px;
+    padding: 5mm 6mm;
+    margin: 5mm 0;
+    page-break-inside: avoid;
+  }
+  .callout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    color: var(--rose-deep);
+    font-weight: 700;
+    margin-bottom: 3mm;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .warning-box {
+    background: var(--warning-bg);
+    border-left: 5px solid var(--warning);
+    border-radius: 0 6px 6px 0;
+    padding: 5mm 6mm;
+    margin: 5mm 0;
+    page-break-inside: avoid;
+  }
+  .warning-box-title {
+    color: var(--warning);
+    font-weight: 800;
+    font-size: 12pt;
+    margin-bottom: 3mm;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .warning-box-title::before { content: '⚠ '; margin-right: 4px; }
+
+  .tip-box {
+    background: #EAF1E8;
+    border-left: 5px solid var(--sage-deep);
+    border-radius: 0 6px 6px 0;
+    padding: 5mm 6mm;
+    margin: 5mm 0;
+    page-break-inside: avoid;
+  }
+  .tip-box-title {
+    color: var(--sage-deep);
+    font-weight: 700;
+    font-size: 12pt;
+    margin-bottom: 2mm;
+  }
+
+  .schedule {
+    background: white;
+    border: 2px solid var(--peach);
+    border-radius: 10px;
+    padding: 5mm 8mm;
+    margin: 5mm 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    page-break-inside: avoid;
+  }
+  .schedule-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    color: var(--rose-deep);
+    font-weight: 700;
+    margin-bottom: 4mm;
+    text-align: center;
+  }
+  .schedule-row {
+    display: flex;
+    align-items: center;
+    padding: 2mm 0;
+    border-bottom: 1px dashed var(--cream-deep);
+    font-size: 11pt;
+  }
+  .schedule-row:last-child { border-bottom: none; }
+  .schedule-icon { font-size: 16pt; margin-right: 12px; width: 30px; }
+  .schedule-time { font-weight: 700; color: var(--rose-deep); width: 70px; }
+  .schedule-action { flex: 1; color: var(--ink); }
+
+  /* ============ MỤC LỤC ============ */
+  .toc-section { margin-bottom: 6mm; }
+  .toc-part-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--rose-deep);
+    margin-bottom: 3mm;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px dotted var(--peach-deep);
+    padding-bottom: 4px;
+  }
+  .toc-list { list-style: none; padding: 0; margin: 0 0 0 8mm; }
+  .toc-list li {
+    padding: 2mm 0;
+    font-size: 11pt;
+    color: var(--ink-soft);
+    border-bottom: 1px dotted #ddd;
+  }
+  .toc-list li::before { content: '◆ '; color: var(--peach-deep); margin-right: 6px; }
+
+  /* ============ UTILITY ============ */
+  .center { text-align: center; }
+  .small { font-size: 9pt; color: var(--ink-soft); }
+  hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--peach-deep), transparent);
+    margin: 6mm 0;
+  }
+  .source-note {
+    font-size: 9pt;
+    color: var(--ink-soft);
+    font-style: italic;
+    text-align: right;
+    border-top: 1px solid var(--cream-deep);
+    padding-top: 3mm;
+    margin-top: 6mm;
+  }
+
+  @media print { body { background: white; } }
+</style>
+</head>
+<body>
+
+<!-- =========================================== COVER =========================================== -->
+<section class="cover">
+  <div class="cover-brand">Hiền Pea • Tập ti bình – Ăn dặm là niềm vui</div>
+
+  <div class="cover-main">
+    <h1 class="cover-title">CẨM NANG<br>ĂN – NGỦ<br>CHO BÉ</h1>
+  </div>
+
+  <div class="cover-illustration">
+    <div class="cover-illustration-icon">🤱</div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-author">Hiền Pea</div>
+    <div class="cover-note">TẬP TI BÌNH • ĂN DẶM LÀ NIỀM VUI</div>
+  </div>
+</section>
+
+<!-- =========================================== MỤC LỤC =========================================== -->
+<section class="page">
+  <h2 class="chapter-title"><span class="chapter-num">Nội dung</span>Mục lục</h2>
+
+  <div class="toc-section">
+    <div class="toc-part-title">Phần I — Dinh dưỡng sữa: Ti bình &amp; Ti hút</div>
+    <ul class="toc-list">
+      <li>Chương 1. Hướng dẫn tập ti bình (chữa biếng sữa)</li>
+      <li>Chương 2. Hướng dẫn cách tập hút bình</li>
+    </ul>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-part-title">Phần II — Giấc ngủ &amp; Lịch sinh hoạt</div>
+    <ul class="toc-list">
+      <li>Chương 3. Lịch sinh hoạt cho bé dưới 12 tháng</li>
+      <li>Chương 4. Lịch sinh hoạt cho bé trên 12 tháng</li>
+      <li>Chương 5. Cách chữa nợ ngủ cho bé</li>
+    </ul>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-part-title">Phần III — Ăn dặm 3 phương pháp</div>
+    <ul class="toc-list">
+      <li>Chương 6. Ăn dặm truyền thống / kiểu Nhật</li>
+      <li>Chương 7. Ăn dặm tự chỉ huy (Baby Led Weaning)</li>
+      <li>Chương 8. So sánh &amp; lựa chọn phương pháp</li>
+    </ul>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-part-title">Phụ lục</div>
+    <ul class="toc-list">
+      <li>A. Bảng tra cứu nhanh</li>
+      <li>B. 7 dấu hiệu từ chối – mẹ phải dừng ngay</li>
+      <li>C. Câu nói mẫu khi giao tiếp với con</li>
+      <li>D. Nguồn tham khảo</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========================================== CHƯƠNG 1 — TẬP TI BÌNH =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🍼</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 1</span>Hướng dẫn tập ti bình<br><span style="font-size: 14pt; color: var(--ink-soft); font-weight: 400;">(chữa biếng sữa)</span></h2>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Điều kiện tiên quyết</div>
+    <p>Mẹ cần đảm bảo con khoẻ mạnh bình thường, <strong>không bệnh nền</strong> trước khi bắt đầu tập cho con.</p>
+  </div>
+
+  <h3>1.1. Dấu hiệu mẹ chưa nhận ra tín hiệu từ chối — đang lỡ ép con</h3>
+  <ul>
+    <li>Mẹ mời con nhiều lần trong vòng <strong>30-45 phút</strong>.</li>
+    <li>Một số bé chỉ ăn duy nhất <strong>1 lần mỗi cữ</strong>, mẹ cần bỏ hẳn và không mời thêm lần nữa tránh lỡ ép con.</li>
+    <li>Mẹ cho con <strong>bú ngủ</strong> vì lúc thức con ăn nhả nhớt, con không ăn hoặc ăn không tập trung.</li>
+    <li>Mẹ <strong>giãn cữ không đúng độ tuổi</strong>, mời bình khi con chưa đói, chưa đòi ăn.</li>
+    <li>Con thấy bình thì quay đi, lăn ra khỏi vị trí ăn, che mặt che miệng, lắc đầu, đập bình, gạt bình, đẩy bình, ưỡn người, khóc nhưng mẹ vẫn giữ / ghì con lại để mời bình.</li>
+    <li>Mẹ chưa bắt đúng tín hiệu con đói đòi ăn, <strong>nhầm lẫn giữa gắt ăn với gắt ngủ / ợ hơi / bim bẩn</strong>.</li>
+    <li>Con không mút, không nuốt, đùn nhả sữa, mút đều, nhả núm, đảo lưỡi nghịch núm, cắn núm, nhai núm... nhưng mẹ vẫn giữ bình trong miệng con, đợi con mút tiếp.</li>
+    <li>Con quay đi mẹ dí bình theo con để không tụt núm ra khỏi miệng.</li>
+  </ul>
+
+  <h3>1.2. Mười một lưu ý khi tập ti bình</h3>
+  <ol>
+    <li>Mẹ cần đảm bảo con khoẻ mạnh bình thường, <strong>không bệnh nền, không ốm bệnh</strong> trước khi bắt đầu tập cho con.</li>
+    <li>Trong quá trình tập ti bình, mẹ cần <strong>dừng ti mẹ hoàn toàn và cắt hoàn toàn ăn dặm, ăn vặt</strong>. Khi cai ti mẹ con sẽ quấy khóc, khó ngủ và khó chuyển giấc, mẹ cố gắng hỗ trợ con bằng cách: ôm, vỗ, hát, võng, ti giả... để con có thể ngủ tốt ở mỗi nap ngày và giấc đêm. Con ngủ không ngon, không sâu con cũng sẽ mệt và ăn kém.</li>
+    <li>Mẹ cần theo dõi và ghi lại những dấu hiệu khác của con trong quá trình tập ti bình: kiểm tra bim, thân nhiệt, dấu hiệu lả (mệt mỏi iu xìu, chân tay mềm oặt, ngủ li bì)...</li>
+    <li>Cần nhất quán sử dụng <strong>1 loại bình với size núm phù hợp tháng tuổi, 1 loại sữa, thống nhất nhiệt độ pha sữa / hâm sữa như nhau</strong> tại tất cả các cữ ăn (nếu mẹ đổi bình, đổi sữa con dễ kén và không hợp tác).</li>
+    <li>Mẹ chỉ nên sử dụng ti giả để hỗ trợ khi con vào giấc / khó vào giấc ngủ hoặc lúc con quấy khóc mẹ không thể dỗ được.</li>
+    <li>Trong quá trình tập mẹ chỉ bổ sung <strong>vitamin D3</strong> và cho uống sau ăn cữ 1 khoảng 30 phút. Do đó mẹ cần đảm bảo sức khoẻ con ổn định khi bắt đầu tập, ngưng bổ sung các loại thực phẩm chức năng, vitamin tổng hợp...</li>
+    <li>Nếu con ăn kém trong <strong>3-5 ngày (xấp xỉ ngưỡng 300ml)</strong> mẹ cần tạm dừng tập và cho con ăn lại sức theo cách cũ trong 3 ngày rồi bắt đầu tập lại.</li>
+    <li>Đối với bé <strong>trên 6 tháng tuổi</strong>, mẹ có thể bổ sung khoảng <strong>10-20ml nước</strong> cho con sau cữ sữa <strong>1-2h</strong>. Tránh cho con uống nhiều, con uống nhiều nước cầm hơi sẽ lửng bụng, ảnh hưởng tới cữ sữa sau đó.</li>
+    <li>Con không ăn, ăn ít sẽ không thức được lâu và ngủ không được sâu giấc. Mẹ cần quan sát tín hiệu buồn ngủ của con và cho con vào môi trường ngủ sớm, hỗ trợ con ngủ tốt bằng mọi cách: ôm, bế, ru, nằm võng...</li>
+    <li>Nếu tới cữ ăn mà con buồn ngủ / đang ngủ hoặc nếu giờ ăn trùng giờ ngủ / tới cữ con ngủ chưa dậy, mẹ cho con ngủ quá cữ 30-60 phút. Hết thời gian này, mẹ đánh thức con dậy lau mặt tỉnh táo rồi đợi 15-20' sau mời bình con nhé.</li>
+    <li>Nếu con khóc mà mẹ không dỗ được bằng mọi cách (mẹ cần loại trừ khả năng con khóc do ợ / ị / đầy hơi / gắt ngủ) thì mẹ có thể mời con ăn trước giờ. Mẹ mời mà con ăn nhiều là mời đúng. Con ăn ít là mẹ đã bắt tín hiệu đòi ăn sai. Mẹ lưu ý và rút kinh nghiệm dỗ con giãn cữ tối đa vào lần sau.</li>
+  </ol>
+</section>
+
+<section class="page">
+  <h3>1.3. Thời gian giãn cữ trong quá trình tập bình</h3>
+  <p>Vào ngày đầu tiên bắt đầu tập bình cho con (tính từ 0h sáng):</p>
+  <ul>
+    <li><strong>Bé chưa cai ti đêm:</strong> Từ 0h đến trước lúc con dậy đón bình minh, mẹ cho con ăn như bình thường và bắt đầu sát luật từ cữ 1 sau khi con dậy.</li>
+    <li><strong>Bé đã cai ti đêm:</strong> Mẹ sát luật tập từ cữ 1 sau khi con dậy đón bình minh.</li>
+  </ul>
+  <p>Mỗi cữ ăn mẹ mời con <strong>tối đa 2 lần</strong>. Lần 1 và lần 2 cách nhau từ 10-20 phút.</p>
+  <p>Nếu sau <strong>4h sáng</strong> con dậy đòi ăn, mẹ cố gắng dỗ con ngủ lại. Nếu không ngủ lại được, mẹ chỉ cho con ăn <strong>khoảng 30-50ml</strong> đủ để con ngủ lại.</p>
+
+  <blockquote><strong>Ví dụ:</strong> 6h30 dậy thì thời gian các cữ ăn là: <strong>7h30 – 11h30 – 15h30 – 19h30</strong> mẹ mời bình.</blockquote>
+
+  <table>
+    <thead>
+      <tr><th>Tháng tuổi</th><th>Giãn cữ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dưới 1 tháng</td><td>2-3 tiếng</td></tr>
+      <tr><td>1-3 tháng</td><td>3-4 tiếng</td></tr>
+      <tr><td>3-6 tháng</td><td>3,5-4 tiếng</td></tr>
+      <tr><td>6 tháng trở lên</td><td>Tối đa 4 tiếng</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip-box">
+    <div class="tip-box-title">💡 Lưu ý</div>
+    <p>Mẹ lưu ý 1 ngày con luôn phải có đủ <strong>4 cữ bú thức tỉnh táo</strong>, không lơ mơ, vừa bú vừa ngủ.</p>
+  </div>
+
+  <h3>1.4. Cách mời bình — 3 bước</h3>
+
+  <div class="callout">
+    <div class="callout-title">🍼 Bước 1 — Chuẩn bị</div>
+    <p>Khi rèn mẹ cho con vào phòng yên tĩnh chỉ có <strong>mẹ và con</strong>. Mẹ nên chuẩn bị sẵn các dụng cụ (nếu cần quay video để xem lại dấu hiệu từ chối) và bình sữa con dùng để uống (mẹ nhớ kiểm tra kỹ cách lắp bình, nhiệt độ sữa trước khi cho con ăn). Nếu có người hỗ trợ quay video thì cố gắng giữ trật tự để bé không mất tập trung.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">🍼 Bước 2 — Đặt con vào vị trí</div>
+    <p>Mẹ để bình sữa cạnh vị trí con nằm (khuất tầm mắt con) sau đó bấm máy quay và đặt con vào vị trí ăn. Tiếp đó, Mẹ nhanh tay lấy bình sữa cho con nhìn ngay (mẹ làm ướt núm và môi con trước khi mời và bỏ khăn quàng cổ ra kẻo làm con sợ, có thể lót khăn trên mặt gối tránh gối bị bẩn).</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">🍼 Bước 3 — Mời bình + Quan sát 5s</div>
+    <p>Mẹ đưa bình tới trước mặt con, cách khoảng <strong>15-20cm</strong> trong tầm mắt và tầm tay với của con, sau đó <strong>dừng bình 5s</strong> để quan sát phản ứng của con với bình.</p>
+  </div>
+</section>
+
+<section class="page">
+  <div class="warning-box">
+    <div class="warning-box-title">Trong 5s đó — Dấu hiệu từ chối</div>
+    <p>Con nhìn bình rồi mà có các dấu hiệu: <strong>lăn ra khỏi vị trí ăn, khóc ưỡn, đạp chân rất mạnh, khóc lóc ầm ĩ quay đầu, cho tay vào miệng, nhìn bình lảng tránh đánh mắt đi hướng khác</strong>... là con đã từ chối → mẹ lập tức cất bình và bế con ra khỏi vị trí ăn, không cố mời con.</p>
+  </div>
+
+  <ul>
+    <li>Nếu con nhìn bình không có phản ứng, mẹ thử đưa bình qua một bên xem con có nhìn theo bình không.</li>
+    <li>Khi con nhìn theo bình nghĩa là con muốn ăn, mẹ mời con ăn bình thường.</li>
+    <li>Trong trường hợp con không nhìn theo bình thì mẹ hãy cất bình đi luôn. Khi đó mẹ đừng cố giữ bình để mời con thêm nha mẹ.</li>
+    <li>Nếu con khóc quá không nhìn bình, mẹ kề núm lên môi dưới con sao cho núm nằm trên mặt lưỡi để con biết mẹ đang mời con ăn. Nếu con muốn ăn con sẽ nhận núm và mút.</li>
+    <li>Còn nếu con cho tay vào miệng trước khi nhìn bình, sau khi mẹ cho bé nhìn bình xong, mẹ hạ bình đưa núm lại gần môi con, gạt nhẹ tay con ra rồi cho con ăn.</li>
+    <li><strong>Con thấy bình mà cho tay vào miệng mẹ cất bình luôn.</strong></li>
+    <li>Nếu mẹ đưa bình vào miệng mà con <strong>đẩy lưỡi, không mút, đùn nhả sữa, mút đều, quay đi</strong>... thì mẹ cất bình ngay nhé → đây là những tín hiệu từ chối rõ ràng của con rằng con chưa muốn ăn.</li>
+  </ul>
+
+  <h3>1.5. Bảy dấu hiệu từ chối — mẹ cần RÚT BÌNH ngay</h3>
+  <ol>
+    <li>Con nhìn thấy bình rồi mà quay ngoắt đi, bịt mắt, lảng tránh không nhìn bình.</li>
+    <li>Mẹ đưa bình, con lơ đãng nhưng lảng tránh không nhìn theo bình.</li>
+    <li>Con thấy bình rồi gượng dậy, lật ra khỏi vị trí ăn.</li>
+    <li>Con đưa tay lên bịt miệng, ngậm chặt không đón bình, mẹ kề núm con không mút.</li>
+    <li>Con đập bình, đẩy bình, ghì chặn bình lại không cho mẹ đưa bình lại gần miệng.</li>
+    <li>Con dùng lưỡi đẩy núm, cắn núm, đùn nhả sữa không nuốt, nhai núm.</li>
+    <li>Con đạp chân, ưỡn người, giẫy lên, khóc — con đang từ chối mạnh, phản ứng gay gắt với bình.</li>
+  </ol>
+
+  <blockquote>Trong những ngày đầu tiên khi rèn mẹ cần phải nắm chắc những dấu hiệu từ chối trên và làm thật đúng, <strong>cất / rút bình dứt khoát</strong> để con thấy được là mẹ tôn trọng nhu cầu của con và sẽ không ép con ăn, con không muốn ăn mẹ sẽ dẹp bình đi nhé.</blockquote>
+
+  <blockquote>Để đến khi nào cái đói át được cái sợ thì con sẽ hợp tác với bình hơn nhưng đây vẫn là giai đoạn con ăn cầm hơi.</blockquote>
+
+  <blockquote>Cho nên Mẹ cần xác định tinh thần trước là con sẽ bỏ cữ 1, 2 hoặc 1, 2, 3 có khi bỏ cả 4 cữ luôn.</blockquote>
+
+  <blockquote><strong>Vì vậy</strong>, mẹ cố gắng quan sát con thật tốt để <strong>rút bình nhanh, dứt khoát và đúng</strong> ngay từ những cữ đầu tiên và những giây đầu tiên con ăn không ngoan để con mau hiểu và hợp tác nha mẹ.</blockquote>
+</section>
+
+<section class="page">
+  <h3>1.6. Hướng dẫn cách cho con ăn cữ đêm</h3>
+
+  <h4>TH1 — Tổng lượng ăn 0h đến hết cữ 4 DƯỚI 300ml</h4>
+  <ul>
+    <li>Con ăn dưới 300ml mà <strong>cả ngày mẹ làm sai</strong> thì cuối ngày mẹ cho con ăn lại như cũ rồi mai tập lại từ đầu.</li>
+    <li>Con ăn dưới 300ml <strong>nhưng mẹ làm đúng, sát luật</strong> thì đêm cho con bú ngủ bù sữa nếu bé nào có bú ngủ, con không bú ngủ mẹ đút thìa / bón ống hoặc xilanh bù sữa cho con.</li>
+  </ul>
+
+  <h4>TH2 — Tổng lượng ăn 0h đến hết cữ 4 TRÊN 300ml</h4>
+  <ul>
+    <li>Con ăn trên 300ml <strong>tập ngày 1, 2, 3</strong> thì không bú ngủ / đút thìa bón ống thêm nữa mà mẹ để con ngủ và tự tỉnh dậy đòi ăn.</li>
+    <li>Con ăn trên 300ml vào <strong>ngày 4, 5 con đang tiến triển</strong> mà lượng ăn chưa tăng nhiều thì đêm cho bú ngủ / bón ống / đút thìa bù sữa thêm 1 đến 2 cữ sao cho lượng ăn tổng trong 24h được khoảng <strong>400-500ml</strong> để con có sức tập tiếp.</li>
+  </ul>
+
+  <blockquote>Còn nếu mẹ tập <strong>5 ngày</strong> mà cả thái độ và lượng ăn của con chưa cải thiện thì mẹ tạm ngưng 3 ngày cho con ăn lại sức, xem lại mình đang sai ở đâu nhé.</blockquote>
+
+  <h3>1.7. CẢNH BÁO — Dấu hiệu nguy hiểm khẩn cấp</h3>
+  <div class="warning-box">
+    <div class="warning-box-title">TUYỆT ĐỐI KHÔNG tự tập tiếp khi con ăn kém 5 ngày 300ml</div>
+    <p><strong>→ CON SẼ LẢ NGUY HIỂM</strong></p>
+  </div>
+
+  <p><strong>Các dấu hiệu nguy hiểm mẹ cần chú ý:</strong></p>
+  <table>
+    <thead>
+      <tr><th>Dấu hiệu</th><th>Biểu hiện</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Lả</strong></td><td>Con mệt mỏi, iu xìu, không muốn chơi, chân tay mềm oặt, ngủ li bì gọi không được.</td></tr>
+      <tr><td><strong>Mất nước nhẹ</strong></td><td>Tã không ướt sau 6h, nước tiểu sậm màu và có mùi nồng hơn bình thường, miệng và môi khô, không hoặc có rất ít nước mắt khi khóc.</td></tr>
+      <tr><td><strong>Mất nước nghiêm trọng</strong></td><td>Mắt trũng, thóp trũng to như ngón tay cái...</td></tr>
+      <tr><td><strong>Hạ đường huyết</strong></td><td>Toát mồ hôi, tay chân lạnh, run rẩy, da dẻ nhợt nhạt, tím tái, mệt mỏi, ngủ li bì...</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Hành động ngay</div>
+    <p>KHI CON BẮT ĐẦU CÓ NHỮNG DẤU HIỆU NÀY, MẸ <strong>LẬP TỨC CHO CON ĂN LẠI CÁCH CŨ</strong> LUÔN NHÉ.</p>
+  </div>
+
+  <div class="source-note">Nguồn: Rowena Bennet — Y tá chăm sóc mẹ và bé • BATLOTE Anh Quỳnh</div>
+</section>
+
+<!-- =========================================== CHƯƠNG 2 — TẬP HÚT BÌNH =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🥤</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 2</span>Hướng dẫn cách tập hút bình</h2>
+
+  <h3>2.1. Lưu ý trước khi tập hút</h3>
+  <ul>
+    <li>Khi con được <strong>7-8 tháng</strong> ngồi vững, cứng cổ đã biết hút nuốt thành thạo thì mẹ có thể bắt đầu tập cho con hút sữa.</li>
+    <li>Đối với những bé <strong>dưới 12 tháng</strong> hoặc <strong>trên 12 tháng</strong> mà mới biết hút, mẹ khoét van chống sặc từng chút một để con điều chỉnh lực dần, chưa nên khoét hết van vội.</li>
+    <li>Nếu con hút nhả ống có khí sục vào bình mẹ kiểm tra xem vặn cổ bình có chặt quá không và khoét van thông hơi ra.</li>
+    <li>Mẹ chuẩn bị cho con <strong>1 bình để hút sữa</strong>, tránh dùng chung, nhầm lẫn với bình hút nước.</li>
+  </ul>
+
+  <h3>2.2. Cách tập hút sữa — 3 bước</h3>
+
+  <div class="callout">
+    <div class="callout-title">🥤 Bước 1 — Cố định vị trí ăn</div>
+    <p>Đầu tiên mẹ cố định vị trí ăn của con, mẹ cho con ngồi ghế hay ngồi tại giường đều được, mẹ nhớ dẹp gọn đồ chơi / đồ vật xung quanh chỗ con hút sữa, tránh làm con mất tập trung. Chuẩn bị bình sữa sẵn sàng để ngay cạnh vị trí ăn của con (khuất tầm mắt), để khi đặt con vào mẹ nhanh tay với bình dễ dàng đưa tới cho con nhìn.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">🥤 Bước 2 — Đưa bình + dừng 5s</div>
+    <p>Mẹ đưa bình từ từ tới cách mặt con tầm <strong>15-20cm</strong>, sau đó <strong>dừng bình 5s</strong> quan sát phản ứng của con và nói <em>"Mẹ mời con uống sữa nhé"</em>.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">🥤 Bước 3 — Phản ứng của con</div>
+    <p>Nếu con nhìn thấy bình rồi mà quay đi, ra khỏi vị trí ngồi, đập bình, đẩy bình, bịt mắt... mẹ cất bình ra khỏi tầm mắt con và bế con rời vị trí ăn, không cố mời con nữa.</p>
+  </div>
+
+  <ul>
+    <li>Nếu con nhìn hợp tác không phát ra tín hiệu từ chối thì mẹ từ từ đưa tới miệng kề ống mời con.</li>
+    <li>Nếu con hút nhả, ngưng nghỉ... mẹ đếm 5s con hút lại thái độ tập trung, ngoan thì không sao.</li>
+    <li>Nhưng nếu con hút nhả, ngưng nghỉ 5s không hút lại ngay, quay đi mất tập trung, nhả sữa không nuốt, cắn ống, trả mẹ bình... thì mẹ xin lại bình của con và cất đi nhé.</li>
+    <li>Mẹ đưa tay xin bình đồng thời thông báo lý do để con hiểu và đếm nhẩm 5s.</li>
+  </ul>
+
+  <blockquote><strong>Ví dụ:</strong> <em>"Con nhả ống không hút nữa cho mẹ xin lại bình nhé"</em>. Hết 5s nếu con không trả, mẹ chủ động lấy lại bình của con nha.</blockquote>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Tuyệt đối tránh</div>
+    <p>Mẹ lưu ý <strong>KHÔNG cướp giật, KHÔNG giằng co bình</strong> của con nhé.</p>
+  </div>
+</section>
+
+<!-- =========================================== CHƯƠNG 3 — LSH <12 THÁNG =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">☀️</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 3</span>Lịch sinh hoạt cho bé dưới 12 tháng</h2>
+
+  <h3>3.1. Nguyên tắc nền tảng</h3>
+  <ul>
+    <li>Mẹ giãn cữ <strong>4 tiếng</strong>, cho con ăn dặm liền sữa, sữa và dặm gói gọn trong vòng <strong>45 phút</strong>. Sữa tối đa 15 phút, dặm tối đa 30 phút.</li>
+    <li>Dặm trước hay sau sữa tuỳ vào độ hợp tác của mỗi bé. Nếu con hợp tác thì dặm trước hay sau sữa đều được.</li>
+    <li><strong>Mẹ cần ổn định LSH cho con.</strong> Không nên nay mẹ cho dặm trước sữa con chưa hợp tác, mai mẹ đổi lại sau sữa. Như vậy con sẽ không hiểu khi nào được ăn, khi nào được uống sữa.</li>
+    <li>Mẹ chọn cho con ăn cữ nào tuỳ thuộc vào LSH của mẹ. Nên cho ăn vào cuối ngày, con đủ đói sẽ hợp tác hơn.</li>
+  </ul>
+
+  <h3>3.2. Lịch mẫu — Ăn dặm vào cữ 2</h3>
+  <div class="schedule">
+    <div class="schedule-title">Lịch sinh hoạt ngày — Ăn dặm cữ 2</div>
+    <div class="schedule-row"><span class="schedule-icon">☀️</span><span class="schedule-time">6h</span><span class="schedule-action">Dậy</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">7h</span><span class="schedule-action">Sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🥣</span><span class="schedule-time">11h</span><span class="schedule-action">Sữa — 5-20 phút sau dặm</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">15h</span><span class="schedule-action">Sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">19h</span><span class="schedule-action">Sữa</span></div>
+  </div>
+  <blockquote><strong>Lưu ý:</strong> Con mới bắt đầu ăn, mẹ cho con 1 cữ dặm trước, khi nào ăn tốt thì tăng lên 2, tốt 2 cữ rồi có thể tăng lên 3 nhé.</blockquote>
+
+  <h3>3.3. Lịch mẫu — Ăn dặm vào cữ 4</h3>
+  <p>Nếu mẹ muốn cho con ăn dặm vào cữ 4 thì tham khảo lịch dưới đây:</p>
+  <div class="schedule">
+    <div class="schedule-title">Lịch sinh hoạt ngày — Ăn dặm cữ 4</div>
+    <div class="schedule-row"><span class="schedule-icon">☀️</span><span class="schedule-time">6h</span><span class="schedule-action">Dậy</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">7h</span><span class="schedule-action">Sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">11h</span><span class="schedule-action">Sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">15h</span><span class="schedule-action">Sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🥣</span><span class="schedule-time">18h30</span><span class="schedule-action">Dặm — 5-20 phút sau uống sữa</span></div>
+  </div>
+  <blockquote>Cuối ngày mẹ nên đẩy giờ ăn dặm lên sớm 30 phút để con không bị mệt và buồn ngủ. Con ăn sữa xong là đi ngủ đêm luôn. <strong>Con buồn ngủ sẽ không muốn ăn mà chỉ muốn uống sữa thôi.</strong></blockquote>
+
+  <h3>3.4. Tỉ lệ sữa và dặm theo giai đoạn</h3>
+  <div class="tip-box">
+    <div class="tip-box-title">💡 Quan trọng nhớ</div>
+    <p>Với bé <strong>dưới 1 tuổi sữa là nguồn dinh dưỡng chính</strong>, ăn dặm là phụ nên trong giai đoạn từ <strong>6 đến 9 tháng</strong> mẹ chưa cần cắt giảm sữa của con nhé. Áp dụng kỉ luật bàn ăn vs con và đút đúng cách để con tự cân bằng sữa và dặm.</p>
+    <p>Tầm <strong>10 tháng</strong> con vẫn thích sữa không hợp tác dặm lúc này mới cần điều chỉnh giảm sữa để con tập trung vào ăn.</p>
+  </div>
+</section>
+
+<!-- =========================================== CHƯƠNG 4 — LSH >12 THÁNG =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🍽️</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 4</span>Lịch sinh hoạt cho bé trên 12 tháng</h2>
+
+  <h3>4.1. Nguyên tắc</h3>
+  <ul>
+    <li>Đối với bé trên 1 tuổi, mẹ cho con ăn ngày <strong>3 bữa chính</strong>, giãn cữ <strong>5 tiếng</strong>.</li>
+    <li>Sáng dậy nếu con không có dấu hiệu đói mẹ vẫn đợi <strong>1 tiếng</strong> rồi mời con ăn.</li>
+    <li>Con ăn xong <strong>5-20 phút</strong> sau mẹ mời con tối đa <strong>100ml sữa</strong> cho 2 cữ đầu (sáng và trưa), trong đó thời gian ăn dặm và sữa gói gọn trong 45 phút.</li>
+    <li>Cữ 3 mẹ chỉ cho dặm.</li>
+    <li>Cách cữ 3 (ăn tối) khoảng 2 tiếng hoặc trước khi con đi ngủ mẹ cho con 1 bình sữa to để con ngủ ngon.</li>
+  </ul>
+
+  <h3>4.2. Lịch mẫu — Bé trên 12 tháng</h3>
+  <div class="schedule">
+    <div class="schedule-title">Lịch sinh hoạt — Bé trên 12 tháng</div>
+    <div class="schedule-row"><span class="schedule-icon">☀️</span><span class="schedule-time">7h</span><span class="schedule-action">Dậy</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🥣</span><span class="schedule-time">8h</span><span class="schedule-action">Ăn dặm, 5-20p sau max 100ml sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🥣</span><span class="schedule-time">13h</span><span class="schedule-action">Ăn dặm, 5-20p sau max 100ml sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🥣</span><span class="schedule-time">18h</span><span class="schedule-action">Ăn dặm — không có sữa</span></div>
+    <div class="schedule-row"><span class="schedule-icon">🍼</span><span class="schedule-time">20h</span><span class="schedule-action">Cho con 1 bình to đi ngủ</span></div>
+  </div>
+
+  <h3>4.3. Khi con biếng sữa hoặc biếng dặm</h3>
+  <blockquote>Nếu con <strong>biếng sữa</strong>, mẹ nên rèn con ăn sữa ngoan, đúng sức rồi bắt đầu cho con ăn dặm lại con sẽ dễ hợp tác hơn. <strong>Biếng sữa rất dễ lây lan sang biếng dặm và ngược lại.</strong></blockquote>
+
+  <ul>
+    <li>Mẹ <strong>rèn song song</strong> sát luật cả dặm và sữa được nhưng <strong>tỉ lệ thành công thấp</strong>, rất dễ hỏng cả hai nếu mẹ không kỉ luật con sữa và không biết quan sát con. Con sẽ bê nguyên thái độ nhả nhớt đó qua dặm.</li>
+    <li>Sữa ngoan là để bù sữa cho con khi mẹ chưa hiểu luật, con chưa hợp tác dặm. Nhưng khi sữa không ngoan chắc chắn sẽ có cữ sữa con ăn kém, dặm cũng chưa ăn được nhiều dẫn đến con ăn kém cả hai, gây nguy hiểm đến sức khoẻ của con, khả năng là cao.</li>
+  </ul>
+</section>
+
+<!-- =========================================== CHƯƠNG 5 — NỢ NGỦ =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🌙</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 5</span>Cách chữa nợ ngủ cho bé</h2>
+
+  <p>Nợ ngủ là tình trạng bé không ngủ đủ giấc hoặc có giấc ngủ không chất lượng trong một thời gian dài, dẫn đến mệt mỏi, quấy khóc và khó ngủ hơn. Nếu không xử lý kịp thời, bé sẽ càng rơi vào vòng luẩn quẩn <strong>"ngủ ít → mệt mỏi → khó ngủ hơn → lại ngủ ít hơn"</strong>.</p>
+
+  <h3>5.1. Triệu chứng – dấu hiệu nợ ngủ</h3>
+  <ul>
+    <li>Bé ngủ không đủ số giờ cần thiết theo độ tuổi.</li>
+    <li>Dễ tỉnh giấc, ngủ chập chờn, catnap (ngủ giấc ngắn &lt; 30 phút).</li>
+    <li>Quấy khóc nhiều, cáu gắt, khó dỗ ngủ, càng về chiều càng khó chịu.</li>
+    <li>Hay giật mình, ngủ không sâu, dậy sớm hơn bình thường.</li>
+    <li>Bám mẹ hơn, không chịu chơi một mình, có thể biếng ăn sinh lý.</li>
+  </ul>
+
+  <h3>5.2. Năm nguyên tắc chữa nợ ngủ</h3>
+
+  <h4>Nguyên tắc 1 — Ngủ bù vào ban ngày</h4>
+  <ul>
+    <li>Bé đang nợ ngủ thì mẹ không nên áp dụng lịch sinh hoạt quá nghiêm ngặt, hãy <strong>cho bé ngủ càng nhiều càng tốt</strong>.</li>
+    <li>Nếu bé dậy sớm, mẹ có thể cố gắng ru lại để ngủ thêm.</li>
+    <li>Nếu bé chỉ ngủ catnap (30-45 phút), hãy hỗ trợ con ngủ lại bằng cách vỗ nhẹ, bế ru, hoặc đặt tay lên người bé.</li>
+    <li>Tăng thời gian ngủ ngày bằng cách <strong>cho ngủ tràn nap</strong>.</li>
+  </ul>
+
+  <h4>Nguyên tắc 2 — Hỗ trợ tối đa để con ngủ ngon</h4>
+  <ul>
+    <li>Trong giai đoạn trả nợ ngủ, mẹ có thể bế ru, cho ti giả, vỗ nhẹ, đu đưa hoặc <strong>ngủ chung với con</strong> nếu cần thiết.</li>
+    <li>Giảm kích thích trước giờ ngủ, không cho bé chơi quá nhiều, không xem TV hoặc tiếp xúc màn hình điện tử.</li>
+    <li>Giấc ngủ trưa và chiều cần <strong>diễn ra trong không gian tối, yên tĩnh, nhiệt độ mát mẻ</strong>.</li>
+    <li>Nếu bé tỉnh giấc giữa chừng, mẹ <strong>không vội bế dậy ngay</strong> mà thử vỗ về nhẹ nhàng.</li>
+  </ul>
+
+  <h4>Nguyên tắc 3 — Điều chỉnh thời gian thức phù hợp</h4>
+  <ul>
+    <li>Bé nợ ngủ thường bị "quá giấc". Mẹ cần <strong>rút ngắn thời gian thức (WT)</strong> xuống một chút.</li>
+    <li>Ví dụ: Nếu bình thường WT của bé là 3 giờ, mẹ có thể cho bé ngủ sau 2.5 giờ để bé dễ ngủ hơn.</li>
+  </ul>
+
+  <h4>Nguyên tắc 4 — Cho bé ngủ sớm hơn vào buổi tối</h4>
+  <ul>
+    <li>Nếu bé đã bị nợ ngủ nhiều ngày, mẹ <strong>hãy cho bé vào môi trường ngủ sớm hơn bình thường khoảng 30-60 phút</strong>.</li>
+    <li>Ví dụ: Nếu trước đây bé ngủ lúc 9h tối, mẹ có thể cho bé ngủ lúc 8h hoặc 7h30 tối.</li>
+    <li>Bé càng nợ ngủ thì càng dễ bị "over tired" vào buổi tối, khiến việc vào giấc khó khăn hơn.</li>
+  </ul>
+
+  <h4>Nguyên tắc 5 — Giữ môi trường ngủ ổn định</h4>
+  <ul>
+    <li><strong>Phòng tối, yên tĩnh</strong> giúp bé dễ vào giấc và ngủ sâu hơn.</li>
+    <li>Đảm bảo nhiệt độ phòng mát mẻ (khoảng <strong>24-26°C</strong>), bé không quá nóng hoặc quá lạnh.</li>
+  </ul>
+
+  <h3>5.3. Quy trình chữa nợ ngủ — 4 bước</h3>
+  <div class="callout">
+    <div class="callout-title">📋 Quy trình từng bước</div>
+    <p><strong>Bước 1: Điều chỉnh giấc ngủ ngày</strong> — Nếu bé ngủ giấc quá ngắn (30-45 phút), mẹ hãy hỗ trợ kéo dài giấc. Nếu bé bỏ giấc ngủ ngày, mẹ hãy cho ngủ sớm hơn vào buổi tối.</p>
+    <p><strong>Bước 2: Cắt bớt thời gian thức</strong> — Rút ngắn WT một chút để bé không bị quá mệt trước khi ngủ.</p>
+    <p><strong>Bước 3: Tăng thời gian ngủ cả ngày và đêm.</strong></p>
+    <p><strong>Bước 4: Kiên trì trong 3-5 ngày</strong> — Khi bé đã ngủ đủ và không còn dấu hiệu nợ ngủ, mẹ có thể dần đưa lịch sinh hoạt trở lại bình thường.</p>
+  </div>
+
+  <h3>5.4. Bao lâu thì bé hết nợ ngủ?</h3>
+  <table>
+    <thead>
+      <tr><th>Mức độ nợ ngủ</th><th>Thời gian cần</th><th>Cách xử lý</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Nợ ngủ nhẹ</strong> (1-2 ngày)</td><td>1-2 ngày ngủ bù</td><td>Con sẽ ổn</td></tr>
+      <tr><td><strong>Nợ ngủ trung bình</strong> (3-5 ngày)</td><td>3-5 ngày</td><td>Bé điều chỉnh lại giấc</td></tr>
+      <tr><td><strong>Nợ ngủ nặng</strong> (hơn 1 tuần)</td><td>1-2 tuần</td><td>Trở lại giấc bình thường</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Lưu ý quan trọng</div>
+    <p>Nếu sau 1-2 tuần bé vẫn quấy khóc, ngủ kém, mẹ cần xem lại có yếu tố nào khác ảnh hưởng không (mọc răng, bệnh, lịch sinh hoạt chưa phù hợp).</p>
+    <p>Nếu bé quá nợ ngủ, cần <strong>ưu tiên trả nợ trước</strong> khi áp dụng bất kỳ phương pháp rèn ngủ nào.</p>
+  </div>
+</section>
+
+<!-- =========================================== CHƯƠNG 6 — ĂN DẶM TRUYỀN THỐNG/NHẬT =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🥣</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 6</span>Ăn dặm truyền thống / kiểu Nhật</h2>
+
+  <h3>6.1. Sáu lưu ý trước khi cho con ăn dặm</h3>
+  <ol>
+    <li>Mẹ chuẩn bị <strong>bát, thìa phù hợp</strong> với con, kèm theo yếm / áo yếm.</li>
+    <li>Mẹ cho con ngồi vào bàn ăn đúng tư thế, thoải mái, ghế ăn đặt ở nơi yên tĩnh để con ăn tập trung. <strong>Tránh cho nằm ăn, ăn trong xe đẩy, cho xem TV, dụ đồ chơi, bế đi ăn rong</strong> → tăng nguy cơ hóc sặc thức ăn.</li>
+    <li>Kiểm tra <strong>tiền sử dị ứng của gia đình</strong> trước khi cho bé ăn dặm.</li>
+    <li>Bé <strong>dưới 1 tuổi</strong> mẹ <strong>không sử dụng mắm, muối, đường</strong>, chỉ sử dụng các loại gia vị phù hợp với bé (nước tương tách muối, phô mai tách muối...).</li>
+    <li><strong>Không nên thúc giục, doạ dẫm hay nịnh nọt</strong> nếu bé không hứng thú ăn nữa.</li>
+    <li>Mẹ lưu ý tỉ lệ cháo rây / xay phù hợp theo tháng tuổi của bé và <strong>tăng thô dần theo khả năng nhai nuốt</strong> của con. Tránh ăn cháo xay nhuyễn quá lâu.</li>
+  </ol>
+
+  <h3>6.2. Trình tự giới thiệu thức ăn theo tháng tuổi</h3>
+  <p>Khi con mới bắt đầu ăn dặm, mẹ cần cho con làm quen với <strong>từng loại thực phẩm trước</strong>, sau đó mới kết hợp để thử dị ứng cho con.</p>
+
+  <p>Trong 2-3 tuần đầu tiên khi bé bắt đầu ăn dặm, mẹ có thể tập cho bé ăn cháo loãng (xay hoặc rây tỉ lệ <strong>1:10</strong>) với nước dashi rau củ.</p>
+
+  <h4>Tuần đầu tiên</h4>
+  <p>Mẹ để bé làm quen với vị rau củ và dễ tiêu hoá như: đậu cove non, cà rốt, bông cải xanh, khoai tây, bí đỏ, cải bó xôi, măng tây, bắp non, khoai lang nhật, bông cải trắng, đậu hà lan, bắp cải tím, bí ngòi xanh, ngô ngọt, rau ngót, bí xanh, susu...</p>
+
+  <h4>Tuần tiếp theo</h4>
+  <p>Mẹ có thể dùng tiếp với các loại rau dạng mềm kết hợp rau củ dạng rắn và đạm thực vật (từ đậu hũ non, các loại đậu) như: <strong>đậu hũ non + cải ngọt, bông cải xanh + khoai sọ, bí ngòi xanh + bí đỏ, đậu que nhật + susu, khoai sọ + mướp hương, rau ngót + bí đỏ, bắp cải xanh + khoai môn, rau dền + đậu hà lan</strong>... để bé thích nghi hơn với việc nghiền và thử thách hệ tiêu hoá mạnh mẽ hơn khi chuyển sang cháo thịt đạm.</p>
+
+  <h4>Sang tuần thứ 3 và 4</h4>
+  <p>Mẹ có thể giới thiệu <strong>đạm từ thịt trắng (cá thịt trắng, cá đồng)</strong> cho bé kết hợp với cháo rau củ.</p>
+
+  <h4>Bé được 7 tháng trở lên</h4>
+  <p>Mẹ có thể giới thiệu <strong>lòng đỏ trứng</strong> (mẹ luộc trứng gà, tách lòng lấy lòng đỏ, nghiền trộn cháo. <em>Mẹ lưu ý chưa cho con dùng lòng trắng vì lòng trắng có khả năng gây dị ứng cao</em>); <strong>thịt gà</strong> (nên dùng phần ức gà do có hàm lượng đạm cao), <strong>chim bồ câu, cá hồi</strong>, và có thể giới thiệu <strong>thịt heo, thịt bò</strong> với lượng ít.</p>
+
+  <h4>Từ 7 đến 9 tháng</h4>
+  <p>Mẹ có thể tăng từ từ lượng thịt heo và thịt bò, giới thiệu thêm các loại <strong>thuỷ sản nước ngọt</strong> như: tôm nước ngọt, cua đồng, lươn...</p>
+
+  <h4>Bé được 9 tháng</h4>
+  <p>Mẹ giới thiệu <strong>từ từ và từng chút một</strong> các loại <strong>hải sản</strong> như: tôm biển, cua biển, cá biển và theo dõi phản ứng của con.</p>
+
+  <h4>10 tháng trở lên</h4>
+  <p>Mẹ có thể bắt đầu cho con ăn một số loại <strong>nội tạng động vật</strong> như: óc heo, tim gà, tim heo...</p>
+
+  <h4>Khi con được 12 tháng trở lên</h4>
+  <p>Hệ tiêu hoá của con đã ổn định hơn, lúc này mẹ giới thiệu cho con ăn <strong>lòng trắng trứng, các loại hải sản có vỏ, mực</strong>...</p>
+
+  <h3>6.3. Năm lưu ý quan trọng về dị ứng</h3>
+  <ul>
+    <li>Khi bắt đầu tập ăn, mẹ cho bé ăn <strong>1 cữ trước</strong>, khi con hợp tác và ăn được nhiều hơn (khoảng từ 8 tháng trở ra), mẹ có thể tăng thêm 1 cữ ăn nữa cho con.</li>
+    <li>Dị ứng phụ thuộc vào cơ địa của từng bé vậy nên đối với các bé có cơ địa nhạy cảm, dễ dị ứng hoặc gia đình có tiền sử gen dị ứng, mẹ nên thử thức ăn, đặc biệt là khi giới thiệu đạm cho con từng chút một để quan sát phản ứng của con.</li>
+    <li><strong>Nguyên tắc quan trọng khi kiểm tra dị ứng cho con</strong> đó là mẹ giới thiệu món mới vào <strong>cữ ban ngày</strong>, không giới thiệu món mới vào cữ tối. Trong trường hợp con dị ứng với thức ăn mới, ba mẹ sẽ dễ dàng quan sát được vào ban ngày hơn để kịp thời xử trí và đưa con đến cơ sở y tế thăm khám kịp thời.</li>
+    <li>Thứ tự giới thiệu đạm cho bé: <strong>từ loại ít khả năng dị ứng đến loại có khả năng dị ứng cao hơn</strong>.</li>
+    <li>Khi giới thiệu đạm mới cho con, mẹ chỉ nên cho ăn lượng ít, <strong>liên tiếp trong 3 ngày</strong> để quan sát phản ứng của con, nếu con ổn thì có thể tăng lượng từ từ.</li>
+  </ul>
+</section>
+
+<section class="page">
+  <h3>6.4. Hướng dẫn cách đút khi ăn dặm truyền thống / kiểu Nhật</h3>
+
+  <p>Mẹ chuẩn bị đồ ăn để cạnh bàn ăn (khuất tầm mắt con), đeo / mặc sẵn áo yếm cho con (nếu có).</p>
+  <p>Mẹ đặt con ngồi vào bàn rồi nhanh tay lấy khay đồ ăn mời con, tránh để con ngồi đợi lâu quấy khóc.</p>
+
+  <div class="callout">
+    <div class="callout-title">🥄 Kỹ thuật đút thìa</div>
+    <p>Khi đút mẹ đưa thìa tới cách mặt con một khoảng <strong>5-10 cm</strong>, đợi con há miệng rồi đưa vào miệng con.</p>
+    <p>Sau đó mẹ chờ con nhai nuốt xong mẹ hẵng mời / đút thìa mới cho con nhé.</p>
+    <p>Con nhai nuốt xong rồi mà mất tập trung, nghịch tay, mẹ đưa thìa tới mời con. <strong>Không đợi con mất tập trung, nghịch xong mới đút.</strong></p>
+  </div>
+
+  <h4>Quy trình khi con mất tập trung</h4>
+  <p>Khi con mất tập trung quay đi, mẹ giữ nguyên thìa đồng thời hỏi con <em>"Con có muốn ăn nữa không"</em> sau đó đếm nhanh <strong>10s</strong>.</p>
+  <ul>
+    <li>→ Nếu con quay lại đón thìa mẹ để con tiếp tục bữa ăn.</li>
+    <li>→ Nếu hết 10s con không quay lại, mẹ thông báo dừng bữa <em>"Con không ăn nữa mẹ dọn nhé"</em> và bế con ra khỏi ghế.</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tip-box-title">⚠️ Quy tắc 2 lần nhắc</div>
+    <p>Mẹ chỉ <strong>nhắc nhở 1 lần</strong> đối với hành động mất tập trung, nhả nhớt để xác nhận lại tín hiệu từ chối.</p>
+    <p><strong>Lần 2</strong> con tiếp tục quay đi, mẹ thông báo dừng bữa chứ không nhắc, không đếm nữa.</p>
+    <p>Không phân biệt hành động trước đó mẹ nhắc con là hành động nào — mẹ chỉ nhắc con 1 lần nếu chưa nhắc và thông báo cho con dừng bữa nếu nhắc lần 2.</p>
+  </div>
+
+  <h4>Dấu hiệu từ chối — cho con ra khỏi ghế ngay</h4>
+  <p>Khi con có dấu hiệu từ chối như: <strong>mím môi quay đầu, nhìn thìa quay đi, không há miệng, gạt thìa, khóc quấy không chịu vào bàn, trèo ra khỏi ghế, ném thìa</strong>... mẹ thông báo lý do đồng thời cho con ra khỏi ghế luôn và cất hết đồ ăn đi không để con thấy nữa.</p>
+
+  <h4>Dạy con cách từ chối</h4>
+  <blockquote>"<em>Con không muốn ăn nữa con nói no / lắc đầu / xua tay cho mẹ hiểu nhé</em>".</blockquote>
+  <p>Khi con từ chối, <strong>mẹ hãy vui vẻ dẹp bàn</strong> dù con ăn được nhiều hay ít.</p>
+
+  <div class="source-note">Nguồn: Ăn dặm kiểu Nhật — Tsutsumi Chiharu</div>
+</section>
+
+<!-- =========================================== CHƯƠNG 7 — BLW =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🤲</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 7</span>Ăn dặm tự chỉ huy (BLW)</h2>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Điều kiện tiên quyết</div>
+    <p>Khi muốn cho con ăn dặm theo phương pháp BLW, Mẹ cần tìm hiểu và <strong>HỌC CÁCH SƠ CỨU HÓC SẶC</strong> trước khi quyết định rèn con.</p>
+  </div>
+
+  <h3>7.1. Cách chế biến thức ăn trong BLW</h3>
+  <p>Mẹ tìm hiểu cách chế biến độ mềm của thức ăn sao cho phù hợp với tháng tuổi và mức độ ăn thô của con. Với các bé ăn thô kém, thức ăn cần được nấu mềm sao cho <strong>2 ngón tay bóp vào nhau nát là được</strong> và từ từ điều chỉnh độ thô sau.</p>
+
+  <div class="callout">
+    <div class="callout-title">🍽️ Quy tắc chế biến đa dạng</div>
+    <ul>
+      <li><strong>Không cắt hình tròn, hình trụ.</strong> Có thể cắt vuông / xéo, thanh dài.</li>
+      <li>Tránh các thức ăn có vỏ hoặc da quá trơn nếu con vừa tập ăn BLW.</li>
+      <li>Thịt nấu mềm nhừ, cá gỡ xương kĩ.</li>
+      <li>Rau lá tránh xơ, dai, rau già.</li>
+    </ul>
+  </div>
+
+  <h3>7.2. Bốn bước rèn BLW</h3>
+  <ol>
+    <li><strong>Bước 1:</strong> Mẹ chuẩn bị 1 suất ăn nhỏ, đầy đủ chất gồm tinh bột, đạm, vitamin và khoáng chất, chất béo... (Khay ăn dự trữ đã chuẩn bị Mẹ cất không cho con thấy)</li>
+    <li><strong>Bước 2:</strong> Mẹ luôn ngồi đối diện con để quan sát và xử lý kịp thời. (<strong>Tối đa 30 phút</strong> cho ăn dặm — con không ăn / kén chọn / từ chối thì dẹp, con ăn lâu cũng chỉ cho tối đa 30 phút, hết giờ mẹ dẹp khay.)</li>
+    <li><strong>Bước 3:</strong> Nếu con bóp nát đồ ăn bỏ miệng thì mẹ quan sát con... Nhưng nếu con bóp nát, ném đồ ăn thì mẹ dẹp. Con có các dấu hiệu như: <strong>đập bàn / khóc / lật khay</strong> thì mẹ cho con ra luôn.</li>
+    <li><strong>Bước 4:</strong> Sử dụng <strong>1 câu cố định</strong> để kết thúc bữa ăn ví dụ: <em>"Con đập bàn mẹ dẹp nhé"</em> để thông báo hành động đó của con mẹ phải dẹp bàn.</li>
+  </ol>
+
+  <h3>7.3. Cách kỷ luật khi con kén ăn</h3>
+  <p>Đối với các món con kén ăn, Mẹ <strong>cắt nhỏ cỡ đầu ngón tay</strong> thôi nha — cho con suất / ít một thôi để con đỡ sợ / ngán ăn và có thể dễ dàng hợp tác ăn hơn mẹ nhé.</p>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Bốn KHÔNG khi con kén ăn</div>
+    <ul>
+      <li><strong>KHÔNG</strong> giục, không hối, không nhắc con ăn đi;</li>
+      <li><strong>KHÔNG</strong> nhắc hỏi con nhiều lần;</li>
+      <li><strong>KHÔNG</strong> can thiệp bốc nhặt chỉ trỏ vào khay con đang ăn;</li>
+      <li><strong>KHÔNG</strong> gằn giọng quát mắng hay cáu gắt con...</li>
+    </ul>
+  </div>
+
+  <p><em>Đối với các bé bị táo</em> → Mẹ tăng xơ giảm tinh bột, cho thêm nước. Hành động nào rõ ràng là từ chối thì mẹ dẹp luôn. Còn hành động nào là thói quen / tật xấu thì kỷ luật / không kỷ luật tạm thời theo dõi bắt buộc.</p>
+</section>
+
+<section class="page">
+  <h3>7.4. Cách kỷ luật nhai nhả</h3>
+  <ul>
+    <li><strong>Xác định tín hiệu từ chối</strong>, không phải cứ nhả là dẹp.</li>
+    <li>Dẹp nếu là từ chối.</li>
+    <li>Không dẹp nếu là kén ăn. <strong>Kén ăn thì hết suất hãy dọn và không cho thêm suất mới.</strong></li>
+    <li>Nếu đồ ăn cứng khi nuốt con nhả thì mẹ cho thêm suất mới. Nếu đồ ăn mềm dễ ăn con nhả thì mẹ đợi hết suất rồi cho ra, không cho thêm suất mới nữa.</li>
+  </ul>
+  <blockquote>Để mẹ không nhầm lẫn giữa <strong>nhả do cứng</strong> hay <strong>nhả do kén</strong> thì thức ăn của con mẹ luôn luôn phải nấu mềm, dễ nhai dễ nuốt... thịt không được dai, rau không được dài và xơ quá, cá không được có xương và các loại củ quả phải nấu mềm mẹ nhé.</blockquote>
+
+  <h3>7.5. Xin thêm đồ ăn</h3>
+  <ul>
+    <li>Con đã ăn hết suất trên khay → mẹ nhanh tay cho con suất mới luôn.</li>
+    <li>Còn nếu con chưa ăn hết suất trên khay mà con chỉ trỏ xin thêm <strong>(không phân biệt đã nhắc 1 lần hay chưa)</strong> Mẹ nhắc con: <em>"Con ăn hết đồ trong khay đi rồi mẹ cho thêm"</em>.</li>
+    <li>Sau đó con ăn hết → mẹ cho con thêm suất mới như bình thường.</li>
+    <li>Còn nếu sau khi mẹ nhắc, con vẫn tiếp tục chỉ trỏ xin thêm mà <strong>không chịu bốc ăn / bốc được vài miếng lại chỉ trỏ xin thêm tiếp</strong> → mẹ thông báo lý do dừng bữa và cho con ra luôn tại đây nha.</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tip-box-title">💡 Với món mới — mình không kỷ luật mẹ nhé</div>
+    <p>Nghĩa là nếu con ăn hết món cũ với thái độ tốt mà món mới con không đụng vào thì hết suất cũ mẹ vẫn cho thêm, <strong>không bắt con ăn món mới</strong> nhé.</p>
+  </div>
+
+  <h3>7.6. Câu nói mẫu khi mời con dừng bữa</h3>
+  <p><em>Ví dụ mẹ có thể tham khảo nhé.</em></p>
+
+  <div class="callout">
+    <div class="callout-title">💬 Lần 1</div>
+    <p><em>"Con có muốn ăn nữa không? Không muốn ăn nữa thì trả đồ ăn cho mẹ nhé"</em></p>
+    <p>Đồng thời mẹ xoè tay ra xin con trả lại. Con không trả mà bốc đồ ăn ăn tiếp thì mẹ kệ cho con ăn. Còn nếu con trả lại đồ ăn cho mẹ thì mẹ thông báo lý do rồi cho con ra luôn nhé.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">💬 Lần 2</div>
+    <p><em>"Con không muốn ăn nữa thì trả đồ ăn cho mẹ, không được... như vậy nha"</em></p>
+    <p>Đồng thời mẹ xoè tay ra xin con trả lại nhé (mẹ đếm nhẩm <strong>5s</strong>, nếu con không trả thì hết 5s mẹ chủ động lấy lại đồ ăn và dừng bữa luôn nha mẹ).</p>
+  </div>
+
+  <blockquote>Mẹ luôn hướng dẫn cho con <strong>cách chủ động dừng bữa</strong> chứ không cướp giật đồ ăn của con mẹ nha.</blockquote>
+
+  <div class="source-note">Nguồn: Phương pháp ăn dặm bé chỉ huy — Gill Rapley, Tracey Murkett • BATLOTE Anh Quỳnh</div>
+</section>
+
+<!-- =========================================== CHƯƠNG 8 — SO SÁNH =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">⚖️</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Chương 8</span>So sánh &amp; lựa chọn phương pháp</h2>
+
+  <h3>8.1. Bảng so sánh nhanh</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Tiêu chí</th>
+        <th>Truyền thống</th>
+        <th>Kiểu Nhật</th>
+        <th>BLW</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Độ tuổi</strong></td><td>6 tháng</td><td>5-6 tháng</td><td>6 tháng (ngồi vững)</td></tr>
+      <tr><td><strong>Hình thức</strong></td><td>Cháo xay nhuyễn</td><td>Cháo rây 1:10 → tăng thô dần</td><td>Thức ăn nguyên miếng (bốc tay)</td></tr>
+      <tr><td><strong>Người chủ động</strong></td><td>Mẹ đút</td><td>Mẹ đút</td><td>Bé tự bốc</td></tr>
+      <tr><td><strong>Trình tự thức ăn</strong></td><td>Linh hoạt</td><td>Lộ trình theo tuần / tháng</td><td>Đa dạng theo kết cấu</td></tr>
+      <tr><td><strong>Ưu điểm</strong></td><td>Đảm bảo lượng ăn, dễ làm</td><td>Kỹ năng nhai tốt, đa dạng vị giác</td><td>Tự lập, vận động tay, tự cảm nhận no</td></tr>
+      <tr><td><strong>Nhược điểm</strong></td><td>Dễ ép, kỹ năng nhai kém</td><td>Tốn thời gian chuẩn bị</td><td>Rủi ro hóc sặc, ăn ít hơn ban đầu</td></tr>
+    </tbody>
+  </table>
+
+  <h3>8.2. Lời khuyên chọn phương pháp</h3>
+  <ul>
+    <li><strong>Không có phương pháp nào tốt nhất</strong>, chỉ có phương pháp <strong>phù hợp nhất với mẹ và con</strong>.</li>
+    <li>Nhiều mẹ kết hợp <strong>2 phương pháp song song</strong>: BLW vào bữa sáng hoặc trưa để con luyện kỹ năng, kiểu Nhật vào bữa tối để đảm bảo lượng ăn.</li>
+    <li>Nếu chọn <strong>BLW</strong>, mẹ <strong>bắt buộc</strong> học sơ cứu hóc sặc trước.</li>
+    <li>Nếu chọn <strong>kiểu Nhật</strong>, mẹ kiên trì với trình tự thức ăn để bé thử dị ứng từng món an toàn.</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tip-box-title">🌟 Ba nguyên tắc bất biến</div>
+    <ol>
+      <li><strong>Không ép con ăn</strong> — tôn trọng tín hiệu từ chối.</li>
+      <li><strong>Tăng thô dần theo khả năng</strong> — không xay nhuyễn quá lâu.</li>
+      <li><strong>Có kỷ luật bàn ăn</strong> — không xem TV, không bế đi ăn rong, không nịnh nọt.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================== PHỤ LỤC A =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">📊</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Phụ lục A</span>Bảng tra cứu nhanh</h2>
+
+  <h3>A.1. Giãn cữ theo tháng tuổi</h3>
+  <table>
+    <thead>
+      <tr><th>Tháng tuổi</th><th>Giãn cữ ăn</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dưới 1 tháng</td><td>2-3 tiếng</td></tr>
+      <tr><td>1-3 tháng</td><td>3-4 tiếng</td></tr>
+      <tr><td>3-6 tháng</td><td>3,5-4 tiếng</td></tr>
+      <tr><td>6 tháng trở lên</td><td>Tối đa 4 tiếng</td></tr>
+      <tr><td>Trên 12 tháng</td><td>5 tiếng (3 bữa chính)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>A.2. Trình tự giới thiệu thức ăn</h3>
+  <table>
+    <thead>
+      <tr><th>Tháng tuổi</th><th>Thức ăn mới</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>6 tháng (tuần 1-2)</td><td>Cháo loãng 1:10 + dashi rau củ + rau củ dễ tiêu</td></tr>
+      <tr><td>6 tháng (tuần 3+)</td><td>Đạm thực vật (đậu hũ non, đậu các loại)</td></tr>
+      <tr><td>6 tháng (tuần 3-4)</td><td>Cá thịt trắng, cá đồng</td></tr>
+      <tr><td>7 tháng</td><td>Lòng đỏ trứng, ức gà, chim bồ câu, cá hồi, thịt heo + bò (ít)</td></tr>
+      <tr><td>7-9 tháng</td><td>Thuỷ sản nước ngọt (tôm, cua đồng, lươn)</td></tr>
+      <tr><td>9 tháng</td><td>Hải sản (tôm, cua, cá biển)</td></tr>
+      <tr><td>10 tháng</td><td>Nội tạng (óc heo, tim gà, tim heo)</td></tr>
+      <tr><td>12 tháng</td><td>Lòng trắng trứng, hải sản có vỏ, mực</td></tr>
+    </tbody>
+  </table>
+
+  <h3>A.3. Lượng ăn — Cảnh báo</h3>
+  <table>
+    <thead>
+      <tr><th>Tình trạng</th><th>Lượng sữa / 24h</th><th>Hành động</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bình thường</td><td>≥ 500ml</td><td>Tiếp tục theo lịch</td></tr>
+      <tr><td>Ăn kém ngày 1-3</td><td>&lt; 300ml</td><td>Quan sát + sát luật</td></tr>
+      <tr><td>Ăn kém ngày 4-5 (&gt;300ml)</td><td>400-500ml</td><td>Bù 1-2 cữ ngủ</td></tr>
+      <tr><td>Ăn kém 5 ngày + lả</td><td>&lt; 300ml</td><td><strong>DỪNG TẬP — cho ăn cách cũ</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <div class="warning-box-title">A.4. Dấu hiệu nguy hiểm — gọi bác sĩ NGAY</div>
+    <ul>
+      <li>🚨 <strong>Lả:</strong> mệt iu xìu, chân tay mềm oặt, ngủ li bì gọi không dậy.</li>
+      <li>🚨 <strong>Mất nước nặng:</strong> mắt trũng, thóp trũng to như đầu ngón tay.</li>
+      <li>🚨 <strong>Hạ đường huyết:</strong> toát mồ hôi, tay chân lạnh, run rẩy, da nhợt nhạt, tím tái.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========================================== PHỤ LỤC B =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">🛑</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Phụ lục B</span>7 dấu hiệu từ chối — mẹ phải dừng ngay</h2>
+
+  <h3>B.1. Từ chối BÌNH SỮA</h3>
+  <ol>
+    <li>Quay ngoắt đi, bịt mắt, lảng tránh không nhìn bình.</li>
+    <li>Lơ đãng nhìn theo bình.</li>
+    <li>Gượng dậy lật khỏi vị trí ăn.</li>
+    <li>Bịt miệng, ngậm chặt, kề núm không mút.</li>
+    <li>Đập, đẩy, ghì chặn bình.</li>
+    <li>Đẩy lưỡi, cắn núm, đùn sữa, nhai núm.</li>
+    <li>Đạp chân, ưỡn, giẫy, khóc.</li>
+  </ol>
+
+  <h3>B.2. Từ chối THÌA (ăn dặm kiểu Nhật)</h3>
+  <ol>
+    <li>Mím môi quay đầu.</li>
+    <li>Nhìn thìa quay đi.</li>
+    <li>Không há miệng.</li>
+    <li>Gạt thìa.</li>
+    <li>Khóc quấy không chịu vào bàn.</li>
+    <li>Trèo ra khỏi ghế.</li>
+    <li>Ném thìa.</li>
+  </ol>
+
+  <h3>B.3. Từ chối KHAY ĂN (BLW)</h3>
+  <ol>
+    <li>Đập bàn, lật khay.</li>
+    <li>Ném đồ ăn (khác với bóp nát bỏ miệng — đây là khám phá).</li>
+    <li>Khóc gắt.</li>
+    <li>Trèo ra khỏi ghế.</li>
+    <li>Trả đồ ăn lại cho mẹ.</li>
+    <li>Chỉ trỏ xin thêm liên tục mà không bốc ăn.</li>
+    <li>Mất tập trung &gt; 10s sau khi mẹ nhắc 1 lần.</li>
+  </ol>
+</section>
+
+<!-- =========================================== PHỤ LỤC C =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">💬</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Phụ lục C</span>Câu nói mẫu — Mẹ giao tiếp với con</h2>
+
+  <h3>C.1. Khi mời bình / thìa</h3>
+  <div class="callout">
+    <p>• <em>"Mẹ mời con uống sữa nhé"</em></p>
+    <p>• <em>"Mẹ mời con ăn nha"</em></p>
+  </div>
+
+  <h3>C.2. Khi con mất tập trung (kiểu Nhật)</h3>
+  <div class="callout">
+    <p>• <em>"Con có muốn ăn nữa không?"</em> → đếm 10s</p>
+    <p>• <em>"Con không ăn nữa mẹ dọn nhé"</em></p>
+  </div>
+
+  <h3>C.3. Khi dạy con cách từ chối</h3>
+  <div class="callout">
+    <p>• <em>"Con không muốn ăn nữa con nói no / lắc đầu / xua tay cho mẹ hiểu nhé"</em></p>
+  </div>
+
+  <h3>C.4. Khi BLW</h3>
+  <div class="callout">
+    <p>• <em>"Con đập bàn mẹ dẹp nhé"</em> (câu cố định)</p>
+    <p>• <em>"Con ăn hết đồ trong khay đi rồi mẹ cho thêm"</em></p>
+    <p>• <em>"Con có muốn ăn nữa không? Không muốn ăn nữa thì trả đồ ăn cho mẹ nhé"</em></p>
+  </div>
+
+  <h3>C.5. Khi xin lại bình hút</h3>
+  <div class="callout">
+    <p>• <em>"Con nhả ống không hút nữa cho mẹ xin lại bình nhé"</em> → đếm 5s</p>
+  </div>
+</section>
+
+<!-- =========================================== PHỤ LỤC D =========================================== -->
+<section class="page">
+  <div class="chapter-illustration"><div class="illustration-icon">📚</div></div>
+  <h2 class="chapter-title"><span class="chapter-num">Phụ lục D</span>Nguồn tham khảo</h2>
+
+  <div class="callout">
+    <div class="callout-title">📚 Các tác giả và nguồn tham khảo</div>
+    <ul>
+      <li><strong>Rowena Bennet</strong> — Y tá chăm sóc mẹ và bé (Australia). Chuyên gia về dinh dưỡng sữa và biếng ăn cho trẻ sơ sinh.</li>
+      <li><strong>BATLOTE Anh Quỳnh</strong> — Tư vấn ngủ và ăn cho bé. Hệ thống phương pháp rèn ti bình và ăn dặm cho mẹ Việt.</li>
+      <li><strong>Tsutsumi Chiharu</strong> — Tác giả sách <em>Ăn dặm kiểu Nhật</em>. Phương pháp ăn dặm chuẩn Nhật Bản với lộ trình thức ăn theo tuần / tháng.</li>
+      <li><strong>Gill Rapley &amp; Tracey Murkett</strong> — Đồng tác giả <em>Baby Led Weaning</em>, sách gốc về phương pháp ăn dặm tự chỉ huy.</li>
+    </ul>
+  </div>
+
+  <p>Cẩm nang này được biên soạn dựa trên các tài liệu hướng dẫn của <strong>Hiền Pea</strong> — Tập ti bình • Ăn dặm là niềm vui, tổng hợp từ kinh nghiệm thực tế đã được nhiều mẹ áp dụng thành công.</p>
+
+  <div class="warning-box">
+    <div class="warning-box-title">Lưu ý quan trọng</div>
+    <p>Tài liệu mang tính chia sẻ kinh nghiệm. Mọi vấn đề sức khoẻ nghiêm trọng của bé cần được thăm khám trực tiếp tại cơ sở y tế. Khi bé có dấu hiệu lả, mất nước, hạ đường huyết — mẹ cần đưa con đến bệnh viện ngay lập tức.</p>
+  </div>
+</section>
+
+</body>
+</html>

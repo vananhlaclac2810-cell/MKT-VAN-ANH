@@ -1,0 +1,199 @@
+<template id="fs-cta-template">
+  <div data-composition-id="fs-cta" data-start="0" data-width="1080" data-height="1920">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+      
+:root {
+  --bg-deep: #0a0815;
+  --bg-mid: #161229;
+  --bg-card: #1f1a3d;
+  --border-glow: rgba(106, 155, 204, 0.3);
+  --accent-orange: #d97757;
+  --accent-cyan: #4dd9d9;
+  --accent-purple: #a774d9;
+  --accent-green: #5dd97a;
+  --ink: #faf9f5;
+  --ink-mute: #a8a4c4;
+  --glow-cyan: 0 0 24px rgba(77, 217, 217, 0.55);
+  --glow-orange: 0 0 24px rgba(217, 119, 87, 0.55);
+  --glow-purple: 0 0 24px rgba(167, 116, 217, 0.55);
+  --glow-green: 0 0 24px rgba(93, 217, 122, 0.55);
+}
+
+      [data-composition-id="fs-cta"] {
+        width: 100%; height: 100%;
+        background: radial-gradient(ellipse 1200px 800px at 50% 30%, var(--bg-mid) 0%, var(--bg-deep) 70%);
+        color: var(--ink);
+        position: relative; overflow: hidden;
+        font-family: 'Be Vietnam Pro', sans-serif;
+      }
+      [data-composition-id="fs-cta"] .particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; will-change: transform, opacity; }
+      [data-composition-id="fs-cta"] .particles circle { will-change: transform, opacity; }
+      [data-composition-id="fs-cta"] .grid-bg {
+        position: absolute; inset: 0; z-index: 0; opacity: 0.25;
+        background-image:
+          linear-gradient(rgba(106, 155, 204, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(106, 155, 204, 0.12) 1px, transparent 1px);
+        background-size: 60px 60px; pointer-events: none;
+      }
+      [data-composition-id="fs-cta"] .vignette {
+        position: absolute; inset: 0; z-index: 2; pointer-events: none;
+        background: radial-gradient(ellipse 800px 600px at 50% 50%, transparent 30%, var(--bg-deep) 100%);
+        opacity: 0.4;
+      }
+      [data-composition-id="fs-cta"] .scene-content {
+        position: relative; z-index: 5;
+        width: 100%; height: 100%;
+        padding: 200px 50px 320px;
+        box-sizing: border-box;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: flex-start;
+      }
+      [data-composition-id="fs-cta"] .topic-pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 12px 24px;
+        background: rgba(31, 26, 61, 0.85);
+        border: 1.5px solid var(--accent-orange);
+        border-radius: 999px;
+        font-weight: 700; font-size: 22px; letter-spacing: 0.18em;
+        text-transform: uppercase; color: var(--accent-orange);
+        margin-bottom: 18px;
+        backdrop-filter: blur(10px);
+        will-change: transform, opacity;
+        box-shadow: var(--glow-orange);
+      }
+      [data-composition-id="fs-cta"] .topic-pill .num {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 32px; height: 32px;
+        background: var(--accent-orange); color: var(--bg-deep);
+        border-radius: 50%; font-weight: 900; font-size: 20px;
+      }
+      [data-composition-id="fs-cta"] .brand-title {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 900; font-size: 110px; line-height: 0.92;
+        letter-spacing: -0.04em; text-transform: uppercase;
+        margin: 0 0 28px; text-align: center;
+        text-shadow: 0 0 40px rgba(217, 119, 87, 0.4);
+        will-change: transform, opacity;
+      }
+      [data-composition-id="fs-cta"] .brand-title .accent {
+        background: linear-gradient(135deg, var(--accent-orange) 0%, #f4a384 100%);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      [data-composition-id="fs-cta"] .brand-title .word {
+        display: inline-block; will-change: transform, opacity; margin-right: 0.18em;
+      }
+      
+        [data-composition-id="fs-cta"] .comment-box { width: 720px; margin: 6px auto 14px; display: flex; align-items: center; gap: 12px; padding: 18px; background: rgba(31, 26, 61, 0.92); border: 2px solid var(--accent-orange); border-radius: 18px; box-shadow: var(--glow-orange); backdrop-filter: blur(12px); will-change: transform, opacity; }
+        [data-composition-id="fs-cta"] .cb-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--accent-cyan); color: var(--bg-deep); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 22px; flex-shrink: 0; }
+        [data-composition-id="fs-cta"] .cb-input { flex: 1; text-align: left; padding: 12px 16px; background: rgba(10, 8, 21, 0.6); border-radius: 999px; font-size: 26px; font-weight: 700; color: var(--ink); }
+        [data-composition-id="fs-cta"] .cb-text { color: var(--accent-orange); background: rgba(217, 119, 87, 0.15); padding: 2px 10px; border-radius: 6px; }
+        [data-composition-id="fs-cta"] .cb-cursor { color: var(--accent-orange); animation: caret 0.6s steps(1) infinite; }
+        @keyframes caret { 50% { opacity: 0; } }
+        [data-composition-id="fs-cta"] .cb-send { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-orange) 0%, #f4a384 100%); color: var(--bg-deep); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; box-shadow: var(--glow-orange); flex-shrink: 0; }
+        [data-composition-id="fs-cta"] .gift-stack { display: flex; flex-direction: column; gap: 12px; width: 720px; }
+        [data-composition-id="fs-cta"] .gift-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: rgba(31, 26, 61, 0.92); border: 1.5px solid var(--border-glow); border-radius: 18px; backdrop-filter: blur(10px); box-shadow: 0 12px 28px rgba(0,0,0,0.4); will-change: transform, opacity; }
+        [data-composition-id="fs-cta"] .gc-thumb { width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-purple) 0%, #c498e0 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 38px; box-shadow: var(--glow-purple); flex-shrink: 0; }
+        [data-composition-id="fs-cta"] .gc-meta { flex: 1; text-align: left; }
+        [data-composition-id="fs-cta"] .gc-tag { font-size: 13px; font-weight: 800; color: var(--accent-cyan); letter-spacing: 0.12em; text-transform: uppercase; }
+        [data-composition-id="fs-cta"] .gc-title { font-size: 24px; font-weight: 800; color: var(--ink); margin-top: 4px; letter-spacing: -0.01em; }
+        [data-composition-id="fs-cta"] .gc-badge { padding: 6px 12px; background: var(--accent-green); color: var(--bg-deep); border-radius: 999px; font-weight: 800; font-size: 14px; box-shadow: var(--glow-green); flex-shrink: 0; }
+        [data-composition-id="fs-cta"] .hand-cta { margin-top: 14px; padding: 16px 32px; background: linear-gradient(135deg, var(--accent-orange) 0%, #f4a384 100%); color: var(--bg-deep); font-weight: 800; font-size: 26px; border-radius: 999px; box-shadow: var(--glow-orange); will-change: transform, opacity; }
+
+    </style>
+
+    <div class="grid-bg"></div>
+    
+<svg class="particles" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+  <circle cx="120" cy="280" r="4" fill="#4dd9d9" opacity="0.6"/>
+  <circle cx="980" cy="380" r="6" fill="#a774d9" opacity="0.5"/>
+  <circle cx="200" cy="1450" r="5" fill="#d97757" opacity="0.55"/>
+  <circle cx="900" cy="1620" r="4" fill="#5dd97a" opacity="0.6"/>
+  <circle cx="540" cy="320" r="3" fill="#4dd9d9" opacity="0.4"/>
+  <circle cx="380" cy="780" r="3" fill="#a774d9" opacity="0.5"/>
+  <circle cx="700" cy="900" r="4" fill="#d97757" opacity="0.45"/>
+  <circle cx="160" cy="1100" r="5" fill="#5dd97a" opacity="0.55"/>
+  <circle cx="850" cy="1200" r="3" fill="#4dd9d9" opacity="0.5"/>
+  <circle cx="450" cy="1700" r="4" fill="#a774d9" opacity="0.4"/>
+</svg>
+
+    <div class="vignette"></div>
+    <div class="scene-content">
+      
+        <div class="topic-pill"><span class="num">💬</span>Quan điểm bạn</div>
+        <h1 class="brand-title">
+          <span class="word accent">Bình</span>
+          <span class="word accent">luận</span>
+          <span class="word">bên</span>
+          <span class="word">dưới</span>
+        </h1>
+        
+        <div class="comment-box">
+          <div class="cb-avatar">M</div>
+          <div class="cb-input">
+            <span class="cb-text">Quan điểm</span><span class="cb-cursor">|</span>
+          </div>
+          <div class="cb-send">▶</div>
+        </div>
+        <div class="gift-stack"><div class="gift-card">
+          <div class="gc-thumb">📚</div>
+          <div class="gc-meta">
+            <div class="gc-tag">TÀI LIỆU FREE</div>
+            <div class="gc-title">Cẩm nang nuôi con không xí tè</div>
+          </div>
+          <div class="gc-badge">FREE</div>
+        </div><div class="gift-card">
+          <div class="gc-thumb">🎁</div>
+          <div class="gc-meta">
+            <div class="gc-tag">TƯ VẤN 1-1</div>
+            <div class="gc-title">Tư vấn từ Dr.Maya</div>
+          </div>
+          <div class="gc-badge">FREE</div>
+        </div></div>
+        <div class="hand-cta">👇 Comment quan điểm của bạn 👇</div>
+        
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const ROOT = '[data-composition-id="fs-cta"]';
+
+      // Particles drift
+      tl.fromTo(ROOT + ' .particles circle',
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 0.6, duration: 1.2, ease: "power2.out", stagger: 0.05 },
+        0
+      );
+      tl.to(ROOT + ' .particles circle', {
+        y: -20, duration: 2.5, ease: "sine.inOut",
+        yoyo: true, repeat: 4, stagger: { each: 0.1, yoyo: true },
+      }, 1.0);
+
+      // Topic pill
+      tl.from(ROOT + ' .topic-pill', {
+        y: -30, scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.8)",
+      }, 0.2);
+
+      // Brand title slam
+      tl.from(ROOT + ' .brand-title .word', {
+        y: 80, opacity: 0, scale: 0.7, duration: 0.55,
+        ease: "back.out(1.6)", stagger: 0.08,
+      }, 0.45);
+
+      tl.from(ROOT + ' .comment-box', { y: -30, opacity: 0, scale: 0.92, duration: 0.5, ease: "back.out(1.6)" }, 1.0);
+        tl.from(ROOT + ' .cb-text', { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 1.4);
+        tl.from(ROOT + ' .gift-card', { y: 40, opacity: 0, scale: 0.9, duration: 0.5, ease: "back.out(1.6)", stagger: 0.18 }, 1.6);
+        tl.from(ROOT + ' .gc-badge', { scale: 0, opacity: 0, rotation: -30, duration: 0.45, ease: "back.out(2.4)", stagger: 0.18 }, 2.0);
+        tl.from(ROOT + ' .hand-cta', { y: 30, scale: 0.5, opacity: 0, duration: 0.5, ease: "back.out(2.2)" }, 2.6);
+        tl.to(ROOT + ' .hand-cta', { scale: 1.06, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: 4 }, 3.2);
+        
+      window.__timelines["fs-cta"] = tl;
+    </script>
+  </div>
+</template>
